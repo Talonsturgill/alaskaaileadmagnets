@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #02060F; position: relative; }
+  #bg { position: absolute; inset: 0; }
+  .layer { position: absolute; inset: 0; }
+  #map { position: absolute; left: 470px; top: 210px; }
+  .kicker {
+    position: absolute; left: 96px; top: 100px;
+    font-family: "JetBrains Mono", monospace; font-weight: 500;
+    font-size: 24px; letter-spacing: 0.2em; color: #FFC72C;
+  }
+  .counter {
+    position: absolute; right: 96px; top: 104px;
+    font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6E85A4;
+  }
+  .head {
+    position: absolute; left: 96px; top: 210px; width: 400px; height: 420px;
+    font-family: "Fraunces", serif; font-weight: 700;
+    color: #F4F8FF; line-height: 1.1;
+  }
+  .body {
+    position: absolute; left: 96px; top: 650px; width: 380px;
+    font-family: "Space Grotesk", sans-serif; font-size: 34px;
+    line-height: 1.44; color: #B9C8DE;
+  }
+  .closeblock {
+    position: absolute; left: 96px; bottom: 210px; width: 856px;
+    font-family: "Fraunces", serif; font-weight: 700; font-size: 46px;
+    color: #F4F8FF; line-height: 1.2;
+  }
+  .closeblock .gold { color: #FFC72C; }
+  .subclose {
+    position: absolute; left: 96px; bottom: 152px; width: 856px;
+    font-family: "Space Grotesk", sans-serif; font-size: 28px; color: #8FA3BE;
+  }
+  .brandrow {
+    position: absolute; left: 96px; bottom: 76px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .wordmark {
+    font-family: "Fraunces", serif; font-weight: 700; font-size: 28px;
+    color: #F4F8FF; letter-spacing: 0.04em;
+  }
+  .site {
+    font-family: "JetBrains Mono", monospace; font-size: 21px; color: #8FA3BE;
+    letter-spacing: 0.1em; padding-top: 4px;
+  }
+</style>
+</head>
+<body>
+  <canvas id="bg" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+  <svg id="map" width="540" height="620" viewBox="0 0 540 620"></svg>
+
+  <div class="layer">
+    <div class="kicker">THE TRANSLATION</div>
+    <div class="counter">03 / 03</div>
+
+    <div class="head" id="head">If a camera can count fish in a glacial river</div>
+
+    <div class="body">it can count pallets in a yard, boards in a kiln, or
+    trucks at a gate. The bottleneck changes in Anchorage. The method does
+    not.</div>
+
+    <div class="closeblock">One company. One bottleneck. One honest breakdown.
+    <span class="gold">Daily.</span></div>
+    <div class="subclose" data-decorative>Sources ride in the first comment. Built in Anchorage.</div>
+
+    <div class="brandrow">
+      <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+      </svg>
+      <div class="wordmark">ALASKA.AI</div>
+      <div class="site" data-decorative>alaskaaihq.com</div>
+    </div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/d3.v7.min.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+
+  // Background wash.
+  AK.reseed(20260723);
+  const cv = document.getElementById('bg');
+  const cx = cv.getContext('2d');
+  cx.scale(2, 2);
+  const W = 1080, H = 1350;
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0, '#02060F');
+  g.addColorStop(1, '#08152A');
+  cx.fillStyle = g;
+  cx.fillRect(0, 0, W, H);
+
+  // Faint graticule field on the map side.
+  cx.strokeStyle = 'rgba(110,133,164,0.10)';
+  cx.lineWidth = 1;
+  for (let x = 470; x <= 1080; x += 68) {
+    cx.beginPath(); cx.moveTo(x, 170); cx.lineTo(x, 900); cx.stroke();
+  }
+  for (let y = 170; y <= 900; y += 68) {
+    cx.beginPath(); cx.moveTo(470, y); cx.lineTo(1080, y); cx.stroke();
+  }
+
+  // Grain.
+  const img = cx.getImageData(0, 0, W * 2, H * 2);
+  const d = img.data;
+  const grng = AK.rng(5150);
+  for (let p = 0; p < d.length; p += 4) {
+    const n = (grng() - 0.5) * 6;
+    d[p] += n; d[p + 1] += n; d[p + 2] += n;
+  }
+  cx.putImageData(img, 0, 0);
+
+  // The state, true lon/lat, canonical projection recipe.
+  const geo = await fetch('@@ASSETS@@/geo/alaska-state.geo.json').then(r => r.json());
+  const proj = d3.geoConicEqualArea()
+    .parallels([55, 65])
+    .rotate([154, 0])
+    .fitExtent([[30, 30], [510, 560]], geo);
+  const path = d3.geoPath(proj);
+  const svg = d3.select('#map');
+
+  svg.append('path')
+    .attr('d', path(geo))
+    .attr('fill', 'rgba(14,33,56,0.55)')
+    .attr('stroke', 'rgba(90,200,240,0.65)')
+    .attr('stroke-width', 1.6);
+
+  // Two pins, the case site and the reader's town.
+  const pins = [
+    { name: 'SITKA', lonlat: [-135.33, 57.05], dy: 34 },
+    { name: 'ANCHORAGE', lonlat: [-149.90, 61.22], dy: -20 }
+  ];
+  for (const p of pins) {
+    const [x, y] = proj(p.lonlat);
+    svg.append('circle').attr('cx', x).attr('cy', y).attr('r', 22)
+      .attr('fill', 'rgba(255,199,44,0.14)');
+    svg.append('circle').attr('cx', x).attr('cy', y).attr('r', 7)
+      .attr('fill', '#FFC72C');
+    svg.append('text')
+      .attr('x', x + 16).attr('y', y + p.dy)
+      .attr('fill', '#F4F8FF')
+      .attr('font-family', 'JetBrains Mono')
+      .attr('font-size', 21)
+      .attr('letter-spacing', '0.1em')
+      .attr('data-decorative', '')
+      .text(p.name);
+  }
+
+  // A quiet great line from the case to the reader.
+  const a = proj(pins[0].lonlat), b = proj(pins[1].lonlat);
+  svg.append('path')
+    .attr('d', `M ${a[0]} ${a[1]} Q ${(a[0] + b[0]) / 2 + 60} ${(a[1] + b[1]) / 2 - 90} ${b[0]} ${b[1]}`)
+    .attr('fill', 'none')
+    .attr('stroke', '#FFC72C')
+    .attr('stroke-width', 2.4)
+    .attr('stroke-dasharray', '2 10')
+    .attr('stroke-linecap', 'round');
+
+  AK.fitText(document.getElementById('head'), { min: 54, max: 74, maxLines: 5 });
+
+  resolve();
+});
+</script>
+</body>
+</html>

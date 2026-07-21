@@ -1,0 +1,22 @@
+{
+  "_doc": "The variety engine, same law as the sibling studio. Schema per entry, run_date, case_file_no, slide_count, hero_structure, atmosphere, depth_technique, line_voice, continuity_device, hook_archetype, palette_family, type_pairing, narrative_structure, variance_dials {design_variance, visual_density, type_temperature}, new_techniques_logged (array). Hard divergence, hero_structure differs from last 4, atmosphere last 3, continuity_device last 2, hook_archetype last 3, palette_family last 3, type_pairing last 2.",
+  "entries": [
+    {
+      "run_date": "2026-07-21",
+      "case_file_no": 0,
+      "note": "Engine proof, not a shipped post. Logged so run 1 diverges from it anyway.",
+      "slide_count": 3,
+      "hero_structure": "typographic cover over night gradient",
+      "atmosphere": "aurora ribbon and star field over deep night",
+      "depth_technique": "none, flat layered 2D",
+      "line_voice": "thin telemetry rules",
+      "continuity_device": "gold kicker rail and counter",
+      "hook_archetype": "narrative reversal",
+      "palette_family": "house dark arctic with gold",
+      "type_pairing": "Fraunces display with Space Grotesk body and JetBrains Mono telemetry",
+      "narrative_structure": "proof, receipts, translation",
+      "variance_dials": {"design_variance": 2, "visual_density": 2, "type_temperature": 3},
+      "new_techniques_logged": []
+    }
+  ]
+}

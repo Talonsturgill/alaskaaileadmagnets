@@ -1,0 +1,100 @@
+# Case Files scoring rubric — the final gate before delivery.
+# The scorer computes: weighted = Σ(score_i × weight_i), then applies the
+# hard-fail penalty: ANY hard fail caps the total at 6.9 (cannot ship).
+# Ship threshold 8.3. Scores must be honest; the iteration ladder relaxes
+# the THRESHOLD, never the scores.
+
+rubric:
+  ship_threshold: 8.3
+  iteration_ladder:
+    - {revision_rounds: 0-2, threshold: 8.3}
+    - {revision_rounds: 3,   threshold: 8.0}
+    - {revision_rounds: 4+,  threshold: 7.7, note: "ship best version, flag shortfall in email"}
+
+  hard_fails:   # any ONE of these caps the score at 6.9 — fix or cut
+    - "em dash or en dash anywhere (slides, post copy, comment block)"
+    - "emoji anywhere"
+    - "factual claim without a claim-id resolving to a verified source"
+    - "vendor-sourced number without its sourcing label in the same sentence or on the same slide"
+    - "a failure base rate cited alone as a scare number (they travel together, and end at what winners do)"
+    - "an ROI or savings claim presented as a lone certain number where the source gives a range, an estimate, or a vendor aggregate"
+    - "a case file shipped without receipts, the catch, or the translation"
+    - "our services pitched by name inside the teaching (the configured offer line is the only commercial sentence)"
+    - "typo or misspelling in any rendered slide (critics transcribe and diff)"
+    - "clipped, overlapping, or cut-off text in any render"
+    - "primary text contrast below 4.5:1 at worst point (critic-verified)"
+    - "slide count outside 6-12"
+    - "machine_qa verdict FAIL, or pdf_mode != vector"
+    - "case company already in ledger/cases.json, or industry/capability repeating any of the last 3 entries without the dossier defending an exception"
+    - "hero visual structure identical to any of the last 4 decks (artwork ledger)"
+    - "banned phrase from brand.yaml in copy or slides"
+    - "hashtag count != 3, or link in post body"
+    - "any placeholder, lorem, TODO, or unfinished element in any artifact"
+
+  criteria:
+    - name: "Thumb-stop cover"
+      weight: 0.12
+      descriptors:
+        10: "Specific number/reversal/tension in <=12 words, huge type, single focal point, works at 432px, ordinary-company energy without cliche."
+        7:  "Strong but slightly generic wording or competing focal point."
+        4:  "Topic-label cover ('AI in Trucking') or cluttered."
+    - name: "Story arc & swipe momentum"
+      weight: 0.12
+      descriptors:
+        10: "The case grammar lands as a story; every slide plants or pays an open loop; slide 2 does the identification work instantly; contact sheet reads as one composed sequence."
+        7:  "Coherent but 1-2 slides reorderable without loss."
+        4:  "A list wearing a story's clothes."
+    - name: "Artwork craft & genuine detail"
+      weight: 0.13
+      descriptors:
+        10: "Every slide survives the zoom test; layered texture/light/depth; zero flat-lazy regions; the hero earns its rung on the rendered ladder or argues flat deliberately in the dossier."
+        7:  "Strong overall; one slide leans on a default or has dead zones."
+        4:  "Decorated templates, uniform line weights, flat fills."
+    - name: "Story-art fusion"
+      weight: 0.10
+      descriptors:
+        10: "Art parameters visibly encode the case's numbers and material world; a stranger could guess the industry from the art alone."
+        7:  "Art matches the topic but is interchangeable with a cousin case."
+        4:  "Wallpaper behind text."
+    - name: "Translation strength & local relevance"
+      weight: 0.11
+      descriptors:
+        10: "The Alaska translation names segments, the honest rung, a cost class as a range, and at least one limit; an Anchorage operator would feel seen, not marketed to."
+        7:  "Translation present but generic to any cold-weather market."
+        4:  "An Alaska sticker on an Outside story."
+    - name: "Insight density & factual weight"
+      weight: 0.08
+      descriptors:
+        10: "Every content slide adds a NEW verified specific (number, mechanism, cost, timeline); 25-50 words each; zero filler."
+        7:  "Mostly dense; one thin or repeated beat."
+        4:  "Vibes with occasional numbers."
+    - name: "Honesty & evidence discipline"
+      weight: 0.10
+      descriptors:
+        10: "Sourcing labels ride with their numbers; ranges with assumptions; the catch is specific and material; ladder rung named; base rates handled per HONEST_AI; the post would survive a hostile fact-check in the comments."
+        7:  "Honest but one label buried or one catch soft."
+        4:  "Reads true but couldn't prove itself under a skeptical reply."
+    - name: "Variety vs ledger"
+      weight: 0.06
+      descriptors:
+        10: "Composition system, palette, type pairing, hook archetype, and narrative structure all diverge from the last 4 decks; dials justified."
+        7:  "Fresh hero concept but 2+ reused subsystems."
+        4:  "A re-skin of a recent deck."
+    - name: "Legibility & platform fitness"
+      weight: 0.06
+      descriptors:
+        10: "All floors met (32px body / 24px min / safe zones); readable at 432px; vector PDF 2-25MB with title; counters present."
+        7:  "One squeaker that still reads."
+        4:  "Requires zooming anywhere."
+    - name: "Copy: voice & hook"
+      weight: 0.05
+      descriptors:
+        10: "Hook lands inside 140 chars; 300-900 chars; operator-blunt voice; deck-summary line; offer line exactly as configured, once; real closing question; grade 8-10."
+        7:  "On-voice with one soft line."
+        4:  "Consultant-speak or hook buried."
+    - name: "Deliverable completeness"
+      weight: 0.07
+      descriptors:
+        10: "Gmail draft complete: post copy, exactly 3 hashtags, first-comment source block with sourcing labels, document title, all links resolve at the pinned commit, inline previews render, report card + aftercare present."
+        7:  "Complete but one convenience element rough."
+        4:  "Any missing deliverable component."

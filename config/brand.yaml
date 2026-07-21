@@ -1,0 +1,120 @@
+brand:
+  page_name: "Alaska.Ai"
+  series_name: "Case Files"          # maintainer may rename; numbering follows
+  series_numbering: "Case File No. {n}"
+  series_tagline: "Proof of work from companies winning with AI"
+  channel: "LinkedIn"
+  surface: >
+    Default surface is the founder's personal profile, with the Alaska.Ai page
+    reposting as the archive. Personal reach runs about double the page's and
+    the page already carries the daily news deck, so the two dailies never
+    share one surface. The maintainer owns posting, the machine only drafts.
+  audience: >
+    Anchorage and Southcentral owners, GMs, and ops leads at businesses of
+    roughly 20 to 2000 people. Tourism operators, independent clinics, ANC
+    subsidiary managers, logistics and air cargo, construction, seafood,
+    utilities, credit unions, trades. Practical, busy, allergic to Outside
+    slickness and AI hype in equal measure. They have used ChatGPT and do not
+    yet believe it matters to their operation.
+
+  voice:
+    one_line: >
+      A working engineer who reads the research and talks like an operator.
+      Blunt, specific, receipts first, honest about limits, zero hype.
+    tone_words: [blunt, specific, analytical, plainspoken, honest-about-limits, calm, local]
+    register: "Spoken confidence. Short sentences. A position taken and defended with numbers."
+    do:
+      - "Lead with the ordinary company detail, size, age, family ownership, before any technology word."
+      - "Name the bottleneck in operational terms, faxes, routes, counts, callbacks."
+      - "Carry a sourcing label in the same breath as any vendor number, 'per Samsara's case study'."
+      - "Name the feasibility ladder rung in plain words, and say when plain software wins."
+      - "Give ranges with stated assumptions, never a lone hero number."
+      - "End the post with a real question an operator could answer from experience."
+      - "Plain English, grade 8 to 10. Complex ideas in short sentences."
+      - "Never use em dashes or en dashes, anywhere. Ranges written 'X to Y'. Straight quotes only."
+      - "NEVER use a colon in post copy or on-slide text, clock times excepted. Restructure the sentence."
+      - "No semicolons in post copy. Cut commas hard, one per sentence is plenty."
+    dont:
+      - "Don't pitch our services inside the teaching. The configured offer line is the only commercial sentence."
+      - "Don't say transformation, journey, revolution, or any sweeping arc. The thesis is targeted builds on specific bottlenecks."
+      - "Don't cite a failure stat alone as a scare. The base rates travel together and end at what winners do."
+      - "Don't dunk on named companies, ever."
+      - "Don't use emojis. Anywhere."
+      - "Don't invent quotes, numbers, or people. If it isn't in claims.json it doesn't exist."
+      - "Don't write 'we' as Alaska. Speak about Alaska, as ourselves."
+  banned_phrases:
+    - "game-changer"
+    - "revolutionize"
+    - "disrupt"
+    - "synergy"
+    - "leverage"
+    - "unlock"
+    - "unleash"
+    - "cutting-edge"
+    - "seamless"
+    - "supercharge"
+    - "skyrocket"
+    - "10x"
+    - "crush it"
+    - "transformation journey"
+    - "AI-powered future"
+    - "embrace AI"
+    - "the AI revolution"
+    - "future-proof"
+    - "delve"
+    - "tapestry"
+    - "testament to"
+    - "ever-evolving"
+    - "navigating the"
+    - "in a world where"
+    - "imagine if"
+    - "it's no secret that"
+    - "here's the honest part"
+    - "here is the honest part"
+    - "buckle up"
+    - "let's dive in"
+
+  linkedin_post:
+    caption_chars: [300, 900]        # hard band, sweet spot 400-700
+    hook_max_chars: 140              # complete before the mobile fold
+    hashtags_exactly: 3              # niche over broad, at the very end
+    links_in_body: false             # sources and links live in the first comment
+    ends_with: engagement_question
+    deck_summary_line: true          # one plain line describing the deck
+    offer_line: >
+      We do this kind of analysis for Alaska businesses, free. If you want
+      your operation looked at this way, say the word.
+    offer_line_rules: >
+      Appears once, near the close of the caption and on the close slide,
+      exactly as configured. Never improvised, never repeated, never expanded.
+      The maintainer edits it HERE, not in prompts.
+
+visual:
+  # Same constellation family as the news carousel, one brand, two desks.
+  constellation:
+    wordmark: "ALASKA.AI"
+    series_mark: "CASE FILES"                # kicker family on covers
+    site: "alaskaaihq.com"                   # close slide, small, mono, near the mark
+    polaris_star: true
+    progress_counter: "NN / NN in JetBrains Mono"
+    coordinates_footer: "case-relevant when it earns its place (mark data-decorative)"
+    gold_presence: "#FFC72C appears deliberately on every slide, budgeted in the dossier"
+    base_register: "dark arctic (#030710..#0d2038 family) default; light decks are a deliberate variance move, max once per 8 runs"
+  tokens:
+    flag_gold: "#FFC72C"
+    gold_halo: "#FFDA6E"
+    deep_night: "#02060F"
+    flag_blue_horizon: "#081426"
+    panel_navy: "#0E2138"
+    aurora_green: "#3CE6B4"
+    aurora_ice: "#5AC8F0"
+    aurora_violet: "#9664E6"
+    forget_me_not: "#6EA5FF"
+    snow: "#F4F8FF"
+    supporting_palettes_rotate: "from the case's material world, see DESIGN_DOCTRINE"
+  on_slide_text_rules:
+    - "No em dashes or en dashes in ANY on-slide string. Zero exceptions."
+    - "No colons in any on-slide string (clock times excepted). Restructure instead."
+    - "Straight quotes. Tabular numerals for data. Units spaced (43 MW, not 43MW)."
+    - "No emojis, no hashtags on slides."
+    - "Every factual on-slide number carries a claim-id in the dossier, and vendor numbers carry their label on the slide."

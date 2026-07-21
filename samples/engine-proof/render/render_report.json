@@ -1,0 +1,1044 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1350,
+    "scale": 2.0,
+    "px": [
+      2160,
+      2700
+    ]
+  },
+  "slides": [
+    {
+      "file": "slide-01.html",
+      "png": "slide-01.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "ALASKA AI \u00b7 CASE FILES \u00b7 ENGINE PROOF",
+          "x": 96,
+          "y": 104,
+          "w": 789,
+          "h": 35,
+          "font_px": 26,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              104,
+              789,
+              35
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "01 / 03",
+          "x": 883,
+          "y": 108,
+          "w": 101,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              883,
+              108,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "The weir lost its funding. The camera kept counting.",
+          "x": 96,
+          "y": 300,
+          "w": 880,
+          "h": 620,
+          "font_px": 125.5,
+          "weight": "900",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              287,
+              819,
+              155
+            ],
+            [
+              96,
+              418,
+              673,
+              155
+            ],
+            [
+              96,
+              548,
+              654,
+              155
+            ],
+            [
+              96,
+              679,
+              500,
+              155
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Computer vision already counts salmon at about 16 sites in Alaska and BC. This s",
+          "x": 96,
+          "y": 956,
+          "w": 800,
+          "h": 248,
+          "font_px": 35,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              958,
+              710,
+              44
+            ],
+            [
+              96,
+              1008,
+              714,
+              44
+            ],
+            [
+              96,
+              1057,
+              744,
+              44
+            ],
+            [
+              96,
+              1107,
+              732,
+              44
+            ],
+            [
+              96,
+              1157,
+              227,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ALASKA.AI",
+          "x": 148,
+          "y": 1205,
+          "w": 185,
+          "h": 37,
+          "font_px": 30,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              148,
+              1205,
+              185,
+              37
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "57\u00b003'N \u00b7 135\u00b020'W \u00b7 SITKA SOUND",
+          "x": 549,
+          "y": 1212,
+          "w": 435,
+          "h": 26,
+          "font_px": 20,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              549,
+              1212,
+              435,
+              26
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "\u203a",
+          "x": 1056,
+          "y": 640,
+          "w": 14,
+          "h": 39,
+          "font_px": 30,
+          "weight": "500",
+          "family": "Space Grotesk",
+          "color": "rgb(255, 199, 44)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              1056,
+              640,
+              14,
+              39
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3684,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 15.4,
+          "variance": 55.9
+        }
+      ]
+    },
+    {
+      "file": "slide-02.html",
+      "png": "slide-02.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE RECEIPTS \u00b7 SALMONVISION",
+          "x": 96,
+          "y": 100,
+          "w": 518,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              100,
+              518,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "02 / 03",
+          "x": 883,
+          "y": 104,
+          "w": 101,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              883,
+              104,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "What the counting camera did",
+          "x": 96,
+          "y": 152,
+          "w": 880,
+          "h": 144,
+          "font_px": 68,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              146,
+              831,
+              84
+            ],
+            [
+              96,
+              218,
+              101,
+              84
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "90%",
+          "x": 96,
+          "y": 344,
+          "w": 300,
+          "h": 81,
+          "font_px": 74,
+          "weight": "800",
+          "family": "Archivo",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              344,
+              163,
+              81
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "reported counting accuracy in deployment CF-01",
+          "x": 430,
+          "y": 378,
+          "w": 554,
+          "h": 83,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              430,
+              378,
+              473,
+              40
+            ],
+            [
+              430,
+              420,
+              196,
+              40
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CF-01",
+          "x": 626,
+          "y": 432,
+          "w": 63,
+          "h": 25,
+          "font_px": 19,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              626,
+              432,
+              63,
+              25
+            ]
+          ],
+          "anc": [
+            4
+          ]
+        },
+        {
+          "text": "60 to 1",
+          "x": 96,
+          "y": 506,
+          "w": 300,
+          "h": 81,
+          "font_px": 74,
+          "weight": "800",
+          "family": "Archivo",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              506,
+              237,
+              81
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "an hour of fish video read in about a minute CF-02",
+          "x": 430,
+          "y": 540,
+          "w": 554,
+          "h": 83,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              430,
+              540,
+              532,
+              40
+            ],
+            [
+              430,
+              582,
+              142,
+              40
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CF-02",
+          "x": 572,
+          "y": 594,
+          "w": 63,
+          "h": 25,
+          "font_px": 19,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              572,
+              594,
+              63,
+              25
+            ]
+          ],
+          "anc": [
+            7
+          ]
+        },
+        {
+          "text": "16 sites",
+          "x": 96,
+          "y": 668,
+          "w": 300,
+          "h": 81,
+          "font_px": 74,
+          "weight": "800",
+          "family": "Archivo",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              668,
+              282,
+              81
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "running across Alaska and BC, aiming at 100 watersheds by 2028 CF-03",
+          "x": 430,
+          "y": 702,
+          "w": 554,
+          "h": 125,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              430,
+              702,
+              459,
+              40
+            ],
+            [
+              430,
+              744,
+              529,
+              40
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CF-03",
+          "x": 430,
+          "y": 798,
+          "w": 63,
+          "h": 25,
+          "font_px": 19,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              430,
+              798,
+              63,
+              25
+            ]
+          ],
+          "anc": [
+            10
+          ]
+        },
+        {
+          "text": "$50k to $10k",
+          "x": 96,
+          "y": 872,
+          "w": 454,
+          "h": 81,
+          "font_px": 74,
+          "weight": "800",
+          "family": "Archivo",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              872,
+              454,
+              81
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "hardware cost per site since the first build CF-04",
+          "x": 584,
+          "y": 906,
+          "w": 400,
+          "h": 83,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              584,
+              906,
+              349,
+              40
+            ],
+            [
+              584,
+              948,
+              309,
+              40
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CF-04",
+          "x": 894,
+          "y": 960,
+          "w": 63,
+          "h": 25,
+          "font_px": 19,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              894,
+              960,
+              63,
+              25
+            ]
+          ],
+          "anc": [
+            13
+          ]
+        },
+        {
+          "text": "The honest part. Counting from sonar echograms in glacial rivers still ran about",
+          "x": 96,
+          "y": 1120,
+          "w": 888,
+          "h": 134,
+          "font_px": 29,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(215, 225, 240)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              361,
+              1127,
+              589,
+              37
+            ],
+            [
+              128,
+              1168,
+              778,
+              37
+            ],
+            [
+              128,
+              1208,
+              763,
+              37
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "The honest part.",
+          "x": 128,
+          "y": 1127,
+          "w": 233,
+          "h": 37,
+          "font_px": 29,
+          "weight": "600",
+          "family": "Space Grotesk",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              128,
+              1127,
+              233,
+              37
+            ]
+          ],
+          "anc": [
+            15
+          ]
+        },
+        {
+          "text": "CF-05",
+          "x": 891,
+          "y": 1218,
+          "w": 63,
+          "h": 25,
+          "font_px": 19,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              891,
+              1218,
+              63,
+              25
+            ]
+          ],
+          "anc": [
+            15
+          ]
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3271,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 13.2,
+          "variance": 14.2
+        }
+      ]
+    },
+    {
+      "file": "slide-03.html",
+      "png": "slide-03.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "SITKA",
+          "x": 947,
+          "y": 578,
+          "w": 74,
+          "h": 27,
+          "font_px": 21,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              947,
+              578,
+              74,
+              27
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ANCHORAGE",
+          "x": 829,
+          "y": 483,
+          "w": 132,
+          "h": 27,
+          "font_px": 21,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              829,
+              483,
+              132,
+              27
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "THE TRANSLATION",
+          "x": 96,
+          "y": 100,
+          "w": 288,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              100,
+              288,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "03 / 03",
+          "x": 883,
+          "y": 104,
+          "w": 101,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              883,
+              104,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "If a camera can count fish in a glacial river",
+          "x": 96,
+          "y": 210,
+          "w": 400,
+          "h": 420,
+          "font_px": 73.5,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              204,
+              373,
+              91
+            ],
+            [
+              96,
+              285,
+              324,
+              91
+            ],
+            [
+              96,
+              366,
+              258,
+              91
+            ],
+            [
+              96,
+              447,
+              397,
+              91
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "it can count pallets in a yard, boards in a kiln, or trucks at a gate. The bottl",
+          "x": 96,
+          "y": 650,
+          "w": 380,
+          "h": 294,
+          "font_px": 34,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(185, 200, 222)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              652,
+              358,
+              43
+            ],
+            [
+              96,
+              701,
+              372,
+              43
+            ],
+            [
+              96,
+              750,
+              379,
+              43
+            ],
+            [
+              96,
+              799,
+              366,
+              43
+            ],
+            [
+              96,
+              848,
+              254,
+              43
+            ],
+            [
+              96,
+              897,
+              292,
+              43
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "One company. One bottleneck. One honest breakdown. Daily.",
+          "x": 96,
+          "y": 1030,
+          "w": 856,
+          "h": 110,
+          "font_px": 46,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              1029,
+              775,
+              57
+            ],
+            [
+              96,
+              1084,
+              436,
+              57
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Daily.",
+          "x": 532,
+          "y": 1084,
+          "w": 130,
+          "h": 57,
+          "font_px": 46,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              532,
+              1084,
+              130,
+              57
+            ]
+          ],
+          "anc": [
+            6
+          ]
+        },
+        {
+          "text": "Sources ride in the first comment. Built in Anchorage.",
+          "x": 96,
+          "y": 1162,
+          "w": 856,
+          "h": 36,
+          "font_px": 28,
+          "weight": "400",
+          "family": "Space Grotesk",
+          "color": "rgb(143, 163, 190)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              96,
+              1162,
+              720,
+              36
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ALASKA.AI",
+          "x": 142,
+          "y": 1240,
+          "w": 173,
+          "h": 34,
+          "font_px": 28,
+          "weight": "700",
+          "family": "Fraunces",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "lines": [
+            [
+              142,
+              1240,
+              173,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "alaskaaihq.com",
+          "x": 331,
+          "y": 1242,
+          "w": 206,
+          "h": 31,
+          "font_px": 21,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 163, 190)",
+          "decorative": true,
+          "overlap_ok": false,
+          "lines": [
+            [
+              331,
+              1246,
+              206,
+              27
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3446,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 15.7,
+          "variance": 24.9
+        }
+      ]
+    }
+  ]
+}

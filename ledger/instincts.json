@@ -1,0 +1,45 @@
+{
+  "_doc": "Confidence scored lessons. Top 5 with confidence at or above 0.7 are injected into every subagent prompt. Bump 0.05 per confirming run, drop 0.1 per contradicting run, prune below 0.5 when older than 8 runs.",
+  "instincts": [
+    {
+      "id": "i-001",
+      "learned": "2026-07-21",
+      "instinct": "Fit display headlines with AK.fitText inside renderReady instead of hand tuned font sizes. Hand sized hooks wrap an extra line and collide with the block below.",
+      "evidence": "Engine proof slide-01 failed QA exactly this way before fitText max was tightened. Same recurring defect class in the sibling studio through 2026-07-09.",
+      "confidence": 0.8,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-002",
+      "learned": "2026-07-21",
+      "instinct": "Give every absolutely positioned text block an explicit vertical budget. A bottom anchored block under a top anchored stack collides the moment content grows a line.",
+      "evidence": "Engine proof slide-02 stats stack collided with the bottom honesty note until row padding and font were budgeted.",
+      "confidence": 0.7,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-003",
+      "learned": "2026-07-21",
+      "instinct": "Constellation micro text (site line, coordinates) must carry data-decorative or QA flags it as tiny text.",
+      "evidence": "Engine proof slide-03 warned on the 21px site line until marked.",
+      "confidence": 0.7,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-004",
+      "learned": "2026-07-21",
+      "instinct": "Lead case posts with the ordinary company detail (size, founding year, family ownership) before the technology. The reader must think, that is basically us, before they will care how it works.",
+      "evidence": "Hypothesis from the evidence base (identification precedes persuasion in the MIT winner profile and the ICP). Unconfirmed by post metrics yet.",
+      "confidence": 0.6,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-005",
+      "learned": "2026-07-21",
+      "instinct": "Vendor sourced numbers get the label in the same breath as the number, never in a footnote. Trust is the product this series sells.",
+      "evidence": "House law restated as craft. The case-critic enforces it, the copy should not make the critic work.",
+      "confidence": 0.75,
+      "last_confirmed": "2026-07-21"
+    }
+  ]
+}

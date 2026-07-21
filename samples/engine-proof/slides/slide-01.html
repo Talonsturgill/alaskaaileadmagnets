@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #02060F; position: relative; font-kerning: normal; }
+  #sky { position: absolute; inset: 0; }
+  .layer { position: absolute; inset: 0; }
+  .kicker {
+    position: absolute; left: 96px; top: 104px;
+    font-family: "JetBrains Mono", monospace; font-weight: 500;
+    font-size: 26px; letter-spacing: 0.22em; color: #FFC72C;
+  }
+  .rule { position: absolute; left: 96px; top: 152px; width: 130px; height: 3px; background: #FFC72C; }
+  .hook {
+    position: absolute; left: 96px; top: 300px; width: 880px; height: 620px;
+    font-family: "Fraunces", serif; font-weight: 900;
+    font-variation-settings: "opsz" 144;
+    color: #F4F8FF; line-height: 1.04; letter-spacing: -0.01em;
+  }
+  .sub {
+    position: absolute; left: 96px; top: 956px; width: 800px;
+    font-family: "Space Grotesk", sans-serif; font-weight: 400;
+    font-size: 35px; line-height: 1.42; color: #B9C8DE;
+  }
+  .counter {
+    position: absolute; right: 96px; top: 108px;
+    font-family: "JetBrains Mono", monospace; font-weight: 400;
+    font-size: 24px; color: #6E85A4;
+  }
+  .brandrow {
+    position: absolute; left: 96px; bottom: 108px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .wordmark {
+    font-family: "Fraunces", serif; font-weight: 700; font-size: 30px;
+    color: #F4F8FF; letter-spacing: 0.04em;
+  }
+  .coords {
+    position: absolute; right: 96px; bottom: 112px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    color: #6E85A4; letter-spacing: 0.08em;
+  }
+  .swipe {
+    position: absolute; right: 10px; top: 640px;
+    font-family: "Space Grotesk", sans-serif; font-weight: 500;
+    font-size: 30px; color: #FFC72C;
+  }
+</style>
+</head>
+<body>
+  <canvas id="sky" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker">ALASKA AI &middot; CASE FILES &middot; ENGINE PROOF</div>
+    <div class="rule"></div>
+    <div class="counter">01 / 03</div>
+
+    <div class="hook" id="hook">The weir lost its funding. The camera kept counting.</div>
+
+    <div class="sub">Computer vision already counts salmon at about 16 sites in
+    Alaska and BC. This series breaks down wins like that one, an everyday
+    operation, one bottleneck, a targeted build, real numbers.</div>
+
+    <div class="brandrow">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+      </svg>
+      <div class="wordmark">ALASKA.AI</div>
+    </div>
+    <div class="coords" data-decorative>57&deg;03'N &middot; 135&deg;20'W &middot; SITKA SOUND</div>
+    <div class="swipe" data-decorative>&rsaquo;</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+
+  // Night water and sky. Seeded, deterministic.
+  AK.reseed(20260721);
+  const cv = document.getElementById('sky');
+  const cx = cv.getContext('2d');
+  cx.scale(2, 2);
+  const W = 1080, H = 1350;
+
+  // Vertical night gradient, deep space into cold horizon blue.
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0.0, '#01040B');
+  g.addColorStop(0.55, '#040B18');
+  g.addColorStop(0.82, '#081426');
+  g.addColorStop(1.0, '#0B1B31');
+  cx.fillStyle = g;
+  cx.fillRect(0, 0, W, H);
+
+  // A faint aurora ribbon, domain warped noise, kept dim so type owns the frame.
+  for (let i = 0; i < 900; i++) {
+    const t = i / 900;
+    const x = t * (W + 300) - 150;
+    const yBase = 330 + AK.fbm2(t * 2.3, 7.7, 4) * 180;
+    const h = 90 + AK.fbm2(t * 3.1, 2.2, 3) * 140;
+    const grad = cx.createLinearGradient(0, yBase - h, 0, yBase + h * 0.4);
+    grad.addColorStop(0, 'rgba(60,230,180,0)');
+    grad.addColorStop(0.55, 'rgba(60,230,180,0.05)');
+    grad.addColorStop(1, 'rgba(90,200,240,0)');
+    cx.fillStyle = grad;
+    cx.fillRect(x, yBase - h, 3.2, h * 1.4);
+  }
+
+  // Star field, seeded, sparse, upper third.
+  const rng = AK.rng(4407);
+  for (let i = 0; i < 130; i++) {
+    const x = rng() * W;
+    const y = rng() * 620;
+    const r = rng() * 1.3 + 0.35;
+    const a = 0.16 + rng() * 0.5;
+    cx.fillStyle = `rgba(244,248,255,${a.toFixed(3)})`;
+    cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill();
+  }
+
+  // Sonar arcs low in the water, the counting motif, very quiet.
+  cx.save();
+  cx.translate(880, 1240);
+  for (let k = 1; k <= 5; k++) {
+    cx.beginPath();
+    cx.arc(0, 0, k * 66, Math.PI * 1.06, Math.PI * 1.94);
+    cx.strokeStyle = `rgba(90,200,240,${(0.16 - k * 0.024).toFixed(3)})`;
+    cx.lineWidth = 2;
+    cx.stroke();
+  }
+  cx.restore();
+
+  // Fine grain so the gradient never bands.
+  const img = cx.getImageData(0, 0, W * 2, H * 2);
+  const d = img.data;
+  const grng = AK.rng(9902);
+  for (let p = 0; p < d.length; p += 4) {
+    const n = (grng() - 0.5) * 7;
+    d[p] += n; d[p + 1] += n; d[p + 2] += n;
+  }
+  cx.putImageData(img, 0, 0);
+
+  // Fit the hook display type.
+  AK.fitText(document.getElementById('hook'), { min: 96, max: 126, maxLines: 4 });
+
+  resolve();
+});
+</script>
+</body>
+</html>

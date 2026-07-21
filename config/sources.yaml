@@ -1,0 +1,88 @@
+# Seed sources for the case hunting phases, so research never starts from zero.
+# Carried forward from the sibling repos' seed lists and extended with the
+# hunting grounds where documented mid-market AI wins actually live.
+# Credibility ranks, primary > high > medium > vendor. The vendor rank is
+# usable ONLY with the vendor-claims label and independent corroboration,
+# vendor numbers never headline a post on their own.
+
+case_hunting_grounds:
+  trade_press:
+    - {url: "https://www.manufacturingdive.com",      outlet: "Manufacturing Dive",        credibility: "high"}
+    - {url: "https://www.supplychaindive.com",        outlet: "Supply Chain Dive",         credibility: "high"}
+    - {url: "https://www.constructiondive.com",       outlet: "Construction Dive",         credibility: "high"}
+    - {url: "https://www.healthcaredive.com",         outlet: "Healthcare Dive",           credibility: "high"}
+    - {url: "https://www.retaildive.com",             outlet: "Retail Dive",               credibility: "high"}
+    - {url: "https://www.hoteldive.com",              outlet: "Hotel Dive",                credibility: "high"}
+    - {url: "https://www.freightwaves.com",           outlet: "FreightWaves",              credibility: "medium"}
+    - {url: "https://www.nationalfisherman.com",      outlet: "National Fisherman",        credibility: "medium"}
+    - {url: "https://www.undercurrentnews.com",       outlet: "Undercurrent News",         credibility: "medium"}
+    - {url: "https://www.ttnews.com",                 outlet: "Transport Topics",          credibility: "medium"}
+
+  government_academic:
+    - {url: "https://www.nist.gov/mep",               outlet: "NIST MEP case studies",     credibility: "primary", note: "mid-market manufacturing wins with numbers"}
+    - {url: "https://www.fisheries.noaa.gov",         outlet: "NOAA Fisheries",            credibility: "primary"}
+    - {url: "https://rosap.ntl.bts.gov",              outlet: "DOT research repository",   credibility: "primary", note: "route optimization and winter ops results"}
+    - {url: "https://intrans.iastate.edu",            outlet: "Iowa State InTrans",        credibility: "primary"}
+    - {url: "https://www.sba.gov",                    outlet: "SBA",                       credibility: "primary"}
+    - {url: "https://arxiv.org",                      outlet: "arXiv",                     credibility: "primary", note: "for the honest counterweight papers"}
+
+  research_and_analysis:
+    - {url: "https://sloanreview.mit.edu",            outlet: "MIT Sloan Mgmt Review",     credibility: "high"}
+    - {url: "https://hbr.org",                        outlet: "HBR",                       credibility: "high", note: "paywall, fetch what renders"}
+    - {url: "https://www.mckinsey.com",               outlet: "McKinsey",                  credibility: "high", note: "consultant published, label it"}
+    - {url: "https://www.bcg.com",                    outlet: "BCG",                       credibility: "high", note: "consultant published, label it"}
+    - {url: "https://hai.stanford.edu",               outlet: "Stanford HAI",              credibility: "high"}
+    - {url: "https://www.uschamber.com",              outlet: "US Chamber reports",        credibility: "high"}
+
+  business_journals:
+    - {url: "https://www.bizjournals.com",            outlet: "American City Business Journals", credibility: "high", note: "regional mid-market stories with named owners"}
+    - {url: "https://www.inc.com",                    outlet: "Inc.",                      credibility: "medium"}
+    - {url: "https://www.forbes.com/small-business",  outlet: "Forbes small business",     credibility: "medium"}
+
+  vendor_libraries:
+    # The specific mid-market stories often live here. Always the vendor-claims
+    # label, always seek independent corroboration, never the headline number.
+    - {url: "https://openai.com/stories",             outlet: "OpenAI customer stories",   credibility: "vendor"}
+    - {url: "https://www.anthropic.com/customers",    outlet: "Anthropic customers",       credibility: "vendor"}
+    - {url: "https://cloud.google.com/customers",     outlet: "Google Cloud customers",    credibility: "vendor"}
+    - {url: "https://www.microsoft.com/en-us/ai/ai-customer-stories", outlet: "Microsoft AI stories", credibility: "vendor"}
+    - {url: "https://www.samsara.com/customers",      outlet: "Samsara (fleet ops)",       credibility: "vendor"}
+    - {url: "https://www.servicetitan.com/customers", outlet: "ServiceTitan (trades)",     credibility: "vendor"}
+
+alaska_translation_layer:
+  # For the Alaska mapping in every post and the local proof stories.
+  alaska_news:
+    - {url: "https://www.adn.com",                    outlet: "Anchorage Daily News",      credibility: "high"}
+    - {url: "https://alaskapublic.org",               outlet: "Alaska Public Media",       credibility: "high"}
+    - {url: "https://www.alaskabeacon.com",           outlet: "Alaska Beacon",             credibility: "high"}
+    - {url: "https://www.akbizmag.com",               outlet: "Alaska Business",           credibility: "high", note: "Corporate 100 for the employer map"}
+    - {url: "https://www.alaskajournal.com",          outlet: "Alaska Journal of Commerce", credibility: "high"}
+    - {url: "https://www.kucb.org",                   outlet: "KUCB (Aleutians)",          credibility: "high"}
+    - {url: "https://www.kyuk.org",                   outlet: "KYUK (Y-K Delta)",          credibility: "high"}
+    - {url: "https://www.kdll.org",                   outlet: "KDLL (Kenai Peninsula)",    credibility: "high"}
+    - {url: "https://www.newsminer.com",              outlet: "Fairbanks News-Miner",      credibility: "high"}
+  government_primary:
+    - {url: "https://www.adfg.alaska.gov",            outlet: "ADF&G",                     credibility: "primary"}
+    - {url: "https://www.muni.org",                   outlet: "Muni of Anchorage",         credibility: "primary"}
+    - {url: "https://news.uaf.edu",                   outlet: "UAF News",                  credibility: "primary"}
+    - {url: "https://www.uaa.alaska.edu/news",        outlet: "UAA News",                  credibility: "primary"}
+
+discover:
+  enabled: true
+  guidance: |
+    Surface credible hunting grounds not in this list, vertical trade outlets,
+    university extension programs, state MEP centers, industry association
+    case libraries, credible operator podcasts with transcripts. Record
+    candidates in the run's source ledger with a one line rationale. The
+    maintainer promotes periodically.
+
+sourcing_rules:
+  evidence_strength:
+    strong: "Independent reporting or government and academic writeups with numbers."
+    medium: "Credible trade press single source, or vendor claims corroborated independently."
+    weak: "Vendor only. Not ship ready. Bank it with the label and hunt corroboration."
+  ship_ready_requires: "strong or medium, 2 plus sources or one primary, numbers from fetched pages"
+  recency: "2023 or later preferred, older allowed as labeled background"
+  quotes: "verbatim from a fetched page or they don't exist"
+  company_size_target: "roughly 20 to 2000 employees, everyday companies, not Big Tech"
+  thesis_filter: "targeted build on a specific bottleneck, not a sweeping transformation story"

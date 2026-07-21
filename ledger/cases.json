@@ -1,0 +1,4 @@
+{
+  "_doc": "Every SHIPPED case file, appended at ship time. The rotation gates read this. Schema per entry, run_date, case_file_no, bank_id, company, industry, capability, flavor (case_file | capability_file | reality_check | translation), angle, headline, evidence_strength, sources_lead (array), outcome_notes. Company never repeats. Industry must differ from the last 3 entries. Capability must differ from the last 3 entries. Flavor rhythm per prompts/routine_instructions.md.",
+  "entries": []
+}

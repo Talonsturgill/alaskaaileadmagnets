@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #02060F; position: relative; }
+  #bg { position: absolute; inset: 0; }
+  .layer { position: absolute; inset: 0; }
+  .kicker {
+    position: absolute; left: 96px; top: 100px;
+    font-family: "JetBrains Mono", monospace; font-weight: 500;
+    font-size: 24px; letter-spacing: 0.2em; color: #FFC72C;
+  }
+  .title {
+    position: absolute; left: 96px; top: 152px; width: 880px;
+    font-family: "Fraunces", serif; font-weight: 700; font-size: 68px;
+    color: #F4F8FF; line-height: 1.06;
+  }
+  .stats { position: absolute; left: 96px; top: 320px; width: 888px; }
+  .row {
+    display: flex; align-items: baseline; gap: 34px;
+    padding: 24px 0 20px 0; border-bottom: 1px solid rgba(110,133,164,0.28);
+  }
+  .row:last-child { border-bottom: none; }
+  .num {
+    font-family: "Archivo", sans-serif; font-weight: 800; font-size: 74px;
+    color: #F4F8FF; letter-spacing: -0.01em; min-width: 300px;
+    font-variant-numeric: tabular-nums;
+  }
+  .num .unit { font-size: 44px; font-weight: 600; color: #B9C8DE; }
+  .lbl {
+    font-family: "Space Grotesk", sans-serif; font-weight: 400;
+    font-size: 32px; line-height: 1.3; color: #B9C8DE; flex: 1;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace; font-size: 19px;
+    color: #6E85A4; letter-spacing: 0.06em;
+  }
+  .honest {
+    position: absolute; left: 96px; bottom: 96px; width: 856px;
+    border-left: 4px solid #FFC72C; padding: 6px 0 6px 28px;
+    font-family: "Space Grotesk", sans-serif; font-size: 29px;
+    line-height: 1.4; color: #D7E1F0;
+  }
+  .honest b { font-weight: 600; color: #FFC72C; }
+  .counter {
+    position: absolute; right: 96px; top: 104px;
+    font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6E85A4;
+  }
+</style>
+</head>
+<body>
+  <canvas id="bg" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker">THE RECEIPTS &middot; SALMONVISION</div>
+    <div class="counter">02 / 03</div>
+    <div class="title">What the counting camera did</div>
+
+    <div class="stats">
+      <div class="row">
+        <div class="num">90%</div>
+        <div class="lbl">reported counting accuracy in deployment <span class="tag" data-decorative>CF-01</span></div>
+      </div>
+      <div class="row">
+        <div class="num">60 to 1</div>
+        <div class="lbl">an hour of fish video read in about a minute <span class="tag" data-decorative>CF-02</span></div>
+      </div>
+      <div class="row">
+        <div class="num">16 sites</div>
+        <div class="lbl">running across Alaska and BC, aiming at 100 watersheds by 2028 <span class="tag" data-decorative>CF-03</span></div>
+      </div>
+      <div class="row">
+        <div class="num">$50k to $10k</div>
+        <div class="lbl">hardware cost per site since the first build <span class="tag" data-decorative>CF-04</span></div>
+      </div>
+    </div>
+
+    <div class="honest"><b>The honest part.</b> Counting from sonar echograms in
+    glacial rivers still ran about a 23 percent error in 2024 research tests.
+    Advancing, not solved. We print that either way. <span class="tag" data-decorative>CF-05</span></div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260722);
+  const cv = document.getElementById('bg');
+  const cx = cv.getContext('2d');
+  cx.scale(2, 2);
+  const W = 1080, H = 1350;
+
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0, '#02060F');
+  g.addColorStop(1, '#071120');
+  cx.fillStyle = g;
+  cx.fillRect(0, 0, W, H);
+
+  // Ghosted sonar wedge behind the stats, the instrument this case is about.
+  cx.save();
+  cx.translate(W - 150, 190);
+  cx.rotate(Math.PI * 0.62);
+  for (let k = 1; k <= 9; k++) {
+    cx.beginPath();
+    cx.arc(0, 0, k * 82, -0.52, 0.52);
+    cx.strokeStyle = `rgba(90,200,240,${(0.085 - k * 0.008).toFixed(3)})`;
+    cx.lineWidth = 2;
+    cx.stroke();
+  }
+  for (let s = -1; s <= 1; s += 2) {
+    cx.beginPath();
+    cx.moveTo(0, 0);
+    cx.lineTo(Math.cos(0.52 * s) * 760, Math.sin(0.52 * s) * 760);
+    cx.strokeStyle = 'rgba(90,200,240,0.06)';
+    cx.lineWidth = 2;
+    cx.stroke();
+  }
+  // Seeded fish blips inside the wedge.
+  const rng = AK.rng(6161);
+  for (let i = 0; i < 26; i++) {
+    const a = (rng() - 0.5) * 0.9;
+    const r = 120 + rng() * 600;
+    cx.beginPath();
+    cx.ellipse(Math.cos(a) * r, Math.sin(a) * r, 7 + rng() * 6, 3 + rng() * 2.4, a, 0, Math.PI * 2);
+    cx.fillStyle = `rgba(60,230,180,${(0.05 + rng() * 0.08).toFixed(3)})`;
+    cx.fill();
+  }
+  cx.restore();
+
+  // Grain.
+  const img = cx.getImageData(0, 0, W * 2, H * 2);
+  const d = img.data;
+  const grng = AK.rng(7311);
+  for (let p = 0; p < d.length; p += 4) {
+    const n = (grng() - 0.5) * 6;
+    d[p] += n; d[p + 1] += n; d[p + 2] += n;
+  }
+  cx.putImageData(img, 0, 0);
+
+  resolve();
+});
+</script>
+</body>
+</html>

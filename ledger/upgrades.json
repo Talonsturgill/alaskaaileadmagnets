@@ -1,0 +1,5 @@
+{
+  "_doc": "The automation change trail. Entries appended by the upgrade engineer phase, one commit per run's set, message prefixed upgrade(<date>):. Schema per entry, run_date, kind (fix | improvement), area, change, trigger, files (array), verification, rollback, commit. scan_log entries, run_date, focus, found, applied_or_parked.",
+  "entries": [],
+  "scan_log": []
+}
