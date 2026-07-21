@@ -98,12 +98,20 @@ def main():
     date_path = f"runs/{args.run_date}"
     link = lambda rel: f"{args.raw_base}/{date_path}/{rel}"
 
+    logo_html = ""
+    logo_path = root / "assets" / "alaskaaipic.png"
+    if logo_path.exists():
+        logo_b64 = base64.b64encode(logo_path.read_bytes()).decode()
+        logo_html = (f'<img src="data:image/png;base64,{logo_b64}" width="54" '
+                     f'style="border-radius:6px;vertical-align:middle;'
+                     f'margin-right:12px;"/>')
+
     body = []
     body.append(
         f'<div style="font-family:Georgia,serif;font-size:15px;color:#1a2433;'
         f'max-width:680px;line-height:1.5;">'
         f'<h1 style="font-size:21px;margin:0 0 2px 0;color:#0E2138;">'
-        f'Alaska.Ai — Case File No. {args.case_no}</h1>'
+        f'{logo_html}Alaska.Ai — Case File No. {args.case_no}</h1>'
         f'<p style="margin:0 0 18px 0;color:#5b6b80;">{esc(args.run_date)} · '
         f'branch {esc(args.branch)} · links pinned to the pushed commit</p>')
 

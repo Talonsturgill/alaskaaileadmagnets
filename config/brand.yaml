@@ -5,10 +5,12 @@ brand:
   series_tagline: "Proof of work from companies winning with AI"
   channel: "LinkedIn"
   surface: >
-    Default surface is the founder's personal profile, with the Alaska.Ai page
-    reposting as the archive. Personal reach runs about double the page's and
-    the page already carries the daily news deck, so the two dailies never
-    share one surface. The maintainer owns posting, the machine only drafts.
+    MAINTAINER DECISION 2026-07-21. The series posts to the Alaska.Ai
+    LinkedIn page, same surface as the daily news carousel. The maintainer
+    owns posting and spacing (two dailies on one surface means the human
+    decides what runs when, the machine only drafts). The research note that
+    personal profiles carry roughly 2x page reach stays on file in
+    research/EVIDENCE.md if this is ever revisited.
   audience: >
     Anchorage and Southcentral owners, GMs, and ops leads at businesses of
     roughly 20 to 2000 people. Tourism operators, independent clinics, ANC
@@ -94,6 +96,16 @@ visual:
   constellation:
     wordmark: "ALASKA.AI"
     series_mark: "CASE FILES"                # kicker family on covers
+    logo_asset: "assets/alaskaaipic.png"     # the gold Alaska mark, uploaded by the maintainer 2026-07-21
+    logo_required: true                       # MAINTAINER RULE, every deck carries it
+    logo_rules: >
+      REQUIRED on every deck, at least once, default placement the close
+      slide brand row, plus the Gmail draft header. Enforced by
+      scripts/logo_check.py in the art build phase and by the scorer's hard
+      fail list. Native size is 135x123, keep it at 66px CSS or smaller on
+      slides so it stays crisp at the 2x render, never stretch it. If a
+      larger placement is ever wanted, ask the maintainer for a higher
+      resolution export first.
     site: "alaskaaihq.com"                   # close slide, small, mono, near the mark
     polaris_star: true
     progress_counter: "NN / NN in JetBrains Mono"

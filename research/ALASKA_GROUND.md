@@ -26,10 +26,15 @@ The real AI deployments and pilots.
   run), trained on 5 million plus annotated frames, deployed at about 16 sites
   across Alaska and BC, goal of 100 watersheds by 2028. Processes an hour of
   video in about a minute. Hardware cost fell from about 50k dollars to 10k
-  (5k video only). After federal funding cuts pulled staffing for the Redoubt
-  Lake weir (one source spells it Readout Lake, uncertain), which supports the
-  largest sockeye subsistence fishery in Southeast Alaska, the Sitka Tribe took
-  the project over and the camera kept counting.
+  (5k video only). CORRECTED BY FACT-CHECK 2026-07-21. The lake is Redoubt
+  Lake (an ADF&G release confirms the spelling), it supports ONE OF the
+  largest sockeye subsistence fisheries in Southeast Alaska, and the camera
+  did NOT simply keep the count going. The Forest Service said in February
+  2024 it lacked funds to run the weir, the Sitka Tribe stepped in to support
+  management with a 200,000 dollar tribal wildlife grant proposing AI video
+  with the Wild Salmon Center and USFS, and the 2025 count still ran through
+  the USFS operated physical weir, 8,111 sockeye by June 29 2025. The AI
+  handoff is being built, not done. See runs/2026-07-21 claims c16 to c19.
   https://salmonvision.org/
   https://www.currentflowstate.com/salmon-vision-the-ai-revolution-comes-to-salmon-conservation/
 - NOAA Alaska Fisheries Science Center customized YOLOv11 to detect pollock and
@@ -44,8 +49,9 @@ The real AI deployments and pilots.
   daily over the Wood River, hand labeling footage to train a counting model
   against ADF&G tower counts. Early, no accuracy figures yet.
   https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts
-- The honest counterweight. An ECCV 2024 paper counting fish from echograms of
-  sonar video (ResNet-18) reported a 23 percent count error on Kenai River data.
+- The honest counterweight. A February 2025 arXiv preprint (not peer
+  reviewed) counting fish from echograms of sonar video (ResNet-18) reported
+  a 23 percent count error on Kenai River data, framed as feasibility.
   A DOE Fish Detection AI project trained Faster R-CNN on ADF&G sonar images.
   This problem is advancing, not solved, and saying so is on brand.
   https://arxiv.org/abs/2502.05129

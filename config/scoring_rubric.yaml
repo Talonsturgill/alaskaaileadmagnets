@@ -25,6 +25,7 @@ rubric:
     - "primary text contrast below 4.5:1 at worst point (critic-verified)"
     - "slide count outside 6-12"
     - "machine_qa verdict FAIL, or pdf_mode != vector"
+    - "the brand logo (brand.yaml logo_asset) absent from every slide of the deck (scripts/logo_check.py is the objective gate)"
     - "case company already in ledger/cases.json, or industry/capability repeating any of the last 3 entries without the dossier defending an exception"
     - "hero visual structure identical to any of the last 4 decks (artwork ledger)"
     - "banned phrase from brand.yaml in copy or slides"

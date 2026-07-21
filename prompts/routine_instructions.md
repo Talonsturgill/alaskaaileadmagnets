@@ -202,8 +202,10 @@ stage its bottleneck_map_row for the ship-time knowledge update.
    does the identification work; a breather exists; the receipts slide is
    keepable; the catch is present and material; the translation slide
    speaks to segments; single-ask close carries the configured offer line
-   and the site fixture; >= 2 continuity devices; every number carries a
-   claim-id and vendor labels where due; the variety divergence is stated.
+   and the site fixture; the brand logo (brand.yaml logo_asset) appears at
+   least once, default the close slide brand row; >= 2 continuity devices;
+   every number carries a claim-id and vendor labels where due; the variety
+   divergence is stated.
 
 ## PHASE 5 — COPY CHAMBER
 
@@ -249,7 +251,13 @@ python .claude/skills/carousel-engine/render.py --slides-dir out/<date>/slides -
 python .claude/skills/carousel-engine/qa.py --render-dir out/<date>/render
 ```
 Fix every FAIL (and every warning you cannot justify) and re-render changed
-slides with `--only N,M`. Do not proceed until qa.py exits 0.
+slides with `--only N,M`. Do not proceed until qa.py exits 0. Then run the
+logo gate (maintainer rule, every deck carries the Alaska Ai logo, default
+the close slide brand row):
+```
+python scripts/logo_check.py --slides-dir out/<date>/slides
+```
+Do not proceed until it exits 0.
 
 ## PHASE 7 — PIXEL REVIEW (the taste gate)
 

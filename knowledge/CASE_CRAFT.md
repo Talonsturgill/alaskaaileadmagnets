@@ -59,8 +59,9 @@ then "oh, that is HOW," then "these Alaska AI people talk straight."
    equivalent build honestly looks like here, per ALASKA_TRANSLATION.md.
    Speak to segments, never call out a named local business as a target.
 9. CLOSE. One ask only. The standing offer line from config/brand.yaml, the
-   site small in mono, the constellation marks. Educational close, zero
-   pressure.
+   site small in mono, the constellation marks, and the Alaska Ai logo
+   (required on every deck, scripts/logo_check.py enforces it, default home
+   is this slide's brand row). Educational close, zero pressure.
 
 The grammar is bones, not a template. Slides may merge (bottleneck and build,
 receipts and what it took) when the story is tight, the count may stretch when
