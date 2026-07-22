@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .kicker {
+    position: absolute; left: 96px; top: 106px;
+    font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 24px;
+    letter-spacing: 0.2em; color: #E9A13C;
+  }
+  .tick {
+    position: absolute; right: 96px; top: 108px;
+    font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A;
+  }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .hook {
+    position: absolute; left: 96px; top: 210px; width: 880px; height: 470px;
+    font-family: "Instrument Serif", serif; font-weight: 400;
+    color: #E8F2F0; line-height: 1.06; letter-spacing: -0.005em;
+  }
+  .sub {
+    position: absolute; left: 96px; top: 684px; width: 760px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 34px; line-height: 1.42; color: #AFC6C2;
+  }
+  .coords {
+    position: absolute; left: 96px; bottom: 112px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    color: #6C818A; letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kicker">ALASKA AI &middot; CASE FILES &middot; No. 01</div>
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">01 / 08</div>
+
+  <div class="hook" id="hook">Alaska still counts its salmon by eye.</div>
+
+  <div class="sub">One fish at a time. This series breaks down real wins with
+  targeted AI, and what they honestly mean for an Anchorage operation.</div>
+
+  <div class="coords" data-decorative>57&deg;N &middot; REDOUBT LAKE &middot; SOCKEYE SEASON</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260722);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 0, 5);
+  CF.shafts(cx, 0, 2);
+  CF.silt(cx, 0);
+  CF.spine(cx, 0);
+
+  // Weir pickets crossing the baseline, bleeding off the right edge.
+  // Tops capped at y820 so the quiet text zone stays clean.
+  CF.pickets(cx, 700, 1080, { top: 820, bottom: 1170 });
+
+  // The human count begins, 28 gold tally strokes, partial bundle at the
+  // cut. Stroke tops capped at y854, 28px clear of the sub descenders.
+  CF.tally(cx, 180, 854, 28, { color: '#FFC72C', h: 26, maxX: 640 });
+
+  // One sockeye, tack sharp, swimming right toward the weir.
+  CF.sockeye(cx, 430, 985, 130, -1);
+
+  // Blurred foreground silt motes, multiplane near layer.
+  const rng = AK.rng(20260722 + 91);
+  for (let i = 0; i < 26; i++) {
+    const x = rng() * 1080, y = 860 + rng() * 460, r = 5 + rng() * 10;
+    cx.fillStyle = `rgba(143,184,174,${(0.05 + rng() * 0.05).toFixed(3)})`;
+    cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill();
+  }
+
+  CF.grain(cx, 6, 8801);
+
+  AK.fitText(document.getElementById('hook'), { min: 116, max: 148, maxLines: 3 });
+  resolve();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick { position: absolute; right: 96px; top: 108px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A; }
+  .close {
+    position: absolute; left: 96px; top: 300px; width: 880px; height: 300px;
+    font-family: "Instrument Serif", serif; color: #E8F2F0; line-height: 1.12;
+  }
+  .offer {
+    position: absolute; left: 96px; top: 668px; width: 840px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 34px; line-height: 1.44; color: #E8F2F0;
+  }
+  .sources {
+    position: absolute; left: 96px; top: 792px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 28px; color: #AFC6C2;
+  }
+  .brandrow {
+    position: absolute; left: 96px; bottom: 96px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .wordmark {
+    font-family: "Instrument Serif", serif; font-size: 30px;
+    color: #E8F2F0; letter-spacing: 0.04em;
+  }
+  .site {
+    font-family: "JetBrains Mono", monospace; font-size: 21px;
+    color: #6C818A; letter-spacing: 0.1em; padding-top: 5px;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="tick">08 / 08</div>
+
+  <div class="close" id="close">The camera got cheap.<br>The trust still has
+  to be built.</div>
+
+  <div class="offer">We do this kind of analysis for Alaska businesses, free.
+  If you want your operation looked at this way, say the word.</div>
+
+  <div class="sources">Sources ride in the first comment.</div>
+
+  <div class="brandrow">
+    <img src="@@ASSETS@@/alaskaaipic.png" width="64" height="58" alt="" style="border-radius:6px;">
+    <div class="wordmark">ALASKA.AI</div>
+    <div class="site" data-decorative>alaskaaihq.com</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260729);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 7, 3);
+  CF.shafts(cx, 7, 2);
+  CF.silt(cx, 7, 160);
+
+  // The final stretch of the spine. The bed continues, the baseline runs,
+  // tally strokes resolve into long calm intervals, then the line lifts
+  // and seals into a gold star.
+  CF.spine(cx, 7, { baseline: false });
+  const y = CF.BASELINE_Y;
+  // The lift stays right of x880 above y660 so it never grazes the offer
+  // line terminals (pixel critic catch).
+  cx.strokeStyle = 'rgba(159,178,184,0.85)';
+  cx.lineWidth = 2.5;
+  cx.beginPath(); cx.moveTo(0, y); cx.lineTo(870, y);
+  cx.bezierCurveTo(935, y, 940, 700, 940, 292);
+  cx.stroke();
+
+  // Sparse resolving tallies, tops kept clear of the sources line above.
+  CF.tally(cx, 140, y - 30, 5, { color: 'rgba(159,178,184,0.6)', h: 26, gap: 26, bundleGap: 30 });
+  CF.tally(cx, 360, y - 30, 3, { color: 'rgba(159,178,184,0.45)', h: 26, gap: 40 });
+
+  // The seal. The deck's last gold, a Polaris drawn at the line's end.
+  const sx = 940, sy = 262;
+  cx.fillStyle = '#FFC72C';
+  cx.beginPath();
+  const R1 = 26, R2 = 7.5;
+  for (let i = 0; i < 8; i++) {
+    const a = (Math.PI / 4) * i - Math.PI / 2;
+    const r = i % 2 === 0 ? R1 : R2;
+    const px = sx + Math.cos(a) * r, py = sy + Math.sin(a) * r;
+    i === 0 ? cx.moveTo(px, py) : cx.lineTo(px, py);
+  }
+  cx.closePath(); cx.fill();
+  const halo = cx.createRadialGradient(sx, sy, 0, sx, sy, 70);
+  halo.addColorStop(0, 'rgba(255,218,110,0.28)');
+  halo.addColorStop(1, 'rgba(255,218,110,0)');
+  cx.fillStyle = halo;
+  cx.beginPath(); cx.arc(sx, sy, 70, 0, Math.PI * 2); cx.fill();
+
+  // The edge-tease sockeye from S7 completes its crossing, straddling the
+  // seam so the S7 cut finishes exactly at x0, nose pointing right.
+  CF.sockeye(cx, 8, 955, 120, -1);
+
+  CF.grain(cx, 5, 8808);
+
+  AK.fitText(document.getElementById('close'), { min: 54, max: 72, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick { position: absolute; right: 96px; top: 108px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A; }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .head {
+    position: absolute; left: 96px; top: 140px; width: 700px; height: 160px;
+    font-family: "Instrument Serif", serif; color: #E8F2F0; line-height: 1.08;
+  }
+  .body {
+    position: absolute; left: 96px; top: 330px; width: 620px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 32px; line-height: 1.42; color: #C9D8D4;
+  }
+  .chiprow { position: absolute; left: 96px; top: 656px; display: flex; gap: 14px; }
+  .chiprow2 { position: absolute; left: 96px; top: 704px; display: flex; }
+  .chip {
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    letter-spacing: 0.08em; background: rgba(6,26,29,0.82);
+    border: 1px solid #2E6E6A; border-radius: 4px; padding: 6px 10px;
+  }
+  .chip.program { color: #E9A13C; }
+  .chip.reported { color: #E9A13C; }
+  .partners {
+    position: absolute; left: 96px; top: 764px; width: 520px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px; line-height: 1.35;
+    letter-spacing: 0.06em; color: #6C818A;
+  }
+  .serieslabel {
+    position: absolute; left: 606px; top: 498px; width: 330px;
+    font-family: "JetBrains Mono", monospace; font-size: 24px; line-height: 1.35;
+    letter-spacing: 0.04em; color: #43A97A; text-align: right;
+  }
+  .barlabelA {
+    position: absolute; left: 836px; top: 144px; width: 170px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px; color: #6C818A; text-align: right;
+  }
+  .barlabelB {
+    position: absolute; left: 734px; top: 564px; width: 266px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px; color: #E9A13C; text-align: right;
+  }
+  .stipnote {
+    position: absolute; left: 96px; bottom: 92px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px; color: #4E6A66; letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">03 / 08</div>
+
+  <div class="head" id="head">The machine arrives</div>
+
+  <div class="body">SalmonVision counts salmon from underwater camera video.
+  Sixteen sites across Alaska and BC in 2025, over 20 projects now, the
+  program's figure. Trained on over 5 million labeled frames.</div>
+
+  <div class="chiprow">
+    <div class="chip reported" data-decorative>SITES AS REPORTED</div>
+    <div class="chip program" data-decorative>PROGRAM FIGURES</div>
+  </div>
+  <div class="chiprow2">
+    <div class="chip reported" data-decorative>SPEED AS REPORTED</div>
+  </div>
+  <div class="partners" data-decorative>SITKA TRIBE AND ADF&amp;G LISTED<br>AMONG PARTNERS &middot; PROGRAM PAGE</div>
+
+  <div class="serieslabel" data-decorative>16 SITES 2025<br>20 PLUS PROJECTS NOW</div>
+  <div class="barlabelA" data-decorative>1 HR OF VIDEO</div>
+  <div class="barlabelB" data-decorative>ABOUT 1 MIN TO READ</div>
+
+  <div class="stipnote" data-decorative>EACH DOT STANDS FOR MANY FRAMES</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260724);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 2, 4);
+  CF.silt(cx, 2);
+  CF.spine(cx, 2);
+
+  // The labeled-frames stipple field, low band, capped Poisson-ish.
+  const rng = AK.rng(20260724 + 41);
+  for (let i = 0; i < 2600; i++) {
+    const x = rng() * 1080, y = 900 + rng() * 400;
+    cx.fillStyle = `rgba(233,161,60,${(0.05 + rng() * 0.07).toFixed(3)})`;
+    cx.fillRect(x, y, 1.6, 1.6);
+  }
+
+  // The machine series rises off the human baseline. 16 solid + 4 dashed nodes.
+  const x0 = 140, y0 = CF.BASELINE_Y, x1 = 940, y1 = 640;
+  const pts = [];
+  for (let i = 0; i < 20; i++) {
+    const t = i / 19;
+    pts.push([x0 + (x1 - x0) * t, y0 - (y0 - y1) * Math.pow(t, 1.35)]);
+  }
+  cx.strokeStyle = '#43A97A'; cx.lineWidth = 3; cx.setLineDash([]);
+  cx.beginPath();
+  pts.slice(0, 16).forEach((p, i) => i ? cx.lineTo(p[0], p[1]) : cx.moveTo(p[0], p[1]));
+  cx.stroke();
+  cx.setLineDash([4, 8]);
+  cx.beginPath();
+  pts.slice(15).forEach((p, i) => i ? cx.lineTo(p[0], p[1]) : cx.moveTo(p[0], p[1]));
+  cx.stroke();
+  cx.setLineDash([]);
+  pts.forEach((p, i) => {
+    cx.beginPath();
+    cx.arc(p[0], p[1], 5, 0, Math.PI * 2);
+    if (i < 16) { cx.fillStyle = '#43A97A'; cx.fill(); }
+    else { cx.strokeStyle = '#43A97A'; cx.lineWidth = 2; cx.stroke(); }
+  });
+
+  // The 60 to 1 bar, right rail. Sixty fine ticks, one lit gold minute.
+  const bxr = 960, byTop = 170, byBot = 520;
+  for (let i = 0; i < 60; i++) {
+    const y = byTop + (byBot - byTop) * (i / 59);
+    cx.strokeStyle = 'rgba(159,178,184,0.5)';
+    cx.lineWidth = 1.6;
+    cx.beginPath(); cx.moveTo(bxr, y); cx.lineTo(bxr + 44, y); cx.stroke();
+  }
+  cx.strokeStyle = '#FFC72C'; cx.lineWidth = 5;
+  cx.beginPath(); cx.moveTo(bxr - 6, byBot + 26); cx.lineTo(bxr + 50, byBot + 26); cx.stroke();
+
+  CF.grain(cx, 6, 8803);
+
+  AK.fitText(document.getElementById('head'), { min: 58, max: 70, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

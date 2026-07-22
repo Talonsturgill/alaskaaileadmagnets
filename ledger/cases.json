@@ -1,4 +1,25 @@
 {
   "_doc": "Every SHIPPED case file, appended at ship time. The rotation gates read this. Schema per entry, run_date, case_file_no, bank_id, company, industry, capability, flavor (case_file | capability_file | reality_check | translation), angle, headline, evidence_strength, sources_lead (array), outcome_notes. Company never repeats. Industry must differ from the last 3 entries. Capability must differ from the last 3 entries. Flavor rhythm per prompts/routine_instructions.md.",
-  "entries": []
+  "entries": [
+    {
+      "run_date": "2026-07-21",
+      "case_file_no": 1,
+      "bank_id": "local:salmonvision",
+      "company": "SalmonVision program and Alaska's salmon counting system (translation flavor, no single company)",
+      "industry": "fisheries",
+      "capability": "computer_vision_counting",
+      "flavor": "translation",
+      "angle": "Alaska still counts salmon by eye, the counting machine arriving north, Redoubt Lake told straight, the watch and count translation for operators",
+      "headline": "Alaska still counts its salmon by eye.",
+      "evidence_strength": "strong",
+      "sources_lead": [
+        "https://www.adfg.alaska.gov/sf/EONR/index.cfm?ADFG=region.NR&Year=2025&NRID=3897",
+        "https://www.adfg.alaska.gov/index.cfm?adfg=sonar.didson",
+        "https://www.currentflowstate.com/salmon-vision-the-ai-revolution-comes-to-salmon-conservation/",
+        "https://salmonvision.org/",
+        "https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts"
+      ],
+      "outcome_notes": "First live run, driven in-session as the manual test. Score 8.39 ship at round 3 threshold 8.0. Fact-check killed the intended payoff (c31) and the honest version shipped. 28 verified claims, honesty gate two rounds, pixel critics three rounds, flow critic ship 8.5."
+    }
+  ]
 }

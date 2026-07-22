@@ -1,0 +1,13 @@
+{
+  "chars": 724,
+  "hook": "Alaska still counts salmon by eye. A technician watches sonar video and tallies fish one at a time.",
+  "hook_len": 99,
+  "hashtags": [
+    "#AlaskaFisheries",
+    "#MachineVision",
+    "#AnchorageBusiness"
+  ],
+  "fails": [],
+  "warns": [],
+  "verdict": "PASS"
+}

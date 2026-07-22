@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick { position: absolute; right: 96px; top: 108px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A; }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .head {
+    position: absolute; left: 96px; top: 120px; width: 620px; height: 120px;
+    font-family: "Instrument Serif", serif; color: #E8F2F0; line-height: 1.08;
+  }
+  .plate {
+    position: absolute; top: 252px; width: 272px; height: 224px;
+    background: rgba(6,26,29,0.86); border: 1px solid #2E6E6A; border-radius: 6px;
+    padding: 20px 22px; box-sizing: border-box;
+  }
+  .p1 { left: 96px; } .p2 { left: 404px; } .p3 { left: 712px; }
+  .plate .v {
+    font-family: "Archivo", sans-serif; font-weight: 800; font-stretch: 90%;
+    font-size: 40px; color: #E8F2F0; font-variant-numeric: tabular-nums;
+  }
+  .plate .l {
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 88%;
+    font-size: 25px; line-height: 1.26; color: #AFC6C2; padding-top: 8px;
+  }
+  .plate .c {
+    position: absolute; left: 22px; bottom: 12px;
+    font-family: "JetBrains Mono", monospace; font-size: 19px; letter-spacing: 0.08em;
+    background: rgba(6,26,29,0.82); border: 1px solid #2E6E6A;
+    border-radius: 4px; padding: 5px 9px;
+  }
+  .cprog { color: #E9A13C; } .cres { color: #43A97A; }
+  .rule {
+    position: absolute; left: 96px; top: 520px; width: 800px;
+    font-family: "Archivo", sans-serif; font-weight: 700; font-stretch: 90%;
+    font-size: 34px; color: #E8F2F0;
+  }
+  .err {
+    position: absolute; left: 96px; top: 604px; width: 640px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 32px; line-height: 1.4; color: #C9D8D4;
+  }
+  .errchip {
+    position: absolute; left: 780px; top: 616px;
+    font-family: "JetBrains Mono", monospace; font-size: 19px; letter-spacing: 0.08em;
+    color: #43A97A; background: rgba(6,26,29,0.82);
+    border: 1px solid #2E6E6A; border-radius: 4px; padding: 5px 9px;
+  }
+  .drone {
+    position: absolute; left: 96px; top: 964px; width: 920px;
+    font-family: "JetBrains Mono", monospace; font-size: 19px;
+    letter-spacing: 0.04em; color: #6C818A; white-space: nowrap;
+  }
+  .takeaway {
+    position: absolute; left: 96px; top: 1032px; width: 780px;
+    font-family: "Archivo", sans-serif; font-weight: 700; font-stretch: 90%;
+    font-size: 34px; line-height: 1.36; color: #E8F2F0;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">06 / 08</div>
+
+  <div class="head" id="head">The catch</div>
+
+  <div class="plate p1">
+    <div class="v">90 percent</div>
+    <div class="l">species detection</div>
+    <div class="c cprog" data-decorative>PROGRAM</div>
+  </div>
+  <div class="plate p2">
+    <div class="v">80.2 mAP</div>
+    <div class="l">current model</div>
+    <div class="c cprog" data-decorative>PROGRAM</div>
+  </div>
+  <div class="plate p3">
+    <div class="v">67.6 mAP</div>
+    <div class="l">earlier benchmark, over 90 coho, over 80 sockeye</div>
+    <div class="c cres" data-decorative>RESEARCH</div>
+  </div>
+
+  <div class="rule">Different measurements. Do not average them.</div>
+
+  <div class="err">About a 23 percent count error on Kenai sonar, a February
+  2025 preprint. Feasibility, not a solved problem.</div>
+  <div class="errchip" data-decorative>RESEARCH</div>
+
+  <div class="drone" data-decorative>BRISTOL BAY DRONE &middot; VALIDATION AGAINST TOWER COUNTS IS A NEXT PHASE</div>
+
+  <div class="takeaway">Clear water counts well. Sonar stays hard. The proven
+  win today is review time.</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260727);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 5, 3);
+  CF.silt(cx, 5, 150);
+  CF.spine(cx, 5);
+
+  // The error band on the baseline. 100 fine ticks, a shaded amber band
+  // spanning the first 23, a dashed next-phase marker at the right end.
+  const tx0 = 120, tx1 = 900, y = CF.BASELINE_Y;
+  // shaded band over ticks 0..23
+  const bandW = (tx1 - tx0) * 0.23;
+  cx.fillStyle = 'rgba(233,161,60,0.12)';
+  cx.fillRect(tx0, y - 34, bandW, 68);
+  cx.strokeStyle = 'rgba(233,161,60,0.5)';
+  cx.lineWidth = 1.5;
+  cx.strokeRect(tx0, y - 34, bandW, 68);
+  for (let i = 0; i <= 100; i++) {
+    const x = tx0 + (tx1 - tx0) * (i / 100);
+    const tall = i % 10 === 0;
+    cx.strokeStyle = 'rgba(159,178,184,0.55)';
+    cx.lineWidth = 1.4;
+    cx.beginPath();
+    cx.moveTo(x, y - (tall ? 16 : 9));
+    cx.lineTo(x, y + (tall ? 16 : 9));
+    cx.stroke();
+  }
+  // dashed next-phase marker (the drone validation, a plan not a result)
+  cx.save();
+  cx.setLineDash([4, 8]);
+  cx.strokeStyle = 'rgba(159,178,184,0.6)';
+  cx.lineWidth = 2;
+  cx.beginPath(); cx.moveTo(940, y - 30); cx.lineTo(940, y + 30); cx.stroke();
+  cx.beginPath(); cx.arc(940, y - 52, 12, 0, Math.PI * 2); cx.stroke();
+  cx.restore();
+
+  // The tally motif admits the miss, one in four strokes fractured.
+  CF.tally(cx, 130, y + 44, 32, { color: 'rgba(159,178,184,0.5)', h: 26, fracturedEvery: 4, maxX: 620 });
+
+  CF.grain(cx, 5, 8806);
+
+  AK.fitText(document.getElementById('head'), { min: 56, max: 66, maxLines: 1 });
+  resolve();
+});
+</script>
+</body>
+</html>

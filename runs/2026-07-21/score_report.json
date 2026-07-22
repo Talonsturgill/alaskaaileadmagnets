@@ -1,0 +1,24 @@
+{
+  "hard_fails": "all 18 rubric hard fails checked PASS with evidence, see the scorer transcript summary in the run retro",
+  "criteria": [
+    {"name": "Thumb-stop cover", "score": 9, "weight": 0.12},
+    {"name": "Story arc & swipe momentum", "score": 9, "weight": 0.12},
+    {"name": "Artwork craft & genuine detail", "score": 8, "weight": 0.13},
+    {"name": "Story-art fusion", "score": 9, "weight": 0.10},
+    {"name": "Translation strength & local relevance", "score": 8, "weight": 0.11},
+    {"name": "Insight density & factual weight", "score": 8, "weight": 0.08},
+    {"name": "Honesty & evidence discipline", "score": 8, "weight": 0.10},
+    {"name": "Variety vs ledger", "score": 9, "weight": 0.06},
+    {"name": "Legibility & platform fitness", "score": 7, "weight": 0.06},
+    {"name": "Copy voice & hook", "score": 9, "weight": 0.05},
+    {"name": "Deliverable completeness", "score": 8, "weight": 0.07}
+  ],
+  "calculation": "(9x0.12)+(9x0.12)+(8x0.13)+(9x0.10)+(8x0.11)+(8x0.08)+(8x0.10)+(9x0.06)+(7x0.06)+(9x0.05)+(8x0.07) = 8.39",
+  "weighted_total": 8.39,
+  "threshold": 8.0,
+  "revision_rounds": 3,
+  "ship": true,
+  "weakest_criterion": "Legibility & platform fitness",
+  "one_sentence_fix": "Add the honest local cost shape as a labeled range with its stated assumption to S7 or the caption (subscription per camera per month vs an engineering build measured in weeks, hardware low thousands to about ten thousand per position).",
+  "editor_notes_for_email": "No hard fails, 8.39 clears the round 3 threshold of 8.0. Before posting, (1) the first comment's USFS line points at the fs.usda.gov homepage, hand swap a deep Redoubt link if you have one, that receipt is the one a skeptic pokes, (2) if anyone challenges the 16 to 20 plus row, slide 3 already splits it, 16 sites in 2025 relayed independently, 20 plus projects is the program page's current figure, (3) paste the first comment within 60 seconds of posting."
+}

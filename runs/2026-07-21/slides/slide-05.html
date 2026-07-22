@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick { position: absolute; right: 96px; top: 108px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A; }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .head {
+    position: absolute; left: 96px; top: 120px; width: 620px; height: 120px;
+    font-family: "Instrument Serif", serif; color: #E8F2F0; line-height: 1.08;
+  }
+  .rows { position: absolute; left: 96px; top: 248px; width: 888px; }
+  .row {
+    display: flex; align-items: baseline; gap: 26px;
+    border-bottom: 1px solid rgba(46,110,106,0.5);
+    padding: 17px 0 13px 0;
+  }
+  .row:last-child { border-bottom: none; }
+  .val {
+    font-family: "Archivo", sans-serif; font-weight: 800; font-stretch: 90%;
+    font-size: 42px; color: #E8F2F0; min-width: 296px;
+    font-variant-numeric: tabular-nums;
+  }
+  .lbl {
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 30px; line-height: 1.3; color: #AFC6C2; flex: 1;
+  }
+  .chip {
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    letter-spacing: 0.08em; background: rgba(6,26,29,0.82);
+    border: 1px solid #2E6E6A; border-radius: 4px; padding: 5px 9px;
+    white-space: nowrap;
+  }
+  .gov { color: #9FB2B8; }
+  .prog { color: #E9A13C; }
+  .footerline {
+    position: absolute; left: 96px; bottom: 108px; width: 700px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 28px; color: #AFC6C2;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">05 / 08</div>
+
+  <div class="head" id="head">The receipts</div>
+
+  <div class="rows">
+    <div class="row">
+      <div class="val">8,111</div>
+      <div class="lbl">sockeye through the Redoubt weir, 2025</div>
+      <div class="chip gov" data-decorative>ADF&amp;G</div>
+    </div>
+    <div class="row">
+      <div class="val">16 to 20 plus</div>
+      <div class="lbl">sites in 2025, projects now</div>
+      <div class="chip prog" data-decorative>REPORTED</div>
+    </div>
+    <div class="row">
+      <div class="val">5 million plus</div>
+      <div class="lbl">labeled frames behind the model</div>
+      <div class="chip prog" data-decorative>PROGRAM</div>
+    </div>
+    <div class="row">
+      <div class="val">$50k to $10k</div>
+      <div class="lbl">rig cost with edge box, video only about $5k</div>
+      <div class="chip prog" data-decorative>REPORTED</div>
+    </div>
+    <div class="row">
+      <div class="val">60 to 1</div>
+      <div class="lbl">an hour of video, about a minute to read</div>
+      <div class="chip prog" data-decorative>REPORTED</div>
+    </div>
+    <div class="row">
+      <div class="val">in hours</div>
+      <div class="lbl">NOAA bycatch review, versus days to weeks of human review</div>
+      <div class="chip gov" data-decorative>NOAA</div>
+    </div>
+  </div>
+
+  <div class="footerline">Save this. Every number wears its source.<br>Next,
+  the part these numbers do not say.</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260726);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 4, 3);
+  CF.silt(cx, 4, 150);
+  // Baseline drawn only at the seams on this slide, the state table says it
+  // BECOMES the table's axis rule, and a live rule through row 6 read as a
+  // strikethrough of the NOAA chip (pixel critic catch).
+  CF.spine(cx, 4, { baseline: false });
+  cx.strokeStyle = 'rgba(159,178,184,0.6)';
+  cx.lineWidth = 2.5;
+  cx.beginPath(); cx.moveTo(0, CF.BASELINE_Y); cx.lineTo(64, CF.BASELINE_Y); cx.stroke();
+  cx.beginPath(); cx.moveTo(1016, CF.BASELINE_Y); cx.lineTo(1080, CF.BASELINE_Y); cx.stroke();
+
+  // The baseline becomes the scoreboard's axis, echoed as a steel rule at
+  // the table top.
+  cx.strokeStyle = 'rgba(159,178,184,0.85)';
+  cx.lineWidth = 2.5;
+  cx.beginPath(); cx.moveTo(96, 252); cx.lineTo(984, 252); cx.stroke();
+
+  // The cost stair, heights linear to 50, 10, 5. Amber, parallel projection.
+  const sx = 720, sy = 1210, unit = 1.8;
+  const bars = [[50, '$50k'], [10, '$10k'], [5, '$5k']];
+  bars.forEach((b, i) => {
+    const h = b[0] * unit, x = sx + i * 96;
+    cx.fillStyle = 'rgba(233,161,60,0.85)';
+    cx.fillRect(x, sy - h, 56, h);
+    cx.fillStyle = 'rgba(233,161,60,0.35)';
+    cx.beginPath();
+    cx.moveTo(x, sy - h); cx.lineTo(x + 14, sy - h - 10);
+    cx.lineTo(x + 70, sy - h - 10); cx.lineTo(x + 56, sy - h);
+    cx.closePath(); cx.fill();
+  });
+
+  CF.grain(cx, 5, 8805);
+
+  AK.fitText(document.getElementById('head'), { min: 56, max: 66, maxLines: 1 });
+  resolve();
+});
+</script>
+</body>
+</html>

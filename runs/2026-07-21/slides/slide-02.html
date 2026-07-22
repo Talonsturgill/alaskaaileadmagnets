@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick {
+    position: absolute; right: 96px; top: 108px;
+    font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A;
+  }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .head {
+    position: absolute; left: 96px; top: 150px; width: 620px; height: 170px;
+    font-family: "Instrument Serif", serif; font-weight: 400;
+    color: #E8F2F0; line-height: 1.08;
+  }
+  .body {
+    position: absolute; left: 96px; top: 340px; width: 560px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 34px; line-height: 1.42; color: #C9D8D4;
+  }
+  .chip {
+    position: absolute; left: 96px; top: 604px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    letter-spacing: 0.08em; color: #9FB2B8;
+    background: rgba(6,26,29,0.82); border: 1px solid #2E6E6A;
+    border-radius: 4px; padding: 6px 10px;
+  }
+  .ident {
+    position: absolute; left: 96px; top: 726px; width: 560px;
+    font-family: "Archivo", sans-serif; font-weight: 700; font-stretch: 90%;
+    font-size: 36px; line-height: 1.34; color: #E8F2F0;
+  }
+  .readout {
+    position: absolute; left: 690px; top: 770px; width: 300px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    letter-spacing: 0.08em; color: #6C818A; text-align: center;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">02 / 08</div>
+
+  <div class="head" id="head">The job today</div>
+
+  <div class="body">A technician watches sonar video and counts fish by eye.
+  The state calls it labor and time intensive. Weirs and towers where water
+  runs clear. Sonar where it runs silty.</div>
+
+  <div class="chip" data-decorative>SOURCE ADF&amp;G</div>
+
+  <div class="ident">Swap the river for an intake line or a gate. Same job.</div>
+
+  <div class="readout" data-decorative>ARIS IMAGING SONAR</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260723);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 1, 4);
+  CF.silt(cx, 1);
+  CF.spine(cx, 1);
+
+  // The instrument. ARIS wedge fan opening upward, amber on a dark bezel.
+  // The bezel is clipped to x >= 668 so it never runs under the body text.
+  const bx = 830, by = 460, R = 280;
+  cx.save();
+  cx.beginPath(); cx.rect(668, 0, 412, 1350); cx.clip();
+  cx.fillStyle = 'rgba(10,39,43,0.88)';
+  cx.beginPath(); cx.arc(bx, by, R + 34, 0, Math.PI * 2); cx.fill();
+  cx.strokeStyle = 'rgba(108,129,138,0.5)';
+  cx.lineWidth = 2;
+  cx.beginPath(); cx.arc(bx, by, R + 34, 0, Math.PI * 2); cx.stroke();
+  // Panel scanlines, clipped to the bezel disc.
+  cx.save();
+  cx.beginPath(); cx.arc(bx, by, R + 33, 0, Math.PI * 2); cx.clip();
+  cx.fillStyle = 'rgba(6,26,29,0.35)';
+  for (let sy = by - R - 34; sy < by + R + 34; sy += 3) cx.fillRect(bx - R - 34, sy, (R + 34) * 2, 1);
+  cx.restore();
+  cx.restore();
+  const blips = CF.sonarWedge(cx, bx, by, R, 1, { rings: 7, blips: 12 });
+  // Ring one blip in steel, the technician's current target.
+  cx.save();
+  cx.translate(bx, by); cx.rotate(-Math.PI / 2);
+  const t = blips[4];
+  cx.beginPath(); cx.arc(t[0], t[1], 22, 0, Math.PI * 2);
+  cx.strokeStyle = '#9FB2B8'; cx.lineWidth = 2; cx.stroke();
+  cx.restore();
+
+  // The hand tally at the screen, five gold strokes on a small plate.
+  cx.fillStyle = 'rgba(6,26,29,0.85)';
+  cx.fillRect(760, 820, 150, 60);
+  cx.strokeStyle = '#2E6E6A'; cx.lineWidth = 1;
+  cx.strokeRect(760, 820, 150, 60);
+  CF.tally(cx, 786, 833, 5, { color: '#FFC72C', h: 34 });
+
+  // The baseline carries small accumulating steel tallies near the station.
+  CF.tally(cx, 120, 848, 22, { color: 'rgba(159,178,184,0.6)', h: 28, maxX: 560 });
+
+  // Seam continuity, S1's picket line trails onto this slide's left edge.
+  cx.save();
+  cx.globalAlpha = 0.5;
+  CF.pickets(cx, 8, 60, { top: 830, bottom: 1170 });
+  cx.restore();
+
+  CF.grain(cx, 6, 8802);
+
+  AK.fitText(document.getElementById('head'), { min: 58, max: 70, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

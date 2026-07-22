@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
+  body { background: #061A1D; position: relative; }
+  #art { position: absolute; inset: 0; }
+  .tick { position: absolute; right: 96px; top: 108px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #6C818A; }
+  .polaris { position: absolute; right: 210px; top: 106px; }
+  .head {
+    position: absolute; left: 96px; top: 140px; width: 720px; height: 150px;
+    font-family: "Instrument Serif", serif; color: #E8F2F0; line-height: 1.08;
+  }
+  .hero {
+    position: absolute; left: 96px; top: 300px;
+    font-family: "Archivo", sans-serif; font-weight: 800; font-stretch: 90%;
+    font-size: 150px; color: #FFC72C; letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums;
+  }
+  .herochip {
+    position: absolute; left: 470px; top: 348px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px; letter-spacing: 0.08em;
+    color: #9FB2B8; background: rgba(6,26,29,0.82);
+    border: 1px solid #2E6E6A; border-radius: 4px; padding: 6px 10px;
+  }
+  .herolabel {
+    position: absolute; left: 96px; top: 486px; width: 560px;
+    font-family: "Archivo", sans-serif; font-weight: 600; font-stretch: 90%;
+    font-size: 32px; line-height: 1.35; color: #E8F2F0;
+  }
+  .body {
+    position: absolute; left: 96px; top: 604px; width: 560px;
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 32px; line-height: 1.42; color: #C9D8D4;
+  }
+  .bodychips { position: absolute; left: 96px; top: 826px; display: flex; gap: 12px; }
+  .bodychips div {
+    font-family: "JetBrains Mono", monospace; font-size: 20px; letter-spacing: 0.08em;
+    background: rgba(6,26,29,0.82);
+    border: 1px solid #2E6E6A; border-radius: 4px; padding: 6px 10px;
+  }
+  .amber { color: #E9A13C; } .steel { color: #9FB2B8; }
+  .quote {
+    position: absolute; left: 96px; top: 906px; width: 700px;
+    background: rgba(6,26,29,0.86); border-left: 3px solid #9FB2B8;
+    padding: 22px 26px;
+  }
+  .quote .q {
+    font-family: "Instrument Serif", serif; font-size: 36px;
+    line-height: 1.25; color: #E8F2F0;
+  }
+  .quote .a {
+    font-family: "Archivo", sans-serif; font-weight: 500; font-stretch: 90%;
+    font-size: 24px; color: #9FB2B8; padding-top: 10px;
+  }
+  .proposed {
+    position: absolute; left: 788px; top: 394px;
+    font-family: "JetBrains Mono", monospace; font-size: 20px;
+    letter-spacing: 0.14em; color: #9FB2B8;
+  }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <svg class="polaris" width="22" height="22" viewBox="0 0 34 34" aria-hidden="true">
+    <path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/>
+  </svg>
+  <div class="tick">04 / 08</div>
+
+  <div class="head" id="head">Redoubt Lake, told straight</div>
+
+  <div class="hero">8,111</div>
+  <div class="herochip" data-decorative>SOURCE ADF&amp;G RELEASE</div>
+  <div class="herolabel">sockeye counted through the physical weir by June 29 2025</div>
+
+  <div class="body">The Forest Service ran out of weir money in February 2024.
+  A 200,000 dollar tribal grant proposes AI video. The count still came
+  through steel.</div>
+  <div class="bodychips" data-decorative>
+    <div class="amber">GRANT AS REPORTED</div>
+    <div class="steel">WEIR RUN BY USFS</div>
+  </div>
+
+  <div class="quote">
+    <div class="q">"Video weirs tend to reduce migration delays fairly
+    dramatically, when compared to sort of traditional trap-associated
+    weirs."</div>
+    <div class="a">Dr William Atlas, senior salmon watershed scientist,<br>Wild
+    Salmon Center</div>
+  </div>
+
+  <div class="proposed" data-decorative>PROPOSED</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/cf-spine.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260725);
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  CF.water(cx);
+  CF.wash(cx, 3, 3);
+  CF.shafts(cx, 3, 2);
+  CF.silt(cx, 3, 180);
+  CF.spine(cx, 3);
+
+  // The SOLID physical weir, right half, the thing that actually counted.
+  CF.pickets(cx, 540, 1080, { top: 690, bottom: 1190, spacing: 46 });
+
+  // Dense season tally band under the weir, steel, the human count at work.
+  CF.tally(cx, 560, 846, 40, { color: 'rgba(159,178,184,0.55)', h: 28, maxX: 1050 });
+
+  // The AI video rig, drawn ENTIRELY in phantom dash. Proposed, not
+  // deployed. Nudged clear of the ADF&G chip so solid and dashed grammars
+  // never touch.
+  CF.phantomRect(cx, 784, 228, 190, 120);
+  cx.save();
+  cx.strokeStyle = 'rgba(159,178,184,0.45)';
+  cx.lineWidth = 2;
+  cx.setLineDash([4, 8]);
+  cx.beginPath(); cx.arc(879, 288, 34, 0, Math.PI * 2); cx.stroke();      // lens
+  cx.beginPath(); cx.moveTo(879, 348); cx.lineTo(879, 690); cx.stroke();  // mount
+  cx.restore();
+
+  CF.grain(cx, 6, 8804);
+
+  AK.fitText(document.getElementById('head'), { min: 56, max: 66, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

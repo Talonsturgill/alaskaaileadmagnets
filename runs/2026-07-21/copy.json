@@ -1,0 +1,30 @@
+{
+  "post_copy": "Alaska still counts salmon by eye. A technician watches sonar video and tallies fish one at a time.\n\nA camera that counts salmon ran at sixteen sites across Alaska and BC in 2025, the program's figure. The program reports the rig cost fell from about 50,000 dollars to about 10,000. At Redoubt Lake a tribal grant proposes AI video and the 2025 count still ran through a steel weir.\n\nThe deck covers the receipts, the catch, and the honest Anchorage translation.\n\nWe do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.\n\nWhat do your people still count by hand, and what happened when you tried to automate it?\n\n#AlaskaFisheries #MachineVision #AnchorageBusiness",
+  "hook_chars": 99,
+  "total_chars": 724,
+  "hashtags": ["#AlaskaFisheries", "#MachineVision", "#AnchorageBusiness"],
+  "first_comment": "Sources, primary first\nADF&G news release, Redoubt weir operational June 14 2025 and 8,111 sockeye counted by June 29, https://www.adfg.alaska.gov/sf/EONR/index.cfm?ADFG=region.NR&Year=2025&NRID=3897\nADF&G sonar overview, weirs and towers need clear narrow water, https://www.adfg.alaska.gov/index.cfm?adfg=sonar.main\nADF&G on DIDSON and ARIS, a technician watching video counts the fish, https://www.adfg.alaska.gov/index.cfm?adfg=sonar.didson\nNOAA Fisheries, bycatch review in hours versus days to weeks, https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery\nUS Forest Service, Redoubt Lake among the largest sockeye fisheries in Southeast Alaska, https://www.fs.usda.gov/\nSitka Sentinel, the Forest Service out of weir funds in February 2024 and the 200,000 dollar grant proposing AI video, https://sitkasentinel.com/stories/sta-sealaska-sign-accord-on-redoubt-operation,57360\nAlaska Public Media, the Bristol Bay drone and its next phase tower count validation, https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts\narXiv, about 23 percent count error on Kenai sonar, February 2025, a preprint, not peer reviewed, https://arxiv.org/abs/2502.05129\nCurrent Flow State, sixteen sites, the 67.6 mAP benchmark, rig costs, program figures relayed by an independent outlet, https://www.currentflowstate.com/salmon-vision-the-ai-revolution-comes-to-salmon-conservation/\nSalmonVision program page, 90 percent detection, 80.2 mAP, 5 million frames, program self report, https://salmonvision.org/\nMore case files live at https://alaskaaihq.com\nRun a watch and count job yourself? Add your numbers or your war story below.",
+  "document_title": "Case File No. 1, One Fish at a Time",
+  "slide_copy_corrections": [
+    {"slide": 1, "field": "coords footer", "now": "57 degrees N, minutes dropped as unverified", "applied": true},
+    {"slide": 3, "field": "body", "now": "hour to a minute sentence removed, lives on the rail and in S5", "applied": true},
+    {"slide": 6, "field": "error band block", "now": "About a 23 percent count error on Kenai sonar, a February 2025 preprint. Feasibility, not a solved problem.", "applied": true},
+    {"slide": 7, "field": "lane 2 note", "now": "if a scan already captures it, plain software wins", "applied": true},
+    {"slide": 1, "field": "coords footer", "now": "SOCKEYE SEASON without LIVE, current year Redoubt operation is not assertable", "applied": true, "source": "case-critic"},
+    {"slide": 2, "field": "bezel readout", "now": "ARIS IMAGING SONAR, date stripped so the decorative mark carries no factual number", "applied": true, "source": "case-critic"},
+    {"slide": 3, "field": "chips", "now": "SITES AS REPORTED chip added, series end label marked decorative echo", "applied": true, "source": "case-critic"},
+    {"slide": 4, "field": "quote card", "now": "full c30 quote restored with the trap-weir comparator and full attribution", "applied": true, "source": "case-critic"},
+    {"slide": 5, "field": "rows 2 and 6", "now": "row 2 chip REPORTED, row 6 reads in hours versus days to weeks of human review", "applied": true, "source": "case-critic"},
+    {"slide": "caption", "field": "hook and sites label", "now": "technician sentence restated to what c23 supports, sixteen sites carries the program's figure label", "applied": true, "source": "case-critic"},
+    {"slide": 4, "field": "quote card", "now": "quote extended to the full c30 verbatim including the trap weir comparator, titled attribution, and the grant and weir chips split into amber REPORTED and steel USFS classes", "applied": true, "source": "case-critic and pixel-critic"},
+    {"slide": 4, "field": "layout", "now": "weir pickets render right half only, an accepted deviation keeping the text column on clean water", "applied": true, "source": "pixel-critic"}
+  ],
+  "aftercare": [
+    "Post on your own clock, drafts arrive daily. Tue to Thu 8 to 11am AKT tests strongest, and you own the cadence and the spacing against the news deck on the Alaska.Ai page.",
+    "Paste the sources comment within 60 seconds of posting, before the first impressions land.",
+    "Reply to every comment in the first 90 minutes with something substantive, the first hour decides reach.",
+    "Check back after 48 hours, note the saves against likes, and answer anyone who raised a hand on the free analysis offer."
+  ],
+  "claims_used": ["c09", "c14", "c18", "c19", "c20", "c23"],
+  "offer_line_included_once": true
+}
