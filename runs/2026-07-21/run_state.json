@@ -1,16 +1,39 @@
-{"run_date": "2026-07-21", "case_file_no": 1, "flavor": "translation", "bank_id": "local:salmonvision",
- "phases": {"wake": "done", "restock": "done", "selection": "done",
-  "verification": "done", "translation": "done",
-  "directors_room": "done", "storyboard": "done", "copy": "done",
-  "honesty_gate": "done", "art_build": "done", "pixel_review": "done",
-  "flow_review": "done", "assemble": "done", "scoring": "done",
-  "ship": "in_progress", "upgrade": "done", "gmail": "pending",
-  "retro": "pending"},
- "score": {"weighted_total": 8.39, "threshold": 8.0, "ship": true},
+{
+ "run_date": "2026-07-21",
+ "case_file_no": 1,
+ "flavor": "translation",
+ "bank_id": "local:salmonvision",
+ "phases": {
+  "wake": "done",
+  "restock": "done",
+  "selection": "done",
+  "verification": "done",
+  "translation": "done",
+  "directors_room": "done",
+  "storyboard": "done",
+  "copy": "done",
+  "honesty_gate": "done",
+  "art_build": "done",
+  "pixel_review": "done",
+  "flow_review": "done",
+  "assemble": "done",
+  "scoring": "done",
+  "ship": "done",
+  "upgrade": "done",
+  "gmail": "done",
+  "retro": "done"
+ },
+ "score": {
+  "weighted_total": 8.39,
+  "threshold": 8.0,
+  "ship": true
+ },
  "notes": {
   "honesty_gate": "Round 1 fix (6 findings), round 2 pass. honesty_report.json persisted after the scorer flagged the missing file.",
   "pixel_review": "Round 1 all revise (6 majors), round 2 six of eight ship, round 3 two majors fixed and verified by showrunner transcription plus machine QA.",
   "flow_review": "Ship 8.5, S5 forward plant applied, S7 manifold and other deviations sanctioned in the RECORD SYNC NOTE.",
   "upgrade": "Phase 11 executed by showrunner under the fallback, 1 verified upgrade (logo gate), scan skipped and logged, see automation_retro.md.",
   "machine_changes_mid_run": "Maintainer rules wired mid-run, the Alaska.Ai page surface and the mandatory deck logo (gate + hard fail + storyboard gate)."
- }}
+ },
+ "gmail_draft_id": "r-3686570067463420788"
+}

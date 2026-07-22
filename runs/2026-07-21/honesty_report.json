@@ -1,4 +1,6 @@
 {
+  "verdict": "pass",
+  "hostile_reply_test": {"weakest_sentence": "Alaska still counts salmon by eye.", "survives": true, "why": "The state's own DIDSON and ARIS page says a technician watching video counts the fish, and the caption's second sentence narrows the hook to exactly that sourced behavior."},
   "_doc": "Case-critic verdicts, run 2026-07-21. Round 1 returned fix with six findings (caption hook overclaim vs c23, truncated c30 quote, unlabeled caption sites figure, factual number on a decorative bezel mark, flattering half of the NOAA range, LIVE implying a current-year Redoubt count) plus three notes (chip class precision, S5 row 2 blend, series label echo). All applied. Round 2 verdict below. Persisted by the showrunner after the scorer flagged the missing file, noted in the automation retro.",
   "round1": {"verdict": "fix", "findings_count": 6, "notes_count": 3},
   "round2": {

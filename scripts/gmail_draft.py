@@ -68,6 +68,8 @@ def main():
     ap.add_argument("--payload-out", required=True)
     ap.add_argument("--to", default="me")
     ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--lean", action="store_true",
+                    help="no embedded images at all; the pinned links carry the visuals")
     args = ap.parse_args()
 
     run = Path(args.run_dir)
@@ -100,6 +102,11 @@ def main():
 
     logo_html = ""
     logo_path = root / "assets" / "alaskaaipic.png"
+    if args.lean:
+        logo_path = Path("/nonexistent")
+        thumbs_enabled = False
+    else:
+        thumbs_enabled = True
     if logo_path.exists():
         logo_b64 = base64.b64encode(logo_path.read_bytes()).decode()
         logo_html = (f'<img src="data:image/png;base64,{logo_b64}" width="54" '
@@ -126,13 +133,22 @@ def main():
     body.append(section("POST (paste as the caption, whole block)", pre_block(post)))
     body.append(section("FIRST COMMENT (paste right after posting)", pre_block(first_comment)))
 
-    if thumbs:
-        cells = []
+    if thumbs and thumbs_enabled:
+        # Inline previews are a convenience, the pinned links carry full
+        # resolution. Cap the embedded payload so the draft call never
+        # bloats past what the Gmail tool accepts.
+        cells, budget = [], 400_000
         for t in thumbs:
             b64 = base64.b64encode(t.read_bytes()).decode()
+            if len(b64) > budget:
+                break
+            budget -= len(b64)
             cells.append(f'<img src="data:image/png;base64,{b64}" width="150" '
                          f'style="margin:0 6px 6px 0;border:1px solid #d8dee8;border-radius:4px;"/>')
-        body.append(section("Preview", f'<div>{"".join(cells)}</div>'))
+        more = len(thumbs) - len(cells)
+        tail = (f'<p style="margin:4px 0 18px 0;color:#5b6b80;">Plus {more} more '
+                f'slides at the full-size links below.</p>' if more > 0 else "")
+        body.append(section("Preview", f'<div>{"".join(cells)}</div>{tail}'))
 
     links = [f'<a href="{link("slide-%02d.png" % (i + 1))}">slide {i + 1:02d}</a>'
              for i in range(len(renders))]
