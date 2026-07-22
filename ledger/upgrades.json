@@ -1,5 +1,24 @@
 {
   "_doc": "The automation change trail. Entries appended by the upgrade engineer phase, one commit per run's set, message prefixed upgrade(<date>):. Schema per entry, run_date, kind (fix | improvement), area, change, trigger, files (array), verification, rollback, commit. scan_log entries, run_date, focus, found, applied_or_parked.",
-  "entries": [],
-  "scan_log": []
+  "entries": [
+    {
+      "run_date": "2026-07-21",
+      "kind": "improvement",
+      "area": "gates",
+      "change": "scripts/logo_check.py, every deck must carry the brand logo, enforced in the art build phase and as a scorer hard fail",
+      "trigger": "Maintainer rule set mid-run, the logo rides every carousel post",
+      "files": ["scripts/logo_check.py", "config/brand.yaml", "config/scoring_rubric.yaml", "prompts/routine_instructions.md", "knowledge/CASE_CRAFT.md"],
+      "verification": "PASS on the live deck (slide-08 carries the logo), FAIL on a reconstruction without it, full deck QA green with the logo present",
+      "rollback": "delete scripts/logo_check.py and the references in the four files listed",
+      "commit": "rides the run commit, Phase 11 executed by showrunner under the fallback"
+    }
+  ],
+  "scan_log": [
+    {
+      "run_date": "2026-07-21",
+      "focus": "skipped, manual test run",
+      "found": "agent infra instability handled by respawn-by-cause, and a DOM over canvas collision class that machine QA cannot see",
+      "applied_or_parked": "parked, a dom-canvas collision pre-check helper as a future gate candidate (see out/2026-07-21/automation_retro.md)"
+    }
+  ]
 }

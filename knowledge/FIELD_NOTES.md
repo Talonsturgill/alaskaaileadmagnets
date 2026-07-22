@@ -3,6 +3,27 @@
 Living lessons for the Case Files studio. Dated entries, newest first. The
 retro phase appends, the wake phase reads.
 
+## 2026-07-21b (Case File No. 1, the first live run)
+
+- The fact-check killed the story's intended payoff (the camera did NOT
+  keep the Redoubt count going) and the honest version was a better story.
+  Bank intake must always mark proposal vs deployed, the case-scout
+  definition requires it.
+- The honesty gate caught the caption outrunning its own deck (the hook
+  claimed more than c23 supports). The caption must never claim more than
+  the most-hedged slide.
+- DOM chips and labels collide with canvas data marks that QA cannot see.
+  Plan canvas element rects IN the dossier next to the DOM budgets, and
+  eyeball every art-zone chip against them. Parked as a future gate.
+- The flow critic's forward-plant fix (one tease line at the predicted
+  bail slide) is cheap and repeatable. Any keepable slide should plant the
+  next slide.
+- Agent deaths from infra blips are real, respawn-by-cause worked, check
+  liveness via the task registry instead of waiting on notifications.
+- The logo is now law and machine-enforced (logo_check.py), default home
+  the close slide brand row, keep it at 66px or smaller until a higher
+  resolution export exists.
+
 ## 2026-07-21 (pre launch, from the build session)
 
 - Engine proof shipped, three slides rendered and QA green in this repo with

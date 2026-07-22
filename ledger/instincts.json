@@ -37,8 +37,32 @@
       "id": "i-005",
       "learned": "2026-07-21",
       "instinct": "Vendor sourced numbers get the label in the same breath as the number, never in a footnote. Trust is the product this series sells.",
-      "evidence": "House law restated as craft. The case-critic enforces it, the copy should not make the critic work.",
+      "evidence": "House law restated as craft. Run 1 confirmed, the case-critic caught an unlabeled caption number and a mis-classed chip.",
+      "confidence": 0.8,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-006",
+      "learned": "2026-07-21",
+      "instinct": "DOM chips and labels placed in the art zone must be checked against canvas data mark coordinates at plan time. Machine QA cannot see canvas, so these collisions survive to the pixel critics or to the reader.",
+      "evidence": "Run 1 had two instances, the S3 chip row covered dashed series nodes and the S5 footer wrapped into the canvas cost stair.",
       "confidence": 0.75,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-007",
+      "learned": "2026-07-21",
+      "instinct": "The caption must never claim more than the most hedged slide supports. Write the hook FROM the verified claim text, not from the story's vibe.",
+      "evidence": "Run 1's hook said one technician tallies every fish all season, c23 supports a technician counting fish images on video. The case-critic caught it, the fix was a near restatement of the state's own page.",
+      "confidence": 0.8,
+      "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-008",
+      "learned": "2026-07-21",
+      "instinct": "Plant the next slide on any keepable slide. A save worthy scoreboard invites exit, one forward tease line at the predicted bail point makes saving and swiping the same impulse.",
+      "evidence": "Flow critic named S5 the bail point for exactly this reason on run 1, the tease was the fix.",
+      "confidence": 0.65,
       "last_confirmed": "2026-07-21"
     }
   ]

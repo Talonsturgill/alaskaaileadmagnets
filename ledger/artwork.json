@@ -17,6 +17,22 @@
       "narrative_structure": "proof, receipts, translation",
       "variance_dials": {"design_variance": 2, "visual_density": 2, "type_temperature": 3},
       "new_techniques_logged": []
+    },
+    {
+      "run_date": "2026-07-21",
+      "case_file_no": 1,
+      "slide_count": 8,
+      "hero_structure": "underwater data baseline panorama",
+      "atmosphere": "turbid glacial silt water with sonar scan banding",
+      "depth_technique": "multiplane silt layers with one sharp focal plane",
+      "line_voice": "instrument editorial with phantom dash proposal grammar",
+      "continuity_device": "count baseline panorama spine with tally mark states, plus provenance stamp chips",
+      "hook_archetype": "status quo exposure",
+      "palette_family": "glacial river and sonar screen",
+      "type_pairing": "Instrument Serif display with Archivo body and JetBrains Mono telemetry",
+      "narrative_structure": "status quo, identification, arrival, reality check, receipts, catch, translation fork, seal",
+      "variance_dials": {"design_variance": 3, "visual_density": 3, "type_temperature": 4},
+      "new_techniques_logged": ["cf-spine shared panorama painter (assets/js/cf-spine.js)", "phantom dash grammar for proposed elements", "provenance stamp chip system", "fractured tally strokes as error admission"]
     }
   ]
 }
