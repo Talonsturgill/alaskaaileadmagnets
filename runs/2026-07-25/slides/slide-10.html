@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .head { position:absolute; left:76px; top:430px; width:840px; height:150px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#26313F; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .offer{ position:absolute; left:76px; top:840px; width:620px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:32px;
+          line-height:1.4; color:#26313F; }
+  .tick { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.06em; color:#4A5464; }
+  .chip { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; color:#26313F; }
+  .brand{ position:absolute; left:200px; top:1042px; display:flex; align-items:center; gap:18px; }
+  .brand img { width:66px; height:60px; display:block; }
+  .wm   { font-family:"JetBrains Mono",monospace; font-weight:700; font-size:24px;
+          letter-spacing:0.16em; color:#26313F; }
+  .site { font-family:"JetBrains Mono",monospace; font-weight:500; font-size:22px;
+          letter-spacing:0.06em; color:#4A5464; }
+  .srcn { position:absolute; right:76px; top:1050px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.08em; color:#4A5464; }
+  .ser  { position:absolute; left:200px; top:1128px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.14em; color:#6B7484; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="head" id="head">Measure your own week first.</div>
+
+  <div class="tick" id="tickLab">54 MINUTES, THE ONLY INDEPENDENTLY MEASURED SAVING</div>
+
+  <div class="offer">We do this kind of analysis for Alaska businesses, free. If you want your
+  operation looked at this way, say the word.</div>
+
+  <div class="chip" id="chipW">PER WEEK</div>
+
+  <div class="brand">
+    <img src="@@ASSETS@@/alaskaaipic.png" alt="Alaska Ai">
+    <div>
+      <div class="wm">ALASKA.AI</div>
+      <div class="site" data-decorative>alaskaaihq.com</div>
+    </div>
+  </div>
+  <div class="srcn">SOURCES IN COMMENTS</div>
+  <div class="ser" data-decorative>CASE FILES</div>
+  <div class="cnt" data-decorative>10 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  // the room is going dark. The curl is the last warm thing in the deck.
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.07, monitor: 0.025 }, monitorRim: 0.35 });
+
+  // ---- the final Week Rule, EMPTY except one gold tick at 54 minutes -----
+  // Same 840px true scale as slide 07. The emptiness is the ask. The reader is
+  // being handed the ruler.
+  const RX = 76, RY = 700, RW = S.RULE_W;
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.45); cx.lineWidth = S.W_HAIR;
+  for (let h = 0; h <= 40; h += 8) {
+    const x = RX + (h * 60) * S.PX_PER_MIN_WEEK;
+    cx.beginPath(); cx.moveTo(x, RY - 11); cx.lineTo(x, RY + 11); cx.stroke();
+  }
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(RX, RY); cx.lineTo(RX + RW, RY); cx.stroke();
+  cx.fillStyle = P.gold;
+  cx.fillRect(RX, RY - 9, 54 * S.PX_PER_MIN_WEEK, 18);
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+  cx.strokeRect(RX, RY - 9, 54 * S.PX_PER_MIN_WEEK, 18);
+  cx.restore();
+
+
+  // #83 crop-mark Ls at the paper corners, the closing drafting furniture
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.inkFaint, 0.7); cx.lineWidth = S.W_FINE;
+  [[96, 396, 1, 1], [988, 396, -1, 1], [96, 1140, 1, -1], [988, 1140, -1, -1]].forEach(c => {
+    cx.beginPath();
+    cx.moveTo(c[0] + c[2] * 8, c[1]); cx.lineTo(c[0] + c[2] * 28, c[1]);
+    cx.moveTo(c[0], c[1] + c[3] * 8); cx.lineTo(c[0], c[1] + c[3] * 28);
+    cx.stroke();
+  });
+  cx.restore();
+
+  // the Polaris, the deck's closing gold mark
+  cx.save();
+  cx.fillStyle = P.gold;
+  const sx = 946, sy = 1104, r1 = 15, r2 = 5.4;
+  cx.beginPath();
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * 6.2832 - Math.PI / 2;
+    const r = i % 2 === 0 ? r1 : r2;
+    const x = sx + Math.cos(a) * r, y = sy + Math.sin(a) * r;
+    if (i === 0) cx.moveTo(x, y); else cx.lineTo(x, y);
+  }
+  cx.closePath(); cx.fill();
+  cx.restore();
+
+  AH.finish(cx);
+
+  document.getElementById('tickLab').style.left = '76px';
+  document.getElementById('tickLab').style.top  = '736px';
+  document.getElementById('chipW').style.left = '76px';
+  document.getElementById('chipW').style.top  = '640px';
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 104, maxLines: 2 });
+
+  resolve();
+});
+</script>
+</body>
+</html>

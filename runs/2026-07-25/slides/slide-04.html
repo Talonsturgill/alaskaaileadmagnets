@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .bdy  { position:absolute; left:104px; top:900px; width:600px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:34px;
+          line-height:1.38; color:#26313F; }
+  .nlab { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.06em; color:#26313F; }
+  .nsub { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:20px; letter-spacing:0.06em; color:#6B7484; }
+  .rung { position:absolute; left:640px; top:1054px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:26px; letter-spacing:0.08em; color:#26313F;
+          background:rgba(240,233,218,0.94); padding:10px 14px; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE BUILD</div>
+  <div class="head" id="head">Five steps, and a person<br>at the end of them.</div>
+
+  <div class="bdy">Consent, record, transcribe, draft, and a clinician reads it and signs.
+  Nothing here plans its own steps. On the ladder that is a workflow, not an agent.</div>
+
+  <div class="rung">RUNG 4, WORKFLOW</div>
+  <div class="cnt" data-decorative>04 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725 });
+
+  // ---- the Week Rule BECOMES the chain's baseline. Same line, new job. -----
+  const BY = 620;
+  const NODES = [
+    { x: 132, label: 'CONSENT',        sub: '' },
+    { x: 320, label: 'RECORD',         sub: '' },
+    { x: 508, label: 'TRANSCRIBE',     sub: 'AWS TRANSCRIBE MEDICAL' },
+    { x: 696, label: 'DRAFT',          sub: 'GPT-4 ON AZURE' },
+    { x: 862, label: 'CLINICIAN SIGNS',sub: '' }
+  ];
+
+  cx.save();
+  cx.lineCap = 'butt'; cx.lineJoin = 'miter';
+
+  // baseline
+  cx.strokeStyle = AH.rgba(P.ink, 0.42);
+  cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(76, BY); cx.lineTo(916, BY); cx.stroke();
+  cx.lineWidth = S.W_HAIR;   // the branch reads THINNER than the chain
+
+  // connectors, strictly LEFT TO RIGHT so nothing reads as a loop (agent washing)
+  for (let i = 0; i < NODES.length - 1; i++) {
+    const a = NODES[i].x + 26, b = NODES[i+1].x - 26;
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+    cx.beginPath(); cx.moveTo(a, BY); cx.lineTo(b - 12, BY); cx.stroke();
+    cx.fillStyle = P.ink;
+    cx.beginPath(); cx.moveTo(b, BY); cx.lineTo(b - 11, BY - 3.6); cx.lineTo(b - 11, BY + 3.6);
+    cx.closePath(); cx.fill();
+  }
+
+  // node 1 is a KEYED VALVE, shut until the key turns: consent gates the chain
+  function valve(x, y) {
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_BOLD;
+    cx.beginPath(); cx.arc(x, y, 22, 0, 6.2832); cx.stroke();
+    cx.lineWidth = S.W_STD;
+    cx.beginPath(); cx.moveTo(x - 15, y + 15); cx.lineTo(x + 15, y - 15); cx.stroke();
+    cx.beginPath(); cx.moveTo(x, y - 22); cx.lineTo(x, y - 38); cx.stroke();
+    cx.beginPath(); cx.moveTo(x - 10, y - 38); cx.lineTo(x + 10, y - 38); cx.stroke();
+  }
+  valve(NODES[0].x, BY);
+
+  // plain nodes
+  for (let i = 1; i < 4; i++) {
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+    cx.fillStyle = AH.rgba('#F0E9DA', 0.95);
+    cx.beginPath(); cx.arc(NODES[i].x, BY, 22, 0, 6.2832); cx.fill(); cx.stroke();
+  }
+
+  // THE CATCHER, node 5: hero weight, gold, the only real safeguard in the chain
+  cx.strokeStyle = P.gold; cx.lineWidth = S.W_HERO;
+  cx.fillStyle = AH.rgba('#F0E9DA', 0.98);
+  cx.beginPath(); cx.arc(NODES[4].x, BY, 26, 0, 6.2832); cx.fill(); cx.stroke();
+
+  // the branch to the patient summary: a THINNER conduit, it is a secondary output
+  cx.strokeStyle = AH.rgba(P.ink, 0.8); cx.lineWidth = S.W_HAIR;
+  cx.beginPath();
+  cx.moveTo(NODES[3].x + 22, BY - 8); cx.lineTo(NODES[3].x + 22, BY - 122);
+  cx.lineTo(NODES[3].x + 108, BY - 122);
+  cx.stroke();
+  // #76 junction dot at the connection
+  cx.fillStyle = P.ink;
+  cx.beginPath(); cx.arc(NODES[3].x + 22, BY - 8, 4.4, 0, 6.2832); cx.fill();
+
+  // #74 haloed balloon numbers
+  NODES.forEach((n, i) => {
+    cx.fillStyle = AH.rgba('#F0E9DA', 1);
+    cx.beginPath(); cx.arc(n.x, BY - 62, 16, 0, 6.2832); cx.fill();
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+    cx.beginPath(); cx.arc(n.x, BY - 62, 13, 0, 6.2832); cx.stroke();
+    cx.fillStyle = P.ink;
+    cx.font = '500 18px "JetBrains Mono", monospace';
+    cx.textAlign = 'center'; cx.textBaseline = 'middle';
+    cx.fillText(String(i + 1), n.x, BY - 61);
+  });
+  cx.textAlign = 'start'; cx.textBaseline = 'alphabetic';
+
+  // the catcher's dimension call carries NO NUMBER. That absence is the open loop.
+  AH.dimension(cx, NODES[4].x - 44, NODES[4].x + 44, BY + 82, { weight: S.W_FINE, ext: 14 });
+  cx.restore();
+
+  AH.finish(cx);
+
+  // ---- DOM labels, positioned from the same node coordinates -------------
+  const mk = (cls, text, x, y, dec) => {
+    const e = document.createElement('div'); e.className = cls; e.textContent = text;
+    e.style.left = x + 'px'; e.style.top = y + 'px';
+    if (dec) e.setAttribute('data-decorative','');
+    document.body.appendChild(e); return e;
+  };
+  // labels alternate above/below their node so 24px mono never collides
+  NODES.forEach((n, i) => {
+    const w = n.label.length * 14.6;
+    mk('nlab', n.label, Math.max(76, Math.min(1004 - w, n.x - w / 2)), BY + 128);
+  });
+  // subs sit on their own staggered rows, right-clamped, so 20px mono never touches
+  mk('nsub', 'AWS TRANSCRIBE MEDICAL', 374, BY + 164, true);
+  mk('nsub', 'GPT-4 ON AZURE', 660, BY + 200, true);
+  // the catcher, named in gold under its own node
+  const tc = mk('nlab', 'THE CATCHER', NODES[4].x - 80, BY + 164);
+  tc.style.color = '#26313F';   // graphite: node 5's ring is the only gold
+  // the secondary output, labelled off the upward branch
+  mk('nsub', 'PLAIN LANGUAGE SUMMARY', 620, BY - 150, true);
+  mk('nsub', 'FOR THE PATIENT', 620, BY - 118, true);
+
+  const _boxes = AH.unitChips(cx, 264, 1092, 'none');
+  _boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:' + (b.on ? '#26313F' : '#4A4438') + ';';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 116, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

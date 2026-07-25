@@ -66,7 +66,7 @@ a bank case or local proof behind them.
 |---|---|---|---|
 | Trucking and air cargo | Insurance, driver risk, paper back office | Telematics plus coaching (workflow) | 001 |
 | Distribution | Hand built routes, fuel burn | Route optimization (rules and optimization, no LLM needed) | 002, plow studies |
-| Independent clinics | Fax intake, charting burnout | Document intake (single call to workflow), ambient scribes (buyable) | 006, 007 |
+| Independent clinics and practices | Fax intake, and the note that gets written after hours | Document intake (single call to workflow). Ambient documentation is rung 4 workflow with the clinician as the catcher, and mid market buys and configures it rather than building it, the case build presumed owning the EHR. Exhaust templates and macros (rung 1) first. Plan against the independent per week result, not the vendor per visit one | 006, 007, Case File 002 (2026-07-25), UW CHWS Alaska Physician Workforce 2021 |
 | Seafood | Watch and count labor, manual counting and grading on intake, hours of line and sonar video reviewed by eye | Small custom CV counting model in a fixed workflow, validated against the existing manual count (rung 4). Where a scale or scan already captures the count, rung 1 rules, no CV. Sonar and murky imagery stay harder than clear video | 015, 016, SalmonVision, Case File 001 (2026-07-21) |
 | Credit unions | Routine call load | Voice AI on the core system (workflow) | 008 |
 | Tourism | Four month season, phone booking load | Voice and booking automation (workflow), rotate this answer | 009 |

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:120px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .th   { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:20px; letter-spacing:0.08em; color:#6B7484; }
+  .c1   { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:28px; line-height:1.06; letter-spacing:0.01em; color:#26313F;
+          width:238px; font-variant-numeric:tabular-nums lining-nums; }
+  .c2   { position:absolute; font-family:"Manrope",sans-serif; font-weight:500;
+          font-size:25px; line-height:1.28; color:#26313F; width:226px; }
+  .c3   { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.01em; color:#4A5464; width:414px; }
+  .plant{ position:absolute; left:76px; top:996px; width:414px;
+          font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+          letter-spacing:0.05em; color:#26313F; line-height:1.35; }
+  .plab { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:19px; letter-spacing:0.08em; color:#4A5464; }
+  .pval { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.01em; color:#26313F; white-space:nowrap; }
+  .chip { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE RECEIPTS</div>
+  <div class="head" id="head">Five figures. One source.</div>
+
+  <div class="plant">NOBODY OUTSIDE CHECKED THESE.<br>NEXT, WHAT OUTSIDERS MEASURED.</div>
+
+
+
+  <div class="cnt" data-decorative>05 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.13, monitor: 0.045 } });
+
+  // ---- table geometry ----------------------------------------------------
+  const TX = 76, TW = 928;
+  const HEAD_Y = 452, ROW0 = 508, PITCH = 88;
+  const COL2 = 344, COL3 = 578;
+
+  // #70 Scotch Rule at the table head: 4px rule, 3px gap, 0.75px hairline
+  cx.save();
+  cx.strokeStyle = P.ink; cx.lineWidth = 4;
+  cx.beginPath(); cx.moveTo(TX, HEAD_Y); cx.lineTo(TX + TW, HEAD_Y); cx.stroke();
+  cx.strokeStyle = AH.rgba(P.ink, 0.55); cx.lineWidth = S.W_HAIR;
+  cx.beginPath(); cx.moveTo(TX, HEAD_Y + 7); cx.lineTo(TX + TW, HEAD_Y + 7); cx.stroke();
+
+  // row rules, hairline
+  cx.strokeStyle = AH.rgba(P.inkFaint, 0.85); cx.lineWidth = S.W_HAIR;
+  for (let i = 1; i < 5; i++) {
+    const y = ROW0 + i * PITCH - 18;
+    cx.beginPath(); cx.moveTo(TX, y); cx.lineTo(TX + TW, y); cx.stroke();
+  }
+
+  // the Week Rule BECOMES the table's bottom rule, with the deck's 6px terminal
+  const BOT = ROW0 + 5 * PITCH - 18;
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(TX, BOT); cx.lineTo(TX + TW, BOT); cx.stroke();
+  cx.restore();
+  AH.terminal(cx, TX + TW, BOT, P.gold);
+
+  // the source column's rule runs off the right edge: the edge tease
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.inkFaint, 0.6); cx.lineWidth = S.W_HAIR;
+  cx.setLineDash([6, 5]);
+  cx.beginPath(); cx.moveTo(TX + TW + 8, BOT); cx.lineTo(1080, BOT); cx.stroke();
+  cx.setLineDash([]);
+  cx.restore();
+
+  // row 3's word "undefined" sits in a dashed box: the source never defines it
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.7); cx.lineWidth = S.W_FINE;
+  cx.setLineDash([5, 4]);
+  cx.strokeRect(COL2 - 6, ROW0 + 2 * PITCH - 12, 292, 40);
+  cx.setLineDash([]);
+  cx.restore();
+
+  const plate = AH.specPlate(cx, 470, 1000, [0,1,2,3], { width: 520, rowH: 40, strong: true });
+  AH.finish(cx);
+
+  // ---- DOM table ---------------------------------------------------------
+  const mk = (cls, text, x, y, dec) => {
+    const e = document.createElement('div'); e.className = cls; e.textContent = text;
+    e.style.left = x + 'px'; e.style.top = y + 'px';
+    if (dec) e.setAttribute('data-decorative','');
+    document.body.appendChild(e); return e;
+  };
+
+  mk('th', 'FIGURE', TX, HEAD_Y - 34, true);
+  mk('th', 'WHAT IT MEASURES', COL2, HEAD_Y - 34, true);
+  mk('th', 'WHO SAYS SO', COL3, HEAD_Y - 34, true);
+
+  // THE COLUMN THAT NEVER CHANGES. Five different figures, one identical
+  // sourcing cell all the way down. The repetition IS the editorial.
+  const ROWS = [
+    ['16 MIN TO UNDER 4', 'one chart, manual vs drafted'],
+    ['88 PERCENT',        'AI text accepted without edits'],
+    ['2.5 TIMES',         'chart detail, undefined'],
+    ['600 PLUS',          'clinicians it reached'],
+    ['10 DAYS',           'the rollout, not the build']
+  ];
+  ROWS.forEach((r, i) => {
+    const y = ROW0 + i * PITCH;
+    mk('c1', r[0], TX, y);
+    mk('c2', r[1], COL2, y + 4);
+    mk('c3', 'CARBON HEALTH, SELF REPORTED', COL3, y + 5);
+  });
+
+  const rows = [['MEASURED BY','CARBON HEALTH, ITSELF'],
+                ['INSTRUMENT','COMPANY BLOG, JUNE 2023'],
+                ['POPULATION','ITS 600 PLUS CLINICIANS'],
+                ['UNIT','MINUTES PER VISIT']];
+  rows.forEach((r, i) => {
+    mk('plab', r[0], plate.x + 12, plate.y + 6 + i * plate.rowH, true);
+    mk('pval', r[1], plate.x + 186, plate.y + 8 + i * plate.rowH);
+  });
+
+  const _boxes = AH.unitChips(cx, 470, 924, 'visit');
+  _boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:' + (b.on ? '#26313F' : '#4A4438') + ';';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 104, maxLines: 1 });
+  resolve();
+});
+</script>
+</body>
+</html>

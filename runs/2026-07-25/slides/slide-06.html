@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .bdy  { position:absolute; left:76px; top:1010px; width:900px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:30px;
+          line-height:1.36; color:#26313F; }
+  .lab  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.04em; color:#26313F;
+          font-variant-numeric:tabular-nums lining-nums; }
+  .sub  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.06em; color:#6B7484; }
+  .prod { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:27px; letter-spacing:0.03em; color:#9E3A30;
+          background:#F4EEE1; padding:16px 18px; line-height:1.32;
+          border-left:3px solid #B4453A; }
+  .tease{ position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; color:#26313F; }
+  .plab { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:19px; letter-spacing:0.08em; color:#4A5464; }
+  .pval { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.01em; color:#26313F; white-space:nowrap; }
+  .chip { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE INDEPENDENT CHECK</div>
+  <div class="head" id="head">Someone outside measured.<br>A different product.</div>
+
+ 
+
+  <div class="prod" id="prod">PRODUCT MEASURED, ABRIDGE.<br>NOT THIS COMPANY'S BUILD.</div>
+
+
+
+  <div class="cnt" data-decorative>06 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  // PALETTE ARC: the independent evidence is read under COLD light.
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.055, monitor: 0.115 }, monitorRim: 1.35 });
+
+  const mk = (cls, text, x, y, dec) => {
+    const e = document.createElement('div'); e.className = cls; e.textContent = text;
+    e.style.left = x + 'px'; e.style.top = y + 'px';
+    if (dec) e.setAttribute('data-decorative','');
+    document.body.appendChild(e); return e;
+  };
+
+  // ---- the attrition funnel, widths LINEAR in the counts (c17,c18,c19) ----
+  // 451 -> 272 -> 263. The reader SEES 42 percent of the sample fall away.
+  const FX = 76, FY = 424, K = 560 / 451;
+  const F = [[451,'451 ENROLLED'], [272,'272 COMPLETED BOTH SURVEYS'], [263,'263 ANALYZED']];
+  cx.save();
+  F.forEach((f, i) => {
+    const w = f[0] * K, y = FY + i * 52;
+    // #39 cabinet extrusion, parallel projection, never perspective
+    cx.fillStyle = AH.rgba(P.ink, 0.16);
+    cx.fillRect(FX, y, w, 34);
+    cx.fillStyle = AH.rgba('#3A4453', 0.5);
+    cx.beginPath();
+    cx.moveTo(FX + w, y); cx.lineTo(FX + w + 11, y - 11);
+    cx.lineTo(FX + w + 11, y + 23); cx.lineTo(FX + w, y + 34);
+    cx.closePath(); cx.fill();
+    cx.strokeStyle = AH.rgba(P.monitorRim, 0.5); cx.lineWidth = S.W_FINE;
+    cx.beginPath(); cx.moveTo(FX + w, y); cx.lineTo(FX + w, y + 34); cx.stroke();
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+    cx.strokeRect(FX, y, w, 34);
+  });
+  cx.restore();
+  F.forEach((f, i) => { const e = mk('sub', f[1], FX + f[0] * K + 24, FY + i * 52 + 4, false); e.style.color = '#26313F'; });
+
+  // ---- burnout dumbbell, to scale on a 0 to 60 percent axis (c20) --------
+  const DX = 76, DY = 650, DW = 660, DMAX = 60;
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.35); cx.lineWidth = S.W_HAIR;
+  cx.beginPath(); cx.moveTo(DX, DY); cx.lineTo(DX + DW, DY); cx.stroke();
+  const xA = DX + (51.9 / DMAX) * DW, xB = DX + (38.8 / DMAX) * DW;
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_BOLD;
+  cx.beginPath(); cx.moveTo(xB, DY); cx.lineTo(xA, DY); cx.stroke();
+  cx.fillStyle = '#F0E9DA'; cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  [xA, xB].forEach(x => { cx.beginPath(); cx.arc(x, DY, 9, 0, 6.2832); cx.fill(); cx.stroke(); });
+  cx.restore();
+  mk('lab', 'BURNOUT, 51.9 TO 38.8 PERCENT, EXPLORATORY', DX, DY - 44);
+
+  // ---- the confidence interval on a LOG axis (c21) -----------------------
+  // Almost nobody draws a CI on LinkedIn. The bar's WIDTH is the honesty.
+  const AX = 76, AY = 756, AW = 760;
+  const lo = Math.log(0.1), hi = Math.log(2.0);
+  const px = v => AX + (Math.log(v) - lo) / (hi - lo) * AW;
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.4); cx.lineWidth = S.W_HAIR;
+  cx.beginPath(); cx.moveTo(AX, AY); cx.lineTo(AX + AW, AY); cx.stroke();
+  // reference tick at 1.0, NO CHANGE
+  cx.strokeStyle = AH.rgba(P.ink, 0.8); cx.lineWidth = S.W_FINE;
+  cx.setLineDash([5, 4]);
+  cx.beginPath(); cx.moveTo(px(1.0), AY - 40); cx.lineTo(px(1.0), AY + 26); cx.stroke();
+  cx.setLineDash([]);
+  // the whisker, 0.13 to 0.54
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(px(0.13), AY); cx.lineTo(px(0.54), AY); cx.stroke();
+  [0.13, 0.54].forEach(v => {
+    cx.beginPath(); cx.moveTo(px(v), AY - 12); cx.lineTo(px(v), AY + 12); cx.stroke();
+  });
+  // the point estimate, the slide's ONLY gold mark
+  cx.fillStyle = P.gold;
+  cx.beginPath(); cx.arc(px(0.26), AY, 10, 0, 6.2832); cx.fill();
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+  cx.beginPath(); cx.arc(px(0.26), AY, 10, 0, 6.2832); cx.stroke();
+  cx.restore();
+  mk('lab', 'ODDS RATIO 0.26, 95 PERCENT CI 0.13 TO 0.54', AX, AY - 56);
+  mk('sub', '1.0, NO CHANGE', px(1.0) - 90, AY - 96, true);
+  mk('sub', 'LOG SCALE, 0.1 TO 2.0', AX, AY + 30, true);
+
+  const plate = AH.specPlate(cx, 530, 812, [0,1,2,3], { width: 448, rowH: 40, strong: true });
+  // edge tease: a dashed arrow leaving the right edge, pointing at the result
+
+  AH.finish(cx);
+
+  const rows = [['MEASURED BY','JAMA NETWORK OPEN'],
+                ['INSTRUMENT','QI SURVEY, 30 DAY'],
+                ['POPULATION','263 AT 6 SYSTEMS'],
+                ['UNIT','HOURS PER WEEK']];
+  rows.forEach((r, i) => {
+    mk('plab', r[0], plate.x + 12, plate.y + 6 + i * plate.rowH, true);
+    mk('pval', r[1], plate.x + 186, plate.y + 8 + i * plate.rowH);
+  });
+
+  document.getElementById('prod').style.left = '76px';
+  document.getElementById('prod').style.top  = '812px';
+  const _boxes = AH.unitChips(cx, 76, 934, 'week');
+  _boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:' + (b.on ? '#26313F' : '#4A4438') + ';';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 116, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

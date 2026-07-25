@@ -1,0 +1,450 @@
+KEY FINDINGS
+n  In 2021 the estimated number of physicians providing direct patient care in Alaska was 
+1,751, 19% higher than the estimated number practicing in 2014. 
+n     There were an estimated 240 physicians per 100,000 population providing direct patient 
+  care in Alaska, including 95 primary care physicians per 100,000 population in 2021. 
+n      The mean age of Alaska’s practicing physicians was 52 years. Women comprised 41% of 
+the state’s physician workforce with 54% of the primary care, including 65% of general 
+pediatricians. 
+n     Compared with urban areas, most rural areas of Alaska had fewer physicians and many 
+rural counties had high percentages of physicians age 55 or older. 
+n     Around 27% of Alaska’s family medicine physician workforce completed a residency 
+in Alaska and 41% completed a residency in one of the WWAMI states: Washington, 
+Wyoming, Alaska, Montana or Idaho. 
+1
+Contents
+Key Findings .........................1
+Introduction  .........................1
+Number, Demographic  
+Characteristics, and  
+Distribution of Physicians  
+in Alaska ............................... 2
+Comparison of Workforce  
+Supply With Population  
+Health Measures ...................8
+Summary and Policy  
+Implications ...........................9
+References ..........................10
+Authors ...............................11
+Funding ...............................11
+Acknowledgments ..............11
+Suggested Citation .............11
+Appendix A: Methods .........12
+Alaska’s Physician Workforce  
+in 2021
+Arati Dahal, PhD, Susan M. Skillman, MS
+July 2022 (rev. Jan 2025)
+INTRODUCTION 
+The population of Alaska grew by 3% between 2010 and 2021.1 At the same time, the state 
+has an increasingly older population. In 2010, the population 65 years and older represented 
+about 8% of population, while in 2021 that figure grew to about 13%.1 These demographic 
+factors will likely have significant effects on the state’s health care delivery and payment 
+systems. Important questions for healthcare policy and planning include whether there 
+2
+Alaska’s Physician Workforce in 2021
+will be enough physicians in the right places and with the needed specialties to meet growing and changing demand. This Brief 
+offers data on the size, distribution, and education history of Alaska’s physician workforce. It updates similar reports from 20162 and 
+20143 and addresses the following questions: 
+•  How many physicians practice in Alaska overall and by specialty group? 
+• How are physicians distributed by county, and by urban versus rural areas? 
+• How many physicians practice in the state relative to the size of the population? 
+• Where did Alaska’s physicians graduate from medical school and complete residency? 
+To estimate the physician workforce providing direct patient care in Alaska, analyses used data from the American Medical Association 
+(AMA) Physician Masterfile (see Methods, Appendix A). 
+NUMBER, DEMOGRAPHIC CHARACTERISTICS,  
+AND DISTRIBUTION OF PHYSICIANS IN ALASKA
+The estimated supply of physicians providing direct patient care in Alaska grew 19% from 1,474 in 2014 to 1,751 in 2021.3 Alaska’s 
+estimated per 100,000 population supply of physicians providing direct patient care is smaller than the national per 100,000 population 
+supply (Figure 1). In 2021, there were 240 physicians per 100,000 population providing direct patient care in the state, and 95 primary 
+care physicians per 100,000 population. Nationally, in 2021 there were 248 physicians per 100,000 providing direct patient care, and 
+94 primary care physicians per 100,000 population.4 
+Table 1 shows the number of physicians providing direct 
+patient care in Alaska in 2021, total and by specialty group, as 
+well as the number per 100,000 population, percent female, 
+and mean age. The mean age overall and by specialty for most 
+Alaska physicians was between 50 and 55 years and 43% of 
+physicians overall were age 55 or older. Approximately 41% of 
+Alaska’s overall physician workforce was female, and women 
+comprised more than half of the primary care specialties, 
+including 65% of general pediatricians and 66% of obstetrician-
+gynecologists. 
+From 2014 to 2016, the estimated size of the Alaska’s physician 
+workforce grew from 198 to 221 physicians per 100,000 
+population (Figure 2). And from 2016 to 2021, the estimated 
+number of physicians per 100,000 population providing direct 
+patient care increased from 221 to 240. Primary care physicians 
+per 100,000 population also rose between 2016 and 2021, from 
+88 to 95 per 100,000 population.
+USAK
+Primary Care PhysiciansAll Physicians 
+240 248
+95 94
+Figure 1: Alaska Compared with National Estimates† 
+of Physicians* per 100,000 Population in 2021
+†National estimates obtained from the American Association of Medical Colleges’  
+2021 Physician Workforce Data Book
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+3
+Table 1:   Number, Gender and Age of Alaska Physicians* in 2021
+#
+#/100,000  
+Population % Female
+Mean Age 
+(years)
+% Age 55 or 
+Older
+Total 1,751 240.1 41.3 52.0 43.3
+Primary care 695 95.3 53.8 50.9 39.6
+    Family medicine 452 62.0 52.9 51.2 39.2
+    General internal medicine 128 17.5 46.9 51.1 44.5
+    General pediatrics 115 15.8 65.2 49.8 35.7
+Surgeons 201 27.6 47.3 53.2 49.3
+    General surgery 51 7.0 33.3 52.8 54.9
+    Obstetrics-gynecology 104 14.3 66.3 52.9 45.2
+    Other surgery 46 6.3 19.6 54.3 52.2
+Psychiatrists 96 13.2 43.8 55.0 57.3
+Other specialists 759 104.1 28.1 52.3 43.3
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+DISTRIBUTION 
+In 2021, fewer physicians provided direct patient care per 100,000 population in rural compared with urban areas of Alaska. In 
+comparison, there was more rural-urban parity among practicing primary care physicians (Figure 3). Between 2016 to 2021, the 
+estimated number of overall physicians per 100,000 population increased more for urban compared to rural areas. The supply 
+of primary care physicians per 100,000 population in 2021 remained comparable with 2016 and 2014 in rural areas, but increased 
+for urban areas in 2021 compared to previous years.
+2021 2016 2014 
+Primary Care PhysiciansAll Physicians 
+77
+198
+88 95
+221
+240
+2021201620142021 20162014
+All Physicians Primary Care Physicians
+126
+263
+135
+300
+141
+80 71
+91 82
+102
+84
+Urban Rural
+235
+Figure 2. Alaska Physicians* per 100K Population in 
+2014, 2016, and 2021
+Figure 3. Alaska Physicians* in Urban & Rural Areas 
+per 100,000 Population in 2014, 2016 and 2021
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska *Providing direct patient care, not federally employed, age <75 years, and in Alaska
+4
+Table 2 details the rural-urban distribution of the state’s physicians, overall and by specialty, and in addition shows their distribution 
+among three sub-rural area types: large rural, small rural and isolated small rural. On a per 100,000 population basis there were 
+higher densities of primary care physicians, especially family physicians, in small rural areas of Alaska than were found in urban 
+areas. Isolated small rural areas, however, had smaller supplies of physicians than were found in other areas of the state.
+Alaska is not organized into counties but instead has 19 boroughs and 10 census areas. The estimated number of all physicians 
+and primary care physicians per 100,000 population in each Alaska borough/census area is shown in Figure 4. In 2021, 7 of the 
+29 Alaskan boroughs/census areas had no practicing physicians and another 9 boroughs/census areas had physician supply rates 
+of fewer than 100 physicians per 100,000 population. 
+As shown in Figure 5, some of Alaska’s boroughs/census areas have high percentages of physicians age 55 and older. In particular, 
+in Southeast Fairbanks, Dillingham, Kenai Peninsula, Sitka, Wrangell, Ketchikan Gateway, and Prince of Wales-Hyderand Haines, 
+more than 50% of all physicians providing direct care were age 55 and older. More than 50% of all primary care physicians 
+providing direct patient care in eight of 29 Alaska boroughs/census areas were age 55 or older in 2021. Those boroughs/census 
+areas were North Slope, Southeast Fairbanks, Dillingham, Kenai Peninsula, Haines, Wrangell, Ketchikan Gateway, and Prince of 
+Wales-Hyder. The percentage of primary care physicians age 55 or older (40%) was similar to the percentage of this age group 
+among overall physicians (43%). 
+Table 2: Alaska Physicians* in Urban, Rural and Sub-Rural Areas** in 2021
+Urban Overall Rural Large Rural Small Rural Isolated Small Rural
+#
+#/100,000 
+Population #
+#/100,000 
+Population #
+#/100,000 
+Population #
+#/100,000 
+Population #
+#/100,000 
+Population
+Total 1,362 300.4 389 140.9 118 152.6 176 199.7 95 85.9
+Primary care 463 102.1 232 84.0 58 75.0 104 118.0 70 63.3
+    Family medicine 266 58.7 186 67.4 42 54.3 76 86.2 68 61.5
+    General internal medicine 102 22.5 26 9.4 8 10.3 17 19.3 1 0.9
+    General pediatrics 95 21.0 20 7.2 8 10.3 11 12.5 1 0.9
+Surgeons 164 36.2 37 13.4 13 16.8 17 19.3 7 6.3
+    General surgery 36 7.9 15 5.4 6 7.8 5 5.7 4 3.6
+    Obstetrics-gynecology 85 18.7 19 6.9 6 7.8 11 12.5 2 1.8
+    Other surgery 43 9.5 3 1.1 1 1.3 1 1.1 1 0.9
+Psychiatrists 82 18.1 14 5.1 10 12.9 4 4.5 0 0.0
+Other specialists 653 144.0 106 38.4 37 47.8 51 57.9 18 16.3
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+**Rural-urban determined using ZIP code and RUCA taxonomy. Overall rural is a combination of the three rural subcategories
+5
+Figure 4. Alaska Physicians** per 100,000 Population in 2021, by Borough/Census Area
+All Physicians   
+per 100,000 Population
+Primary Care Physicians   
+per 100,000 Population
+* Boroughs/Census Areas with no practicing physicians  
+**Providing direct patient care, not federally employed, age <75 years, and in Alaska
+6
+Figure 5. Alaska Physicians** Age 55 or Older in 2021, by Borough/Census Area 
+All Physicians  
+Age 55 or Older  
+Primary Care Physicians  
+Age 55 or Older  
+* Boroughs/Census Areas with no practicing physicians  
+**Providing direct patient care, not federally employed, age <75 years, and in Alaska
+7
+Medical Schools State # Percent
+University of Washington School of Medicine WA 219 12.5
+Uniformed Services University of the Health Sci-
+ences F . Edward Hebert School of Medicine MD 49 2.8
+University of Minnesota Medical School MN 45 2.6
+University of Colorado School of Medicine CO 42 2.4
+Oregon Health and Sciences University School 
+of Medicine OR 40 2.3
+Table 3: Top 5 Medical Schools from Which Alaska Physicians* 
+Graduated
+Table 4: Top 5 States Where Alaska Physicians* Completed a Residency
+State #
+% of Alaska Physicians who 
+Completed a Residency in 
+the State
+CA 165 10.0
+WA 148 9.0
+AK 121 7.3
+TX 110 6.7
+NY 69 4.2
+Table 5:  Alaska Physicians* in 2021 Who Graduated from a Medical School in Washington, and/or Completed a 
+Residency in Alaska or in any WWAMI** State
+Graduated from a Medical School in 
+Washington***
+Completed a Residency in 
+ Alaska****
+Completed a Residency in a WWAMI 
+State
+# % # % # %
+Total 229 13.1% 121 7.3% 293 17.8%
+Primary care 113 16.3% 116 17.7% 204 31.1%
+    Family medicine 83 18.4% 116 27.3% 173 40.7%
+    General internal medicine 13 10.2% 0 0.0% 15 12.4%
+    General pediatrics 17 14.8% 0 0.0% 16 14.4%
+Surgeons 25 12.4% 0 0.0% 20 10.5%
+    General surgery 11 21.6% 0 0.0% 9 18.8%
+    Obstetrics-gynecology 11 10.6% 0 0.0% 4 4.0%
+    Other surgery 3 6.5% 0 0.0% 7 16.3%
+Psychiatrists 9 9.4% 0 0.0% 8 8.5%
+Other specialists 82 10.8% 5 0.7% 61 8.6%
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+**WWAMI = Washington, Wyoming, Alaska, Montana, and Idaho
+***Includes 14 graduates from Pacific Northwest University of Health Sciences and 215 from the University of Washington School of Medicine   
+****Percentages are calculated based on physicians for whom residency state data were available. There were 102 records (5.8%) that were missing residency state and 0 were 
+missing medical school information             
+      
+EDUCATION AND TRAINING 
+The highest percentage of Alaska’s physicians 
+graduated from the University of Washington School 
+of Medicine ( Table 3 ). Around 10% of Alaska’s 
+physicians completed a residency in California, 
+followed closely by 9% of physicians who completed 
+their residency in Washington. Smaller percentages 
+completed residencies in Alaska, Texas, and New 
+York (Table 4). 
+As shown in Table 5 , 13% of Alaska’s overall 
+practicing physician supply in 2021 graduated 
+from the two medical schools in Washington and 
+18% completed a residency in a WWAMI state, 
+including Alaska. Among primary care physicians, 
+16% graduated from a Washington medical school, 
+18% completed a residency in Alaska and 31% 
+completed a residency in any WWAMI state. Among 
+physicians specializing in family medicine these 
+percentages were higher: 41% of Alaska’s family 
+medicine physicians completed a residency in a 
+WWAMI state, including Alaska.
+8
+COMPARISON OF  
+WORKFORCE SUPPLY 
+WITH POPULATION 
+HEALTH MEASURES
+The Robert Wood Johnson Foundation (RWJF) County 
+Health Rankings use available data on population 
+health factors and health outcomes to create county 
+(or borough/census area) rankings within each state. 5 
+These rankings are derived from data from a variety of 
+national sources and include overall health outcomes 
+which is comprised of length of life and quality of life 
+measures. We compared Alaska’s physician workforce 
+supply findings with the RWJF county health rankings 
+for the combined overall health outcomes measure 
+and listed the top ranked 15 Alaska boroughs/census areas in three categories ( Table 6 ).
+Among physicians who graduated from medical school since 
+2000, the percentage of Alaska’s physicians who completed a 
+residency in Alaska was higher than for the overall physician 
+workforce (including those who graduated prior to 2000) and 
+continued to fall in each of 2014, 2016, and 2021 (Figure 6). 
+Table 6: Top 15 Boroughs/Census Areas in Alaska Ranked by Health Outcomes and Supply of Physicians* per 100,000 
+Population
+  Borough/Census 
+Area Rank** Overall Health Outcomes*** Number of Overall Physicians* Number of Primary Care Physicians*
+1 Kodiak Island Anchorage Haines 
+2 Juneau Sitka Dillingham
+3 Sitka Haines Sitka 
+4 Southeast Fairbanks Juneau Petersburg 
+5 Valdez-Cordova Ketchikan Gateway Kodiak Island
+6 Fairbanks North Star Dillingham Valdez-Cordova
+7 Kenai Peninsula Fairbanks North Star Juneau 
+8 Matanuska-Susitna Petersburg Ketchikan Gateway 
+9 Anchorage Kenai Peninsula Wrangell 
+10 Ketchikan Gateway Kodiak Island Nome 
+11 Petersburg Nome Census Anchorage
+12 Haines Valdez-Cordova Prince of Wales-Hyder 
+13 North Slope Prince of Wales-Hyder Bethel 
+14 Wrangell Wrangell Fairbanks North Star 
+15 Aleutians West Matanuska-Susitna Northwest Arctic 
+*Providing direct patient care, not federally employed, age <75 years, and in Alaska
+Figure 6. Percentages of Alaska Physicians* in 2014, 
+2016, and 2021 Who Completed a Residency in 
+Alaska 
+Graduating 2000-on
+2021 20162014202120162014
+Total Physicians Primary Care Physicians
+5.2 %
+16.1 %
+6.2 %
+14.5%
+7.3%
+14.3% 13.6%
+35.8%
+15.4%
+31.2%
+17.7%
+30.3%
+All
+* Number of physicians per 100,000 population, providing direct patient care, not federally employed, age <75 years, and in Alaska
+**Lower number reflects higher rank, i.e., better health measures, more physicians
+***Overall health outcomes ranking obtained from the Robert Wood Johnson Foundation, which combines length and quality of life measures
+9
+SUMMARY AND POLICY IMPLICATIONS
+Alaska’s physician supply, on a per 100,000 population basis, is similar to the national number. Differences in distribution are 
+apparent between urban and rural areas of the state. While more physicians practice in urban areas, the numbers of primary 
+care physicians per 100,000 population in Alaska’s large rural areas are closer to urban areas. Fewer physicians (86 per 100,000 
+population) work in isolated small rural areas of Alaska. Attributing a single practice location to Alaska physicians may be somewhat 
+misleading, however, because it is not uncommon for providers to travel to rural sites for short periods of practice, and/or to 
+provide telemedicine to more remote sites while based in urban locations. As a result, these results may over- or under-estimate 
+physician supply in more sparsely populated areas where each physician constitutes a significant percentage of the overall supply. 
+Additionally, the physician supply numbers in this report should be viewed with the understanding that the source data from the 
+AMA Physician Masterfile has limitations. Locum tenens physicians, newly recruited physicians, and physicians with addresses 
+in other locations may not be reflected in the supply of some boroughs/census areas, for example. This analysis also excluded 
+physicians that are 75 years or older, which could imply undercounting of effective physician supply in some areas. Also, recent 
+expansions of the use of telehealth and virtual visits reduced the need for providers and patients to be in close proximity, improving 
+satisfaction and reducing costs for some patients.6 While many providers adopted hybrid approaches to patient visits (with some 
+in-person and some virtual) requiring that they remain near their practice sites, attention should be paid to how future telehealth 
+use may be affecting the need for providers and patients to be located in the same geographic areas. 
+Additionally, early in the pandemic, COVID-19 was shown to adversely affect medical students’ preparation effort and application 
+to residency programs by causing significant disruptions in the education system. 7 As a response, some organizations started 
+making adjustments to the residency application process such as by relaxing the requirement of standardized letters of evaluation 
+and limiting the maximum number of away rotations, 8 which alleviated some of the challenges faced by medical graduates. 
+Some medical schools also accelerated graduation of medical students and deployed them to care for patients to help ease the 
+workforce shortage during the pandemic.9 
+About 13% of Alaska’s total physician supply graduated from the University of Washington (the highest percentage of any 
+medical school), where Alaska participates in the WWAMI medical education program. Medical students from Alaska have been 
+supported by the state to attend the WWAMI program since 1971. In 2021, the retention rate for Alaska graduates practicing 
+As shown in Table 6, 13 out of 15 boroughs/census areas that have higher number of physicians per 100,000 population 
+and 10 out of 15 boroughs/census areas with higher number of primary care physicians per 100,000 population also 
+appeared among the 15 boroughs/census areas ranked the highest for health outcomes. Nonetheless, boroughs/
+census areas that had lower health outcomes ranks did not necessarily have lower number of physicians per 100,000 
+population, thus implying no clear overall relationship between the number of physicians per 100,000 population 
+and the overall health outcomes based on boroughs/census areas ranking. The availability of physicians is one of 
+multiple factors that contribute to population health. For example, having more providers, including non-physician 
+medical providers such as physician assistants and nurse practitioners, and public health officials may be associated 
+with delivering more of the healthcare services needed by a population, and/or more providers may be attracted 
+to counties with healthier populations, and providers may be less easily recruited to counties with less healthy 
+populations. While the data for the RWJF county rankings is the most recent available to the developers, some of 
+the data components contributing to the measures may be several years old and therefore these findings should be 
+interpreted as suggestive and not conclusive. In addition, rankings are simply relational measures and a ranking of 1 
+doesn’t necessarily indicate “great” status, nor does a high number indicate “bad” status. Nonetheless, while there 
+is not necessarily a direct correlation between population health rankings and physician supply, these comparisons 
+may suggest areas where further study and possible action is needed. 
+10
+REFERENCES
+1.   U.S. Census Bureau. Quick Facts: Alaska. https://www.census.gov/quickfacts/fact/table/AK/POP010210 
+2.    Skillman SM, Dahal A. Alaska State’s physician workforce in 2016. Seattle, WA: WWAMI Center for Health Workforce 
+Studies, University of Washington, Feb 2017. https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2015/09/ 
+alaska-physician-workforce-in-2016.pdf 
+3.    Skillman SM, Stover B. Alaska State’s physician workforce in 2014. Seattle, WA: WWAMI Center for Health Workforce 
+Studies, University of Washington, Aug 2014. http://depts.washington.edu/uwrhrc/uploads/CHWS_AK_Phys_ 
+Workforce_2014.pdf 
+4.    Center for Workforce Studies, Association of American Medical Colleges. 2021 state physician workforce data book. 
+Physician Databook. Washington, DC: Association of American Medical Colleges; 2021. Retrieved from https://store.aamc. 
+org/downloadable/download/sample/sample_id/506/ 
+5.    Robert Wood Johnson Foundation and the University of Wisconsin Population Health Institute. County Health Rankings & 
+Roadmaps. 2021. http://www.countyhealthrankings.org/explore-health-rankings. Accessed May 04, 2022. 
+6.    Charters E, Khom MJ, Baker J, Lindsay T. Patient satisfaction and cost analysis of telehealth delivered by allied health 
+oncology clinicians. Contemp Oncol. 2022; 26 (1): 44-48. DOI: https://doi.org/10.5114/wo.2022.115047 
+7.    Akers A, Blough C, Iyer M S. COVID-19 Implications on Clinical Clerkships and the Residency Application Process for 
+      Medical Students. Cureus. 2020; 12(4): e7800. doi:10.7759/cureus.7800
+8.     Katirji L, Smith L, Pelletier-Bui A, et al. Addressing challenges in obtaining emergency medicine away rotations and 
+      standardized letters of evaluation due to COVID-19 pandemic. West J Emerg Med. 2020, 21:10.5811/westjem.2020.3.47444
+9.     Flotte TR, Larkin AC, Fischer MA, Chimienti SN, DeMarco DM, Fan PY, Collins MF . Accelerated Graduation and the 
+      Deployment of New Physicians During the COVID-19 Pandemic. Acad Med. 2020 Oct;95(10):1492-1494. doi: 10.1097/
+      ACM.0000000000003540. PMID: 32520751; PMCID: PMC7302071
+10.  Douglas C Schaad. (Personal communication, July 12, 2022).
+11.  Patterson DG, Andrilla CHA, Garberson LA. Preparing Physicians for Rural Practice: Availability of Rural Training in 
+Rural Centric Residency Programs. J Grad Med Educ. 2019 Oct;11(5):550-557. doi: 10.4300/JGME-D-18-01079.1. PMID: 
+31636825; PMCID: PMC6795329. 
+12.  Ballance D, Kornegay D, Evans P . Factors that influence physicians to practice in rural locations: A review and commentary. 
+J Rural Health. 2009;25:276–281. 
+in the WWAMI region was 63%.10 As shown in these findings as well as in the 2016 and 2014 analyses, residency can be highly 
+associated with the location where a physician eventually chooses to practice and of the population he or she prefers to serve, 
+and is therefore a useful recruitment tool.11,12
+In 2020 Alaska ranked second among states for retaining physicians who complete a residency in-state, with a 65% retention rate 
+in 2020.4 This high rate of retention contributed to the 27% of all 2021 physicians in family medicine specialties who completed a 
+residency in Alaska. The state has few physician residencies, however, so even with a high residency retention rate only 7% of all 
+practicing Alaska physicians (across all specialties) completed an in-state residency. While not easy to accomplish, the extent to 
+which more residencies can be formed in locations and for specialties that serve the populations where shortages are greatest 
+could help reduce disparities in the distribution of Alaska’s physicians. This study also showed that high percentages of physicians 
+who were more recent medical school graduates (since 2000) completed a residency in-state (14% of the total). Efforts specifically 
+designed to retain these young physicians could be a useful health workforce development strategy for Alaska. 
+11
+AUTHORS
+Arati Dahal, PhD, Research Scientist, UW CHWS
+Susan M. Skillman, MS, Senior Deputy Director, UW CHWS
+FUNDING
+This project is supported through Grant # U77HP03022 by the Health Resources and Services Administration (HRSA) of the 
+U.S. Department of Health and Human Services (HHS) as part of an award totaling $740,000 with 0% financed with non-
+governmental sources. The contents are those of the authors and do not necessarily represent the official views of, nor an 
+endorsement, by HRSA, HHS, or the U.S. Government. For more information, please visit HRSA.gov.
+ACKNOWLEDGMENTS
+Grace A. Guenther, MPA, produced this report’s maps, and Bev Marshall helped with the document design.
+SUGGESTED CITATION
+Dahal A, Skillman SM. Alaska’s Physician Workforce in 2021. Seattle, WA: Center for Health Workforce Studies, University of 
+Washington, July 2022.
+Revision: a correction was made on January 29, 2025, on page 7, line 7, to change “Arkansas” to “Alaska”. 
+University of Washington • School of Medicine 
+Box 354982 • Seattle WA 98195-4982 
+phone: (206) 685-0402 • fax: (206) 616-4768 
+https://familymedicine.uw.edu/chws/
+13.  U.S. Department of Agriculture. Rural-urban commuting area codes. http://www.ers.usda.gov/data-products/ 
+ruralurbancommuting-area-codes.aspx#.U6xpL0Ca-2N. Accessed December, 2016
+14.  Claritas. 2021 Selected Population Facts Data for All ZIP Codes and Boroughs Nationwide; Selected Data Items for All 
+Tracts Nationwide. ZIP Code Cross-reference File Included. Custom-prepared data CD. San Diego, CA: Claritas; 2021. 
+15. StataCorp. 2019. Stata Statistical Software: Release 16. College Station, TX: StataCorp LLC.
+12
+APPENDIX A: METHODS
+The Alaska state physician supply data for this study came from the American Medical Association (AMA) Physician Masterfile, 
+accessed in February, 2022. Changes in physician supply and characteristics for 2014 and 2016 were assessed using prior studies 
+that used data from 2014 and 2016 AMA Physician Masterfile. 2,3 There were 2,538 total allopathic and osteopathic physicians 
+with Alaska license records in the dataset. Those selected for these analyses were the 1,751 with 1) an in-state practice address 
+(or mail address, when practice was not available), 2) who were age 74 or younger, 3) provided direct patient care, and 4) were 
+not a federal employee. Physicians were assigned specialties using the AMA dataset’s “primary” and “secondary” specialty 
+fields. The primary specialty was reassigned to the secondary specialty for about 5% of physicians when there was indication 
+from the listed secondary specialty that the physician was likely to practice more specialized medicine than the primary specialty 
+indicated. Physician specialties were grouped into “Primary care” (family medicine, general internal medicine and general 
+pediatrics specialties), “Surgeons” (general surgery, obstetrics-gynecology, and other surgery), and “Other Specialists”. Data 
+for psychiatrists were analyzed and reported separately. Rural-urban status was determined using Rural Urban Commuting Area 
+(RUCA) taxonomy13 and the population data came from a custom-prepared file of selected 2021 population data with ZIP codes 
+cross-referenced to counties.14 All analyses were done using STATA version 1615 and maps were generated using Tableau data 
+visualization tool.

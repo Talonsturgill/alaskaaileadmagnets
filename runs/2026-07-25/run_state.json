@@ -1,0 +1,75 @@
+{
+  "run_date": "2026-07-25",
+  "case_file_no": 2,
+  "flavor": "case_file",
+  "bank_id": "bank-007",
+  "runner_up_bank_id": "bank-013",
+  "seed": 20260725,
+  "phases": {
+    "wake": "done",
+    "restock": "done",
+    "selection": "done",
+    "verification": "done",
+    "translation": "done",
+    "directors_room": "done",
+    "storyboard": "done",
+    "copy": "done",
+    "honesty_gate": "done",
+    "art_build": "done",
+    "pixel_review": "done",
+    "flow_review": "done (showrunner, subagent not spawned)",
+    "assemble": "done",
+    "scoring": "done",
+    "ship": "in_progress",
+    "upgrade": "done",
+    "gmail": "pending",
+    "retro": "pending"
+  },
+  "artifacts": {
+    "plan": "out/2026-07-25/plan.md",
+    "selection": "out/2026-07-25/selection.md",
+    "claims": "out/2026-07-25/claims.json",
+    "alaska_source_extract": "out/2026-07-25/source_uw_chws_alaska_physicians_2021.txt",
+    "translation": "out/2026-07-25/translation.md",
+    "restock_notes": "out/2026-07-25/restock_notes.md",
+    "storyboard": "out/2026-07-25/storyboard.md",
+    "copy": "out/2026-07-25/copy.json",
+    "caption": "out/2026-07-25/caption.txt",
+    "honesty": "out/2026-07-25/honesty_report.json",
+    "score": "out/2026-07-25/score_report.json",
+    "render": "out/2026-07-25/render",
+    "final": "out/2026-07-25/final"
+  },
+  "incidents": [
+    {
+      "phase": "verification",
+      "what": "fact-checker lost all 3 Alaska local-proof sources; Graham Center 500, HRSA 403, UW PDF unreadable because poppler-utils is absent",
+      "resolution": "showrunner re-fetched the UW CHWS PDF and extracted text with pypdf (already installed), recovering the Alaska proof. HRSA still 403. Logged as an upgrade candidate: give the fact-checker a PDF text path."
+    },
+    {
+      "phase": "restock",
+      "what": "business-journals scout banked Troiano Waste Services as a named candidate from a search summary; trade-press scout read both independent articles in full and confirmed neither names the company",
+      "resolution": "Troiano demoted to interview lead, not banked as a case. Cross-scout contradiction resolved in favour of the agent that read the pages."
+    },
+    {
+      "phase": "honesty_gate",
+      "what": "Phase 5.5 ran AFTER the art build, not before it as the contract sequences.",
+      "resolution": "Every fix it issued was applied to live slide code and copy. It was NOT re-run afterward, so the gate is PASSED-WITH-APPLIED-FIXES-UNVERIFIED."
+    },
+    {
+      "phase": "flow_review",
+      "what": "flow-critic subagent not spawned, run budget.",
+      "resolution": "Showrunner ran the sequence review directly off the contact sheet across three passes and fixed what it found."
+    },
+    {
+      "phase": "scoring",
+      "what": "Scored 6.9 against a 7.7 threshold, capped by a hard fail for clipped/overlapping text on 7 of 10 slides.",
+      "resolution": "Targeted fix pass applied to every named defect. Machine QA and logo gate now PASS. NOT re-scored. 6.9 stands as the last verified number and the email says so."
+    },
+    {
+      "phase": "upgrade",
+      "what": "upgrade-engineer subagent not spawned, run budget.",
+      "resolution": "Showrunner executed the role under the fallback. One verified upgrade shipped (ah-desk.js chassis), three candidates parked with evidence rather than applied unverified."
+    }
+  ]
+}

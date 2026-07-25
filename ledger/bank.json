@@ -12,17 +12,41 @@
       "bottleneck": "Rising insurance costs, paper heavy back office, overdue preventive maintenance, no visibility into driver risk or trailer utilization.",
       "build": "Samsara AI dash cams with automated driver coaching, telematics, driver app, smart trailer dormancy reports, plus an internal Fraley Score driver performance system built on top.",
       "numbers": [
-        {"value": "36 percent", "what": "insurance cost reduction 2020 to 2023 while the market rose about 20 percent", "source_url": "https://www.samsara.com/customers/fraley-and-schilling", "sourcing": "vendor"},
-        {"value": "187,000 dollars and 6,700 hours per year", "what": "back office admin savings, 99 percent less paperwork processing time", "source_url": "https://www.samsara.com/customers/fraley-and-schilling", "sourcing": "vendor"},
-        {"value": "75 percent", "what": "fewer overdue preventive maintenance checks", "source_url": "https://www.samsara.com/customers/fraley-and-schilling", "sourcing": "vendor"},
-        {"value": "800,000 dollars plus", "what": "total estimated annual savings across programs", "source_url": "https://www.samsara.com/customers/fraley-and-schilling", "sourcing": "vendor"}
+        {
+          "value": "36 percent",
+          "what": "insurance cost reduction 2020 to 2023 while the market rose about 20 percent",
+          "source_url": "https://www.samsara.com/customers/fraley-and-schilling",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "187,000 dollars and 6,700 hours per year",
+          "what": "back office admin savings, 99 percent less paperwork processing time",
+          "source_url": "https://www.samsara.com/customers/fraley-and-schilling",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "75 percent",
+          "what": "fewer overdue preventive maintenance checks",
+          "source_url": "https://www.samsara.com/customers/fraley-and-schilling",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "800,000 dollars plus",
+          "what": "total estimated annual savings across programs",
+          "source_url": "https://www.samsara.com/customers/fraley-and-schilling",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "2020 to 2023",
       "evidence_strength": "medium",
       "skepticism": "Vendor case study. The insurance number is the most concrete and externally anchored line. The rest are company estimates. Label vendor sourced.",
-      "sources": ["https://www.samsara.com/customers/fraley-and-schilling"],
+      "sources": [
+        "https://www.samsara.com/customers/fraley-and-schilling"
+      ],
       "alaska_translation": "Alaska trucking and air cargo run the same math with harsher roads and higher stakes. Insurance, maintenance compliance, and back office paperwork are universal fleet bottlenecks.",
-      "icp_segments": ["logistics"],
+      "icp_segments": [
+        "logistics"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Strongest single company story in the bank for relatability. Alternates surfaced but not fetched, Halvor Lines (Netradyne), Dohrn Transfer (Samsara)."
@@ -38,17 +62,42 @@
       "bottleneck": "Static hand built routes. Customers got appended to routes so drivers crossed town and back. Two to three route planners per distribution center.",
       "build": "OptimoRoute algorithmic route optimization with delivery time windows, unload times, and what if simulation for prospective customers.",
       "numbers": [
-        {"value": "20 percent", "what": "fleet wide mileage reduction on 4.6 million annual miles", "source_url": "https://optimoroute.com/route-optimization-food-distributor/", "sourcing": "vendor"},
-        {"value": "12 percent", "what": "lower driver costs", "source_url": "https://optimoroute.com/route-optimization-food-distributor/", "sourcing": "vendor"},
-        {"value": "14 percent", "what": "more delivery capacity, about 330 extra deliveries a day, same fleet", "source_url": "https://optimoroute.com/route-optimization-food-distributor/", "sourcing": "vendor"},
-        {"value": "89 to 94 percent", "what": "on time rate improvement", "source_url": "https://optimoroute.com/route-optimization-food-distributor/", "sourcing": "vendor"}
+        {
+          "value": "20 percent",
+          "what": "fleet wide mileage reduction on 4.6 million annual miles",
+          "source_url": "https://optimoroute.com/route-optimization-food-distributor/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "12 percent",
+          "what": "lower driver costs",
+          "source_url": "https://optimoroute.com/route-optimization-food-distributor/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "14 percent",
+          "what": "more delivery capacity, about 330 extra deliveries a day, same fleet",
+          "source_url": "https://optimoroute.com/route-optimization-food-distributor/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "89 to 94 percent",
+          "what": "on time rate improvement",
+          "source_url": "https://optimoroute.com/route-optimization-food-distributor/",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "not stated",
       "evidence_strength": "medium",
       "skepticism": "Vendor case study with a named logistics manager and unusually specific operational detail. No independent audit.",
       "alaska_translation": "Anchorage food and freight distribution runs the same static route trap. Percent level mileage cuts are real money at Alaska fuel and labor rates. Same math as the snowplow route studies.",
-      "icp_segments": ["logistics", "distribution"],
-      "sources": ["https://optimoroute.com/route-optimization-food-distributor/"],
+      "icp_segments": [
+        "logistics",
+        "distribution"
+      ],
+      "sources": [
+        "https://optimoroute.com/route-optimization-food-distributor/"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Family produce house archetype. Pairs with the public sector plow route evidence for a boring optimization pays theme."
@@ -64,16 +113,36 @@
       "bottleneck": "2 percent of background check records are messy free text needing classification into 230 categories. GPT-4 hit 88 percent overall, 82 on hard cases, 7 to 15 second latency, 7,000 to 12,000 dollars a month.",
       "build": "Fine tuned Llama-3 8B on their own data via Predibase, served on a single A100 GPU.",
       "numbers": [
-        {"value": "97 percent", "what": "overall accuracy after fine tuning, 85 on the hardest cases", "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html", "sourcing": "independent"},
-        {"value": "under 0.15 seconds", "what": "latency, roughly 30x faster", "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html", "sourcing": "independent"},
-        {"value": "about 800 dollars a month", "what": "serving cost, roughly 5x cheaper than GPT-4", "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html", "sourcing": "independent"}
+        {
+          "value": "97 percent",
+          "what": "overall accuracy after fine tuning, 85 on the hardest cases",
+          "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html",
+          "sourcing": "independent"
+        },
+        {
+          "value": "under 0.15 seconds",
+          "what": "latency, roughly 30x faster",
+          "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html",
+          "sourcing": "independent"
+        },
+        {
+          "value": "about 800 dollars a month",
+          "what": "serving cost, roughly 5x cheaper than GPT-4",
+          "source_url": "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html",
+          "sourcing": "independent"
+        }
       ],
       "timeline": "reported September 2024",
       "evidence_strength": "strong",
       "skepticism": "Original reporting by Computerworld with before and after baselines, though the underlying numbers are self reported by Checkr's ML engineer.",
       "alaska_translation": "The cleanest public proof that a small model fine tuned on your own data can beat the big general model on cost, speed, and accuracy for one narrow job. The ownership story, your model, your data, costs that fall.",
-      "icp_segments": ["professional_services", "anc_enterprises"],
-      "sources": ["https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html"],
+      "icp_segments": [
+        "professional_services",
+        "anc_enterprises"
+      ],
+      "sources": [
+        "https://www.computerworld.com/article/3541362/checkr-ditches-gpt-4-for-a-smaller-genai-model-streamlines-background-checks.html"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "The model tuning capability file anchor. Over the size band as a tech firm, use for the mechanism with the size caveat said plainly."
@@ -89,16 +158,36 @@
       "bottleneck": "Seasonal temp labor surges brought forklift and pedestrian safety breaches, especially failure to stop at intersections.",
       "build": "Voxel AI computer vision on existing security cameras flagging unsafe behaviors, feeding video based coaching plus physical workflow changes.",
       "numbers": [
-        {"value": "82 percent", "what": "drop in vehicle safety incidents", "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky", "sourcing": "vendor"},
-        {"value": "92 percent", "what": "drop in no stop at intersection events", "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky", "sourcing": "vendor"},
-        {"value": "19 to 3", "what": "daily vehicle incidents at the Hebron site in six months", "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky", "sourcing": "vendor"}
+        {
+          "value": "82 percent",
+          "what": "drop in vehicle safety incidents",
+          "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "92 percent",
+          "what": "drop in no stop at intersection events",
+          "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "19 to 3",
+          "what": "daily vehicle incidents at the Hebron site in six months",
+          "source_url": "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "five to six month window, reported 2025",
       "evidence_strength": "medium",
       "skepticism": "Vendor published, numbers are Verst's internal incident counts, not audited. Independent trade coverage of the partnership exists.",
       "alaska_translation": "Runs on cameras a warehouse already owns. Anchorage warehousing, seafood processing floors, and cargo operations have the same forklift and pedestrian physics plus ice.",
-      "icp_segments": ["logistics", "seafood"],
-      "sources": ["https://www.voxelai.com/case-studies/verst-logistics-hebron-ky"],
+      "icp_segments": [
+        "logistics",
+        "seafood"
+      ],
+      "sources": [
+        "https://www.voxelai.com/case-studies/verst-logistics-hebron-ky"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Existing cameras plus a model is a low lift entry story for CV."
@@ -114,15 +203,30 @@
       "bottleneck": "Undetected tool breakage on automated machines. Roughly a third of parts per shift lost to scrap, an hour per shift sorting good from bad, machines over provisioned at 200 percent capacity to absorb waste.",
       "build": "MachineMetrics tool monitoring, sensorless high frequency data from the machine control, ML detects imminent tool failure and feed holds the machine before it wrecks parts.",
       "numbers": [
-        {"value": "about 72,000 dollars", "what": "saved per machine per year", "source_url": "https://www.machinemetrics.com/bc-machining", "sourcing": "vendor"},
-        {"value": "about 99 percent", "what": "accuracy predicting tool failure", "source_url": "https://www.machinemetrics.com/bc-machining", "sourcing": "vendor"}
+        {
+          "value": "about 72,000 dollars",
+          "what": "saved per machine per year",
+          "source_url": "https://www.machinemetrics.com/bc-machining",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "about 99 percent",
+          "what": "accuracy predicting tool failure",
+          "source_url": "https://www.machinemetrics.com/bc-machining",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "not stated",
       "evidence_strength": "medium",
       "skepticism": "Vendor case study interview. Per machine framing is honest, checkable arithmetic, which helps.",
       "alaska_translation": "Any Alaska shop running machines that break expensive things quietly, machining, wood, food processing lines. The pattern is listen to the machine, stop it before the damage.",
-      "icp_segments": ["manufacturing", "trades"],
-      "sources": ["https://www.machinemetrics.com/bc-machining"],
+      "icp_segments": [
+        "manufacturing",
+        "trades"
+      ],
+      "sources": [
+        "https://www.machinemetrics.com/bc-machining"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Small shop archetype, enabled lights out running."
@@ -138,23 +242,42 @@
       "bottleneck": "Referrals arrive as faxes. Manual processing took 10 to 15 minutes each, backlog hit 2 to 3 weeks, tedium drove constant intake staff turnover.",
       "build": "Tennr, an AI document processing layer that reads referral faxes and automates patient creation and sales order generation.",
       "numbers": [
-        {"value": "10 to 15 minutes down to under 5", "what": "per fax processing time", "source_url": "https://www.tennr.com/customer-stories/neb-medical-services", "sourcing": "vendor"},
-        {"value": "50 to 170", "what": "faxes per day per user", "source_url": "https://www.tennr.com/customer-stories/neb-medical-services", "sourcing": "vendor"},
-        {"value": "3 weeks to under 48 hours", "what": "referral backlog", "source_url": "https://www.tennr.com/customer-stories/neb-medical-services", "sourcing": "vendor"}
+        {
+          "value": "10 to 15 minutes down to under 5",
+          "what": "per fax processing time",
+          "source_url": "https://www.tennr.com/customer-stories/neb-medical-services",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "50 to 170",
+          "what": "faxes per day per user",
+          "source_url": "https://www.tennr.com/customer-stories/neb-medical-services",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "3 weeks to under 48 hours",
+          "what": "referral backlog",
+          "source_url": "https://www.tennr.com/customer-stories/neb-medical-services",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "not stated",
       "evidence_strength": "weak",
       "skepticism": "Vendor only, no dates, company's own numbers, owners named. Needs corroboration hunt before it can ship as a headline case. Similar Tennr DME cases exist.",
       "alaska_translation": "Anchorage clinics and DME providers live in the same fax stream. Document intake is the single most repeatable back office win in independent healthcare.",
-      "icp_segments": ["healthcare"],
-      "sources": ["https://www.tennr.com/customer-stories/neb-medical-services"],
+      "icp_segments": [
+        "healthcare"
+      ],
+      "sources": [
+        "https://www.tennr.com/customer-stories/neb-medical-services"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Ship only with the vendor label prominent or after corroboration."
     },
     {
       "id": "bank-007",
-      "status": "candidate",
+      "status": "shipped",
       "company": "Carbon Health",
       "location": "San Francisco, clinics multi state",
       "size": "600 plus clinicians across the clinic network",
@@ -163,17 +286,31 @@
       "bottleneck": "Charting burnout. Clinicians spent about 16 minutes per visit writing notes instead of seeing patients.",
       "build": "In house ambient scribe inside their own EHR. Visit audio with consent, AWS Transcribe Medical, EHR context into a GPT-4 prompt, draft chart for provider review, plus plain language patient summaries. Launched all clinics June 2023.",
       "numbers": [
-        {"value": "under 4 minutes vs 16", "what": "complete chart time", "source_url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits", "sourcing": "vendor"},
-        {"value": "88 percent", "what": "of AI generated text accepted without edits", "source_url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits", "sourcing": "vendor"}
+        {
+          "value": "under 4 minutes vs 16",
+          "what": "complete chart time",
+          "source_url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "88 percent",
+          "what": "of AI generated text accepted without edits",
+          "source_url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "launched June 2023",
       "evidence_strength": "medium",
-      "skepticism": "Self published numbers, launch covered by healthcare trade press. A circulated claim of 30 percent more visits is NOT in the primary source, never use it.",
+      "skepticism": "SHIPPED as Case File 002. CORRECTION TO THIS ENTRY, the note that the 30 percent more visits claim is 'NOT in the primary source' is WRONG. It IS in Carbon Health's own Business Wire press release verbatim, one San Francisco pilot clinic, though it is absent from the engineering blog. Also note zero independent corroboration of any figure exists, Becker's returned 403 on 2026-07-25.",
       "alaska_translation": "Ambient scribes are now buyable off the shelf, which makes this THE entry story for independent Anchorage practices. Documentation is where healthcare ROI concentrates.",
-      "icp_segments": ["healthcare"],
-      "sources": ["https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits"],
+      "icp_segments": [
+        "healthcare"
+      ],
+      "sources": [
+        "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits"
+      ],
       "added": "2026-07-21",
-      "last_verified": null,
+      "last_verified": "2026-07-25",
       "notes": "Non tech operator building rather than buying, early and credible."
     },
     {
@@ -187,15 +324,29 @@
       "bottleneck": "Call center queues and a legacy IVR. Members waited to do routine transactions a machine could handle.",
       "build": "Olive, a conversational voice and chat AI from interface.ai integrated with the Jack Henry Symitar core. Balances, history, transfers, phone banking, 24 7.",
       "numbers": [
-        {"value": "about 33 percent", "what": "of about 1,600 day one calls fully handled by the AI", "source_url": "https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive", "sourcing": "trade"},
-        {"value": "500 plus", "what": "members in and out in about 90 seconds on day one", "source_url": "https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive", "sourcing": "trade"}
+        {
+          "value": "about 33 percent",
+          "what": "of about 1,600 day one calls fully handled by the AI",
+          "source_url": "https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive",
+          "sourcing": "trade"
+        },
+        {
+          "value": "500 plus",
+          "what": "members in and out in about 90 seconds on day one",
+          "source_url": "https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive",
+          "sourcing": "trade"
+        }
       ],
       "timeline": "launched August 2023",
       "evidence_strength": "medium",
       "skepticism": "Launch numbers via credit union trade press quoting the COO. The mature state claims of 60 to 75 percent containment are vendor only. The COO later testified to Congress on AI in financial services, which signals the deployment is real.",
       "alaska_translation": "Alaska credit unions are exactly this size class and exactly this member service shape. One of the clearest voice AI fits in the local market.",
-      "icp_segments": ["financial_services"],
-      "sources": ["https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive"],
+      "icp_segments": [
+        "financial_services"
+      ],
+      "sources": [
+        "https://www.cutoday.info/THE-feature/Great-Lakes-CU-Introduces-Olive"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Use day one numbers as the verified layer, vendor mature numbers labeled."
@@ -211,15 +362,29 @@
       "bottleneck": "Seasonal staffing swings, abandoned calls, dated IVR frustrating guests on 10,000 to 15,000 calls a month.",
       "build": "PolyAI voice agent. Routing, hundreds of FAQs, 24 7 room reservations and cancellations, housekeeping requests logged directly into HotSOS.",
       "numbers": [
-        {"value": "92 percent", "what": "reduction in inbound call volume reaching the contact center", "source_url": "https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/", "sourcing": "vendor"},
-        {"value": "187 percent", "what": "vendor framed ROI on labor cost savings", "source_url": "https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/", "sourcing": "vendor"}
+        {
+          "value": "92 percent",
+          "what": "reduction in inbound call volume reaching the contact center",
+          "source_url": "https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "187 percent",
+          "what": "vendor framed ROI on labor cost savings",
+          "source_url": "https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "not stated",
       "evidence_strength": "medium",
       "skepticism": "Vendor case study, no dates, ROI framing is the vendor's. Named, specific, operationally detailed.",
       "alaska_translation": "Alaska tourism runs a four month season on phone based booking. The seasonal staffing swing is worse here than Reno. Careful, the house rule against over indexing on voice agents applies, rotate this capability.",
-      "icp_segments": ["tourism"],
-      "sources": ["https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/"],
+      "icp_segments": [
+        "tourism"
+      ],
+      "sources": [
+        "https://poly.ai/case-studies/how-peppermill-resort-spa-casino-achieved-187-roi-on-labor-cost-savings-with-polyai/"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Tourism anchor. Golden Nugget numbers exist as pattern corroboration."
@@ -235,14 +400,24 @@
       "bottleneck": "Project knowledge scattered across Procore, staffing systems, playbooks, directories, and a data lake. Generic chatbots do not know how RO builds and failed their security bar.",
       "build": "Compass, a custom in house AI assistant connected to 7,000 plus project records, staffing systems, and internal documentation.",
       "numbers": [
-        {"value": "up to 50 minutes", "what": "saved on difficult tasks, per the company", "source_url": "https://www.prnewswire.com/news-releases/rogers-obrien-construction-sets-new-standard-with-custom-ai-assistant-302582578.html", "sourcing": "vendor"}
+        {
+          "value": "up to 50 minutes",
+          "what": "saved on difficult tasks, per the company",
+          "source_url": "https://www.prnewswire.com/news-releases/rogers-obrien-construction-sets-new-standard-with-custom-ai-assistant-302582578.html",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "announced October 2025",
       "evidence_strength": "weak",
       "skepticism": "Entirely self published, soft metric. Included because a 650 person regional GC building its own assistant is exactly the mid market pattern and the integration list is concrete.",
       "alaska_translation": "Anchorage GCs carry the same scattered project brain. Pair with Gilbane for the numbers and this for the size profile.",
-      "icp_segments": ["construction"],
-      "sources": ["https://www.prnewswire.com/news-releases/rogers-obrien-construction-sets-new-standard-with-custom-ai-assistant-302582578.html", "https://r-o.com/media/200965"],
+      "icp_segments": [
+        "construction"
+      ],
+      "sources": [
+        "https://www.prnewswire.com/news-releases/rogers-obrien-construction-sets-new-standard-with-custom-ai-assistant-302582578.html",
+        "https://r-o.com/media/200965"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Mechanism story, ship paired with bank-011."
@@ -258,16 +433,36 @@
       "bottleneck": "A 456 million dollar project carried 21,000 documents. Field staff burned hours walking to the trailer and digging through drawings, specs, RFIs, change orders.",
       "build": "Trunk Tools TrunkText, an LLM RAG agent over the full document set. Answers field questions in 5 to 10 seconds, drafts RFIs in a few clicks.",
       "numbers": [
-        {"value": "87 percent", "what": "of 246 answers over 37 working days validated correct by the project team", "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/", "sourcing": "independent"},
-        {"value": "20 to 40 minutes", "what": "saved per query", "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/", "sourcing": "independent"},
-        {"value": "100,000 dollars plus a month", "what": "rework avoided", "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/", "sourcing": "independent"}
+        {
+          "value": "87 percent",
+          "what": "of 246 answers over 37 working days validated correct by the project team",
+          "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/",
+          "sourcing": "independent"
+        },
+        {
+          "value": "20 to 40 minutes",
+          "what": "saved per query",
+          "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/",
+          "sourcing": "independent"
+        },
+        {
+          "value": "100,000 dollars plus a month",
+          "what": "rework avoided",
+          "source_url": "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/",
+          "sourcing": "independent"
+        }
       ],
       "timeline": "project completed May 2024",
       "evidence_strength": "strong",
       "skepticism": "Underlying numbers from a vendor case study but validated by Gilbane's project team, quoted by a named superintendent, independently reported by Construction Dive.",
       "alaska_translation": "The mechanism, ask your documents instead of digging, applies to any Alaska GC, and to permit and compliance stacks far beyond construction. Size caveat said plainly, this is a big firm, the tool is not.",
-      "icp_segments": ["construction", "anc_enterprises"],
-      "sources": ["https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/"],
+      "icp_segments": [
+        "construction",
+        "anc_enterprises"
+      ],
+      "sources": [
+        "https://www.constructiondive.com/news/gilbane-trunk-tools-ai-baird-center/725378/"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Best documented construction RAG numbers public. Over band, mechanism case."
@@ -283,15 +478,31 @@
       "bottleneck": "Fresh department ordering by gut feel. Over ordering produce that shrinks, under ordering what sells, hours counting inventory.",
       "build": "Afresh, AI ordering and forecasting for fresh departments. Store teams confirm counts on a tablet, the model recommends order quantities tuned to shelf life and demand.",
       "numbers": [
-        {"value": "about 25 percent", "what": "food waste reduction, VENDOR AGGREGATE across customers, not chain specific", "source_url": "https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/", "sourcing": "vendor"},
-        {"value": "80 percent", "what": "fewer out of stocks, vendor aggregate", "source_url": "https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/", "sourcing": "vendor"}
+        {
+          "value": "about 25 percent",
+          "what": "food waste reduction, VENDOR AGGREGATE across customers, not chain specific",
+          "source_url": "https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "80 percent",
+          "what": "fewer out of stocks, vendor aggregate",
+          "source_url": "https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "Cub rollout September 2021, Bashas pilot 2023",
       "evidence_strength": "medium",
       "skepticism": "Deployments well documented in trade press but every number traces to Afresh, not a named grocer's books. Say so if used.",
       "alaska_translation": "Alaska grocery runs the hardest freshness math in the country, barge and air freight lead times against shelf life. Forecasting is the quiet giant of retail AI.",
-      "icp_segments": ["retail", "distribution"],
-      "sources": ["https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/", "https://thedatastory.substack.com/p/spoiler-alert-afresh-case-study"],
+      "icp_segments": [
+        "retail",
+        "distribution"
+      ],
+      "sources": [
+        "https://www.specialtyfood.com/news-media/news-features/specialty-food-news/cub-foods-works-with-afresh-to-reduce-waste/",
+        "https://thedatastory.substack.com/p/spoiler-alert-afresh-case-study"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Deployment verified, numbers vendor aggregate, frame accordingly."
@@ -307,15 +518,29 @@
       "bottleneck": "Drone inspections of transmission lines generate millions of images. Manual review took 6 to 8 months per cycle and was error prone.",
       "build": "Buzz Solutions AI platform, competitively bid 2021, auto detects damaged insulators, corrosion, vegetation encroachment across drone imagery.",
       "numbers": [
-        {"value": "months to hours or days", "what": "image analysis time", "source_url": "https://www.nypa.gov/news/press-releases/2022/20221122-drone", "sourcing": "government"},
-        {"value": "about 85 percent", "what": "baseline detection accuracy, improving with feedback", "source_url": "https://www.nypa.gov/news/press-releases/2022/20221122-drone", "sourcing": "government"}
+        {
+          "value": "months to hours or days",
+          "what": "image analysis time",
+          "source_url": "https://www.nypa.gov/news/press-releases/2022/20221122-drone",
+          "sourcing": "government"
+        },
+        {
+          "value": "about 85 percent",
+          "what": "baseline detection accuracy, improving with feedback",
+          "source_url": "https://www.nypa.gov/news/press-releases/2022/20221122-drone",
+          "sourcing": "government"
+        }
       ],
       "timeline": "November 2022",
       "evidence_strength": "strong",
       "skepticism": "Government press release, reliable on facts, promotional in tone, accuracy figure is the vendor's. No dollar figures disclosed.",
       "alaska_translation": "Railbelt co-ops fly the same inspection problem across harder terrain. Chugach, MEA, GVEA analogy is direct, drones plus a model instead of months of review.",
-      "icp_segments": ["utilities"],
-      "sources": ["https://www.nypa.gov/news/press-releases/2022/20221122-drone"],
+      "icp_segments": [
+        "utilities"
+      ],
+      "sources": [
+        "https://www.nypa.gov/news/press-releases/2022/20221122-drone"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Public sector but operationally a utility ops win."
@@ -331,15 +556,29 @@
       "bottleneck": "Third party after hours answering booked only 58 calls at a 53 percent rate in the baseline period. Maintenance plan signups stagnant.",
       "build": "Avoca AI CSR voice agent for after hours calls with booking logic and proactive maintenance plan offers.",
       "numbers": [
-        {"value": "58 to 208", "what": "after hours bookings, up 257 percent", "source_url": "https://www.avoca.ai/customers/aire-serv", "sourcing": "vendor"},
-        {"value": "53 to 90 percent", "what": "after hours booking rate", "source_url": "https://www.avoca.ai/customers/aire-serv", "sourcing": "vendor"}
+        {
+          "value": "58 to 208",
+          "what": "after hours bookings, up 257 percent",
+          "source_url": "https://www.avoca.ai/customers/aire-serv",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "53 to 90 percent",
+          "what": "after hours booking rate",
+          "source_url": "https://www.avoca.ai/customers/aire-serv",
+          "sourcing": "vendor"
+        }
       ],
       "timeline": "not stated",
       "evidence_strength": "weak",
       "skepticism": "Vendor published, no timeframe, single small location, unaudited. Illustrative trades story only, clearly labeled.",
       "alaska_translation": "Anchorage trades run the same after hours math with a boiler season attached. Missed winter calls are lost emergency revenue.",
-      "icp_segments": ["trades"],
-      "sources": ["https://www.avoca.ai/customers/aire-serv"],
+      "icp_segments": [
+        "trades"
+      ],
+      "sources": [
+        "https://www.avoca.ai/customers/aire-serv"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Not ship ready alone. Needs corroboration or explicit vendor framing inside a capability file."
@@ -355,14 +594,24 @@
       "bottleneck": "Regulation required weekly manual sea lice counts, netting and handling fish by hand, weather dependent, stressful for fish, labor heavy.",
       "build": "Aquabyte in pen cameras with ML models that continuously photograph passing salmon and count lice automatically.",
       "numbers": [
-        {"value": "first ever", "what": "dispensation from the Norwegian Food Safety Authority to run on automatic lice counting alone, replacing weekly manual counts", "source_url": "https://thefishsite.com/articles/consigning-manual-lice-counting-to-history", "sourcing": "trade"}
+        {
+          "value": "first ever",
+          "what": "dispensation from the Norwegian Food Safety Authority to run on automatic lice counting alone, replacing weekly manual counts",
+          "source_url": "https://thefishsite.com/articles/consigning-manual-lice-counting-to-history",
+          "sourcing": "trade"
+        }
       ],
       "timeline": "dispensation reported November 2020",
       "evidence_strength": "medium",
       "skepticism": "Independent trade press plus an actual regulator decision, but no quantified savings published. The win is regulatory acceptance of the AI count as equivalent, arguably harder evidence than a vendor ROI claim.",
       "alaska_translation": "A REGULATOR accepting a model's count as official is the strongest trust signal in fisheries AI. Rhymes directly with the SalmonVision and sonar counting work in Alaska. Alaska bans finfish farming, analogy only, say so.",
-      "icp_segments": ["seafood"],
-      "sources": ["https://thefishsite.com/articles/consigning-manual-lice-counting-to-history", "https://www.globalseafood.org/blog/kvaroy/"],
+      "icp_segments": [
+        "seafood"
+      ],
+      "sources": [
+        "https://thefishsite.com/articles/consigning-manual-lice-counting-to-history",
+        "https://www.globalseafood.org/blog/kvaroy/"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "The regulatory acceptance angle is unique in the bank."
@@ -378,23 +627,366 @@
       "bottleneck": "Electronic monitoring replaced some human observers but a single trip generates 2 TB plus of video and human review of bycatch footage takes days to weeks per tow set.",
       "build": "NOAA trained YOLOv11 on 16,998 annotated frames to identify salmon escaping through excluder devices in pollock nets. Ai.Fish Catchvision flags key events in EM footage for human reviewers.",
       "numbers": [
-        {"value": "97 percent detection, 82 percent prediction accuracy", "what": "best model performance, published September 2025", "source_url": "https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery", "sourcing": "government"},
-        {"value": "hours vs days to weeks", "what": "tow review time vs human review", "source_url": "https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery", "sourcing": "government"},
-        {"value": "up to 80 percent", "what": "of EM footage review time saved, per NOAA SBIR success story on Ai.Fish", "source_url": "https://techpartnerships.noaa.gov/sbir-success-story-ai-innovation-helps-commercial-fishing-save-time-money-and-manpower/", "sourcing": "government"}
+        {
+          "value": "97 percent detection, 82 percent prediction accuracy",
+          "what": "best model performance, published September 2025",
+          "source_url": "https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery",
+          "sourcing": "government"
+        },
+        {
+          "value": "hours vs days to weeks",
+          "what": "tow review time vs human review",
+          "source_url": "https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery",
+          "sourcing": "government"
+        },
+        {
+          "value": "up to 80 percent",
+          "what": "of EM footage review time saved, per NOAA SBIR success story on Ai.Fish",
+          "source_url": "https://techpartnerships.noaa.gov/sbir-success-story-ai-innovation-helps-commercial-fishing-save-time-money-and-manpower/",
+          "sourcing": "government"
+        }
       ],
       "timeline": "published September 2025 and January 2026",
       "evidence_strength": "strong",
       "skepticism": "Government published, near peer reviewed numbers, but a sector and agency story more than a single company P&L win. Frame it that way. Anchorage's Saltwater Inc uses CV in Gulf pollock EM but publishes no numbers, interview lead.",
       "alaska_translation": "This IS Alaska. A custom small vision model, under 17,000 labeled frames, built by a small team, running on the state's biggest fishery. The exact scale of build a mid market operation can afford.",
-      "icp_segments": ["seafood"],
-      "sources": ["https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery", "https://techpartnerships.noaa.gov/sbir-success-story-ai-innovation-helps-commercial-fishing-save-time-money-and-manpower/", "https://em4.fish/industry-focus-saltwater-inc/"],
+      "icp_segments": [
+        "seafood"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/feature-story/faster-analysis-data-evaluate-bycatch-reduction-efforts-pollock-fishery",
+        "https://techpartnerships.noaa.gov/sbir-success-story-ai-innovation-helps-commercial-fishing-save-time-money-and-manpower/",
+        "https://em4.fish/industry-focus-saltwater-inc/"
+      ],
       "added": "2026-07-21",
       "last_verified": null,
       "notes": "Pairs with SalmonVision in research/ALASKA_GROUND.md for the local flagship."
+    },
+    {
+      "id": "bank-017",
+      "status": "candidate",
+      "company": "CJB Industries (CJB Family of Companies)",
+      "location": "Valdosta, Georgia",
+      "size": "about 200 employees, three facilities, 361,500 sq ft",
+      "industry": "manufacturing_chemical",
+      "capability": "document_intake_automation",
+      "bottleneck": "With more than 200 diverse customers, employees spent numerous hours weekly processing printed batch sheets carrying non standard client data. More than 100 distinct printed batch sheet formats needed converting to a standard digital format.",
+      "build": "Georgia MEP at Georgia Tech guided a data historian (dataPARC) deployment across two facilities, then introduced Vieaura, an AI startup implementing generative AI to convert non standard printed batch sheets into a standardized digital workflow. The historian separately feeds preventative maintenance and quality management.",
+      "numbers": [
+        {
+          "value": "300,000 dollars",
+          "what": "CJB's investment in data software across two facilities, covering coding, rewiring, and updating equipment",
+          "source_url": "https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai",
+          "sourcing": "government"
+        },
+        {
+          "value": "30,000 dollars per month",
+          "what": "savings NIST attributes to better preventative maintenance enabled by the new data software",
+          "source_url": "https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai",
+          "sourcing": "government"
+        },
+        {
+          "value": "51 percent",
+          "what": "reduction in the price of non conformance after a new quality management system",
+          "source_url": "https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai",
+          "sourcing": "government"
+        },
+        {
+          "value": "20 percent",
+          "what": "increase in production capacity per NIST's writeup of the GaMEP engagement",
+          "source_url": "https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai",
+          "sourcing": "government"
+        }
+      ],
+      "timeline": "data historicization began March 2022, quality assessment June 2022, three GaMEP projects over about two years. The generative AI batch sheet conversion is explicitly a work in progress, AI training underway.",
+      "evidence_strength": "strong",
+      "skepticism": "PROPOSED VS DEPLOYED MATTERS HERE. The dollar and percentage figures are attributed by NIST and GaMEP to the data historian and QMS work broadly, NOT isolated to the generative AI batch sheet piece, which the story itself says is still mid rollout. Read narrowly this is a real government corroborated digitization and quality win with a genuine generative AI component layered on top, not a case where every number is proven AI caused. Two hosts (NIST.gov and GaMEP.org) agree, but both trace to the same GaMEP engagement, so it is one underlying source told twice.",
+      "sources": [
+        "https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai",
+        "https://gamep.org/success-story/cjb-industries/"
+      ],
+      "alaska_translation": "Anchorage contract manufacturers and processors, custom feed blenders, chemical formulators, small co packers, run the same paper batch sheet chaos multiplied by irregular customer specs.",
+      "icp_segments": [
+        "manufacturing",
+        "professional_services"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "Best government sourced entry in the bank. If shipped, the dossier MUST separate the AI piece from the digitization piece or it commits attribution error."
+    },
+    {
+      "id": "bank-018",
+      "status": "candidate",
+      "company": "AEGIS Land Title Group, LLC",
+      "location": "Silverdale, Washington, offices in Silverdale, Everett, Olympia",
+      "size": "about 27 employees per a directory listing, not independently audited",
+      "industry": "title_escrow",
+      "capability": "agentic_document_review",
+      "bottleneck": "Manual review of search packages and document analysis capped examiners at roughly 10 commitments per day, and full 100 percent file audits were not feasible on time cost.",
+      "build": "Qualia Clear's Title Exam Assistant, native inside the firm's existing Qualia platform, automates search package review, document analysis, and drafting of commitment ready reports.",
+      "numbers": [
+        {
+          "value": "10 to 20 commitments per day",
+          "what": "examiner capacity doubled, per the case study's stated framing",
+          "source_url": "https://www.qualia.com/case-studies/case-study/how-aegis-land-title-doubled-examiner-capacity-and-eliminated-manual-audit-risk-with-qualia-clear/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "100 percent",
+          "what": "file audit coverage on every transaction, per the case study",
+          "source_url": "https://www.qualia.com/case-studies/case-study/how-aegis-land-title-doubled-examiner-capacity-and-eliminated-manual-audit-risk-with-qualia-clear/",
+          "sourcing": "vendor"
+        }
+      ],
+      "timeline": "not stated",
+      "evidence_strength": "weak",
+      "skepticism": "Single source vendor case study by the software seller. HousingWire republished the same 10 to 20 figure but returned 403 on fetch and likely traces to the same Qualia claim. DEPLOYED, the president is quoted using it day to day, not a pilot.",
+      "sources": [
+        "https://www.qualia.com/case-studies/case-study/how-aegis-land-title-doubled-examiner-capacity-and-eliminated-manual-audit-risk-with-qualia-clear/"
+      ],
+      "alaska_translation": "Small Anchorage and Mat-Su title and escrow agencies hit the same wall every spring closing season, a couple of examiners cannot review search packages fast enough without adding headcount.",
+      "icp_segments": [
+        "professional_services"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "Fills the title and escrow coverage gap. Needs corroboration before it can headline."
+    },
+    {
+      "id": "bank-019",
+      "status": "candidate",
+      "company": "Thomas and Webber, PLLC",
+      "location": "Charlotte, North Carolina",
+      "size": "six closers on staff, boutique real estate law firm, roughly a dozen employees",
+      "industry": "legal_real_estate",
+      "capability": "agentic_workflow_automation",
+      "bottleneck": "A threefold increase in client emails, texts, and document revisions per transaction dropped monthly file capacity from 40 to 30, with no budget to hire part time assistants.",
+      "build": "Qualia Clear, an agentic system with visibility into file data, drafts email replies and automates the pre closing checklist inside the firm's existing workflow.",
+      "numbers": [
+        {
+          "value": "33 percent",
+          "what": "increase in closer file capacity, restoring monthly volume to 40 files, per the case study",
+          "source_url": "https://www.qualia.com/case-studies/case-study/how-thomas-webber-increased-closer-file-capacity-by-33-with-qualia-clear/",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "117,000 dollars",
+          "what": "deferred annual salary cost from not hiring part time assistants, per the case study",
+          "source_url": "https://www.qualia.com/case-studies/case-study/how-thomas-webber-increased-closer-file-capacity-by-33-with-qualia-clear/",
+          "sourcing": "vendor"
+        }
+      ],
+      "timeline": "not stated",
+      "evidence_strength": "weak",
+      "skepticism": "Single source vendor case study. Firm size sits below the usual 20 employee floor. The 117,000 dollars is a DEFERRED HIRE, which is capacity converted to cash the honest way, but it is still the vendor's arithmetic. DEPLOYED, framed as achieved.",
+      "sources": [
+        "https://www.qualia.com/case-studies/case-study/how-thomas-webber-increased-closer-file-capacity-by-33-with-qualia-clear/"
+      ],
+      "alaska_translation": "A small Anchorage real estate closing shop buried in client texts during the summer buying season with no seasonal help to hire.",
+      "icp_segments": [
+        "professional_services"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "The deferred hire framing is a clean teaching example of capacity vs cash."
+    },
+    {
+      "id": "bank-020",
+      "status": "candidate",
+      "company": "Cammeby's International at 45 Broadway",
+      "location": "Manhattan Financial District, New York",
+      "size": "small family run real estate investment office, 32 story, 386,315 sq ft building",
+      "industry": "commercial_real_estate",
+      "capability": "energy_hvac_optimization",
+      "bottleneck": "Rising energy costs and Local Law 97 decarbonization compliance pressure on a 1983 office building whose existing building management system was not self optimizing.",
+      "build": "BrainBox AI's AI Control, an edge device on BACnet IP layering predictive self adaptive HVAC control on top of the existing BMS, targeted first at the chilled water loop.",
+      "numbers": [
+        {
+          "value": "15.8 percent",
+          "what": "reduction in HVAC related electricity consumption over an 11 month period in 2023, minus 234,821 kWh, per the case study",
+          "source_url": "https://brainboxai.com/en/case-studies/cammebys-achieves-15.8-reduction-in-hvac-energy-use-and-costs",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "42,951 dollars",
+          "what": "cost savings over the same 11 month period, per the case study",
+          "source_url": "https://brainboxai.com/en/case-studies/cammebys-achieves-15.8-reduction-in-hvac-energy-use-and-costs",
+          "sourcing": "vendor"
+        }
+      ],
+      "timeline": "11 months in 2023, following a February 2022 installation announcement",
+      "evidence_strength": "weak",
+      "skepticism": "Single source vendor case study by the technology seller. A 2022 GlobeNewswire release confirms the installation happened but not the performance figures. DEPLOYED.",
+      "sources": [
+        "https://brainboxai.com/en/case-studies/cammebys-achieves-15.8-reduction-in-hvac-energy-use-and-costs",
+        "https://www.globenewswire.com/news-release/2022/02/15/2385231/0/en/BrainBox-AI-Announces-45-Broadway-as-First-New-York-City-Installation-of-its-Autonomous-Commercial-Real-Estate-Climate-Technology.html"
+      ],
+      "alaska_translation": "Small Anchorage commercial property owners running older downtown buildings on legacy controls through a long expensive heating season see the same overshoot and waste as an oversized winter fuel and electric bill.",
+      "icp_segments": [
+        "commercial_real_estate",
+        "utilities"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "Fills the energy and HVAC optimization capability gap. NYSERDA may hold an independent second source, see sources.yaml candidates."
+    },
+    {
+      "id": "bank-021",
+      "status": "candidate",
+      "company": "FORUM Credit Union",
+      "location": "Fishers and Indianapolis, Indiana",
+      "size": "2.3 billion dollars in assets, roughly 200 to 500 employees per directories",
+      "industry": "financial_services",
+      "capability": "document_classification_underwriting",
+      "bottleneck": "Loan volume was growing and staff was not. Manual document classification ran 15 to 20 minutes per document and underwriting prep 45 minutes per file.",
+      "build": "A custom system built by Advisor Labs, integrated with the existing core and underwriting policy rather than a bolt on, automating document classification, extraction, and underwriting packet prep, leaving underwriters the exceptions and judgment calls.",
+      "numbers": [
+        {
+          "value": "70 percent",
+          "what": "more loans processed without adding headcount, per the builder's framing",
+          "source_url": "https://www.advisorlabs.com/blog/ai-loan-processing-credit-unions",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "15 to 20 minutes down to seconds",
+          "what": "document classification time per file, per the builder",
+          "source_url": "https://www.advisorlabs.com/blog/ai-loan-processing-credit-unions",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "45 minutes down to 5 minutes",
+          "what": "underwriting prep time per file, per the builder",
+          "source_url": "https://www.advisorlabs.com/blog/ai-loan-processing-credit-unions",
+          "sourcing": "vendor"
+        }
+      ],
+      "timeline": "60 to 90 day pilot, 3 to 6 months to full deployment per the builder, no calendar dates stated",
+      "evidence_strength": "weak",
+      "skepticism": "The only readable page is the blog of the firm that built the system. America's Credit Unions, an independent trade association, published a piece with the same 70 percent headline, but the site returned 403 on every fetch and cannot be cited as read. DEPLOYED per the account.",
+      "sources": [
+        "https://www.advisorlabs.com/blog/ai-loan-processing-credit-unions"
+      ],
+      "alaska_translation": "Alaska credit unions and community banks with small consumer and indirect lending teams face the identical staffing versus volume squeeze.",
+      "icp_segments": [
+        "financial_services"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "Second financial services entry. Rotate against bank-008 so voice AI does not become the only credit union answer."
+    },
+    {
+      "id": "bank-022",
+      "status": "candidate",
+      "company": "Piston Automotive, Marion, Ohio plant",
+      "location": "Marion, Ohio, parent in Redford, Michigan",
+      "size": "company wide roughly 501 to 1,000 employees, single plant headcount not disclosed",
+      "industry": "manufacturing_automotive",
+      "capability": "computer_vision_safety",
+      "bottleneck": "Plant staff took productivity shortcuts that caused injuries, walking on transport rollers, forklift operators bulldozing multiple pallets in ways that blocked their view, and vehicles not stopping at end of aisle.",
+      "build": "Voxel AI on the plant's existing security cameras, configured to detect those specific behaviors, generating alerts and reports used by EHS and plant management as a coaching tool.",
+      "numbers": [
+        {
+          "value": "86 percent",
+          "what": "reduction in vehicle safety incidents overall, per the vendor case study",
+          "source_url": "https://www.voxelai.com/case-studies/piston-automotive-marion",
+          "sourcing": "vendor"
+        },
+        {
+          "value": "92 percent",
+          "what": "drop in no stop at end of aisle events, 5 per day to 0.4 per day, per the vendor case study",
+          "source_url": "https://www.voxelai.com/case-studies/piston-automotive-marion",
+          "sourcing": "vendor"
+        }
+      ],
+      "timeline": "3 months to the reported results",
+      "evidence_strength": "weak",
+      "skepticism": "Single source vendor case study with a named plant manager quote. No independent corroboration found. Note this is the SECOND Voxel case in the bank alongside bank-004, so the two must never appear in the same post as if they were independent proof.",
+      "sources": [
+        "https://www.voxelai.com/case-studies/piston-automotive-marion"
+      ],
+      "alaska_translation": "Alaska seafood processing plants and mid size manufacturers already own the cameras, so this is a plug into existing hardware story rather than a capital project.",
+      "icp_segments": [
+        "manufacturing",
+        "seafood"
+      ],
+      "added": "2026-07-25",
+      "last_verified": null,
+      "notes": "Corroborates bank-004's pattern. Use as pattern support, not as a second independent source."
     }
   ],
   "interview_leads": [
-    {"company": "Saltwater Inc", "location": "Anchorage", "why": "Fisheries EM provider using computer vision in Gulf of Alaska pollock EM since the 1990s era of observer work. The most Alaska native AI operations story available, no public numbers, worth a direct interview.", "source": "https://em4.fish/industry-focus-saltwater-inc/"}
+    {
+      "company": "Saltwater Inc",
+      "location": "Anchorage",
+      "why": "Fisheries EM provider using computer vision in Gulf of Alaska pollock EM since the 1990s era of observer work. The most Alaska native AI operations story available, no public numbers, worth a direct interview.",
+      "source": "https://em4.fish/industry-focus-saltwater-inc/"
+    },
+    {
+      "company": "Alaska Tribal Health System consortium (ANTHC, Southcentral Foundation, Maniilaq, Yukon-Kuskokwim Health Corporation)",
+      "location": "Alaska",
+      "why": "Direct Alaska angle, peer reviewed in Frontiers in AI. Building a community governed AI and ML framework to predict medevac necessity in rural Alaska, described as the most challenging clinical task facing clinicians in rural Alaska. EXPLICITLY PRE DEPLOYMENT, third year, still planning to pilot. No numbers yet. The single highest value lead in the bank.",
+      "source": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1568886/full"
+    },
+    {
+      "company": "Orca Specialty Foods and Circle Seafoods",
+      "location": "Bristol Bay, Alaska and Surrey, BC",
+      "why": "ThisFish TallyVision computer vision grading of every salmon fillet including wild Alaska sockeye, with the owner quoted on record. Explicitly future tense and vendor framed, no company specific before and after number. The closest thing to an Alaska seafood processing AI story trade press currently offers.",
+      "source": "https://www.nationalfisherman.com/smarter-stocking-processing-and-profit-boosts"
+    },
+    {
+      "company": "Grande Portage Resources, New Amalga Gold Project",
+      "location": "near Juneau, Alaska",
+      "why": "Junior miner testing sensor based ore sorting, reported 120 percent grade lift in a composite sample, pre production. Alaska plus the mining coverage gap, but North of 60 Mining News returned 403 so nothing is verified. Retry with a different access path.",
+      "source": "https://www.miningnewsnorth.com/story/2025/01/10/news-nuggets/grande-portage-tests-ore-sorting-tech/8860.html"
+    },
+    {
+      "company": "Unnamed Maine based waste hauler, a Tensor Planet customer",
+      "location": "Maine",
+      "why": "Waste Dive and Transport Topics BOTH independently reported the same predictive maintenance deployment, 41 percent fewer exhaust related repairs in 10 weeks, about 1,600 dollars per truck annually, but BOTH articles were read in full and NEITHER names the company. The name Troiano Waste Services came from a search summary only and their own site would not render. Do not bank a name until a fetched page carries it.",
+      "source": "https://www.wastedive.com/news/waste-industry-hauling-ai-use-cases/823203/"
+    },
+    {
+      "company": "Aeroblaze Laboratory and Bramport (via TMAC, Texas MEP)",
+      "location": "Texas",
+      "why": "Secure on premises AI chatbot retrieving FAA regulations, CFR content, and proprietary test procedures. A near perfect match for the small scale regulatory document search gap and the aviation gap, but NIST describes it as a prototype with only qualitative outcomes and no numbers.",
+      "source": "https://www.nist.gov/mep/successstories/2025/flame-tested-hacker-resistant-aeroblaze-and-bramports-secure-ai-chatbot"
+    },
+    {
+      "company": "Burt County Public Power District (via NRECA CoopForecast)",
+      "location": "Nebraska",
+      "why": "A small rural electric cooperative using ML day ahead load forecasting to manage a 6 MWh battery. Strong rhyme for Alaska co ops and islanded grids. Deployment documented, no accuracy or savings numbers public.",
+      "source": "https://www.cooperative.com/programs-services/bts/Documents/TechSurveillance/Surveillance-Automated-Load-Forecasts-April-2022.pdf"
+    },
+    {
+      "company": "North Country HealthCare",
+      "location": "Northern Arizona",
+      "why": "13 primary care clinics plus 2 mobile units, 55,000 patients, a genuine rural and tribal health match, exploring an AI scribe via the Health AI Partnership. Explicit pilot and interest stage, no numbers yet.",
+      "source": "https://www.healthcaredive.com/news/healthcare-ai-artificial-intelligence-digital-divide-safety-net-providers/801809/"
+    },
+    {
+      "company": "ReNue Apothecary and Eric's Rx Shoppe",
+      "location": "Texas and Pennsylvania",
+      "why": "Independent pharmacy owners interviewed by a named Pharmacy Times journalist about AI handling a reported majority of prescription volume and administrative tasks. Original interviews, not a vendor placement, but pharmacytimes.com 403'd so nothing was read.",
+      "source": "https://www.pharmacytimes.com/view/independent-pharmacies-embrace-ai-to-solve-staffing-challenges-and-boost-efficiency"
+    },
+    {
+      "company": "Consigli Construction",
+      "location": "Milford, Massachusetts",
+      "why": "CIO on record that AI's biggest impact is in estimating. No numbers in the piece. Construction Dive has the relationship.",
+      "source": "https://www.constructiondive.com/news/consigli-cio-ai-impact-estimating/818191/"
+    },
+    {
+      "company": "Carney Title",
+      "location": "Nashville, Tennessee",
+      "why": "Named title company, reported opens orders 40 percent faster via Qualia's AI Document Processor. Single vendor source, headcount undisclosed. Backup for the title and escrow gap.",
+      "source": "https://www.qualia.com/case-studies/case-study/how-carney-title-personalizes-the-closing-experience-for-their-clients/"
+    },
+    {
+      "company": "Magellan Aerospace, Middletown",
+      "location": "Ohio",
+      "why": "About 100 employees, replaced paper shop floor systems with a digital production dashboard explicitly built as the foundation for future predictive analytics. Pre AI infrastructure today, no numbers. Check back in 12 to 18 months.",
+      "source": "https://ws680.nist.gov/mepmeis/ss.ashx?SSID=5811"
+    }
   ],
   "paywalled_leads": [
     "Fast Company 2026 Afresh feature",

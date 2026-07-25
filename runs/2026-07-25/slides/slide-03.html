@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .bdy  { position:absolute; left:104px; top:876px; width:850px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:34px;
+          line-height:1.38; color:#26313F; }
+  .mono { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          letter-spacing:0.06em; color:#26313F; font-variant-numeric:tabular-nums lining-nums; }
+  .m26  { font-size:26px; } .m24 { font-size:24px; color:#4A5464; }
+  .chip { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; }
+  .solid{ color:#26313F; } .ghost { color:#4A4438; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE BOTTLENECK</div>
+  <div class="head" id="head">The note gets written<br>after the visit is over.</div>
+
+  <div class="mono m26" id="labA">16 MIN, MANUAL</div>
+  <div class="mono m26" id="labB">UNDER 4 MIN, DRAFTED</div>
+  <div class="mono m24" id="labD">DIFFERENCE, MORE THAN 12 MIN PER VISIT</div>
+  <div class="mono" id="scale" style="font-size:20px;color:#6B7484;" data-decorative>1 MIN = 44 PX</div>
+
+  <div class="bdy">A manual chart averaged 16 minutes. The company says its draft comes back in
+  under 4. Both figures are Carbon Health measuring itself, on its own blog, with no method
+  published and nobody outside checking.</div>
+
+
+
+  <div class="cnt" data-decorative>03 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.12, monitor: 0.05 } });
+
+  // ---- the Week Rule takes VISIT scale, 44 px per minute (c01) ------------
+  const X0 = 76;
+  const YA = 560, YB = 700, YD = 812;
+  const WA = 16 * S.PX_PER_MIN_VISIT;   // 704
+  const WB = 4  * S.PX_PER_MIN_VISIT;   // 176
+
+  // bar A, closed: 16 minutes is a stated figure
+  cx.save();
+  cx.fillStyle = AH.rgba(P.ink, 0.14);
+  cx.fillRect(X0, YA - 22, WA, 44);
+  cx.restore();
+  AH.dimension(cx, X0, X0 + WA, YA, { weight: S.W_STD, ext: 32 });
+  AH.terminal(cx, X0 + WA, YA, P.gold);
+
+  // bar B, OPEN DASHED RIGHT CAP: the source says "less than 4 minutes", so a
+  // closed bar would claim precision the source does not give. The inequality
+  // is DRAWN, not narrated.
+  cx.save();
+  cx.fillStyle = AH.rgba(P.ink, 0.14);
+  cx.fillRect(X0, YB - 22, WB - 28, 44);
+  // the fill DISSOLVES over the last 28px so the bar visibly gives out rather
+  // than stopping. "under 4" drawn, not narrated.
+  for (let i = 0; i < 28; i += 2) {
+    cx.globalAlpha = 0.14 * (1 - i / 28);
+    cx.fillRect(X0 + WB - 28 + i, YB - 22, 2, 44);
+  }
+  cx.globalAlpha = 1;
+  cx.restore();
+  AH.dimension(cx, X0, X0 + WB, YB, { weight: S.W_STD, ext: 32, openRight: true });
+
+  // the difference bracket, ONE OPEN ENDED ARROW: 16 minus under-4 is OVER 12
+  (function () {
+    // the difference bracket. 16 minus under-4 is OVER 12, and the uncertainty
+    // lives at bar B's "under" end, so the OPEN phantom cap goes on the LEFT
+    // and the closed arrowhead on the right at bar A's exact terminal.
+    const a = X0 + WB, b = X0 + WA;
+    cx.save();
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE; cx.lineCap = 'butt';
+    cx.beginPath(); cx.moveTo(a, YD); cx.lineTo(b, YD); cx.stroke();
+    cx.beginPath(); cx.moveTo(b, YD - 22); cx.lineTo(b, YD + 6); cx.stroke();
+    cx.fillStyle = P.ink;
+    cx.beginPath(); cx.moveTo(b, YD); cx.lineTo(b - 10, YD - 3.3); cx.lineTo(b - 10, YD + 3.3);
+    cx.closePath(); cx.fill();
+    cx.setLineDash([6, 5]); cx.lineWidth = S.W_FINE;
+    cx.beginPath(); cx.moveTo(a - 16, YD); cx.lineTo(a + 14, YD); cx.stroke();
+    cx.setLineDash([]);
+    cx.restore();
+  })();
+
+  // edge tease into S7: ghost slivers begin and are cut by the right frame
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.inkFaint, 0.55);
+  cx.lineWidth = S.W_FINE;
+  cx.setLineDash(AH.DASH.phantom);
+  for (let i = 0; i < 3; i++) {
+    const x = 930 + i * 24;
+    cx.beginPath(); cx.moveTo(x, YA - 16); cx.lineTo(x, YA + 16); cx.stroke();
+  }
+  cx.setLineDash([]);
+  cx.restore();
+
+  AH.finish(cx);
+
+  const put = (id, x, y) => { const e = document.getElementById(id); e.style.left = x+'px'; e.style.top = y+'px'; };
+  put('labA', X0, YA - 62);                // above the bar, clear of the right margin
+  put('labB', X0 + WB + 40, YB - 18);
+  put('labD', X0 + WB, YD + 26);
+  put('scale', X0 + 300, YA - 58);
+  document.getElementById('scale').style.color = '#4A5464';
+  // chips drawn as SHAPES (solid vs phantom), clear of the curl polygon
+  const boxes = AH.unitChips(cx, 264, 1092, 'visit');
+  boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:' + (b.on ? '#26313F' : '#4A4438') + ';';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 116, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

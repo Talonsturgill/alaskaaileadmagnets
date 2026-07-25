@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .bdy  { position:absolute; left:76px; top:424px; width:640px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:34px;
+          line-height:1.38; color:#26313F; }
+  .mono { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          letter-spacing:0.06em; color:#26313F; font-variant-numeric:tabular-nums lining-nums; }
+  .m26  { font-size:26px; } .m24 { font-size:24px; color:#4A5464; }
+  .plab { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:19px; letter-spacing:0.08em; color:#4A5464; }
+  .pval { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.01em; color:#26313F; white-space:nowrap; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE COMPANY</div>
+  <div class="head" id="head">A clinic network that owned<br>its own software.</div>
+
+  <div class="bdy">Carbon Health ran ambient charting across every clinic from June 2023.
+  More than 600 clinicians. The company built it inside an EHR it owned itself, which is
+  the detail that decides whether this story is yours.</div>
+
+  <div class="mono m26" id="dotlab">600 PLUS CLINICIANS</div>
+  <div class="mono m24" id="circlab">ONE PILOT CLINIC</div>
+
+  <div class="cnt" data-decorative>02 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725 });
+
+  // ---- the Week Rule, present ONLY as a blind emboss ----------------------
+  // This is the week nobody has measured yet. An unlabeled impression where a
+  // rule will later be drawn.
+  cx.save();
+  cx.strokeStyle = AH.rgba('#FFFFFF', 0.34);
+  cx.lineWidth = 2;
+  cx.beginPath(); cx.moveTo(S.RULE_X0, 1002); cx.lineTo(S.RULE_X0 + S.RULE_W, 1002); cx.stroke();
+  cx.strokeStyle = AH.rgba('#6E6555', 0.30);
+  cx.beginPath(); cx.moveTo(S.RULE_X0, 1004.5); cx.lineTo(S.RULE_X0 + S.RULE_W, 1004.5); cx.stroke();
+  cx.restore();
+
+  // ---- #66 Stipple Tone Field, exactly 600 dots = c05 ---------------------
+  const BX = 76, BY = 764, BW = 790, BH = 128;
+  const rnd = AK.rng(20260725);
+  const pts = [];
+  let guard = 0;
+  while (pts.length < 600 && guard < 90000) {
+    guard++;
+    const x = BX + rnd() * BW, y = BY + rnd() * BH;
+    let ok = true;
+    for (let i = pts.length - 1; i >= 0 && i > pts.length - 60; i--) {
+      const d = (pts[i][0]-x)*(pts[i][0]-x) + (pts[i][1]-y)*(pts[i][1]-y);
+      if (d < 132) { ok = false; break; }      // blue-noise-ish min distance
+    }
+    if (ok) pts.push([x, y]);
+  }
+  cx.save();
+  cx.fillStyle = P.ink;
+  pts.forEach(p => { cx.beginPath(); cx.arc(p[0], p[1], 1.35, 0, 6.2832); cx.fill(); });
+
+  // #17 Dither Decay: about 40 further dots dissolving off the right edge under
+  // a mono "+". The "plus" is DRAWN as a fade, never stated as a count we do
+  // not have.
+  for (let i = 0; i < 40; i++) {
+    const t = i / 40;
+    const x = BX + BW + 10 + t * 128, y = BY + rnd() * BH;
+    cx.globalAlpha = Math.max(0, 0.85 - t * 0.95);
+    cx.beginPath(); cx.arc(x, y, 1.35, 0, 6.2832); cx.fill();
+  }
+  cx.globalAlpha = 1;
+  cx.restore();
+
+  // ---- #62 Rough Double-Stroke: the gold hand-ink circle (c12, planted) ----
+  // Drawn TWICE with independent seeded jitter. It is the only hand-drawn mark
+  // on the slide because it marks the one claim a human drew a circle around
+  // and nobody checked.
+  const CCX = 700, CCY = 828, CR = 50;
+  cx.save();
+  cx.strokeStyle = P.gold; cx.lineWidth = 2.5; cx.lineCap = 'round';
+  for (let pass = 0; pass < 2; pass++) {
+    const jr = AK.rng(20260725 + pass * 17);
+    cx.beginPath();
+    for (let a = 0; a <= 64; a++) {
+      const th = (a / 64) * 6.2832;
+      const wob = (jr() - 0.5) * 5.2;
+      const x = CCX + Math.cos(th) * (CR + wob) * 1.28;
+      const y = CCY + Math.sin(th) * (CR + wob);
+      if (a === 0) cx.moveTo(x, y); else cx.lineTo(x, y);
+    }
+    cx.stroke();
+  }
+  // leader from the circle down to its label
+  cx.strokeStyle = AH.rgba(P.gold, 0.75); cx.lineWidth = S.W_FINE;
+  cx.beginPath();
+  cx.moveTo(CCX, CCY + 54); cx.lineTo(CCX - 12, CCY + 84); cx.lineTo(CCX - 44, CCY + 84);
+  cx.stroke();
+  cx.restore();
+
+  // ---- the SPEC PLATE (Device C), first full appearance -------------------
+  const plate = AH.specPlate(cx, 470, 964, [0,1,2,3], { width: 520, rowH: 40 });
+
+  AH.finish(cx);
+
+  // ---- DOM positioned from the same numbers ------------------------------
+  const put = (el, x, y) => { el.style.left = x + 'px'; el.style.top = y + 'px'; };
+  put(document.getElementById('dotlab'), BX, BY + BH + 24);
+  put(document.getElementById('circlab'), 596, BY + BH + 26);
+
+  const rows = [['MEASURED BY','CARBON HEALTH, ITSELF'],
+                ['INSTRUMENT','COMPANY BLOG, JUNE 2023'],
+                ['POPULATION','ITS 600 PLUS CLINICIANS'],
+                ['UNIT','MINUTES PER VISIT']];
+  rows.forEach((r, i) => {
+    const a = document.createElement('div'); a.className = 'plab'; a.textContent = r[0];
+    a.setAttribute('data-decorative','');
+    put(a, plate.x + 12, plate.y + 6 + i * plate.rowH);
+    document.body.appendChild(a);
+    const b = document.createElement('div'); b.className = 'pval'; b.textContent = r[1];
+    put(b, plate.x + 186, plate.y + 8 + i * plate.rowH);
+    document.body.appendChild(b);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 116, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

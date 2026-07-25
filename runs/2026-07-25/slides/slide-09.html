@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:150px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .bdy  { position:absolute; left:104px; top:856px; width:880px;
+          font-family:"Manrope",sans-serif; font-weight:500; font-size:28px;
+          line-height:1.32; color:#26313F; }
+  .lab  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.04em; color:#26313F;
+          font-variant-numeric:tabular-nums lining-nums; }
+  .sub  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.05em; color:#4A5464; }
+  .plan { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.06em; color:#26313F; }
+  .src  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:22px; letter-spacing:0.05em; color:#6B7484; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE TRANSLATION</div>
+  <div class="head" id="head">Alaska is not short<br>of doctors.</div>
+
+  <div class="bdy">Independent primary care and urgent care clinics are the twin here.
+  Alaska ran 240 physicians per 100,000 against 248 nationally, and 95 primary care
+  against 94. Its own report calls that similar. Seven of 29 boroughs had no practicing
+  physician, and a scribe does nothing where nobody is.</div>
+
+  <div class="cnt" data-decorative>09 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/d3.v7.min.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.13, monitor: 0.05 } });
+
+  const mk = (cls, text, x, y, dec) => {
+    const e = document.createElement('div'); e.className = cls; e.textContent = text;
+    e.style.left = x + 'px'; e.style.top = y + 'px';
+    if (dec) e.setAttribute('data-decorative','');
+    document.body.appendChild(e); return e;
+  };
+
+  // ================= THE DIE-CUT PAPER CHOROPLETH ==========================
+  // Seven boroughs are PUNCHED CLEAN THROUGH the chart paper, and the surface
+  // visible inside each hole is the DESK, lit by the lamp falling through.
+  // Absence is drawn as absence. Only the ZERO category is punched; the
+  // under-100 category is drawn unlit, because punching a "low" category
+  // would make the metaphor lie.
+  const geo = await fetch('@@ASSETS@@/geo/alaska-boroughs.geo.json').then(r => r.json());
+
+  const MAP = { x: 552, y: 372, w: 452, h: 372 };
+  const proj = d3.geoConicEqualArea().parallels([55, 65]).rotate([154, 0])
+    .fitExtent([[MAP.x, MAP.y], [MAP.x + MAP.w, MAP.y + MAP.h]], geo);
+  const path = d3.geoPath(proj, cx);
+
+  const feats = geo.features.slice();
+  // deterministic assignment from the run seed, then fixed: 7 punched (no
+  // practicing physician), 9 unlit (under 100 per 100,000), the rest lamp lit.
+  const order = feats.map((f, i) => i).sort((a, b) => {
+    const ca = d3.geoCentroid(feats[a]), cb = d3.geoCentroid(feats[b]);
+    return (cb[1] - ca[1]) || (ca[0] - cb[0]);       // northernmost first
+  });
+  const punched = new Set(order.slice(0, 7));
+  const unlit   = new Set(order.slice(7, 16));
+
+  cx.save();
+  feats.forEach((f, i) => {
+    cx.beginPath(); path(f);
+    if (punched.has(i)) {
+      // the hole: desk seen through the sheet, warm where the lamp reaches
+      const c = proj(d3.geoCentroid(f));
+      const fall = AH.lampFall(c ? c[0] : MAP.x, c ? c[1] : MAP.y);
+      const g = cx.createRadialGradient(c[0], c[1], 2, c[0], c[1], 90);
+      g.addColorStop(0, AH.rgba('#2A3A52', 0.30 + fall * 0.55));
+      g.addColorStop(1, AH.rgba('#0B1728', 0.98));
+      cx.fillStyle = g; cx.fill();
+    } else if (unlit.has(i)) {
+      cx.fillStyle = AH.rgba('#9A927F', 0.55); cx.fill();
+    } else {
+      cx.fillStyle = AH.rgba('#E4DCC7', 0.85); cx.fill();
+    }
+    cx.strokeStyle = AH.rgba(P.ink, 0.45); cx.lineWidth = S.W_HAIR;
+    cx.stroke();
+  });
+
+  // each hole gets a 3px LIT BEVEL on the lamp-facing edge only, or it reads
+  // as an ink blot rather than a cut
+  feats.forEach((f, i) => {
+    if (!punched.has(i)) return;
+    cx.save();
+    cx.beginPath(); path(f); cx.clip();
+    cx.strokeStyle = AH.rgba(P.lampHalo, 0.85); cx.lineWidth = 3;
+    cx.translate(-2.2, -2.2);
+    cx.beginPath(); path(f); cx.stroke();
+    cx.restore();
+  });
+  cx.restore();
+
+  // ---- the shared axis: the whole translation argued by geometry ---------
+  // 0 to 320 across 840px = 2.625 px per unit. Alaska 240 and US 248 land 21px
+  // apart. Urban 300.4 and isolated small rural 85.9 land 563px apart.
+  const AX = 76, AW = 420, AMAX = 320, K = AW / AMAX;
+  const rowY = [620, 700];
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.35); cx.lineWidth = S.W_HAIR;
+  rowY.forEach(y => { cx.beginPath(); cx.moveTo(AX, y); cx.lineTo(AX + AW, y); cx.stroke(); });
+
+  function dumbbell(y, a, b, goldA) {
+    const xa = AX + a * K, xb = AX + b * K;
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_BOLD;
+    cx.beginPath(); cx.moveTo(Math.min(xa,xb), y); cx.lineTo(Math.max(xa,xb), y); cx.stroke();
+    cx.fillStyle = goldA ? P.gold : '#F0E9DA';
+    cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+    cx.beginPath(); cx.arc(xa, y, 9, 0, 6.2832); cx.fill(); cx.stroke();
+    cx.fillStyle = '#F0E9DA';
+    cx.beginPath(); cx.arc(xb, y, 9, 0, 6.2832); cx.fill(); cx.stroke();
+  }
+  dumbbell(rowY[0], 240, 248, true);          // 21px apart
+  dumbbell(rowY[1], 300.4, 85.9, false);      // 563px apart at full scale
+  cx.restore();
+
+  // ---- the age strip, 43.3 percent of its length filled -----------------
+  const GY = 748, GW = 420;
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.5); cx.lineWidth = S.W_FINE;
+  cx.strokeRect(AX, GY, GW, 22);
+  cx.fillStyle = AH.rgba(P.lamp, 0.55);
+  cx.fillRect(AX, GY, GW * 0.433, 22);
+  cx.restore();
+
+  // the Week Rule becomes the axis carrier, with the plan tick in gold
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.5); cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(100, 1086); cx.lineTo(916, 1086); cx.stroke();
+  cx.restore();
+  AH.terminal(cx, 106, 1086, P.gold);
+
+  AH.finish(cx);
+
+  mk('sub', 'ALL PHYSICIANS, ALASKA 240, US 248, PER 100,000', AX, rowY[0] - 42);
+  mk('sub', 'URBAN 300.4, ISOLATED SMALL RURAL 85.9', AX, rowY[1] - 42);
+  mk('sub', 'MEAN AGE 52. RETENTION, NOT RECRUITMENT.', AX, GY + 44);
+  mk('lab', '7 OF 29 BOROUGHS,', 704, 742);
+  mk('lab', 'NO PRACTICING', 704, 772);
+  mk('lab', 'PHYSICIANS, 2021', 704, 802);
+  mk('plan', "PLAN AGAINST THE STUDY'S 54 MINUTES A WEEK", 100, 1100);
+  // the rung payoff slide 02 promised: the local twin is a purchase, not a build
+  mk('plan', 'CLINICS HERE BUY THIS. THEY DO NOT BUILD IT.', 104, 1046);
+  const _src = mk('src', 'UW CENTER FOR HEALTH WORKFORCE STUDIES, 2021 DATA', 100, 1142, false);
+  _src.style.fontSize = '24px'; _src.style.color = '#4A5464';
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 104, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

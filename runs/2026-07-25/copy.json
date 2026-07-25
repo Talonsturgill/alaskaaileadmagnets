@@ -1,0 +1,24 @@
+{
+  "document_title": "Case File No. 002, Two Rulers, One Exam Room",
+  "post_copy": "A clinic network that owned its own software measured its AI scribe per visit. The independent study measured per week.\n\nCarbon Health owned its own EHR and built the scribe inside it, for 600 plus clinicians by its own count. No outside party has audited those figures.\n\nThe peer reviewed study we used measured a different vendor's product, so it is category evidence, not company proof.\n\nThe deck walks through the build, the receipts, why the two numbers cannot be added, and the Alaska limits.\n\nWe do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.\n\nWhat is the worst per unit number you have seen scaled into a business case?\n\n#AmbientAI #ClinicOperations #AlaskaBusiness",
+  "first_comment": "Sources, primary first\n\n1. Olson KD, Meeker D, Troup M, Barker TD, Nguyen VH, Manders JB, Stults CD, Jones VG, Shah SD, Shah T, Schwamm LH. Use of Ambient AI Scribes to Reduce Administrative Burden and Professional Burnout. JAMA Network Open, 2025, volume 8, issue 10, article e2534976. PEER REVIEWED, INDEPENDENT. It studied the Abridge ambient scribe, a different product from the one in this deck. https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542\n\n2. PubMed record for the same study, independent index. https://pubmed.ncbi.nlm.nih.gov/41037268/\n\n3. Dahal A, Skillman SM. Alaska's Physician Workforce in 2021. Center for Health Workforce Studies, University of Washington, July 2022, revised January 2025, HRSA funded. Every Alaska figure in the deck comes from here. https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf\n\n4. Carbon Health, hands free charting announcement. COMPANY BLOG, SELF REPORTED. https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits\n\n5. Carbon Health launches AI charting in its EHR. COMPANY PRESS RELEASE, NOT INDEPENDENT REPORTING. https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/\n\nDisclosure. We could not independently verify a single Carbon Health figure this run. The trade coverage we went looking for returned an access error, so every company number in this deck is self reported and carries that label on the slide.\n\nThe rest of the Case Files sit at https://alaskaaihq.com if you want the earlier ones.\n\nIf you have run an ambient scribe, or any vendor pilot, in a clinic or anywhere else, add your own numbers or your war story below. Corrections welcome.",
+  "aftercare": [
+    "Post Tuesday to Thursday, 8 to 11am Alaska time. Drafts land daily and you own the cadence, so hold this one if a stronger deck is already queued.",
+    "Paste the first comment source block within about 60 seconds of posting, before the first readers arrive.",
+    "Reply substantively to every comment inside the first 90 minutes. A dead first hour rarely recovers.",
+    "At 48 hours, log saves against our trailing median and reply personally to anyone who took the offer line up."
+  ],
+  "claims_used": [
+    "c01",
+    "c05",
+    "c06",
+    "c07",
+    "c11",
+    "c14",
+    "c22",
+    "c24",
+    "c28",
+    "c29"
+  ],
+  "offer_line_included_once": true
+}

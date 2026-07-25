@@ -20,6 +20,26 @@
         "https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts"
       ],
       "outcome_notes": "First live run, driven in-session as the manual test. Score 8.39 ship at round 3 threshold 8.0. Fact-check killed the intended payoff (c31) and the honest version shipped. 28 verified claims, honesty gate two rounds, pixel critics three rounds, flow critic ship 8.5."
+    },
+    {
+      "run_date": "2026-07-25",
+      "case_file_no": 2,
+      "bank_id": "bank-007",
+      "company": "Carbon Health",
+      "industry": "healthcare_clinics",
+      "capability": "ambient_documentation",
+      "flavor": "case_file",
+      "angle": "Two rulers, one exam room. The vendor measured a visit, the independent study measured a week, they disagree because they measure different things, and the operator should plan against the modest one.",
+      "headline": "The vendor measured a visit. The study measured a week.",
+      "evidence_strength": "medium",
+      "sources_lead": [
+        "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+        "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+        "https://pubmed.ncbi.nlm.nih.gov/41037268/",
+        "https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/",
+        "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf"
+      ],
+      "outcome_notes": "33 verified claims. ZERO independent corroboration of any Carbon Health figure (Becker's 403), so every company number ships vendor-labeled on the slide. The independent JAMA study measured ABRIDGE, a different product, which the deck states on S6 and again in the S7 guard. The fact-check overturned the bank's own skepticism note, the 30 percent claim IS in the company's press release. No AI failure base rates used, none were verifiable. Alaska proof recovered by the showrunner after the fact-checker lost all three sources to a missing PDF extractor."
     }
   ]
 }

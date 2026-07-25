@@ -1,0 +1,27 @@
+{
+  "run_date": "2026-07-25",
+  "case_file_no": 2,
+  "weighted_total": 6.9,
+  "threshold": 7.7,
+  "ship": false,
+  "revision_rounds": "4 plus",
+  "scored_against": "the renders as of the scoring run, BEFORE the final fix pass",
+  "hard_fail": "clipped / overlapping text on 7 of 10 slides, one root cause (DOM labels positioned against canvas-painted art without a bounds check)",
+  "weakest_criterion": "Legibility and platform fitness (4/10)",
+  "criteria": {
+    "Thumb-stop cover": 7,
+    "Story arc and swipe momentum": 7,
+    "Artwork craft and genuine detail": 5,
+    "Story-art fusion": 9,
+    "Translation strength and local relevance": 7,
+    "Insight density and factual weight": 6,
+    "Honesty and evidence discipline": 8,
+    "Variety vs ledger": 9,
+    "Legibility and platform fitness": 4,
+    "Copy voice and hook": 9,
+    "Deliverable completeness": 7
+  },
+  "one_sentence_fix": "Position every DOM label from AH.paperRect and AH.S, then run a render-time bounding-box pass that rejects any label overlapping another label, the canvas art, or the paper's edge.",
+  "showrunner_note": "AFTER this score was returned, a targeted fix pass was applied to the named defects: the hand-ink stroke was removed from the slide 10 headline, the slide 10 brand row was lifted clear of the paper edge, the slide 4 rung chip was moved off the body, the slide 7 guard and SE label were separated, the slide 5 chips were moved off the table, the slide 9 age note and map caption were separated, and all three spec plates got a real label gutter. Machine QA and the logo gate pass on the re-rendered deck. THE DECK WAS NOT RE-SCORED AND THE CASE-CRITIC WAS NOT RE-RUN after that pass. The 6.9 stands as the last independently verified number.",
+  "verdict_for_email": "DO NOT POST AS RENDERED without a human read. Scored 6.9 against a 7.7 threshold."
+}

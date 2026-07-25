@@ -1,0 +1,24 @@
+{
+  "run_date": "2026-07-25",
+  "verdict": "fix, all fixes applied, NOT re-verified",
+  "gate_status": "PASSED-WITH-APPLIED-FIXES-UNVERIFIED",
+  "fixes_applied": [
+    "slide 01 footer now reads NEITHER IS WRONG. NOT THE SAME SCALE. The cover drew two different scales and never said so.",
+    "slide 03 body now says 'averaged 16 minutes', because c01's source says 'on average'.",
+    "slide 05 forward plant no longer implies the next slide checked THESE figures. Nobody checked them.",
+    "slide 06 body no longer says the study 'followed clinicians for a year'. It was a 30 day pre and post survey.",
+    "slide 06 burnout label now carries EXPLORATORY per c20's softening instruction.",
+    "slide 07 guard now reads DIFFERENT TIME BASES. DIFFERENT PRODUCTS. NOT A SUM., and the week label names Abridge. The climax slide never said the independent number came from a different product.",
+    "slide 09 body now names the segment, carries the 95 against 94 primary care parity, and quotes the report's own word 'similar'. Rule 7 (segments, never targets) had failed outright.",
+    "slide 09 plan line now attributes the 54 minutes to the study, not to the UW plate above it.",
+    "slide 09 adds CLINICS HERE BUY THIS. THEY DO NOT BUILD IT., the rung payoff slide 02 promised.",
+    "caption no longer claims 'the one peer reviewed study' or 'both rulers at one scale'.",
+    "claims c29 to c33 added for the Alaska figures, kill_log amended to record the recovery."
+  ],
+  "hostile_reply_test": {
+    "weakest_sentence_before_fix": "A peer reviewed study followed clinicians at 6 health systems for a year.",
+    "survives_after_fix": true,
+    "why": "The study was a 30 day pre and post survey, not a year of follow up. In a deck whose brand claim is that other people are sloppy about what a measurement measures, that sentence was fatal. It is gone."
+  },
+  "standing_disclosure": "ZERO independent corroboration of any Carbon Health figure exists this run. Becker's returned 403. Every company number ships vendor-labeled and the first comment says so explicitly."
+}

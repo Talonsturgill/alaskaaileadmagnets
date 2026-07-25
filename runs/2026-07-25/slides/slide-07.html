@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .lab  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.04em; color:#26313F;
+          font-variant-numeric:tabular-nums lining-nums; }
+  .sub  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.06em; color:#4A5464; }
+  .dec  { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:20px; letter-spacing:0.08em; color:#6B7484; }
+  .guard{ position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.05em; color:#26313F;
+          background:rgba(240,233,218,0.96); padding:8px 12px; }
+  .ghost{ position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.05em; color:#9E3A30; }
+  .chip { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; color:#26313F; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE CATCH</div>
+  <div class="head" id="head">Neither number is wrong.<br>They are not the same ruler.</div>
+
+  <div class="dec" id="tsLab" data-decorative>A 40 HOUR WEEK, TRUE SCALE</div>
+  <div class="lab" id="weekLab">0.90 HOURS PER WEEK, ABRIDGE, INDEPENDENT</div>
+  <div class="ghost" id="ghostLab">VISITS PER WEEK NOT STATED</div>
+
+  <div class="guard" id="boxHead">SAME SCALE INSIDE THIS BOX ONLY</div>
+  <div class="guard" id="boxGuard">DIFFERENT TIME BASES. DIFFERENT PRODUCTS. NOT A SUM.</div>
+  <div class="sub" id="magLab" style="color:#26313F;">MAGNIFIED 30 TIMES</div>
+  <div class="sub" id="restate">THE SAME FINDING, RESTATED PER DAY, 10.8 MINUTES</div>
+
+
+  <div class="sub" id="notsame" style="color:#9E3A30;">NOT THE SAME BASE</div>
+
+  <div class="cnt" data-decorative>07 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.09, monitor: 0.09 } });
+
+  // ================= THE TRUE SCALE WEEK RULE ==============================
+  // 0.35 px per minute. A 40 hour week is 840px. 0.90 hours (54 min) is 18.9px.
+  // That tininess is the POINT, and the callout below is why it stays legible.
+  const RX = 76, RY = 500, RW = S.RULE_W;                 // 840
+  const WEEK_PX = 54 * S.PX_PER_MIN_WEEK;                 // 18.9
+
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.ink, 0.5); cx.lineWidth = S.W_HAIR;
+  // week ticks every 8 hours
+  for (let h = 0; h <= 40; h += 8) {
+    const x = RX + (h * 60) * S.PX_PER_MIN_WEEK;
+    cx.beginPath(); cx.moveTo(x, RY - 12); cx.lineTo(x, RY + 12); cx.stroke();
+  }
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(RX, RY); cx.lineTo(RX + RW, RY); cx.stroke();
+
+  // the 0.90 hour segment, at TRUE scale, with its gold tick
+  cx.fillStyle = P.gold;
+  cx.fillRect(RX, RY - 9, WEEK_PX, 18);
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+  cx.strokeRect(RX, RY - 9, WEEK_PX, 18);
+
+  // ---- THE GHOST MULTIPLICATION -------------------------------------------
+  // The arithmetic the reader was about to do: 12 minutes times visits times
+  // five days. It is drawn as phantom copies of the visit bar marching along
+  // the true-scale week and FADING to nothing, because the vendor never
+  // published a visit count. NO COUNT IS IMPLIED. The fade IS the uncertainty.
+  const VISIT_ON_WEEK = 12 * S.PX_PER_MIN_WEEK;           // 4.2px per visit saved
+  cx.setLineDash(AH.DASH.phantom);
+  cx.lineWidth = S.W_STD;
+  for (let i = 0; i < 46; i++) {
+    const t = i / 46;
+    const x = RX + 40 + i * 19;
+    if (x > RX + RW) break;
+    cx.strokeStyle = AH.rgba('#6E6555', Math.max(0, 0.95 - t * 0.95));
+    cx.beginPath(); cx.moveTo(x, RY - 26); cx.lineTo(x + VISIT_ON_WEEK, RY - 26); cx.stroke();
+    cx.beginPath(); cx.moveTo(x, RY - 34); cx.lineTo(x, RY - 18); cx.stroke();
+  }
+  cx.setLineDash([]);
+  // red-brown dashed cap and a question tick where the arithmetic gives out
+  cx.strokeStyle = P.redStroke; cx.lineWidth = S.W_STD;
+  cx.setLineDash([6, 5]);
+  cx.beginPath(); cx.moveTo(RX + 620, RY - 42); cx.lineTo(RX + 620, RY - 10); cx.stroke();
+  cx.setLineDash([]);
+  cx.restore();
+
+  // ---- the drafting BREAK ZIGZAG joining true scale to the lens -----------
+  // The standard symbol for a scale discontinuity. This is what makes the
+  // magnified view honest rather than a trick.
+  const BOX = { x: 96, y: 650, w: 716, h: 292 };
+  cx.save();
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+  cx.beginPath();
+  var zx = RX + WEEK_PX / 2, zy = RY + 14;
+  cx.moveTo(zx, zy);
+  cx.lineTo(zx, zy + 40);
+  for (let i = 0; i < 4; i++) { zy += 14; cx.lineTo(zx + (i % 2 ? -12 : 12), zy + 40); }
+  cx.lineTo(zx, zy + 54);
+  cx.lineTo(BOX.x + 96, BOX.y - 2);
+  cx.stroke();
+  cx.restore();
+  AH.terminal(cx, RX + WEEK_PX / 2, RY + 14, P.gold);
+
+  // ================= THE MAGNIFIED CALLOUT (the lens) ======================
+  cx.save();
+  // the lens is the only element with its own elevation shadow
+  cx.shadowColor = AH.rgba(P.shadowTight, 0.42);
+  cx.shadowBlur = 16; cx.shadowOffsetX = 6; cx.shadowOffsetY = 8;
+  cx.fillStyle = AH.rgba('#F7F1E2', 0.96);
+  cx.fillRect(BOX.x, BOX.y, BOX.w, BOX.h);
+  cx.restore();
+  cx.save();
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_HERO;
+  cx.strokeRect(BOX.x, BOX.y, BOX.w, BOX.h);
+
+  // inside the lens: 10.5 px per minute, so 54 min is 567px
+  const ZY = BOX.y + 168, ZX = BOX.x + 44;
+  const ZW = 54 * S.PX_PER_MIN_ZOOM;                      // 567
+  cx.fillStyle = AH.rgba(P.ink, 0.82);
+  cx.fillRect(ZX, ZY - 17, ZW, 34);
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.strokeRect(ZX, ZY - 17, ZW, 34);
+  cx.restore();
+  AH.terminal(cx, ZX + ZW, ZY, P.gold);
+  cx.save();
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_HERO;
+
+  // the plus or minus one standard error whisker, 0.19 h = 11.4 min
+  const SE = 11.4 * S.PX_PER_MIN_ZOOM;                    // 120
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_FINE;
+  cx.beginPath(); cx.moveTo(ZX + ZW - SE / 2, ZY + 44); cx.lineTo(ZX + ZW + SE / 2, ZY + 44); cx.stroke();
+  [-SE/2, SE/2].forEach(d => {
+    cx.beginPath(); cx.moveTo(ZX + ZW + d, ZY + 36); cx.lineTo(ZX + ZW + d, ZY + 52); cx.stroke();
+  });
+  cx.restore();
+
+  // ---- both unit chips SOLID with a red hairline strike between them -----
+  const _boxes = AH.unitChips(cx, 96, 1058, 'both');
+  // a cancellation X between the chips, never a connector: a dash between two
+  // words would assert the equivalence this slide exists to deny
+  cx.save();
+  const gx = _boxes[0].x + _boxes[0].w + 12, gy = 1058 + 22;
+  cx.strokeStyle = P.redStroke; cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(gx - 8, gy - 8); cx.lineTo(gx + 8, gy + 8); cx.stroke();
+  cx.beginPath(); cx.moveTo(gx + 8, gy - 8); cx.lineTo(gx - 8, gy + 8); cx.stroke();
+  cx.restore();
+
+  // knockout window so the break zigzag never strikes the label's glyphs
+  AH.knockout(cx, RX - 4, RY + 30, 372, 30);
+
+  AH.finish(cx);
+
+  const seLab = document.createElement('div');
+  seLab.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;font-size:24px;letter-spacing:0.04em;color:#4A5464;';
+  seLab.textContent = 'WHISKER, PLUS OR MINUS ONE SE';
+  seLab.style.left = (BOX.x + 400) + 'px'; seLab.style.top = (BOX.y + 74) + 'px';
+  document.body.appendChild(seLab);
+
+  const put = (id, x, y) => { const e = document.getElementById(id); e.style.left = x+'px'; e.style.top = y+'px'; };
+  put('tsLab', RX + 2, RY + 34);
+  put('weekLab', RX, RY - 96);
+  put('ghostLab', RX + 420, RY + 96);
+  put('boxHead', BOX.x + 20, BOX.y + 20);
+  put('boxGuard', BOX.x + 20, BOX.y + 240);
+  put('magLab', BOX.x + 20, BOX.y + 74);
+  put('restate', BOX.x, BOX.y + BOX.h + 30);
+  _boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:#26313F;';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+  put('notsame', 600, 1070);
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 110, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

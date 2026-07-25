@@ -7,10 +7,29 @@
       "area": "gates",
       "change": "scripts/logo_check.py, every deck must carry the brand logo, enforced in the art build phase and as a scorer hard fail",
       "trigger": "Maintainer rule set mid-run, the logo rides every carousel post",
-      "files": ["scripts/logo_check.py", "config/brand.yaml", "config/scoring_rubric.yaml", "prompts/routine_instructions.md", "knowledge/CASE_CRAFT.md"],
+      "files": [
+        "scripts/logo_check.py",
+        "config/brand.yaml",
+        "config/scoring_rubric.yaml",
+        "prompts/routine_instructions.md",
+        "knowledge/CASE_CRAFT.md"
+      ],
       "verification": "PASS on the live deck (slide-08 carries the logo), FAIL on a reconstruction without it, full deck QA green with the logo present",
       "rollback": "delete scripts/logo_check.py and the references in the four files listed",
       "commit": "rides the run commit, Phase 11 executed by showrunner under the fallback"
+    },
+    {
+      "run_date": "2026-07-25",
+      "kind": "improvement",
+      "area": "engine assets",
+      "change": "assets/js/ah-desk.js, a reusable lamplit desk chassis publishing AH.S scale constants, AH.specPlate, AH.unitChips and AH.dimension so DOM labels can be positioned from the same numbers the canvas draws from",
+      "trigger": "Case File 002 needed one shared painter across 10 slides and a structural answer to instinct i-006",
+      "files": [
+        "assets/js/ah-desk.js"
+      ],
+      "verification": "10 slides rendered from it, machine QA PASS, logo gate PASS, vector PDF 6.38 MB",
+      "rollback": "delete assets/js/ah-desk.js and the 10 slide files that load it",
+      "commit": "rides the run commit, Phase 11 executed by the showrunner under the fallback"
     }
   ],
   "scan_log": [
@@ -19,6 +38,12 @@
       "focus": "skipped, manual test run",
       "found": "agent infra instability handled by respawn-by-cause, and a DOM over canvas collision class that machine QA cannot see",
       "applied_or_parked": "parked, a dom-canvas collision pre-check helper as a future gate candidate (see out/2026-07-21/automation_retro.md)"
+    },
+    {
+      "run_date": "2026-07-25",
+      "focus": "skipped, run budget spent on the pixel and honesty fix rounds",
+      "found": "THREE upgrade candidates with hard evidence, all PARKED rather than applied because none could be built and verified inside the remaining budget, and an unverified upgrade is worse than none. (1) A PAPER-BOUNDS GATE. qa.py cannot see the drawn sheet, so DOM text below it renders on the dark desk at 2 to 3 to 1 and passes clean. This run shipped that defect four separate times and the scorer capped the deck at 6.9 for it. The fix is a render-time bounding-box pass asserting every text node sits inside the slide's declared on-paper band and overlaps no other label. This is the single highest value change available to this machine. (2) PDF TEXT EXTRACTION. poppler-utils is absent, so the fact-checker downloaded two government and academic PDFs and could read neither, losing all three Alaska sources. pypdf is already installed and recovered it in one command. Add a pdf_text helper and give the fact-checker a path to it. Government sources are the tier the bank needs most and are disproportionately PDFs. (3) SOURCES.YAML IS STALE ON ACCESS. bizjournals, Becker's, RAND, HousingWire, Pharmacy Times and North of 60 all returned 403 or empty this run. sources.yaml rates bizjournals as the best ground for named mid-market operators and it returns nothing. Either find a fetch path or downgrade its billing.",
+      "applied_or_parked": "parked, all three, with evidence. See out/2026-07-25/restock_notes.md and knowledge/FIELD_NOTES.md."
     }
   ]
 }

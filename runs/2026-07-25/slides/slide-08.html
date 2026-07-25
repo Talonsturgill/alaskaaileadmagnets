@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+  .kick { position:absolute; top:96px; left:76px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .head { position:absolute; left:72px; top:148px; width:876px; height:150px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA; line-height:0.98;
+          letter-spacing:-0.02em; }
+  .ch   { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.04em; color:#26313F;
+          font-variant-numeric:tabular-nums lining-nums; width:300px; line-height:1.25; }
+  .cb   { position:absolute; font-family:"Manrope",sans-serif; font-weight:500;
+          font-size:26px; line-height:1.4; color:#26313F; width:290px; }
+  .stamp{ position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; color:#9E3A30; }
+  .prov { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.02em; width:296px; line-height:1.24; }
+  .gold { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.08em; color:#26313F; }
+  .cnt  { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick">THE CATCH, CONTINUED</div>
+  <div class="head" id="head">Three claims worth<br>a second look.</div>
+  <div class="cnt" data-decorative>08 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+  const S = AH.S, P = AH.P;
+
+  AH.stage(cx, { seed: 20260725, mood: { lamp: 0.10, monitor: 0.07 } });
+
+  const mk = (cls, text, x, y, dec) => {
+    const e = document.createElement('div'); e.className = cls; e.textContent = text;
+    e.style.left = x + 'px'; e.style.top = y + 'px';
+    if (dec) e.setAttribute('data-decorative','');
+    document.body.appendChild(e); return e;
+  };
+
+  // #31 Small-Multiples Grid: three structurally identical columns, so the
+  // DIFFERENCES between them are what the eye reads.
+  const COLS = [96, 400, 704], CW = 280;
+  const HY = 430, BARY = 500, BODY = 590;
+
+  cx.save();
+  cx.lineCap = 'butt'; cx.lineJoin = 'miter';
+  COLS.forEach(x => {
+    cx.strokeStyle = AH.rgba(P.inkFaint, 0.8); cx.lineWidth = S.W_HAIR;
+    cx.beginPath(); cx.moveTo(x, HY - 22); cx.lineTo(x + CW, HY - 22); cx.stroke();
+  });
+
+  // --- claim 1, the 30 percent: an UNFILLED phantom outline. An unfilled bar
+  // is the picture of an unsupported quantity. It is the only one in the deck.
+  cx.strokeStyle = AH.rgba(P.ink, 0.85); cx.lineWidth = S.W_FINE;
+  cx.setLineDash(AH.DASH.phantom);
+  cx.strokeRect(COLS[0], BARY, CW * 0.72, 44);
+  cx.setLineDash([]);
+  // struck once in red-brown hand-ink (#62 rough double-stroke)
+  for (let pass = 0; pass < 2; pass++) {
+    const jr = AK.rng(20260725 + pass * 31);
+    cx.strokeStyle = AH.rgba(P.redStroke, 0.9); cx.lineWidth = 2.6; cx.lineCap = 'round';
+    cx.beginPath();
+    for (let i = 0; i <= 22; i++) {
+      const t = i / 22;
+      const x = COLS[0] - 8 + t * (CW * 0.72 + 16);
+      // DOWNWARD left to right, overshooting both ends, so it can never be
+      // misread as growth on the one claim we are discounting
+      const y = BARY + 15 + t * 14 + (jr() - 0.5) * 5;
+      if (i === 0) cx.moveTo(x, y); else cx.lineTo(x, y);
+    }
+    cx.stroke();
+  }
+  cx.lineCap = 'butt';
+
+  // --- claim 2, the 88 percent: DIVIDED bar, 88 filled and 12 phantom, so the
+  // 12 percent that got edited is visible rather than asserted.
+  const w2 = CW * 0.96;
+  cx.fillStyle = P.ink;
+  cx.fillRect(COLS[1], BARY, w2 * 0.88, 44);
+  cx.strokeStyle = P.ink; cx.lineWidth = S.W_STD;
+  cx.strokeRect(COLS[1], BARY, w2 * 0.88, 44);
+  cx.strokeStyle = AH.rgba(P.ink, 0.7); cx.lineWidth = S.W_FINE;
+  cx.setLineDash(AH.DASH.phantom);
+  cx.strokeRect(COLS[1] + w2 * 0.88, BARY, w2 * 0.12, 44);
+  cx.setLineDash([]);
+
+  // --- claim 3, the study's own limits: three phantom brackets. The study
+  // grades itself and we draw its own grading.
+  for (let i = 0; i < 3; i++) {
+    const y = BARY + i * 16;
+    cx.strokeStyle = AH.rgba(P.ink, 0.75); cx.lineWidth = S.W_FINE;
+    cx.setLineDash([5, 4]);
+    cx.beginPath();
+    cx.moveTo(COLS[2] + 10, y + 4); cx.lineTo(COLS[2], y + 4);
+    cx.lineTo(COLS[2], y + 12); cx.lineTo(COLS[2] + 10, y + 12);
+    cx.stroke();
+    cx.beginPath(); cx.moveTo(COLS[2] + 18, y + 8); cx.lineTo(COLS[2] + 210, y + 8); cx.stroke();
+    cx.setLineDash([]);
+  }
+
+  // ---- the Week Rule, with three segments STRUCK ------------------------
+  const WRY = 900;
+  cx.strokeStyle = AH.rgba(P.ink, 0.5); cx.lineWidth = S.W_STD;
+  cx.beginPath(); cx.moveTo(76, WRY); cx.lineTo(916, WRY); cx.stroke();
+  cx.strokeStyle = P.redStroke; cx.lineWidth = S.W_BOLD;
+  [[120, 260], [360, 500], [600, 740]].forEach(seg => {
+    cx.beginPath(); cx.moveTo(seg[0], WRY); cx.lineTo(seg[1], WRY); cx.stroke();
+  });
+  cx.restore();
+
+  // the gold tick pointing right, the tease into the translation
+  cx.save();
+  cx.fillStyle = P.gold;
+  cx.beginPath();
+  cx.moveTo(916, WRY); cx.lineTo(900, WRY - 8); cx.lineTo(900, WRY + 8);
+  cx.closePath(); cx.fill();
+  cx.restore();
+
+  AH.finish(cx);
+
+  mk('ch', '30 PERCENT MORE PATIENTS', COLS[0], HY);
+  mk('ch', '88 PERCENT ACCEPTED',      COLS[1], HY);
+  mk('ch', 'THE STUDY ITSELF',         COLS[2], HY);
+
+  mk('stamp', 'NOT CHECKED', COLS[0], BARY + 62);
+  // every column carries its provenance, which also restores the structural
+  // symmetry that is this slide's defence against reading as an attack
+  const prov = (t, x, col) => { const e = mk('prov', t, x, BARY + 62); e.style.color = col; };
+  prov('CARBON HEALTH, SELF REPORTED', COLS[1], '#4A5464');
+  prov('JAMA NETWORK OPEN, PEER REVIEWED', COLS[2], '#4A5464');
+
+  mk('cb', "In the company's own press release, from one pilot clinic, with no control group. Their engineering blog never repeats it.", COLS[0], BODY + 96);
+  mk('cb', 'Accepted without edits is not checked for accuracy. The page names no external standard.', COLS[1], BODY + 96);
+  mk('cb', 'No control group. Self reported time, not EHR data. The authors say recruitment may have favored people who like new tools.', COLS[2], BODY + 96);
+
+  mk('gold', 'SO PLAN AGAINST THE WEEK', 104, WRY + 34);
+
+  const _boxes = AH.unitChips(cx, 620, 1092, 'week');
+  _boxes.forEach(b => {
+    const e = document.createElement('div');
+    e.style.cssText = 'position:absolute;font-family:"JetBrains Mono",monospace;font-weight:500;'
+      + 'font-size:24px;letter-spacing:0.06em;color:' + (b.on ? '#26313F' : '#4A4438') + ';';
+    e.textContent = b.text;
+    e.style.left = (b.x + 14) + 'px'; e.style.top = (b.y + 8) + 'px';
+    document.body.appendChild(e);
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 104, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

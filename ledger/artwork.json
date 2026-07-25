@@ -15,7 +15,11 @@
       "palette_family": "house dark arctic with gold",
       "type_pairing": "Fraunces display with Space Grotesk body and JetBrains Mono telemetry",
       "narrative_structure": "proof, receipts, translation",
-      "variance_dials": {"design_variance": 2, "visual_density": 2, "type_temperature": 3},
+      "variance_dials": {
+        "design_variance": 2,
+        "visual_density": 2,
+        "type_temperature": 3
+      },
       "new_techniques_logged": []
     },
     {
@@ -31,8 +35,44 @@
       "palette_family": "glacial river and sonar screen",
       "type_pairing": "Instrument Serif display with Archivo body and JetBrains Mono telemetry",
       "narrative_structure": "status quo, identification, arrival, reality check, receipts, catch, translation fork, seal",
-      "variance_dials": {"design_variance": 3, "visual_density": 3, "type_temperature": 4},
-      "new_techniques_logged": ["cf-spine shared panorama painter (assets/js/cf-spine.js)", "phantom dash grammar for proposed elements", "provenance stamp chip system", "fractured tally strokes as error admission"]
+      "variance_dials": {
+        "design_variance": 3,
+        "visual_density": 3,
+        "type_temperature": 4
+      },
+      "new_techniques_logged": [
+        "cf-spine shared panorama painter (assets/js/cf-spine.js)",
+        "phantom dash grammar for proposed elements",
+        "provenance stamp chip system",
+        "fractured tally strokes as error admission"
+      ]
+    },
+    {
+      "run_date": "2026-07-25",
+      "case_file_no": 2,
+      "slide_count": 10,
+      "hero_structure": "raking lamplit chart-paper plane on a cabinet-extruded desk, all data as flat ink on the sheet",
+      "atmosphere": "after hours desk under one warm lamp with a cool monitor practical, dry and still",
+      "depth_technique": "multiplane with a single sharp focal plane at the paper, one lifted curl as the only raised object",
+      "line_voice": "drafting, butt caps and miter joins, five weight tokens by meaning",
+      "continuity_device": "the Week Rule (one dimension line whose JOB changes per slide) plus solid-versus-phantom unit chips plus the four row spec plate",
+      "hook_archetype": "evidence collision",
+      "palette_family": "after hours clinic, lamp amber and monitor glow on ink navy with chart paper",
+      "type_pairing": "Bricolage Grotesque display with Manrope body and JetBrains Mono telemetry",
+      "narrative_structure": "collision, identification, bottleneck at true scale, mechanism and catcher, vendor bench, independent bench, collision resolved, what the numbers cannot say, Alaska, ask",
+      "variance_dials": {
+        "design_variance": 4,
+        "visual_density": 2,
+        "type_temperature": 2
+      },
+      "new_techniques_logged": [
+        "raking desk plane chassis (assets/js/ah-desk.js)",
+        "unit-collision ruler with broken-scale callout (S7)",
+        "the ghost multiplication, an arithmetic drawn fading to nothing because its input was never published",
+        "the column that never changes (S5)",
+        "die-cut paper choropleth, the zero category punched through the sheet (S9)",
+        "solid-versus-phantom unit chips as a shape-state continuity device"
+      ]
     }
   ]
 }

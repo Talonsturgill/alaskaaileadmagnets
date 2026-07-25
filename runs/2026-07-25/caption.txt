@@ -1,0 +1,13 @@
+A clinic network that owned its own software measured its AI scribe per visit. The independent study measured per week.
+
+Carbon Health owned its own EHR and built the scribe inside it, for 600 plus clinicians by its own count. No outside party has audited those figures.
+
+The peer reviewed study we used measured a different vendor's product, so it is category evidence, not company proof.
+
+The deck walks through the build, the receipts, why the two numbers cannot be added, and the Alaska limits.
+
+We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.
+
+What is the worst per unit number you have seen scaled into a business case?
+
+#AmbientAI #ClinicOperations #AlaskaBusiness

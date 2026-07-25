@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050B14; position:relative; }
+  #art { position:absolute; inset:0; }
+
+  .kick { position:absolute; top:96px; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.10em; color:#7C8899; }
+  .kick.l { left:76px; }
+  .kick.r { right:76px; }
+
+  .head { position:absolute; left:72px; top:148px; width:876px; height:182px;
+          font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+          font-variation-settings:"wdth" 84; color:#F0E9DA;
+          line-height:0.98; letter-spacing:-0.02em; }
+
+  .ulab { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:26px; letter-spacing:0.06em; color:#26313F;
+          font-variant-numeric:tabular-nums lining-nums; }
+  .usub { position:absolute; font-family:"JetBrains Mono",monospace; font-weight:500;
+          font-size:24px; letter-spacing:0.06em; color:#4A5464; }
+
+  .foot { position:absolute; left:76px; top:872px; font-family:"JetBrains Mono",monospace;
+          font-weight:500; font-size:24px; letter-spacing:0.10em; color:#4A5464; }
+
+  .cnt { position:absolute; right:76px; top:1236px; font-family:"JetBrains Mono",monospace;
+         font-weight:500; font-size:22px; letter-spacing:0.10em; color:#5C6675; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="kick l">CASE FILE NO. 002</div>
+  <div class="kick r">ALASKA.AI</div>
+
+  <div class="head" id="head">The vendor measured a visit.<br>The study measured a week.</div>
+
+  <!-- ruler labels are positioned from AH.S in JS so DOM and canvas agree (i-006) -->
+  <div class="ulab" id="ulabA">16 MIN / VISIT</div>
+  <div class="usub" id="usubA">CARBON HEALTH, SELF REPORTED</div>
+  <div class="ulab" id="ulabB">0.90 HR / WEEK</div>
+  <div class="usub" id="usubB">JAMA NETWORK OPEN, PEER REVIEWED</div>
+
+  <div class="foot">NEITHER IS WRONG. NOT THE SAME SCALE.</div>
+  <div class="cnt" data-decorative>01 / 10</div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/ah-desk.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  const S = AH.S, P = AH.P;
+  AH.stage(cx, { seed: 20260725 });
+
+  // ---- the two rulers -----------------------------------------------------
+  // The cover makes a UNIT claim, never a SCALE claim. Each ruler is drawn at
+  // its OWN unit scale and its unit is welded to its terminal, so no cross
+  // scale comparison is implied. This is the difference between committing the
+  // units error and being a deck about it.
+  const AX0 = 76, AY = 636, AW = 16 * S.PX_PER_MIN_VISIT;   // 704px, 16 min/visit
+  const BX0 = 76, BY = 786, BW = 210;                        // 0.90 hr, own scale
+
+  cx.save();
+  cx.strokeStyle = P.ink;
+  AH.dimension(cx, AX0, AX0 + AW, AY, { weight: S.W_STD, ext: 30 });
+  AH.dimension(cx, BX0, BX0 + BW, BY, { weight: S.W_STD, ext: 30 });
+  cx.restore();
+
+  // gold terminal ticks, the deck's only two gold marks on this slide
+  AH.terminal(cx, AX0 + AW, AY, P.gold);
+  AH.terminal(cx, BX0 + BW, BY, P.gold);
+
+  // edge tease: the upper ruler's scale continues past the margin and is cut
+  cx.save();
+  cx.strokeStyle = AH.rgba(P.inkFaint, 0.55);
+  cx.lineWidth = S.W_HAIR;
+  cx.setLineDash([6, 5]);
+  cx.beginPath(); cx.moveTo(AX0 + AW + 16, AY); cx.lineTo(1080, AY); cx.stroke();
+  cx.setLineDash([]);
+  cx.restore();
+
+  AH.finish(cx);
+
+  // ---- position DOM labels from the SAME numbers the canvas used ----------
+  const put = (id, x, y) => { const e = document.getElementById(id); e.style.left = x + 'px'; e.style.top = y + 'px'; };
+  put('ulabA', AX0, AY - 76);
+  put('usubA', AX0, AY - 44);
+  put('ulabB', BX0, BY - 76);
+  put('usubB', BX0, BY - 44);
+
+  AK.fitText(document.getElementById('head'), { min: 62, max: 132, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+{
+  "claims": [
+    {
+      "id": "c01",
+      "claim": "Carbon Health states its AI system generates a complete medical chart in less than 4 minutes compared to 16 minutes for a manual chart.",
+      "value": "under 4 minutes vs 16 minutes",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "On average, the system generates a complete medical chart in less than 4 minutes compared to 16 minutes for a manual chart",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "Carbon Health's own blog reports charts completed in under 4 minutes versus 16 minutes manually. That is the company measuring itself, self-reported, no independent audit, and no stated methodology for how either figure was measured."
+    },
+    {
+      "id": "c02",
+      "claim": "Carbon Health states 88 percent of the AI-generated text is accepted by the provider without edits.",
+      "value": "88 percent",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "88% of the AI-generated text is accepted by the provider without edits",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "By Carbon Health's own count, 88 percent of AI-written text was accepted without edits. Acceptance is not accuracy. The page does not say text was checked against any external standard."
+    },
+    {
+      "id": "c03",
+      "claim": "Carbon Health states its AI-generated charts are 2.5 times more detailed than manual entry.",
+      "value": "2.5x",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "Charts are 2.5x more detailed than manual entry",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "Carbon Health says charts came out 2.5x more detailed. The company does not define what 'detailed' measures, and more text in a chart is not automatically better care."
+    },
+    {
+      "id": "c04",
+      "claim": "The phrase 'in just ten days' in Carbon Health's blog refers to the deployment of the charting feature across its clinician network, not to the time taken to build the system.",
+      "value": "ten days (rollout, not build)",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "In just ten days, we've eliminated manual charting...for our 600+ clinicians",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "Ten days was the ROLLOUT window across clinicians, not the build. Never write or imply 'built in ten days'. The page gives no build duration at all."
+    },
+    {
+      "id": "c05",
+      "claim": "Carbon Health states the charting feature was deployed to 600 plus clinicians.",
+      "value": "600+ clinicians",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "In just ten days, we've eliminated manual charting...for our 600+ clinicians",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c06",
+      "claim": "Carbon Health's ambient charting stack uses AWS Transcribe Medical for transcription and OpenAI GPT-4 hosted on Microsoft Azure to generate the note.",
+      "value": "AWS Transcribe Medical + GPT-4 on Azure",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "AWS Transcribe Medical (for transcription); OpenAI's GPT-4 (for chart generation); Microsoft Azure (hosting GPT-4)",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c07",
+      "claim": "Carbon Health published its hands-free charting announcement on June 5, 2023, and describes the feature as live across all clinics, making this a DEPLOYED system rather than a pilot or announcement.",
+      "value": "2023-06-05",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/",
+          "outlet": "Business Wire (Carbon Health press release)",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "Carbon Health Launches AI Charting in Its EHR Across All Clinics and Providers",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "DEPLOYED as of June 2023 per the company. Note the deck is written in 2026 and no fetched page confirms the system is still running today in this form."
+    },
+    {
+      "id": "c08",
+      "claim": "Carbon Health's system also drafts a plain language summary and takeaways for the patient as part of the care plan.",
+      "value": "",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "The feature also proposes a simpler summary and a set of takeaways for patients as part of their care plan",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c09",
+      "claim": "Carbon Health describes obtaining patient consent before recording the visit.",
+      "value": "",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "After gaining patient consent at the start of the visit, providers simply hit 'record'",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c10",
+      "claim": "NEGATIVE FINDING, load bearing: Carbon Health's own blog post makes no claim about seeing more patients, more visits per day, or increased visit volume. Its claims are confined to charting time, text acceptance, and chart detail.",
+      "value": "no volume claim on the blog page",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://carbonhealth.com/blog-post/introducing-hands-free-charting-ai-enabled-note-taking-for-more-personal-visits",
+          "outlet": "Carbon Health company blog",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "[Verified by absence on the fetched page. The page's stated outcomes are chart time, 88% acceptance, and 2.5x detail. No visit-volume or patients-per-day claim appears.]",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "The blog claims saved charting time. It does NOT claim more patients seen. Attribute the absence to the blog specifically, not to 'the company', because the company's press release does make a volume claim, see c12."
+    },
+    {
+      "id": "c11",
+      "claim": "The Business Wire item announcing the launch is a press release issued by Carbon Health itself, not independent reporting.",
+      "value": "",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/",
+          "outlet": "Business Wire (Carbon Health press release)",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "SAN FRANCISCO--(BUSINESS WIRE)--",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "A Business Wire dateline is a paid wire distribution. This is the company talking. Never cite it as press coverage or independent corroboration."
+    },
+    {
+      "id": "c12",
+      "claim": "Carbon Health's press release claims one San Francisco pilot clinic saw a 30 percent increase in patients compared to typical visit volume.",
+      "value": "30 percent, one clinic, pilot",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/",
+          "outlet": "Business Wire (Carbon Health press release)",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "In a pilot test, a Carbon Health clinic in San Francisco, CA, saw a 30% increase in patients compared to typical visit volume, without added stress on the team",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "CORRECTS THE BANK. The bank said the 30 percent claim is 'NOT in the primary source'. It IS in Carbon Health's own press release, verbatim, though NOT in the blog post. It remains vendor-sourced, single clinic, pilot, no control, no baseline given, and no causal test linking it to the scribe. RECOMMENDED USE: cite it only as the example of the claim the operator should discount, phrased as 'the company's press release claims one pilot clinic saw 30 percent more patients, one clinic, no control, and the company's own engineering blog never repeats it.' Do NOT use it as an outcome."
+    },
+    {
+      "id": "c13",
+      "claim": "Carbon Health Chief Clinical Innovation Officer Dr. Caesar Djavaherian is quoted on the launch saying he is not going back to manual notes.",
+      "value": "",
+      "sourcing": "vendor",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://businesswire.com/news/home/20230605005211/en/Carbon-Health-Launches-AI-Charting-in-Its-EHR-Across-All-Clinics-and-Providers/",
+          "outlet": "Business Wire (Carbon Health press release)",
+          "pub_date": "2023-06-05",
+          "verbatim_quote": "It's tough to imagine my shifts without this technology. Carbon Health's hands-free charting feature provides a level of detail and accuracy that we could never achieve with manual notes. I'm never going back.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "An executive quote in his own company's press release. Attribute in the same breath as company leadership, not as clinician testimony."
+    },
+    {
+      "id": "c14",
+      "claim": "The JAMA Network Open ambient AI scribe study was a quality improvement study using preintervention and 30-day postintervention surveys.",
+      "value": "QI study, pre and 30-day post surveys",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "Quality improvement study with preintervention and 30-day postintervention surveys",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "A quality improvement study, not a randomized trial. Say so whenever the study is cited."
+    },
+    {
+      "id": "c15",
+      "claim": "The JAMA Network Open study spanned 6 academic and community-based health care systems in the US.",
+      "value": "6 health systems",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "6 academic and community-based health care systems across the US",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c16",
+      "claim": "The JAMA Network Open study was conducted February 1 to October 31, 2024.",
+      "value": "2024-02-01 to 2024-10-31",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "conducted February 1 to October 31, 2024",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c17",
+      "claim": "451 clinicians enrolled in the JAMA Network Open ambient AI scribe study.",
+      "value": "451",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "451 clinicians enrolled",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c18",
+      "claim": "272 of the enrolled clinicians completed both surveys in the JAMA Network Open study, a 60.3 percent completion rate.",
+      "value": "272 (60.3 percent)",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "272 completed both surveys (60.3%)",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c19",
+      "claim": "263 clinicians with direct patient care in ambulatory clinics were included in the final analysis of the JAMA Network Open study.",
+      "value": "263",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "263 included in final analysis",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c20",
+      "claim": "In the JAMA Network Open study the proportion of participants experiencing burnout decreased from 51.9 percent before to 38.8 percent after the ambient AI scribe intervention.",
+      "value": "51.9 percent to 38.8 percent",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "the proportion of participants experiencing burnout decreased significantly from 51.9% to 38.8%",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "Both percentages share the same base, the analyzed survey-completing sample. Note that one academic medical center with 69 respondents did not participate in the burnout question, so the burnout sample is smaller than 263, and the authors call this secondary outcome exploratory. See c25."
+    },
+    {
+      "id": "c21",
+      "claim": "The odds ratio for burnout after the ambient AI scribe intervention in the JAMA Network Open study was 0.26, with a 95 percent confidence interval of 0.13 to 0.54.",
+      "value": "OR 0.26, 95% CI 0.13-0.54",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "(odds ratio, 0.26; 95% CI, 0.13-0.54)",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c22",
+      "claim": "In the JAMA Network Open study, time spent documenting after hours fell by a mean difference of 0.90 hours PER WEEK, standard error 0.19, P less than .001.",
+      "value": "0.90 hours per week (about 54 minutes per week)",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "time spent documenting after hours (mean [SE] difference, 0.90 [0.19] hours; P < .001)",
+          "primary_source": true
+        },
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open, outcome measure wording",
+          "pub_date": "2025-10",
+          "verbatim_quote": "The average amount of time I spend per week writing notes outside of clinic hours.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "TIME BASE ESTABLISHED AND MANDATORY: 0.90 hours PER WEEK, roughly 54 minutes a week, and it is clinicians' self-reported estimate of after-hours note writing, not EHR telemetry. Always write the 'per week' in the same breath as the number. Never present it next to Carbon Health's per-visit 16 minutes as if they were the same measurement."
+    },
+    {
+      "id": "c23",
+      "claim": "The JAMA Network Open authors state participants reported the equivalent of 10.8 minutes saved per workday after the intervention.",
+      "value": "10.8 minutes per workday",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "Our participants reported the equivalent of 10.8 minutes saved per workday after intervention.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "This is the authors' own restatement of the same 0.90 hours per week finding, 54 minutes divided over a 5 day week. It is the SAME number, not an additional independent result. Never stack c22 and c23 as two separate savings."
+    },
+    {
+      "id": "c24",
+      "claim": "The JAMA Network Open study names the ambient AI scribe platform studied as Abridge, from Abridge AI, Inc.",
+      "value": "Abridge AI, Inc",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open",
+          "pub_date": "2025-10",
+          "verbatim_quote": "Abridge ambient AI scribe (Abridge AI, Inc)",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "Important for the deck's honesty beat: the independent study measured Abridge, a commercial vendor product, NOT Carbon Health's in-house build. The two are different systems. The study is evidence about the ambient scribe CATEGORY, not about Carbon Health."
+    },
+    {
+      "id": "c25",
+      "claim": "The JAMA Network Open study authors state there was no control group to adjust for temporal trends.",
+      "value": "",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open, Limitations",
+          "pub_date": "2025-10",
+          "verbatim_quote": "There was no control group to adjust for temporal trends.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c26",
+      "claim": "The JAMA Network Open study authors state their findings were subjective self-reports not paired with quantitative EHR documentation data.",
+      "value": "",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open, Limitations",
+          "pub_date": "2025-10",
+          "verbatim_quote": "The findings were subjective reports of the professional experience and not paired with quantitative data on clinical documentation efficiency from the EHR.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": "Ideal catch-slide material. Even the independent study is self-reported time, not measured time."
+    },
+    {
+      "id": "c27",
+      "claim": "The JAMA Network Open study authors state recruitment may have been biased toward individuals favorable to new technologies and that the survey was not anonymous.",
+      "value": "",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542",
+          "outlet": "JAMA Network Open, Limitations",
+          "pub_date": "2025-10",
+          "verbatim_quote": "It is conceivable that recruitment may have been biased toward individuals in favor of new technologies and more likely to give a favorable review.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c28",
+      "claim": "The study citation is Olson KD, Meeker D, Troup M, Barker TD, Nguyen VH, Manders JB, Stults CD, Jones VG, Shah SD, Shah T, Schwamm LH. Use of Ambient AI Scribes to Reduce Administrative Burden and Professional Burnout. JAMA Network Open. 2025;8(10):e2534976.",
+      "value": "JAMA Netw Open. 2025;8(10):e2534976. doi:10.1001/jamanetworkopen.2025.34976",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41037268/",
+          "outlet": "PubMed",
+          "pub_date": "2025-10",
+          "verbatim_quote": "Use of Ambient AI Scribes to Reduce Administrative Burden and Professional Burnout. JAMA Netw Open. 2025;8(10):e2534976",
+          "primary_source": false
+        }
+      ],
+      "needs_softening": true,
+      "suggested_phrasing": "NOTE FOR LINKING: the fullarticle URL in the brief (2839148) is WRONG, it resolves to an unrelated JAMA Cardiology paper. The correct URL is https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542 via DOI 10.1001/jamanetworkopen.2025.34976. Use the correct one anywhere the deck or email links out."
+    },
+    {
+      "id": "c29",
+      "claim": "Alaska had 240 physicians per 100,000 providing direct patient care and 95 primary care physicians per 100,000 in 2021, against 248 and 94 nationally.",
+      "value": "240 / 95 AK, 248 / 94 US per 100,000",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf",
+          "outlet": "UW Center for Health Workforce Studies, Alaska's Physician Workforce in 2021",
+          "pub_date": "2022-07 (rev. 2025-01-29)",
+          "verbatim_quote": "In 2021, there were 240 physicians per 100,000 population providing direct patient care in the state, and 95 primary care physicians per 100,000 population. Nationally, in 2021 there were 248 physicians per 100,000 providing direct patient care, and 94 primary care physicians per 100,000 population.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c30",
+      "claim": "In 2021, 7 of Alaska's 29 boroughs and census areas had no practicing physicians and another 9 had fewer than 100 physicians per 100,000.",
+      "value": "7 of 29, plus 9 under 100",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf",
+          "outlet": "UW Center for Health Workforce Studies, Alaska's Physician Workforce in 2021",
+          "pub_date": "2022-07 (rev. 2025-01-29)",
+          "verbatim_quote": "In 2021, 7 of the 29 Alaskan boroughs/census areas had no practicing physicians and another 9 boroughs/census areas had physician supply rates of fewer than 100 physicians per 100,000 population.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c31",
+      "claim": "Alaska urban areas ran 300.4 physicians per 100,000 against 85.9 in isolated small rural areas in 2021.",
+      "value": "300.4 urban, 85.9 isolated small rural",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf",
+          "outlet": "UW Center for Health Workforce Studies, Alaska's Physician Workforce in 2021",
+          "pub_date": "2022-07 (rev. 2025-01-29)",
+          "verbatim_quote": "Fewer physicians (86 per 100,000 population) work in isolated small rural areas of Alaska",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c32",
+      "claim": "The mean age of Alaska's practicing physicians was 52 years and 43.3 percent were age 55 or older in 2021.",
+      "value": "mean age 52.0, 43.3 percent age 55+",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf",
+          "outlet": "UW Center for Health Workforce Studies, Alaska's Physician Workforce in 2021",
+          "pub_date": "2022-07 (rev. 2025-01-29)",
+          "verbatim_quote": "The mean age of Alaska's practicing physicians was 52 years.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    },
+    {
+      "id": "c33",
+      "claim": "The UW report states Alaska's physician supply per 100,000 is similar to the national number.",
+      "value": "similar to the national number",
+      "sourcing": "independent",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://familymedicine.uw.edu/chws/wp-content/uploads/sites/5/2022/08/Alaska_Physicians_FR_2022_July.pdf",
+          "outlet": "UW Center for Health Workforce Studies, Alaska's Physician Workforce in 2021",
+          "pub_date": "2022-07 (rev. 2025-01-29)",
+          "verbatim_quote": "Alaska's physician supply, on a per 100,000 population basis, is similar to the national number.",
+          "primary_source": true
+        }
+      ],
+      "needs_softening": false,
+      "suggested_phrasing": ""
+    }
+  ],
+  "case_viable": true,
+  "viability_note": "SPINE INTACT, case ships. Both halves verified fresh today. (1) Carbon Health's own blog is live and every core number is on the page verbatim, under 4 minutes vs 16, 88 percent, 2.5x, ten days, 600+ clinicians, full stack, consent language, patient summaries. (2) The JAMA Network Open study verified in full text, all thirteen requested data points confirmed. CRITICAL UNITS ANSWER, as demanded: the 0.90 hours after-hours documentation difference is PER WEEK. The article's own outcome-measure wording is 'The average amount of time I spend per week writing notes outside of clinic hours.' This is confirmed by internal arithmetic, 0.90 hours equals 54 minutes per week, which the authors themselves restate as 'the equivalent of 10.8 minutes saved per workday' over a 5 day week. c22 and c23 are therefore the SAME finding expressed two ways and must never be stacked. MAGNITUDE SANITY CHECK, the deck's whole thesis: Carbon Health's 16 minutes is PER VISIT chart-writing time, vendor self-measured. The study's 0.90 hours is PER WEEK of self-reported AFTER-HOURS note writing. Different units, different time bases, different populations, different systems, and different measurement methods (vendor internal instrumentation vs clinician survey recall). Any slide placing 12 saved minutes per visit beside 54 saved minutes per week without naming both bases must be killed. The honest framing the deck should carry is that the vendor measured the task and the independent study measured the week, and the week barely moved. THREE FINDINGS THAT CHANGE THE BRIEF. First, the bank's skepticism note is WRONG as written. It says the 30 percent more visits claim is 'NOT in the primary source'. It IS in Carbon Health's own Business Wire press release verbatim, one San Francisco pilot clinic, though it is absent from the engineering blog. This is a stronger honesty beat than the brief anticipated, the company made a volume claim on the wire and did not repeat it on its own technical blog. Use it as the discounted claim, never as an outcome. See c12. Second, the independent study measured ABRIDGE, a commercial vendor product, not Carbon Health's in-house build. The study is category evidence, not evidence about this company, and the deck must say so or it commits the aggregate-vs-specific error. See c24. Third, the JAMA URL supplied in the brief (fullarticle/2839148) is WRONG and resolves to an unrelated JAMA Cardiology myotonic dystrophy paper. The DOI redirects to fullarticle/2839542. Fix every outbound link. LOSSES, none fatal per the brief's own rule. All three Alaska local-proof sources and both failure-base-rate and trade-corroboration fetches failed today, so the translation slide has NO verified Alaska number and must be written as qualitative segment language only, or the showrunner must source new Alaska proof. Becker's returned 403 so no independent trade corroboration exists in this claim set, meaning every Carbon Health fact in the deck is vendor-sourced and must carry that label in the same breath per i-005. The deck's independent evidence is the JAMA study alone, which is sufficient because the thesis is precisely that the vendor and the independent literature disagree. NOT FACTS, ANALYSIS ONLY, no claim-ids, may not wear citations: that the two numbers measure different things and the operator should plan against the independent one; that acceptance rate is not accuracy; that ambient scribes buy back attention rather than throughput; any Anchorage clinic sizing or bottleneck mapping.",
+  "kill_log": [
+    {
+      "claim": "The JAMA study found documentation reduced by 'nearly 7 minutes' per day",
+      "why_killed": "KILLED ON THE PAGE, not on plausibility. Full text fetched today. The phrase 'nearly 7 minutes' does not appear anywhere in the article. The only per-day time figure the authors state is 'the equivalent of 10.8 minutes saved per workday', which is a restatement of the 0.90 hours per week after-hours result. The circulating 7 minute figure is unsourced. Never use it."
+    },
+    {
+      "claim": "The JAMA study found after-hours work reduced by '5 minutes'",
+      "why_killed": "KILLED. No 5 minute figure appears in the fetched full text. The after-hours result is 0.90 hours per week, about 54 minutes per week. A '5 minutes' framing is off by an order of magnitude against the actual per-week finding and does not correspond to any stated per-day value either. Unsourced, never use."
+    },
+    {
+      "claim": "Carbon Health's ambient scribe was BUILT in ten days",
+      "why_killed": "KILLED PREEMPTIVELY. The page's ten days refers to ROLLOUT across 600+ clinicians. No build duration appears on any fetched page. c04 preserves the true rollout claim, any build-time phrasing is fabrication."
+    },
+    {
+      "claim": "Carbon Health clinicians saw 30 percent more patients per day because of the AI scribe",
+      "why_killed": "KILLED AS AN OUTCOME, preserved only as vendor claim c12. The 30 percent figure exists verbatim in Carbon Health's own press release but is one pilot clinic, no control, no baseline, and no causal test. It is absent from the company's own engineering blog. It may appear in the deck ONLY as the claim the operator should discount, never as a result."
+    },
+    {
+      "claim": "Independent trade coverage (Becker's Hospital Review) corroborates the Carbon Health launch",
+      "why_killed": "UNVERIFIED, PAGE UNREACHABLE. https://www.beckershospitalreview.com/disruptors/carbon-health-rolls-out-gpt-4-charting-for-ehr/ returned HTTP 403 Forbidden today. No independent trade corroboration verified. Consequence, the deck has ZERO independent verification of any Carbon Health number and must present all of them as vendor self-reported."
+    },
+    {
+      "claim": "Alaska needs about 40 percent more primary care physicians by 2030, roughly 237 additional PCPs above 2021",
+      "why_killed": "UNVERIFIED, SOURCE DOWN. The Graham Center Alaska PDF returned HTTP 500 Internal Server Error, and the parent state-collections page also returned HTTP 500 after a redirect. The Graham Center site appears to be down entirely today. Both the 40 percent and the 237 figures are unverifiable. Do not use either number in any form."
+    },
+    {
+      "claim": "Alaska physicians per 100,000 and primary care physicians per 100,000 (UW CHWS, 2021 data)",
+      "why_killed": "RESOLVED AFTER THE FACT-CHECK. The fact-checker could not render the PDF because poppler-utils is absent. The showrunner re-fetched the same URL this run and extracted the text with pypdf to out/2026-07-25/source_uw_chws_alaska_physicians_2021.txt, then read and verified the figures directly. Now carried as verified claims c29 to c33. The original kill stands only against the fact-checker's own attempt, not against the source."
+    },
+    {
+      "claim": "HRSA State of the Primary Care Workforce 2025, Alaska-specific and national figures",
+      "why_killed": "UNVERIFIED, PDF UNREADABLE. The HRSA PDF downloaded (317KB) but could not be rendered to text, same poppler-utils limitation. No figure was ever read. Cannot be cited."
+    },
+    {
+      "claim": "RAND AI project failure rate",
+      "why_killed": "UNVERIFIED, PAGE BLOCKED. https://www.rand.org/pubs/research_reports/RRA2680-1.html returned HTTP 403 Forbidden today. RAND's exact framing was never read. Per the standing rule that failure base rates must travel together and never alone, and with none verified, the deck may NOT reference any AI failure base rate this run."
+    },
+    {
+      "claim": "JAMA Network Open article at fullarticle/2839148",
+      "why_killed": "WRONG URL, not a content kill. That article ID resolves to an unrelated JAMA Cardiology paper on electrocardiograms in myotonic dystrophy type 1. The correct article is fullarticle/2839542, reached via DOI 10.1001/jamanetworkopen.2025.34976 which 302-redirects there. The study itself is fully verified, only the link in the brief was bad."
+    }
+  ]
+}
