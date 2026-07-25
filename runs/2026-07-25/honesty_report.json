@@ -16,9 +16,9 @@
     "claims c29 to c33 added for the Alaska figures, kill_log amended to record the recovery."
   ],
   "hostile_reply_test": {
-    "weakest_sentence_before_fix": "A peer reviewed study followed clinicians at 6 health systems for a year.",
-    "survives_after_fix": true,
-    "why": "The study was a 30 day pre and post survey, not a year of follow up. In a deck whose brand claim is that other people are sloppy about what a measurement measures, that sentence was fatal. It is gone."
+    "weakest_sentence": "A peer reviewed study followed clinicians at 6 health systems for a year. CAUGHT AND FIXED, the study was a 30 day pre and post survey.",
+    "survives": true,
+    "why": "In a deck whose brand claim is that other people are sloppy about what a measurement measures, describing a 30 day pre and post survey as a year of follow up was fatal. The case-critic caught it and the line is gone. The runner up attack, Alaska is not short of doctors when your own slide says 240 against 248, is now answered on the slide itself with the report's own word similar and the 95 against 94 primary care parity."
   },
   "standing_disclosure": "ZERO independent corroboration of any Carbon Health figure exists this run. Becker's returned 403. Every company number ships vendor-labeled and the first comment says so explicitly."
 }

@@ -20,10 +20,10 @@
     "flow_review": "done (showrunner, subagent not spawned)",
     "assemble": "done",
     "scoring": "done",
-    "ship": "in_progress",
+    "ship": "done",
     "upgrade": "done",
-    "gmail": "pending",
-    "retro": "pending"
+    "gmail": "done",
+    "retro": "done"
   },
   "artifacts": {
     "plan": "out/2026-07-25/plan.md",
@@ -71,5 +71,9 @@
       "what": "upgrade-engineer subagent not spawned, run budget.",
       "resolution": "Showrunner executed the role under the fallback. One verified upgrade shipped (ah-desk.js chassis), three candidates parked with evidence rather than applied unverified."
     }
-  ]
+  ],
+  "gmail_draft_id": "r7324941642265230305",
+  "pushed_sha": "3e080ad619b7a81db3f1b47c2719111be0b1afef",
+  "pr": "https://github.com/Talonsturgill/alaskaaileadmagnets/pull/1",
+  "complete": true
 }
