@@ -61,7 +61,14 @@ At claude.ai/code/routines create a daily Routine on this repo:
 - Prompt, the contents of prompts/ROUTINE_PROMPT.txt.
 - Schedule, daily, a morning Alaska hour so drafts are ready before 8am
   posting windows.
-- Connectors, Gmail (draft scope is enough, the routine only drafts).
+- Connectors, Gmail (draft scope is enough, the routine only drafts). The
+  connector authenticates as docket@alaskaaihq.com, a Workspace mailbox on
+  our own domain. Drafts land there, and would send from there, DKIM signed
+  by alaskaaihq.com. There is no send-as alias to configure and no From
+  address to set.
 - Network, standard web research access.
-The first run creates a Gmail draft titled "Alaska.Ai — Case File No. 1 —
-<date> — <title>". Don't post a draft you haven't read.
+The first run creates a Gmail draft in docket@alaskaaihq.com titled
+"Alaska.Ai — Case File No. 1 — <date> — <title>". Check that mailbox, not a
+personal inbox. It is freshly repointed, so it holds no drafts from earlier
+runs and an empty history there means nothing. Don't post a draft you
+haven't read.
