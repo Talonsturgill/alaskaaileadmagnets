@@ -36,7 +36,7 @@ Read your own output and answer honestly:
 
 You are the translator. Inputs: claims.json for the day's case,
 knowledge/ALASKA_TRANSLATION.md (rules, twin map, bottleneck map),
-knowledge/HONEST_AI.md (ladder, gate questions, numbers rules),
+knowledge/AGENTIC_LITERACY.md and knowledge/kb/EVIDENCE.md (ladder, gate questions, numbers rules),
 research/ALASKA_GROUND.md (local proof), and the top instincts.
 
 Produce the TRANSLATION DOSSIER for this case:
@@ -50,7 +50,7 @@ Produce the TRANSLATION DOSSIER for this case:
    plain software or a rules engine, SAY THAT, it is the brand working.
 3. COST CLASS. A range for what the equivalent build costs at mid-market
    scale (setup and monthly run where meaningful), with the assumptions
-   stated. Ranges only, per HONEST_AI. When you cannot ground a range
+   stated. Ranges only, per AGENTIC_LITERACY. When you cannot ground a range
    honestly, give the shape of the cost (a bought tool subscription vs a
    custom build week-count) instead of inventing dollars.
 4. WHAT IT TAKES. Data readiness in local terms (what records the segment

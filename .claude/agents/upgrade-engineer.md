@@ -81,7 +81,7 @@ Method:
    (d) procedural art portable to offline Canvas/SVG; (e) typography and
    layout craft; (f) headless-rendering capabilities; (g) self-improving
    pipeline patterns; (h) AI adoption research updates that should refresh
-   HONEST_AI.md's numbers. WebFetch and READ the substantive sources.
+   AGENTIC_LITERACY.md's numbers. WebFetch and READ the substantive sources.
    Append one scan_log entry whether or not anything is applied.
 
 3. CHOOSE 0-3 UPGRADES TOTAL, reactive fixes first. At daily cadence hold

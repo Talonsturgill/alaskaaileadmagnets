@@ -12,7 +12,7 @@ public employer record, refresh both as the market moves.
    Named local companies appear only as public record sector anchors (the
    Corporate 100 is public) or when their story is already public.
 2. Honest rung. The translation names the feasibility ladder rung and the
-   rough cost class at mid market scale, per HONEST_AI.md, ranges only.
+   rough cost class at mid market scale, per AGENTIC_LITERACY.md, ranges only.
 3. Where it does NOT translate. Every translation names at least one limit,
    scale, data, regulation, season, or the plain software answer. Alaska
    bans finfish farming, so aquaculture CV is an analogy here, say so.
