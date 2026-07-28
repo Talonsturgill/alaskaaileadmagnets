@@ -1,0 +1,4 @@
+{
+ "_doc": "Per-run per-slide image fingerprints (16x20 grayscale, base64). Engine B of the variety system reads this so a new deck must diverge from what shipped in PIXELS and not only in labels. Written by scripts/variety_check.py --record in Phase 10. A run that does not record has broken the engine for every future run.",
+ "runs": []
+}
