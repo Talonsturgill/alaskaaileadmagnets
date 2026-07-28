@@ -114,9 +114,17 @@ REFERENCE ONLY from sessions in this repo. Never write to them.
 
 - `knowledge/` — **THE_READER.md (the doctrine, read first)**,
   AGENTIC_LITERACY.md (the ladder and the curriculum), CASE_CRAFT.md (story
-  grammar and the qualifying filter), ALASKA_TRANSLATION.md (the landing),
-  plus the studio doctrine (CAROUSEL_CRAFT, DESIGN_DOCTRINE,
-  SLIDE_DOSSIER_SPEC, TECHNIQUE_LIBRARY) and FIELD_NOTES.
+  grammar and the qualifying filter), NARRATIVE_COHERENCE.md (one idea, eight
+  slides, no chop), VARIETY.md (the two variety engines),
+  ALASKA_TRANSLATION.md (the landing), plus the studio doctrine
+  (CAROUSEL_CRAFT, DESIGN_DOCTRINE, SLIDE_DOSSIER_SPEC, TECHNIQUE_LIBRARY)
+  and FIELD_NOTES.
+- `knowledge/kb/` — **the standing knowledge base.** AI_LANDSCAPE,
+  DEPLOYMENT_PATTERNS (the shapes we hunt), ECONOMICS, EVIDENCE, VENDOR_MAP,
+  ANCHORAGE, HUNTING_GROUNDS. Agents read it so they start a run holding the
+  priors a good analyst holds. **It is PRIORS, never a citation** — the
+  handling law is in `knowledge/kb/README.md` and it does not bend. Retros
+  grow it, every entry naming the URL that established it.
 - `prompts/` — routine_instructions.md (the run contract) + ROUTINE_PROMPT.txt.
 - `config/` — brand.yaml, sources.yaml, scoring_rubric.yaml.
 - `ledger/` — bank.json (the case bank), cases.json, artwork.json,
@@ -125,8 +133,12 @@ REFERENCE ONLY from sessions in this repo. Never write to them.
   treatment-director, copywriter, pixel-critic, flow-critic, case-critic,
   scorer, upgrade-engineer.
 - `.claude/skills/carousel-engine/` — render + QA + assembly harness.
-- `assets/` — fonts, art libraries, Alaska geodata. `scripts/` — gmail_draft.py,
-  caption_check.py, style_lint.py, logo_check.py.
+- `assets/` — fonts, art libraries, Alaska geodata.
+- `scripts/` — the gates. **layout_check.py** (text over text, gutters,
+  worst-tile contrast, zone and budget conformance), **variety_check.py**
+  (both variety engines, within-deck and cross-run), **coherence_check.py**
+  (the story survives the edit rounds), plus gmail_draft.py, caption_check.py,
+  style_lint.py, logo_check.py.
 - `runs/` — shipped artifacts. `out/` — per-run scratch (gitignored).
 
 ## MANUAL TEST

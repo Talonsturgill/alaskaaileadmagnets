@@ -34,6 +34,11 @@ Three failures we have actually shipped, named so they never repeat:
 
 ## 1. DECK RHYTHM (new, mandatory)
 
+`knowledge/VARIETY.md` owns the full law here, both engines, with the measured
+numbers and the thresholds. `scripts/variety_check.py` enforces it at
+pre-planning, at every render, before ship, and in the retro. This section is
+the design half of it.
+
 A deck is a filmstrip. Judge it on the contact sheet, not slide by slide.
 
 **No deck may use the same compositional mode more than three times.** Assign
@@ -52,6 +57,11 @@ every slide one of these modes in the dossier header, and vary them:
 A legal 8 slide rhythm: `OBJECT, SCENE, DOCUMENT, DIAGRAM, DATA, DOCUMENT,
 FIELD, OBJECT`. An illegal one: six DOCUMENTs in a row, which is what shipped
 last time.
+
+**And the rule underneath the rhythm rule:** no two slides in a deck may share
+a mode AND a layout family, no art system is reused across slides, and every
+slide carries a written sentence naming what makes it unlike the others. A
+chassis is a tool for making one slide. It is not a deck.
 
 **Tonal rhythm too.** The deck must not be one temperature and one value
 throughout. Plan a value arc (dark, dark, light, dark...) and a temperature arc
