@@ -1,4 +1,63 @@
 {
  "_doc": "Per-run per-slide image fingerprints (16x20 grayscale, base64). Engine B of the variety system reads this so a new deck must diverge from what shipped in PIXELS and not only in labels. Written by scripts/variety_check.py --record in Phase 10. A run that does not record has broken the engine for every future run.",
- "runs": []
+ "runs": [
+  {
+   "run_date": "2026-07-25",
+   "case_file_no": 2,
+   "slides": [
+    {
+     "name": "slide-01.html",
+     "mode": null,
+     "fp": "CgwODw8PDg0MCggICAcFBg0PDA0LCQUCAAAAAAAIDQgOUkpKWVI+UE1JTjdRTwoKD2JhZHNgWGlnZltMZVwKCg06REVXSkpRTEs9RVpKDQ0gfImOlJ2eo6eqrqymr4YLK+T08/X29/f39vHr4uKlDiXS5ePm6Onp6Ojk39fXpBIhwNbV2ubi5uzq5uHZ2KgUG8fi4OTk4+bq5+Hd19arFhfC39rc6urp6Ojk3tXTrBgTuNvV3OTi4OHm4NrRz6waEL3m4ePl5eTh3NvVzMqqGw2v29bX3NzZ19PTzsbDpxsMrt3X29zc2tjTzcfAu6IbCZ/Tys7Pz83Kx8O9trCbHQZ/zNHT1NTT0MzGv7aumx8SLlBtbGdjXllTTEY/ODESEAsFAwMDAgIDAwMDAwYICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-02.html",
+     "mode": null,
+     "fp": "Cg0ODw8PDg0LCggICAgGBgwNDg0HBAMCAwAAAAAABwgSPl5gQlNNUUhcSU5TVxUHF1pibVZvcWJTRTg/QT8PCRJJQVNBUE9WTQIAAAABDA0ffo6QmZyhpqu2trWyuIYLK9Ti3+Lk4eXf6fLo3+ClDiS3xsTIyszNyNXj39fXpBIgus/JzsvQ0czS4+LY2KgUG7XOysnS1dLV1Nzh19arFhfA3Nvb6O7u7enk3tXTrBgTxuvm6ejo6OXg29XOzqsZELzm4OPl4+Hf29TOyMiqGw2s2NPU1eDh29HQyMHEpxsLqdjS1NXaz8zIube2sJ4cCaDUy9DRzsC/v6uqpp2PHgZ+zNHT1NPN0Me4taupmh8SLlBtbGdjX1lTTUdAOTESEAsFAwMDAgIDAwMDAwYICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-03.html",
+     "mode": null,
+     "fp": "Cw4QEBEQDw4MCgkICAcFBg4NDRILBQcBAgAAAAADCAcPXVZCVlA7V0I7V1xNJQcLDkpxVHhibnlZXF5dbDEDCw5eeE9eYk52ZlNIaVEFDQwjrMK9v9PH4NjY2eHTuIUKLNzq6+7r7+vt7eng2OClDSXH2dPb5eDj5ufi3tjXoxAhy+He4uXl5uXh2tnZ2KgSG8/q5+jq6+zq6ufh19aqFRbD4uTc3uHh2+Lk3dXTrBYUx+vm6uvr6+nl39nSz6sYEL7n3tfa3dnY1tDKxsuqGg+rycTGyMLIxcK/t624qBkOoL+7vr++v7y8ta6nqKIbCpi/trm5urm2trCsoqWcHAZ/ztLW2NLIyM3HwLevmx8SLlBtbGdjXVhTTEU+ODESEAsFAwMDAgMDAwMDAwcICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-04.html",
+     "mode": null,
+     "fp": "Cg0ODxAPDQ0LCQgICAgGBgwLDAoDAwcCAAEAAAAABwgTXlJEWVM0RlM9Q01KSg8IE01sVmp1VGdnSmNaXFkQCRBXXWxObV9cZXReBAAADA0hmaOtsru7vMLOzbyyuYYLK97v7O/v8fLx7Ojl3d+lDiXS5OPl5+jo6d/Z0s/VpBEizOPm5Ojr5uvp4ODY2agUHMnk5eXo6ujq5uDc2NerFhfJ6ebm6uzq6uni3dDQqxgUut7l2uDd0dfb1My9u6IbEMHs5Oro6Ofl3dnOxseqGw+v0M7Q09DQzdPXz8jEpxsOn7+8v77AvrjHy8W9uKIbC5O4sLW3t7Syu8zNwsOeHAh2ucvGx8rEw9DS0MXEnx4SLlFubGhkXllSSkM9NTASEAsFAgMDAgIDAwMEAwcICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-05.html",
+     "mode": null,
+     "fp": "DA4QERIREA0NCggICAcFBg0NDhEIBQUHAAAAAAACCAcUYFVhXlRNQF9AS01QKgYLFUpcUnlcWUNcSlRWVDYFCw8AAAAAAAAAAAAAAAADDQshhZSZoKSprbK1t7ezuIYJLdvt7e3s7enq6OXh19eeDCbC093k2tre4N3b18/NnRAhudDf6tTT4eXg3tvSz6MSG8jc3erX0tvo3t3a0c2lFRbG3uDq1tLq5tzb187KphYTu9/i6dXW6+TZ19TKxqYYELXb4ebS1uHc1tXQxsGlGg2v2dvdztXS0s3EwL+6oRoMptfO09PXz83Lv7q7tqAbCYjCvsDAzL+9vqurqJ6PHQd2vMzO0dLGysSyr6ehkh8SL1FubWliWldORkM7ODIREAoFAgIDAwMDBAQEBAcICwsMDg4PDw8PDw8ODg4ODgw="
+    },
+    {
+     "name": "slide-06.html",
+     "mode": null,
+     "fp": "CQoLCwsKCwsKCAgICAgGBgkICgwJCwMAAAAAAAAACQkNTUtLTT9NVk4/VFBRUA0JEFl9eWZeYWxoUUFCPjoOCxAyTUpIR0ZJVDwAAAADDg8dfIaLk5mgoqatuLezuIcPKdzs6+3u7u/s5uLX1+GmEiLG2NbZ2dfX09va0M/YpBUex9/e4ODg3uHn5OHa2KkYG8Lf4ePi5Nve1NHW2NarGhfA3trf49vf4dzX0tbTrRsTwOHf4eLn5uXh3dfOzKsdELrh3NXg2uDX0dG+uLahIA2149rY3N7g0tHKubavoh8MptLQ09Db18/Rxbu0sqEeCaDVy8/Rz87Lx8S/t7GbHgZ+zNDT1NTT0MzGv7aumyASLlBtbGdjXllTTEY/ODESEAsFAwMDAgIDAwMDAwcICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-07.html",
+     "mode": null,
+     "fp": "Cg0ODw4ODgwLCQgJCAYGBgwKCgcGAwIAAgEAAAAJCAkSVGVdP0xUU0Q/Rk4/BAoKEWtrYVdgZXBPUlxXcCgJCww9YU9QSE9STFZdRF9nEAwfeomRkZqeoaipqa+qr4YNKtzm5enr6ufs4+Dm4eGlDyTL393h4uXp6Ojk3NLVpBMgzuTi5ubr6ejm4d3V1KgVG8Xe3N7f39nX19TQztGrFxe729ve2+fh3+3q2cjRrBkTuMW8wsLJxMPB1t3EzKsbD7W+rbKzsrS1rtLmxsyqHA2q4Nnf2+Hd29zV0tDUqxsNpMrFxsvIx8XFwLm7vaMcCaDSyMvMzs/KxcG6srCbHQaAy87Q0dLTzsfCurKumx8SLlBubGhjXllUTUdAODESEAsFAwMDAgMDAwMDAwYICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-08.html",
+     "mode": null,
+     "fp": "Cg0PDw4ODgwLCggGBgYGBg0MCgoPDAMDAAAABAgHCAgOWlxMSmVYQUpRXxYHCwoKDkVjXlV1Z1ZXVFAZBwoKCxRHYGJoYGB2IAAABAkLDQ0gjp+jqKuxt7azt7Swt4YLLNbY3uPt6eX5++bb1NShDybH0tjm2XVzdLjr29XVpBIhzOHa6OW0ub3U283EzKYUG8/q5+rs7PD27eHb0dWrFhi/08/U3tfU1NnVycPAoxkWtc3K0uHOzsXd0b64taIbE67IytHez9Ta3su3trWgHQ+qy9HY2NXc39fKwMLDphsMq9jP0dbS1tfSz8rAu6IbCaDUzNDQ0c7Kx8O9trGbHQZ+zNDT1NTS0MS8u8XCnh4SLlBtbGdjXllTTEU/OTESEAsFAwMDAgIDAwMDAwcICwsMDg4PDw8PDw8PDg4ODgw="
+    },
+    {
+     "name": "slide-09.html",
+     "mode": null,
+     "fp": "DA8QEREQEA4MCwgGBgYGBg4MDg8QCQQEAQABBwYIBwcPWV1eUUtQTFdXPgYLCwoKEV93a2BXW05UXTgICwoJChNVWmpnbTQAAAAABgYLDAwhjJmiqKyyrrK2tbe4t4UKLOHx7vHy8/X08/LSttumDCbS5eTm6Onp6ejpmmrDqA8hzuHd5OHk5+bk4LO40qgSG8bf3uDc3+Ti4uHc2depFRfG4t3h4+Ln5+Xk3dPQqxcTvuPh5OTo5uPh0L+1tKYZEbbZ1tjZ29jV08vBu7ukGxCowcLDxMXDv7y5tK6roRsOob+8vb7ExL+9urSqraIbC5a7tbi6wsbBvrq1srGbHAd4vL7ExsLDwLe5rbCumx8SLUtnZmJcV1RNSUE7OTESEAsGBAQEBAQEBAMEBAcICwsMDg4ODw8PDw4ODg4ODgw="
+    },
+    {
+     "name": "slide-10.html",
+     "mode": null,
+     "fp": "CQoLCwsLCgkIBwYGBgYGBgsMDQ0NDQwKCgkIBgYHBwcNDQ4PDw4ODAoKCgkJCgoJDhITFBMSERANCwsLCgoJCgwAAQIDAwMDAwIDBggKCwoei5mco6its7W7u7SwtoUHKrLIz9DX2NDZzs/o4OCkCCSSlpOQp5KVspSg3NfXowshl5WanY/D/PH07+HY2acNG7DBztnS3O3r6eXg2NapEBbF5eXm6ufi4+Da1czQqxETw+Pi4+Xk4ePe19PKz6sUELPc1tra2tvV3t7WzcqpFg2ewr3CxMLCx9jUzcbDphcMlszVz9LRzsvQzsjAvKIZCZ/Jhb/DyM/NyL22sqqWGwaBxZ7Fys3R0MzEvbStmh0SLlF0bGhkXllTTUY/OTEREAsFAgMDAgIDAwMDAwYICwsMDg4PDw8PDw8PDg4ODgw="
+    }
+   ],
+   "note": "Case File No. 2, the deck the maintainer REJECTED. Recorded deliberately, and it is the most important entry in this file: it is the look no future run may reproduce. Measured at 0.978 median pairwise image correlation, 0.565 median layout overlap and a 0.059 value arc. Recorded here rather than via its own run branch so the cross-run engine remembers it regardless of what happens to that branch.",
+   "outcome": "rejected"
+  }
+ ]
 }
