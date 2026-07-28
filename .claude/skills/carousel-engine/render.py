@@ -149,6 +149,19 @@ IN_PAGE_QA_JS = """
                   (el.closest && !!el.closest("[data-decorative]")),
       overlap_ok: el.hasAttribute("data-overlap-ok") ||
                   (el.closest && !!el.closest("[data-overlap-ok]")),
+      // LAYOUT SYSTEM (2026-07-28, DESIGN_DOCTRINE section 3). Declared
+      // membership, read by scripts/layout_check.py: `zone` is the named
+      // rectangle the element belongs to (HEAD/BODY/ART/DATA/FOOTER/BRAND),
+      // `block` is the vertical-budget group it shares with its siblings, and
+      // `knockout` marks text that sits on an explicit opaque plate and is
+      // therefore allowed inside ART. Inherited from the nearest ancestor
+      // carrying the attribute, so a wrapper can declare a whole column.
+      zone: (el.closest && el.closest("[data-zone]")
+             ? el.closest("[data-zone]").getAttribute("data-zone") : null),
+      block: (el.closest && el.closest("[data-block]")
+              ? el.closest("[data-block]").getAttribute("data-block") : null),
+      knockout: el.hasAttribute("data-knockout") ||
+                (el.closest && !!el.closest("[data-knockout]")),
       lines: lines,
       anc: anc
     };
