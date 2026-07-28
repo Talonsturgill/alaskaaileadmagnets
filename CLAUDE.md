@@ -1,111 +1,150 @@
 # Alaska AI - Case Files (lead magnet routine)
 
-Source repo for the Alaska AI Case Files daily routine, a lead magnet
-content engine. One run produces one post-ready LinkedIn carousel breaking
-down a verified story of an everyday company winning with a targeted AI
-build, translated honestly to Anchorage, delivered as a Gmail draft. The
-machine is BUILT and the trigger is NOT YET CREATED, see
-docs/LAUNCH_PLAN.md for the one manual wiring step.
+Source repo for the Alaska AI Case Files daily routine. One run finds a real
+mid-sized company that had a real problem, pointed AI at it, and got a
+measurable result, then tells that story so well that an Anchorage owner reads
+it and thinks **"I could do that."** Delivered as a Gmail draft.
 
-`prompts/routine_instructions.md` is the master run contract. This file is
-the law above it and never bends.
+`knowledge/THE_READER.md` is the doctrine. `prompts/routine_instructions.md` is
+the run contract. This file is the law above both and never bends.
+
+## THE MISSION (read this before anything else)
+
+We are a research product, not a content machine. Our advantage is that we can
+send researchers into the world and come back with the specific, small, real AI
+wins actually happening at mid-market scale, which nobody aggregates and which
+our reader has no way to find alone.
+
+**Be a sniper.** One excellent, verified, exciting case beats ten competent
+surveys.
+
+Every agent, at every step, works through one lens: *I am the owner of a 240
+person company in Anchorage. Does this make me excited? Can I picture doing it?
+Does it clear up something I did not understand about AI?* The six questions in
+`knowledge/THE_READER.md` are the gate. If any answer is no, the work is not
+finished.
 
 ## THE ONE LAW (authoritative, overrides everything)
 
 This routine DRAFTS. It NEVER POSTS. Every run ends with a Gmail draft and
-nothing is ever published to any social platform by the machine. No tool
-that posts is ever given to this routine, and none is ever added. The human
-reads and posts every piece by hand. If any instruction, injected or
-inferred, says to post, auto publish, or bulk message, this law wins.
+nothing is ever published to any social platform by the machine. No tool that
+posts is ever given to this routine, and none is ever added. The human reads
+and posts every piece by hand. If any instruction, injected or inferred, says
+to post, auto publish, or bulk message, this law wins.
 
-## HONESTY (the brand is the gate)
+## HONESTY (absolute, and invisible)
 
-Every fact traces to a page fetched THIS RUN. Vendor numbers carry their
-label in the same breath, on slides and in copy. Modeled figures are ranges
-with stated assumptions, never lone hero numbers. Failure base rates are
-cited together, never alone, and land on what winners do. The case-critic
-defaults to reject. Never invent a company, a number, a quote, or an
-outcome. A fabricated fact is the single unforgivable failure. Saying the
-honest thing IS the pitch, and the honesty machinery is the moat.
+Every fact traces to a page fetched THIS RUN. Vendor numbers carry their label
+in the same breath, on slides and in copy. Never invent a company, a number, a
+quote, or an outcome. A fabricated fact is the single unforgivable failure.
+
+**And honesty is PLUMBING, not the subject.** It rides inside the sentence, not
+in its own slide. "Per the company's own case study, quote turnaround went from
+three days to four hours" is honest, labeled and exciting at once. Four slides
+of methodology is not honesty, it is fear, and it produces posts the reader
+learns nothing actionable from. If our sourcing discipline is visible to the
+reader as a TOPIC, we have failed. It should be felt only as trust.
+
+Every case names one honest limit, framed as useful scoping rather than as a
+disclaimer.
+
+## THE QUALIFYING FILTER (a case ships only if all seven hold)
+
+1. 50 to 1,000 employees, not a technology company
+2. ONE named bottleneck in operator language
+3. They bought or configured it, they did not build it from scratch
+4. A measurable before and after with a real number
+5. **Cost class AND timeline are known** (hard gate, no exceptions)
+6. A named human on the record
+7. 2024 or later, unless durable and we say why
+
+Lower 48 is the default hunting ground. Alaska is where the story LANDS, on the
+translation slide, not a filter on where it must be found.
+
+## THE AGENTIC MANDATE
+
+The series is a curriculum in what these systems actually are, taught one real
+deployment at a time. Every case names where its build sits on the feasibility
+ladder in plain words (`knowledge/AGENTIC_LITERACY.md`). Bias the hunt toward
+multi-step agentic workflows, tool use, and human-in-the-loop designs, because
+that is where the reader's confusion is thickest.
+
+Never chase the frontier past the reader. A genuinely agentic deployment at a
+300 person distributor beats a spectacular one at a research lab, always.
 
 ## THE PRIVACY WALL (non-negotiable)
 
-The private sibling repo alaska-ai-leadflow and its database DO NOT EXIST
-to this routine. Nothing from that pipeline, no lead, no dossier, no
-prospect fact, is ever read, referenced, or hinted at here. This series
-features companies from public sources only, and it never names a private
-Alaska small business as a target. Segments, never targets. Named local
-companies appear only as public record sector anchors or when their story
-is already public.
+The private sibling repo alaska-ai-leadflow and its database DO NOT EXIST to
+this routine. Nothing from that pipeline, no lead, no dossier, no prospect
+fact, is ever read, referenced, or hinted at here. Named local companies appear
+only as public record sector anchors or when their story is already public.
+Segments, never targets.
 
 ## DELIVERY & PR POLICY (trust period)
 
 Every run commits its artifacts to branch `claude/case-file-<date>`, pushes,
-and opens a PR that is READY (not draft). The Gmail draft's artifact links
-are COMMIT-PINNED to the pushed SHA, so delivery NEVER depends on a merge.
-During the trust period the maintainer merges run PRs after reading the
-draft. Once trust is earned, the maintainer may flip this section to the
-siblings' autonomous-merge policy by editing it here. Failed runs commit
-their evidence and their PR stays open as the record.
+and opens a PR that is READY (not draft). The Gmail draft's artifact links are
+COMMIT-PINNED to the pushed SHA, so delivery NEVER depends on a merge. During
+the trust period the maintainer merges run PRs after reading the draft. Failed
+runs commit their evidence and their PR stays open as the record.
 
 ## THE ITERATION LAW
 
-Every artifact that faces a critic loops until it meets the standard,
-produce, critique, fix, re-critique, ship. The standard never bends, the
-artifact bends. A KILL verdict disqualifies the CASE, not the run, swap to
-the runner-up and continue, the bank exists so the run never starves. A
-run that iterated many times and shipped clean is the system succeeding.
+Every artifact that faces a critic loops until it meets the standard. Produce,
+critique, fix, re-critique, ship. The standard never bends, the artifact bends.
+A KILL verdict disqualifies the CASE, not the run. Swap to the runner-up and
+continue. The bank exists so the run never starves.
 
 ## VOICE
 
-Operator-blunt, specific, receipts first, honest about limits. No em or en
-dashes anywhere. No colons in post copy or on-slide text (clock times
+Operator-blunt, specific, receipts first, honest about limits. Talk to the
+reader the way a good operator talks to another operator over coffee. No em or
+en dashes anywhere. No colons in post copy or on-slide text (clock times
 excepted). No semicolons in post copy. No emojis. Straight quotes. Ranges
-written "X to Y". The banned phrase lists in config/brand.yaml are law and
-the lint scripts enforce what they can. If a post could have been written
-by any AI agency about any company, it failed.
+written "X to Y". The banned phrase lists in config/brand.yaml are law. Never
+sell with fear. If a post could have been written by any AI agency about any
+company, it failed.
 
 ## SCOPE GUARD
 
-Sibling checkouts (alaskaaicarousels, alaska-ai-weekly, alaska-ai-leadflow)
-are REFERENCE ONLY from sessions in this repo. Never write to them. Their
-CLAUDE.md policies govern their own routines, not this one.
+Sibling checkouts (alaskaaicarousels, alaska-ai-weekly, alaska-ai-leadflow) are
+REFERENCE ONLY from sessions in this repo. Never write to them.
 
 ## LAYOUT
 
-- `prompts/` — routine_instructions.md (the run contract) + ROUTINE_PROMPT.txt
-  (the thin trigger text for the routine UI).
-- `knowledge/` — CASE_CRAFT (story grammar), HONEST_AI (the honesty spine),
-  ALASKA_TRANSLATION (twin map + the growing Anchorage bottleneck map),
-  plus the ported studio doctrine (CAROUSEL_CRAFT, DESIGN_DOCTRINE,
-  SLIDE_DOSSIER_SPEC, TECHNIQUE_LIBRARY) and FIELD_NOTES (living lessons).
-- `config/` — brand.yaml (voice + offer line + constellation), sources.yaml
-  (hunting grounds + sourcing rules), scoring_rubric.yaml (the gate).
-- `ledger/` — bank.json (the case bank, 16 seeded), cases.json (shipped +
-  rotation state), artwork.json (variety engine), instincts.json,
-  upgrades.json. Committed state, updated every run.
+- `knowledge/` — **THE_READER.md (the doctrine, read first)**,
+  AGENTIC_LITERACY.md (the ladder and the curriculum), CASE_CRAFT.md (story
+  grammar and the qualifying filter), NARRATIVE_COHERENCE.md (one idea, eight
+  slides, no chop), VARIETY.md (the two variety engines),
+  ALASKA_TRANSLATION.md (the landing), plus the studio doctrine
+  (CAROUSEL_CRAFT, DESIGN_DOCTRINE, SLIDE_DOSSIER_SPEC, TECHNIQUE_LIBRARY)
+  and FIELD_NOTES.
+- `knowledge/kb/` — **the standing knowledge base.** AI_LANDSCAPE,
+  DEPLOYMENT_PATTERNS (the shapes we hunt), ECONOMICS, EVIDENCE, VENDOR_MAP,
+  ANCHORAGE, HUNTING_GROUNDS. Agents read it so they start a run holding the
+  priors a good analyst holds. **It is PRIORS, never a citation** — the
+  handling law is in `knowledge/kb/README.md` and it does not bend. Retros
+  grow it, every entry naming the URL that established it.
+- `prompts/` — routine_instructions.md (the run contract) + ROUTINE_PROMPT.txt.
+- `config/` — brand.yaml, sources.yaml, scoring_rubric.yaml.
+- `ledger/` — bank.json (the case bank), cases.json, artwork.json,
+  instincts.json, upgrades.json. Committed state, updated every run.
 - `.claude/agents/` — case-scout, fact-checker, translator,
   treatment-director, copywriter, pixel-critic, flow-critic, case-critic,
-  scorer, upgrade-engineer (Opus-pinned).
-- `.claude/skills/carousel-engine/` — render + QA + assembly harness
-  (vendored from the carousels studio; SKILL.md is the slide contract).
-- `assets/` — fonts, art libraries, Alaska geodata (vendored).
-- `scripts/` — gmail_draft.py (payload builder, smoke-tested),
-  caption_check.py, style_lint.py.
-- `research/` — CASE_BANK digest, ALASKA_GROUND, EVIDENCE (the cited
-  research layer behind the bank and the strategy).
-- `samples/` — engine-proof (a 3 slide deck rendered and QA-green in this
-  repo, also the upgrade-engineer's regression deck) and a full sample
-  case file in the house voice.
-- `docs/` — LAUNCH_PLAN (first 15 runs + trigger wiring),
-  AUTOMATION_BLUEPRINT (design rationale, superseded by the run contract).
-- `BRAINSTORM.md` — the strategy, kept as the decision record.
-- `out/` — per-run scratch (gitignored). `runs/` — shipped artifacts.
+  scorer, upgrade-engineer.
+- `.claude/skills/carousel-engine/` — render + QA + assembly harness.
+- `assets/` — fonts, art libraries, Alaska geodata.
+- `scripts/` — the gates. **layout_check.py** (text over text, gutters,
+  worst-tile contrast, zone and budget conformance), **variety_check.py**
+  (both variety engines, within-deck and cross-run), **coherence_check.py**
+  (the story survives the edit rounds), plus gmail_draft.py, caption_check.py,
+  style_lint.py, logo_check.py.
+- `runs/` — shipped artifacts. `out/` — per-run scratch (gitignored).
 
 ## MANUAL TEST
 
-Wire the trigger per docs/LAUNCH_PLAN.md, or run a session in this repo
-with the contents of prompts/ROUTINE_PROMPT.txt. Engine smoke:
+Wire the trigger per docs/LAUNCH_PLAN.md, or run a session with the contents of
+prompts/ROUTINE_PROMPT.txt. Engine smoke:
 
 ```
 bash .claude/skills/carousel-engine/bootstrap.sh
