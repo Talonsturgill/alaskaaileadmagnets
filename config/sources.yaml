@@ -39,6 +39,19 @@ case_hunting_grounds:
     - {url: "https://www.inc.com",                    outlet: "Inc.",                      credibility: "medium"}
     - {url: "https://www.forbes.com/small-business",  outlet: "Forbes small business",     credibility: "medium"}
 
+  cost_disclosure_grounds:
+    # Added 2026-07-28. Cost class AND timeline are now a HARD INTAKE GATE
+    # (knowledge/CASE_CRAFT.md), so the grounds where operators say what they
+    # paid are the highest-yield grounds we have. Operators talking to peers
+    # disclose; operators talking to press do not. See
+    # knowledge/kb/ECONOMICS.md and knowledge/kb/HUNTING_GROUNDS.md.
+    - {kind: "conference talks and operator panels", credibility: "high", note: "sector conference agendas and recorded sessions; peers ask peers what it ran them"}
+    - {kind: "operator podcasts with transcripts",   credibility: "medium", note: "underused and frequently candid about cost and timeline"}
+    - {kind: "public procurement and grant records", credibility: "primary", note: "cost is public by law; state, municipal, utility, federal"}
+    - {kind: "trade association case libraries",     credibility: "high", note: "written for peers, far more operationally specific than press"}
+    - {kind: "industry award submissions",           credibility: "high", note: "entrants describe the build in detail to win"}
+    - {kind: "state MEP centers and extension programs", credibility: "primary", note: "mid-market manufacturing, numbers included"}
+
   vendor_libraries:
     # The specific mid-market stories often live here. Always the vendor-claims
     # label, always seek independent corroboration, never the headline number.
@@ -81,8 +94,14 @@ sourcing_rules:
     strong: "Independent reporting or government and academic writeups with numbers."
     medium: "Credible trade press single source, or vendor claims corroborated independently."
     weak: "Vendor only. Not ship ready. Bank it with the label and hunt corroboration."
-  ship_ready_requires: "strong or medium, 2 plus sources or one primary, numbers from fetched pages"
-  recency: "2023 or later preferred, older allowed as labeled background"
+  ship_ready_requires: "strong or medium, 2 plus sources or one primary, numbers from fetched pages, AND a disclosed cost class AND a disclosed timeline"
+  recency: "2024 or later, unless the win is structurally durable and the entry says why. Tooling economics moved too fast for older numbers to guide a decision made now."
   quotes: "verbatim from a fetched page or they don't exist"
-  company_size_target: "roughly 20 to 2000 employees, everyday companies, not Big Tech"
-  thesis_filter: "targeted build on a specific bottleneck, not a sweeping transformation story"
+  company_size_target: "50 to 1000 employees, and not a technology company. The reader must be able to say 'that's basically us'."
+  buy_not_build: "they bought or configured it. If the answer required hiring ML engineers, the reader cannot copy it and the case does not qualify."
+  named_human: "a quote with a name and a role, from a fetched page"
+  thesis_filter: "targeted build on ONE named bottleneck in operator language, not a sweeping transformation story"
+  geography: "the lower 48 is the default hunting ground. Alaska is where the story lands, not where it must be found. An Alaska case is a bonus, never a requirement."
+  ladder_bias: "prefer rungs 4 and 5 (knowledge/AGENTIC_LITERACY.md). That is where the reader's fog is thickest and where the curriculum is worth the most. Never chase the frontier past the reader."
+  snippet_rule: "a company name NEVER enters the bank from a search snippet. Only from a page fetched and read in full. This rule was paid for on 2026-07-25."
+  search_craft: "search the bottleneck in operator language, not the technology. Full craft in knowledge/kb/HUNTING_GROUNDS.md."

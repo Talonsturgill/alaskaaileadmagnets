@@ -1,4 +1,18 @@
-# Honest AI
+# Honest AI — SUPERSEDED, kept as reference
+
+**Read `knowledge/AGENTIC_LITERACY.md` and `knowledge/kb/EVIDENCE.md`
+instead.** Those two files now own this ground: the ladder and the curriculum
+in the first, the source taxonomy, inflation patterns and verification
+protocol in the second.
+
+This file is kept because its frames are still correct and the case-critic's
+tables came from here. But its FRAMING is wrong for the rebuilt series, and
+the wrong framing is what produced the 2026-07-25 deck: it treats honesty as
+a subject to be taught. Honesty is plumbing. It rides inside the sentence, it
+is absolute, and it is never the topic. Where this file and
+`knowledge/THE_READER.md` disagree, THE_READER wins.
+
+---
 
 The public honesty spine of the series. Every frame here traces to public
 research and published practice. This file exists so the series teaches the

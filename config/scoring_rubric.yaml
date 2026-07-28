@@ -1,8 +1,20 @@
 # Case Files scoring rubric — the final gate before delivery.
-# The scorer computes: weighted = Σ(score_i × weight_i), then applies the
+#
+# Rebuilt 2026-07-28 around knowledge/THE_READER.md. The previous rubric
+# scored craft and evidence discipline heavily and never asked whether the
+# reader could USE the post. It gave a respectable score to a deck that taught
+# measurement epistemology, and the maintainer's verdict on that deck was that
+# it did not mean anything to them.
+#
+# So the weight moved. Honesty did not get less important, it moved from a
+# scored criterion to a floor: it is now mostly hard fails, because honesty is
+# plumbing and plumbing is pass/fail. What gets SCORED is whether the post
+# does its job for one specific person.
+#
+# The scorer computes weighted = sum(score_i * weight_i), then applies the
 # hard-fail penalty: ANY hard fail caps the total at 6.9 (cannot ship).
-# Ship threshold 8.3. Scores must be honest; the iteration ladder relaxes
-# the THRESHOLD, never the scores.
+# Scores must be honest; the iteration ladder relaxes the THRESHOLD, never
+# the scores. A score computed before the last fix pass is not a score.
 
 rubric:
   ship_threshold: 8.3
@@ -11,91 +23,143 @@ rubric:
     - {revision_rounds: 3,   threshold: 8.0}
     - {revision_rounds: 4+,  threshold: 7.7, note: "ship best version, flag shortfall in email"}
 
-  hard_fails:   # any ONE of these caps the score at 6.9 — fix or cut
-    - "em dash or en dash anywhere (slides, post copy, comment block)"
-    - "emoji anywhere"
-    - "factual claim without a claim-id resolving to a verified source"
-    - "vendor-sourced number without its sourcing label in the same sentence or on the same slide"
-    - "a failure base rate cited alone as a scare number (they travel together, and end at what winners do)"
+  # ---------------------------------------------------------------------
+  # HARD FAILS — any ONE caps the score at 6.9. Fix or cut.
+  # ---------------------------------------------------------------------
+  hard_fails:
+
+    # --- the reader gate (new, and it sits first on purpose)
+    - "the company is one Dana cannot be: a technology company, a Fortune 500, a venture-backed darling, or a research lab, shipped without the labelled-mechanism exception"
+    - "the company is outside 50-1000 employees"
+    - "the win is one Dana cannot copy: built in house with a data team, or otherwise closed"
+    - "no cost class on the deck, or no timeline on the deck (this disqualifies the CASE, and a case with neither should never have reached scoring)"
+    - "a THE RECEIPTS, WHAT IT TOOK, or YOUR VERSION slide is missing"
+    - "the post's subject is our evidence handling rather than a use case"
+    - "fear used as a motivator anywhere ('you are falling behind')"
+
+    # --- the machine gates
+    - "machine_qa verdict FAIL"
+    - "layout_check verdict FAIL"
+    - "variety_check verdict FAIL (either engine)"
+    - "coherence_check verdict FAIL"
+    - "pdf_mode != vector (without the noted fallback)"
+
+    # --- honesty, as a floor rather than a score
+    - "factual claim without a claim-id resolving to a source fetched this run"
+    - "vendor-sourced number without its sourcing label in the same breath"
+    - "a failure base rate cited alone as a scare number (they travel together and end on what winners do)"
     - "an ROI or savings claim presented as a lone certain number where the source gives a range, an estimate, or a vendor aggregate"
-    - "a case file shipped without receipts, the catch, or the translation"
-    - "our services pitched by name inside the teaching (the configured offer line is the only commercial sentence)"
+    - "freed hours converted to cash without naming the decision that made them cash"
+    - "agent washing repeated uncorrected: a rung 4 workflow called an agent"
+    - "no honest limit named anywhere in the deck"
+
+    # --- craft floors
     - "typo or misspelling in any rendered slide (critics transcribe and diff)"
     - "clipped, overlapping, or cut-off text in any render"
     - "primary text contrast below 4.5:1 at worst point (critic-verified)"
     - "slide count outside 6-12"
-    - "machine_qa verdict FAIL, or pdf_mode != vector"
-    - "the brand logo (brand.yaml logo_asset) absent from every slide of the deck (scripts/logo_check.py is the objective gate)"
-    - "case company already in ledger/cases.json, or industry/capability repeating any of the last 3 entries without the dossier defending an exception"
-    - "hero visual structure identical to any of the last 4 decks (artwork ledger)"
+    - "the brand logo (brand.yaml logo_asset) absent from every slide (scripts/logo_check.py is the objective gate)"
     - "banned phrase from brand.yaml in copy or slides"
-    - "hashtag count != 3, or link in post body"
+    - "em dash or en dash anywhere; emoji anywhere"
+    - "hashtag count != 3, or a link in the post body"
+    - "our services pitched by name inside the teaching (the configured offer line is the only commercial sentence)"
+    - "a named private Alaska business used as a target rather than a public-record sector anchor"
     - "any placeholder, lorem, TODO, or unfinished element in any artifact"
 
+  # ---------------------------------------------------------------------
+  # SCORED CRITERIA
+  # ---------------------------------------------------------------------
   criteria:
-    - name: "Thumb-stop cover"
-      weight: 0.12
+
+    - name: "Identification: does Dana see themselves"
+      weight: 0.14
+      note: "The highest-weighted criterion, because nothing downstream lands without it."
       descriptors:
-        10: "Specific number/reversal/tension in <=12 words, huge type, single focal point, works at 432px, ordinary-company energy without cliche."
-        7:  "Strong but slightly generic wording or competing focal point."
-        4:  "Topic-label cover ('AI in Trucking') or cluttered."
-    - name: "Story arc & swipe momentum"
-      weight: 0.12
+        10: "By slide 2 an Anchorage operator thinks 'that's basically us'. Size, sector texture and ordinariness all land. The company is deliberately unglamorous and concretely described."
+        7:  "Recognisable but generic; the company could be anywhere doing anything."
+        4:  "Dana files it under 'not me' and stops reading."
+
+    - name: "The door: can Dana picture doing this"
+      weight: 0.14
+      note: "The move must be small, bought or configured, and priced."
       descriptors:
-        10: "The case grammar lands as a story; every slide plants or pays an open loop; slide 2 does the identification work instantly; contact sheet reads as one composed sequence."
-        7:  "Coherent but 1-2 slides reorderable without loss."
-        4:  "A list wearing a story's clothes."
-    - name: "Artwork craft & genuine detail"
-      weight: 0.13
-      descriptors:
-        10: "Every slide survives the zoom test; layered texture/light/depth; zero flat-lazy regions; the hero earns its rung on the rendered ladder or argues flat deliberately in the dossier."
-        7:  "Strong overall; one slide leans on a default or has dead zones."
-        4:  "Decorated templates, uniform line weights, flat fills."
-    - name: "Story-art fusion"
-      weight: 0.10
-      descriptors:
-        10: "Art parameters visibly encode the case's numbers and material world; a stranger could guess the industry from the art alone."
-        7:  "Art matches the topic but is interchangeable with a cousin case."
-        4:  "Wallpaper behind text."
-    - name: "Translation strength & local relevance"
+        10: "The mechanism is concrete enough to picture running in Dana's building. Cost class and timeline are both on the deck. Dana finishes knowing the first thing they would do Monday."
+        7:  "The build is clear but what it would take is vague, or the first step is not obvious."
+        4:  "Admirable and unreachable. Entertainment."
+
+    - name: "The number that survives Thursday"
       weight: 0.11
       descriptors:
-        10: "The Alaska translation names segments, the honest rung, a cost class as a range, and at least one limit; an Anchorage operator would feel seen, not marketed to."
-        7:  "Translation present but generic to any cold-weather market."
-        4:  "An Alaska sticker on an Outside story."
-    - name: "Insight density & factual weight"
+        10: "One concrete before-and-after figure with its base named, that Dana could repeat out loud to their CFO without hedging or looking it up."
+        7:  "Numbers present but soft, or too many competing for the same slot."
+        4:  "Percentages with no base, or improvement language with no figure."
+
+    - name: "Agentic literacy delivered"
+      weight: 0.10
+      note: "The curriculum. This is what no competitor is doing for Dana."
+      descriptors:
+        10: "The build's ladder rung is named in plain words, the distinction is taught rather than asserted, and Dana finishes able to tell one kind of AI from another in the next demo they sit through."
+        7:  "The rung is named but the teaching is thin."
+        4:  "The word 'AI' does all the work; the fog is the same thickness at the end."
+
+    - name: "Narrative coherence"
+      weight: 0.10
+      note: "Machine gate is coherence_check; this is the judged half."
+      descriptors:
+        10: "One thesis, held end to end. Every slide opens a loop and pays one. No slide removable or reorderable without loss. One vocabulary, one unit base, one voice."
+        7:  "Coherent but 1-2 slides reorderable without loss, or one vocabulary drift."
+        4:  "A list wearing a story's clothes, or a deck whose one sentence cannot be stated."
+
+    - name: "Artwork craft & genuine detail"
+      weight: 0.11
+      descriptors:
+        10: "Looks like a magazine commissioned it. Every slide survives the zoom test; layered texture, light and depth; the deck climbs the rendered ladder; zero flat-lazy regions."
+        7:  "Strong overall; one slide leans on a default or has dead zones."
+        4:  "Decorated templates, uniform line weights, flat fills."
+
+    - name: "Variety: within the deck and against the ledger"
+      weight: 0.08
+      note: "Machine gate is variety_check; this is the judged half. See knowledge/VARIETY.md."
+      descriptors:
+        10: "Every slide is its own composition. The contact sheet reads as a composed sequence, not one image repeated. Composition system, palette, type pairing, hook archetype and narrative structure all diverge from recent decks."
+        7:  "Fresh hero concept but two or more reused subsystems, or two slides that are one idea rendered twice."
+        4:  "A chassis repeated with different text, or a re-skin of a recent deck."
+
+    - name: "Translation strength & local relevance"
       weight: 0.08
       descriptors:
-        10: "Every content slide adds a NEW verified specific (number, mechanism, cost, timeline); 25-50 words each; zero filler."
-        7:  "Mostly dense; one thin or repeated beat."
-        4:  "Vibes with occasional numbers."
-    - name: "Honesty & evidence discipline"
-      weight: 0.10
-      descriptors:
-        10: "Sourcing labels ride with their numbers; ranges with assumptions; the catch is specific and material; ladder rung named; base rates handled per HONEST_AI; the post would survive a hostile fact-check in the comments."
-        7:  "Honest but one label buried or one catch soft."
-        4:  "Reads true but couldn't prove itself under a skeptical reply."
-    - name: "Variety vs ledger"
+        10: "Names the specific Anchorage segments with this exact bottleneck, the local version of the build in local nouns, a cost range for here, and at least one honest limit framed as scoping. An operator would feel seen, not marketed to."
+        7:  "Translation present but generic to any cold-weather market."
+        4:  "An Alaska sticker on an Outside story."
+
+    - name: "Thumb-stop cover"
       weight: 0.06
       descriptors:
-        10: "Composition system, palette, type pairing, hook archetype, and narrative structure all diverge from the last 4 decks; dials justified."
-        7:  "Fresh hero concept but 2+ reused subsystems."
-        4:  "A re-skin of a recent deck."
-    - name: "Legibility & platform fitness"
-      weight: 0.06
-      descriptors:
-        10: "All floors met (32px body / 24px min / safe zones); readable at 432px; vector PDF 2-25MB with title; counters present."
-        7:  "One squeaker that still reads."
-        4:  "Requires zooming anywhere."
+        10: "The ordinary company and the number in 12 words or fewer, huge type, single focal point, works at 432px. At thumb size Dana can tell this is about a company like theirs and that something concrete happened."
+        7:  "Strong but slightly generic wording or competing focal point."
+        4:  "Topic-label cover ('AI in Trucking') or cluttered."
+
     - name: "Copy: voice & hook"
-      weight: 0.05
+      weight: 0.04
       descriptors:
-        10: "Hook lands inside 140 chars; 300-900 chars; operator-blunt voice; deck-summary line; offer line exactly as configured, once; real closing question; grade 8-10."
+        10: "Hook lands inside 140 chars; identification before information; operator-blunt voice; offer line exactly as configured, once; a real closing question an operator could answer from experience."
         7:  "On-voice with one soft line."
         4:  "Consultant-speak or hook buried."
+
     - name: "Deliverable completeness"
-      weight: 0.07
+      weight: 0.04
       descriptors:
-        10: "Gmail draft complete: post copy, exactly 3 hashtags, first-comment source block with sourcing labels, document title, all links resolve at the pinned commit, inline previews render, report card + aftercare present."
+        10: "Gmail draft complete: post copy, exactly 3 hashtags, first-comment source block with labels, document title, every link resolving at the pinned commit, inline previews, report card with all four gate verdicts, aftercare present."
         7:  "Complete but one convenience element rough."
         4:  "Any missing deliverable component."
+
+  # ---------------------------------------------------------------------
+  # THE FINAL GATE, which sits above the arithmetic
+  # ---------------------------------------------------------------------
+  final_gate:
+    question: "Read the finished deck as Dana. Is the honest reaction 'I could do that' or 'that was well made'?"
+    rule: >
+      If it is the second one, the deck does not ship regardless of the score.
+      Report this judgement explicitly in the score card as
+      reader_verdict: "i_could_do_that" or "well_made". A "well_made" verdict
+      is a hard fail no matter what the weighted number says.
