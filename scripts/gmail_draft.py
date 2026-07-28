@@ -66,7 +66,21 @@ def main():
                     help="commit-pinned raw base, .../<owner>/<repo>/<sha>")
     ap.add_argument("--branch", required=True)
     ap.add_argument("--payload-out", required=True)
-    ap.add_argument("--to", default="me")
+    # THE DELIVERY MAILBOX. The Gmail connector on this account authenticates
+    # as docket@alaskaaihq.com, a Google Workspace mailbox on our own domain,
+    # so every draft this repo creates lands there and would send from there,
+    # DKIM signed by alaskaaihq.com. There is no send-as alias step and no
+    # From address to set: the draft is already from the right address.
+    #
+    # This default is a literal address rather than the Gmail API's "me"
+    # because the MCP create_draft tool rejects "me" with "At least one
+    # recipient must be specified" (2026-07-25, case file 2, where the run had
+    # to substitute an address by hand at the tool call). Keeping the real
+    # address here means the payload is correct as emitted.
+    #
+    # The routine still DRAFTS ONLY and NEVER SENDS. That is unchanged and is
+    # not negotiable (CLAUDE.md, THE ONE LAW).
+    ap.add_argument("--to", default="docket@alaskaaihq.com")
     ap.add_argument("--repo-root", default=".")
     ap.add_argument("--lean", action="store_true",
                     help="no embedded images at all; the pinned links carry the visuals")

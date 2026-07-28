@@ -88,6 +88,11 @@ COMMIT-PINNED to the pushed SHA, so delivery NEVER depends on a merge. During
 the trust period the maintainer merges run PRs after reading the draft. Failed
 runs commit their evidence and their PR stays open as the record.
 
+**The draft goes to `docket@alaskaaihq.com`**, the Workspace mailbox the Gmail
+connector authenticates as. Drafts are already from that address, so nothing
+ever sets a From address, a sender name, or a send-as alias. And the routine
+still drafts only, per THE ONE LAW above.
+
 ## THE ITERATION LAW
 
 Every artifact that faces a critic loops until it meets the standard. Produce,

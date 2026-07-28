@@ -7,6 +7,10 @@ receipts, the honest catch, and an Alaska translation, delivered as a Gmail
 draft for the maintainer to post by hand. Showing instead of asking is the
 entire sales strategy.
 
+**Where the draft lands: `docket@alaskaaihq.com`**, the Workspace mailbox the
+Gmail connector authenticates as. Not a personal inbox. The routine drafts
+only and never sends.
+
 STATUS. The machine is built and proven, the trigger is not yet created.
 The engine renders and QA-passes in this repo (samples/engine-proof, vector
 PDF), the caption and style lints pass on the sample post, the delivery

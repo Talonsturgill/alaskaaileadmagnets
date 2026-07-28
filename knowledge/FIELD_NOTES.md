@@ -45,3 +45,30 @@ retro phase appends, the wake phase reads.
 - Voice discipline note for case posts, the vendor label reads cleanest as a
   plain attribution mid sentence, "per Samsara's case study, insurance costs
   fell 36 percent," which satisfies the honesty rule without a footnote.
+
+## 2026-07-28 — the Gmail account was repointed
+
+The Gmail connector on this account now authenticates as
+**docket@alaskaaihq.com**, a Google Workspace mailbox on our own domain,
+replacing the personal Gmail it used before. This is account level, so it
+applies to every run from here.
+
+What it means in practice:
+
+- Drafts land in docket@alaskaaihq.com. That is the mailbox to check, not a
+  personal inbox. It is freshly repointed, so it holds nothing from earlier
+  runs and an empty history there means nothing at all. Never infer run state
+  from mailbox contents; `runs/<date>/gmail_draft_id.txt` and the run PR are
+  the record.
+- Drafts are already from the right address, DKIM signed by alaskaaihq.com.
+  **There is no From address to set and no send-as alias to configure.** Any
+  step that changes the sender is obsolete, and following one now would be
+  wrong.
+- `scripts/gmail_draft.py --to` now defaults to the real address rather than
+  the Gmail API's `me` shorthand, because the MCP `create_draft` tool rejects
+  `me` with "At least one recipient must be specified". On 2026-07-25 that
+  error was worked around by typing an address at the tool call, which is
+  exactly the kind of hand substitution that goes stale. The payload is now
+  correct as emitted and gets passed through unmodified.
+
+Unchanged: this routine drafts and never sends.

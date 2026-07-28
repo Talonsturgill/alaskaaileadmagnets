@@ -404,8 +404,30 @@ python scripts/gmail_draft.py --run-dir out/<date> --run-date <date> \
   --branch claude/case-file-<date> --payload-out out/<date>/gmail_payload.json
 ```
 Create the draft via the Gmail MCP `create_draft` tool with the payload
-(subject, `to` the maintainer, html_body). Save the returned draft id to
-`runs/<date>/gmail_draft_id.txt` (a follow-up commit is fine).
+(subject, `to`, html_body) EXACTLY as the script emits it. Save the returned
+draft id to `runs/<date>/gmail_draft_id.txt` (a follow-up commit is fine).
+
+**The delivery mailbox is `docket@alaskaaihq.com`**, a Google Workspace
+mailbox on our own domain, which is what the Gmail connector authenticates as.
+The draft lands there and that is where the maintainer reads it.
+
+Two things follow, and both matter:
+
+- **Do NOT set a From address, a sender name, or a send-as alias.** The draft
+  is already from the right address, DKIM signed by alaskaaihq.com. Any step
+  that changes the sender is obsolete and doing it now would be wrong.
+- **Do NOT substitute a different recipient at the tool call.** The script's
+  `--to` default is the real address on purpose: the MCP tool rejects the
+  Gmail API's `me` shorthand with "At least one recipient must be specified",
+  and on 2026-07-25 that error was worked around by typing an address by hand.
+  Pass the payload through unmodified instead.
+
+The mailbox is freshly repointed, so it holds no historical drafts. Never
+infer anything from what is or is not already in it, and never list drafts to
+confirm past runs. `runs/<date>/gmail_draft_id.txt` and the run PR are the
+record.
+
+**And unchanged: this routine drafts, it never sends.**
 
 **THE EMAIL BODY IS THE SCRIPT'S OUTPUT, VERBATIM.** Never hand compose or
 restyle it. The paste-ready blocks are a copy/paste contract:
