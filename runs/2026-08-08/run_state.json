@@ -17,8 +17,8 @@
     "coherence_gate": "not_reached_no_qualifying_case",
     "assemble": "not_reached_no_qualifying_case",
     "scoring": "not_reached_no_qualifying_case",
-    "ship": "pending",
-    "upgrade": "running",
+    "ship": "done_evidence_only",
+    "upgrade": "done",
     "gmail": "pending",
     "retro": "pending"
   },
@@ -36,7 +36,8 @@
     "scout_w2c": "out/2026-08-08/scout_w2c_summary.md",
     "scout_w2d": "out/2026-08-08/scout_w2d_summary.md",
     "scout_w3a": "out/2026-08-08/scout_w3a_summary.md",
-    "scout_w3b": "out/2026-08-08/scout_w3b_summary.md"
+    "scout_w3b": "out/2026-08-08/scout_w3b_summary.md",
+    "automation_retro": "runs/2026-08-08/automation_retro.md"
   },
   "incidents": [
     "2026-08-08 wake: bootstrap.sh failed on the cryptography repair step with a pip ReadTimeoutError to files.pythonhosted.org. Retried `pip install --user --upgrade cryptography`; second attempt succeeded and `from pypdf import PdfReader, PdfWriter` now imports cleanly. Vector PDF path is available. Bootstrap re-run is fully green.",
@@ -48,7 +49,9 @@
     "2026-08-08 kills worth remembering: Summit Electric killed independently by two scouts (built in house, plus a Sonepar operating company); Dairyland Power builds and resells its platform so it is a vendor here, not an adopter; Casella Construction's deck has real numbers and no AI in it at all; 'Meridian Supply Co.' is an almost-certainly synthetic vendor case study and must never be used; one quoted 'independent customer' turned out to be the vendor's own COO.",
     "2026-08-08 vendor stat-card check earned its place: the Field Aerospace page's stat card reads '25 minutes (vs 3-4 weeks before)' while the body prose and the named human's pull quote both say two weeks. A marketer appears to have collapsed 'three or four people, two weeks' into '3-4 weeks'. Shipping the card would have inflated the baseline ~2x on a vendor's arithmetic error.",
     "2026-08-08 new open venues found: necaconvention.org/presentations (64 public decks, ~50 unwalked) and archive.tech-con.agc.org/2025-session-presentations (~25 decks). The 2026 AGC index still 404s two days after that conference ended; retry in two to four weeks.",
-    "2026-08-08 PDF tooling: poppler is NOT installed in this sandbox, so a subagent without Bash has no local PDF path. r.jina.ai works but has a rate quota that recovers in ~15 minutes, so a 401 means wait rather than blocked. Image-only decks return nothing and are a dead end, not a retry."
+    "2026-08-08 PDF tooling: poppler is NOT installed in this sandbox, so a subagent without Bash has no local PDF path. r.jina.ai works but has a rate quota that recovers in ~15 minutes, so a 401 means wait rather than blocked. Image-only decks return nothing and are a dead end, not a retry.",
+    "2026-08-08 upgrade-engineer finding that most changes what our hunting grounds are worth: SIX hosts this run recorded as 403 walls are 403 to WebFetch ONLY. A plain browser-UA GET returns 200 from achrnews.com (including deep /articles/ paths), www.mcaa.org, cfma.org, mmh.com, constructionexec.com and abc.org. Wave 1 recorded losing achrnews.com as 'severe' and half of that was a tool artefact. Genuinely walled to everything by Cloudflare JS challenge: bizjournals.com, forconstructionpros.com, thefabricator.com, sdcexec.com, naw.org.",
+    "2026-08-08 showrunner error: the run committed the upgrade-engineer's work mid-flight in two commits (50d4fd3, 427001a) while it was still working, in response to a repeating stop-hook prompt to keep the tree clean. No work was lost and the agent reported it, but the correct handling is to let the agent finish and make one upgrade commit. Worth a guard next run."
   ],
   "outcome": "FAILED_NO_QUALIFYING_CASE"
 }
