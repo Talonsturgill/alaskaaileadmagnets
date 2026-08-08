@@ -19,8 +19,8 @@
     "scoring": "not_reached_no_qualifying_case",
     "ship": "done_evidence_only",
     "upgrade": "done",
-    "gmail": "pending",
-    "retro": "pending"
+    "gmail": "done",
+    "retro": "done"
   },
   "artifacts": {
     "plan": "out/2026-08-08/plan.md",
@@ -37,7 +37,8 @@
     "scout_w2d": "out/2026-08-08/scout_w2d_summary.md",
     "scout_w3a": "out/2026-08-08/scout_w3a_summary.md",
     "scout_w3b": "out/2026-08-08/scout_w3b_summary.md",
-    "automation_retro": "runs/2026-08-08/automation_retro.md"
+    "automation_retro": "runs/2026-08-08/automation_retro.md",
+    "gmail_payload": "runs/2026-08-08/gmail_payload.json"
   },
   "incidents": [
     "2026-08-08 wake: bootstrap.sh failed on the cryptography repair step with a pip ReadTimeoutError to files.pythonhosted.org. Retried `pip install --user --upgrade cryptography`; second attempt succeeded and `from pypdf import PdfReader, PdfWriter` now imports cleanly. Vector PDF path is available. Bootstrap re-run is fully green.",
@@ -53,5 +54,8 @@
     "2026-08-08 upgrade-engineer finding that most changes what our hunting grounds are worth: SIX hosts this run recorded as 403 walls are 403 to WebFetch ONLY. A plain browser-UA GET returns 200 from achrnews.com (including deep /articles/ paths), www.mcaa.org, cfma.org, mmh.com, constructionexec.com and abc.org. Wave 1 recorded losing achrnews.com as 'severe' and half of that was a tool artefact. Genuinely walled to everything by Cloudflare JS challenge: bizjournals.com, forconstructionpros.com, thefabricator.com, sdcexec.com, naw.org.",
     "2026-08-08 showrunner error: the run committed the upgrade-engineer's work mid-flight in two commits (50d4fd3, 427001a) while it was still working, in response to a repeating stop-hook prompt to keep the tree clean. No work was lost and the agent reported it, but the correct handling is to let the agent finish and make one upgrade commit. Worth a guard next run."
   ],
-  "outcome": "FAILED_NO_QUALIFYING_CASE"
+  "outcome": "FAILED_NO_QUALIFYING_CASE",
+  "gmail_draft_id": "r-2908502790583185106",
+  "pushed_sha": "9cdc8dbbbb15b54b70f1e2ebff49f50a9bcf3968",
+  "pr": "https://github.com/Talonsturgill/alaskaaileadmagnets/pull/5"
 }

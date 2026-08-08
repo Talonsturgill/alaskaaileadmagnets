@@ -46,10 +46,28 @@ def main():
     root = Path(a.repo_root)
     link = lambda rel: f"{a.raw_base}/runs/{a.run_date}/{rel}"
 
+    # The brand mark rides the draft header (config/brand.yaml logo_rules).
+    # Quantised to 80px / 32 colours first: the source PNG base64s to ~28KB,
+    # which would be five sixths of the whole payload for a 54px display size.
     logo_html = ""
     logo = root / "assets" / "alaskaaipic.png"
     if logo.exists():
-        b64 = base64.b64encode(logo.read_bytes()).decode()
+        try:
+            from PIL import Image
+            import io
+            im = Image.open(logo).convert("RGBA")
+            bg = Image.new("RGBA", im.size, (255, 255, 255, 255))
+            flat = Image.alpha_composite(bg, im).convert("RGB")
+            w = 80
+            flat = flat.resize((w, max(1, int(w * flat.height / flat.width))),
+                               Image.LANCZOS)
+            buf = io.BytesIO()
+            flat.convert("P", palette=Image.ADAPTIVE, colors=32).save(
+                buf, format="PNG", optimize=True)
+            raw = buf.getvalue()
+        except Exception:
+            raw = logo.read_bytes()
+        b64 = base64.b64encode(raw).decode()
         logo_html = (f'<img src="data:image/png;base64,{b64}" width="54" '
                      f'style="border-radius:6px;vertical-align:middle;margin-right:12px;"/>')
 
