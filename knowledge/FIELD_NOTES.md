@@ -3,6 +3,44 @@
 Living lessons for the Case Files studio. Dated entries, newest first. The
 retro phase appends, the wake phase reads.
 
+## 2026-08-08 (Case File No. 2, shipped nothing)
+
+The run found no qualifying case in ~250 queries and 85 full-page reads. It
+refused to lower the bar, which was correct. What it produced instead is in
+`knowledge/kb/` under CONFIRMED BY RUNS. Three things belong here.
+
+- **Cost is a property of the venue, not of the words.** Hunt operator
+  conference decks, and hunt the session NOT titled about AI. The AI-titled
+  session is a vendor. The cost slide is in the contractor's session about
+  service or prefab or labour. Demonstrated twice on the same index.
+- **Ask "who built it" first.** Filter 3 kills faster and kills more than the
+  cost gate does, and vendor case studies for self-hostable tools omit the
+  answer as a matter of format. The `case-scout` kill order now leads with it.
+- **A "403" in a scout report means 403 to WebFetch.** It does not mean the
+  site is walled. Six hosts the run wrote off return 200 to a plain browser-UA
+  GET from Bash, including `achrnews.com`, which wave 1 recorded as a severe
+  loss. Access statuses must be recorded per tool from now on.
+
+**PARKED, candidate for a future run, with the evidence measured 2026-08-08:**
+
+- **`scripts/fetch_page.py`, a general browser-UA HTML fetcher.** Measured this
+  run: `achrnews.com` (200 on the homepage AND on deep `/articles/` paths),
+  `www.mcaa.org` (200), `cfma.org` (200), `mmh.com` (200),
+  `constructionexec.com/topic/technology/` (200),
+  `abc.org/Technology/AI-Resource-Guide` (200) — all 403 to WebFetch.
+  Genuinely walled to both, by Cloudflare JS challenge: `bizjournals.com`,
+  `forconstructionpros.com`, `thefabricator.com`, `sdcexec.com`, `naw.org`.
+  **Blocked on a maintainer decision, not on code:** the tool is only useful to
+  a scout if `case-scout` is granted Bash, and that is a capability decision
+  the upgrade engineer should not make alone.
+- **IRS Form 990 Part VII Section B** as a cost-public-by-law seam for
+  nonprofits and co-ops. Named by scout W3-B. No filing has been fetched, so it
+  is an untested hypothesis about a ground, not a ground.
+- **The 2026 AGC Technology Conference deck index**,
+  `archive.tech-con.agc.org/2026-session-presentations/`. The conference ran
+  4 to 6 August 2026 and the index still 404s. Retry in two to four weeks; it
+  is the freshest possible batch of contractor-authored decks.
+
 ## 2026-07-21b (Case File No. 1, the first live run)
 
 - The fact-check killed the story's intended payoff (the camera did NOT

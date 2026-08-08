@@ -45,9 +45,40 @@ six.
 3. **They bought or configured it, they did not build it.**
 4. **A measurable before and after, with a real number.**
 5. **Cost class AND timeline known. HARD GATE.** No cost and no timeline means
-   it is a lead, not a case. Check this EARLY, before you invest in the story.
+   it is a lead, not a case.
 6. **A named human on the record.**
 7. **2024 or later**, unless durable and you say why.
+
+### THE KILL ORDER — ask these three FIRST, in this order
+
+All seven must hold. This is not a different bar, it is a cheaper route to the
+same verdict. On 2026-08-08 ten scouts read ~85 pages in full and banked zero
+cases, and almost every death was one of these three. Asking them first would
+have saved most of that budget.
+
+**Q1. WHO BUILT IT?** Before cost, before timeline, before you enjoy the story.
+Filter 3 kills faster and kills more than any other filter. It is also the one
+a vendor page will never volunteer, because the vendor's interest is in making
+it look effortless. Self-hosted open source, a custom front end, a bespoke API
+integration, "we developed", "our team built" — any of those and you must find
+out who did that work. If it took a software team or an outside agency, **kill
+it now**, whatever the price turns out to be. If no page says, it is a lead
+with exactly one question attached, not a case.
+
+**Q2. IS THE PRICE ANYWHERE ON THIS PAGE?** One fetch answers it. Ask the
+fetcher directly for *"every verbatim sentence containing a time period or a
+dollar amount."* That single call closes or fails the hard gate on a suspect
+page. And know what does NOT count: a vendor's list price is not what this
+customer paid; money that stopped going out is a benefit, not a cost; "free
+add-on to something we already had" is not a cost class.
+
+**Q3. IS THIS COMPANY THE ADOPTER?** A company that built the tool and now
+resells it is a vendor in this story. An operator quoted as an independent
+customer who now works for the vendor has a commercial interest. And check the
+premise itself: a deck full of excellent numbers may contain no AI at all.
+
+Only after those three do you invest in the bottleneck, the numbers and the
+named human.
 
 **Geography:** the lower 48 is the default hunting ground. Alaska is where the
 story lands, not where it must be found. An Alaska case is a bonus.
@@ -65,9 +96,48 @@ turnaround thinks of it as a good quarter. Search "cut quote turnaround",
 "estimator backlog", "invoices keyed by hand", "the dispatcher", paired with
 the year and with scale language like "family owned" or "three locations".
 
-**Search where cost gets disclosed:** conference talks, operator panels,
-podcasts, procurement records, trade association case studies, award
-submissions. "What it cost us", "all in", "we paid about".
+**Do NOT search for cost phrases.** "What it cost us", "all in", "we paid
+about", "$3,000 a month", "how much did it cost" are dead craft as of
+2026-08-08. Four scouts ran them across six sector framings and one logged nine
+failures out of nine. Every variant returns "Best AI Software 2026" listicles
+and consultancy pricing guides. The vertical-AI-pricing SEO farm has colonised
+every operator noun. If you catch yourself typing a dollar sign into a search
+box, stop.
+
+**Hunt the VENUE instead, and read what is there.** Cost is a property of the
+room a story was told in, not of the words in it.
+
+- **Operator conference DECKS**, not agendas and not recaps. When an operator
+  presents to a room of peers, the invoice goes on the slide because the room
+  will ask. This is the only venue that has ever produced a real itemised cost
+  for this series.
+- **The session NOT titled about AI.** The AI-titled session is usually a
+  vendor or a consultant. The cost slide is in the session about service,
+  prefab, systems integration or labour, presented by a contractor.
+- **Agenda and speaker pages as operator-identification maps.** Harvest the
+  named operators at named companies first, then hunt each name. Before
+  searching for cases, not after.
+- **A company's own owner-written newsletter or newsroom**, which is the one
+  source type that gave us an operator describing his own deployment with no
+  vendor holding the pen.
+- **Records where cost is public by law:** procurement files, grant
+  close-outs (never announcements), nonprofit filings.
+
+**READ THE ACCESS MAP in `knowledge/kb/HUNTING_GROUNDS.md` BEFORE YOUR FIRST
+FETCH.** It records which hosts are walled to your fetcher, which are walled to
+everybody, and which look dead but are not. Ten scouts independently
+rediscovered the same walls on 2026-08-08 and nobody should pay for that again.
+Add anything new you hit to your `ground_notes`, with the exact status code.
+
+**PDFs: you cannot read one, so do not try.** WebFetch on a `.pdf` returns raw
+binary it cannot decode, and `Read` on the saved file fails because poppler is
+not installed here. There IS a working extractor, `scripts/fetch_pdf_text.py`,
+but it needs Bash and you do not have Bash. **So when you find a deck index or
+a PDF that matters, put the exact PDF URLs in your `ground_notes` and say what
+you expect to be in them.** A named PDF URL handed back is a real deliverable,
+not a failure. Do not burn budget on `r.jina.ai`: it has a hard quota, 401s for
+about fifteen minutes after roughly four calls, then recovers. One call at a
+time, never two in parallel, and a 401 means wait rather than blocked.
 
 Full craft in `knowledge/kb/HUNTING_GROUNDS.md`. Use it.
 
@@ -117,6 +187,12 @@ Full craft in `knowledge/kb/HUNTING_GROUNDS.md`. Use it.
     }
   ],
   "killed": [{"company": "...", "why": "which filter it failed"}],
+  "pdf_urls_unread": [
+    {"url": "the exact .pdf URL you could not open", "why_it_matters": "who presented and what you expect is in it"}
+  ],
+  "access_notes": [
+    {"host": "example.com", "status": "403|404|200|503|paywall", "note": "what you tried"}
+  ],
   "ground_notes": "what this hunting ground yielded, what to try next time"
 }
 ```

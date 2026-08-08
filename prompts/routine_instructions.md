@@ -124,9 +124,30 @@ If fewer than 8, spawn up to FOUR `case-scout` agents in parallel, one per
 hunting ground from `config/sources.yaml`, each with: the ground, the current
 bank company list (never re-surface), the coverage gaps, and the top instincts.
 
-The scouts hunt operator language, not AI language. They check cost and
-timeline EARLY. They read full pages before citing anything, and a company
-name never enters the bank from a search snippet.
+The scouts hunt operator language, not AI language. They apply the kill order
+(who built it, is the price on the page, is this company the adopter) BEFORE
+investing in a story. They read full pages before citing anything, and a
+company name never enters the bank from a search snippet.
+
+**The deck pre-pass, and it is YOUR job, not a scout's.** Scouts have no Bash
+and therefore no way to open a PDF. Before or alongside the wave, walk the
+conference deck indexes yourself:
+
+```
+python3 scripts/fetch_pdf_text.py <pdf-url> --money
+```
+
+`--money` prints only the lines carrying a dollar amount or a duration, which
+is the hard gate run as one command. Exit 5 means the deck does not close the
+gate, exit 3 means it is an image-only export and is a dead end rather than a
+retry, exit 4 means it is not a PDF. Harvest the index page's `.pdf` hrefs
+first, and **walk the sessions NOT titled about AI**: the AI-titled session is
+usually a vendor, the cost slide is in the operator's session about service,
+prefab or labour. Known open indexes are listed under CONFIRMED BY RUNS in
+`knowledge/kb/HUNTING_GROUNDS.md`.
+
+Also read back each scout's `pdf_urls_unread` and run the same command over
+them, and fold each scout's `access_notes` into the access map.
 
 Merge their JSON into the bank with skepticism labels intact. Near misses go
 in as LEADS with what is missing named. Write `out/<date>/restock_notes.md`.

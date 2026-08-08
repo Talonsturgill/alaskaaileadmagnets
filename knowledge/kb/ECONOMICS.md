@@ -136,3 +136,81 @@ run got backwards.
 *(Appended by the upgrade-engineer each retro, with the URL that established
 each entry. Real disclosed figures are the most valuable thing this file can
 accumulate: every one of them makes the next run's smell test sharper.)*
+
+### 2026-08-08 (case file 2, shipped nothing) — WHO DISCLOSES COST, AND WHY
+
+Ten scouts, three waves, roughly 250 queries and 85 pages fetched and read in
+full. **One real cost disclosure.** That ratio is the finding, and it has a
+structural explanation that this file should have carried from the start.
+
+> **Cost is the punchline of a build-it-cheap talk. It is never the punchline
+> of a bought-it talk.**
+
+An operator discloses the invoice when the invoice IS the story: "we did this
+for three thousand dollars and we are not data scientists." A company that
+signed a licence has a procurement reason not to say the number, and the price
+is not what the room asked them there to talk about. So the disclosure and the
+copyability move in opposite directions.
+
+**The consequence for the qualifying filter, stated plainly so no future run
+mistakes it for a scouting failure.** Filter 5 wants a disclosed cost. Filter 3
+wants bought-not-built. **On the open web that intersection is close to empty**,
+and it will reproduce every run until the series buys the number some other
+way: a procurement record, a reporter who actually asked, or one phone call to
+a named operator who has already talked in public once. Four scouts arrived at
+the same closing line independently, and it is the honest one: *at some point
+the cheapest path to a qualifying case is not another search, it is one email.*
+
+### The one disclosed figure the run found
+
+**Peckham Industries** (family-owned paving and materials contractor, ~100
+years old, New York and New England), presenting at the AGC Technology
+Conference on 6 August 2025. Their deck carries a literal itemised annual cost
+slide:
+
+| Line | Amount |
+|---|---|
+| Tokens, year to date | $19.70 |
+| Vector store database, annualised | $840 |
+| Azure App Service, annualised | $2,760 |
+| **Total** | **~$3,000/yr**, framed on the deck as "the equivalent of a $3,000 home-improvement budget" |
+
+They also disclosed the experiment they abandoned: nearly **$1,000 in one day**
+on fine-tuning, before concluding they did not need it.
+Source: the deck linked from
+`https://archive.tech-con.agc.org/2025-session-presentations/`, fetched
+2026-08-08 by scout W2-D.
+
+**Three things this figure teaches, and note that none of them is the price.**
+
+1. **It measures an INPUT, not an outcome.** The deck names no before-and-after
+   anywhere. A thrilling cost number with no measured result is not a case, it
+   is a budget line. Do not let a beautiful figure smuggle a missing filter 4
+   past the gate.
+2. **The shape of the itemisation is the useful part.** Tokens were $19.70 of
+   ~$3,000. **Model spend was 0.7 percent of the bill; hosting was 92 percent.**
+   When Dana is quoted "AI is expensive because of the model", that is the
+   counter-example. This is a real instance of the four-costs frame: the
+   licence layer here is nearly free and the whole cost is layer 2 and 3.
+3. **It fails filter 3 anyway.** Chainlit, Azure OpenAI GPT-4o, LangGraph,
+   NLP-to-SQL. Built in Python. Cheap and uncopyable at the same time, which is
+   exactly the tension named above.
+
+### Cost bands that survived contact, and one that did not
+
+- The four-to-five-figure annual band for a single-workflow deployment is
+  **not contradicted** by anything found, and Peckham sits at its bottom edge.
+- **A vendor list price is not a cost disclosure and must never stand in as
+  one.** Field Aerospace self-hosts n8n on the Business plan, and n8n's public
+  pricing page lists Business at 667 EUR/mo billed annually. That is n8n's
+  price, not Field's, and the internal developer hours for the React/Node
+  front end they built over it are entirely unknown. Source: scout W2-A,
+  2026-08-08, the n8n case study and n8n's own pricing page.
+- **"Money that stopped going out" is not the cost either.** Field Aerospace's
+  $30,000 of eliminated annual software spend is a benefit, not an input.
+  Filing it as cost would invert the ROI sentence.
+- **"Free add-on to a tool we already had" is not a cost class.** Building
+  Products Inc got Pronto free with their existing Proton CRM. That answers
+  nothing about what the CRM costs or what changed. Source: scout W3-B.
+- The only other dollar figure found in an AI context across the whole run was
+  a **published $20/month ChatGPT Plus list price on a teaching slide.**
