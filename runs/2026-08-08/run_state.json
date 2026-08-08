@@ -1,0 +1,40 @@
+{
+  "run_date": "2026-08-08",
+  "case_file_no": 2,
+  "bank_id": null,
+  "phases": {
+    "wake": "done",
+    "restock": "wave1_done_wave2_running",
+    "selection": "pending",
+    "verification": "pending",
+    "translation": "pending",
+    "directors_room": "pending",
+    "storyboard": "pending",
+    "copy": "pending",
+    "honesty_gate": "pending",
+    "art_build": "pending",
+    "review_loop": "pending",
+    "coherence_gate": "pending",
+    "assemble": "pending",
+    "scoring": "pending",
+    "ship": "pending",
+    "upgrade": "pending",
+    "gmail": "pending",
+    "retro": "pending"
+  },
+  "artifacts": {
+    "plan": "out/2026-08-08/plan.md",
+    "run_state": "out/2026-08-08/run_state.json",
+    "restock_notes": "out/2026-08-08/restock_notes.md",
+    "scout_s1": "out/2026-08-08/scout_s1_summary.md",
+    "scout_s2": "out/2026-08-08/scout_s2_summary.md",
+    "scout_s3": "out/2026-08-08/scout_s3.json",
+    "scout_s4": "out/2026-08-08/scout_s4_summary.md"
+  },
+  "incidents": [
+    "2026-08-08 wake: bootstrap.sh failed on the cryptography repair step with a pip ReadTimeoutError to files.pythonhosted.org. Retried `pip install --user --upgrade cryptography`; second attempt succeeded and `from pypdf import PdfReader, PdfWriter` now imports cleanly. Vector PDF path is available. Bootstrap re-run is fully green.",
+    "2026-08-08 restock wave 1: four scouts, four hunting grounds, ~150 queries, ~40 full page fetches, ZERO qualifying cases and fifteen leads. Every lead died on the cost-and-timeline hard gate, not on the story, the size or the named human. Bank appended with bank-017 to bank-024. Wave 2 launched, re-aimed from 'find a story' to 'find the price'.",
+    "2026-08-08 restock wave 1 craft finding: literal cost-phrase searching ('we paid about', 'what it cost us', '$3,000 a month') is now dead craft and returns SEO spam farms; it failed nine times out of nine for S1 and was independently confirmed by S2 and S4. knowledge/kb/HUNTING_GROUNDS.md search craft rule 2 instructs scouts to hunt exactly these phrases and should be rewritten to hunt the VENUE instead. Flagged for the upgrade-engineer.",
+    "2026-08-08 fetch wall discovered: bizjournals.com returns a hard 400 on its search API (the whole regional business journal network is unreachable, and it was supposed to be our best mid-market-by-name source); 403 from achrnews.com and all BNP Media, forconstructionpros.com, thefabricator.com, mmh.com, naw.org, www.mcaa.org. WORKAROUND FOUND: dev.mcaa.org is a readable mirror of www.mcaa.org."
+  ]
+}
