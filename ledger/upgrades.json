@@ -11,6 +11,28 @@
       "verification": "PASS on the live deck (slide-08 carries the logo), FAIL on a reconstruction without it, full deck QA green with the logo present",
       "rollback": "delete scripts/logo_check.py and the references in the four files listed",
       "commit": "rides the run commit, Phase 11 executed by showrunner under the fallback"
+    },
+    {
+      "run_date": "2026-08-08",
+      "kind": "improvement",
+      "area": "hunt",
+      "change": "scripts/fetch_pdf_text.py, fetch a PDF and extract its text with pypdf. --money prints only lines carrying a dollar amount or a duration, which runs the cost-and-timeline hard gate against a conference deck as one command. Distinct exit codes so a caller can tell 'no cost in this deck' (5) from 'image-only export, dead end not a retry' (3) from 'not a PDF, a wall or an HTML redirect' (4). Wired into prompts/routine_instructions.md Phase 1 as a showrunner deck pre-pass, because case-scout has no Bash and therefore no PDF path at all.",
+      "trigger": "Scouts W2-D and W3-A found that operator conference decks are the only venue in ~250 queries that produced a real itemised cost (Peckham Industries, ~$3,000/yr, via https://archive.tech-con.agc.org/2025-session-presentations/), and that a scout cannot open one: WebFetch on a .pdf returns FlateDecode binary, Read fails because poppler is absent, and r.jina.ai is quota-limited. W3-A also found https://www.necaconvention.org/presentations/, an open index of 64 unwalked decks. pypdf was already repaired at wake this run and sat unused.",
+      "files": ["scripts/fetch_pdf_text.py", "prompts/routine_instructions.md", "knowledge/kb/HUNTING_GROUNDS.md"],
+      "verification": "All five exit paths run against live URLs on 2026-08-08. Exit 0 with 30 money/duration hits on NECA-2025_Convention-Ed_The-State-of-AI_Carr-Chris.pdf (78pp). Exit 0 with 8 hits on NECA-2025_Tradeshow-Ed_Innovation-in-Action (15pp), surfacing a contractor's own '$25-$30 Million Annual Sales, 50 to 65 Field Workers' slide. Exit 5 on NECA-2025_Tradeshow-Ed_Tech-Enabled-Labor-Planning (6pp, no figures). Exit 4 on an HTML page, on cfma.org, and on a nonexistent host. Exit 3 on a synthetic single-page PDF with no text layer. --pages and --local both verified. It also read the exact PDF WebFetch had just failed to decode. Engine regression re-run and green: render.py + qa.py on samples/engine-proof, 3 slides, warnings=0 errors=0, verdict PASS. No new runtime dependency: pypdf 6.15.0 and requests 2.33.1 both already present. Slides remain fully offline; this tool never touches the slide path.",
+      "rollback": "delete scripts/fetch_pdf_text.py and revert the Phase 1 deck pre-pass block in prompts/routine_instructions.md",
+      "commit": "staged for upgrade(2026-08-08), committed by the showrunner"
+    },
+    {
+      "run_date": "2026-08-08",
+      "kind": "fix",
+      "area": "agents",
+      "change": "case-scout gains a three-question KILL ORDER ahead of the seven-part filter (who built it, is the price anywhere on this page, is this company the adopter). The seven-part filter is unchanged and unweakened; only the order of cheap checks changed. The dead cost-phrase search craft is deleted from the agent and from HUNTING_GROUNDS.md search craft rule 2 and replaced with venue craft. The agent is told to read the new standing access map before its first fetch, that it has no PDF path, and to return pdf_urls_unread and access_notes as structured JSON fields.",
+      "trigger": "Four scouts proved cost-phrase searching is dead craft, S1 logging nine failures out of nine (out/2026-08-08/scout_s1_summary.md, s2, w2b, w2c, w2d, w3b). HUNTING_GROUNDS rule 2 was still instructing exactly that craft. W2-A established that filter 3 is the faster killer and that vendor case studies for self-hostable tools omit who built it as a matter of format, via the n8n Field Aerospace case study. Ten scouts independently rediscovered the same fetch walls.",
+      "files": [".claude/agents/case-scout.md", "knowledge/kb/HUNTING_GROUNDS.md", "knowledge/kb/EVIDENCE.md", "knowledge/kb/ECONOMICS.md", "knowledge/kb/VENDOR_MAP.md", "prompts/routine_instructions.md"],
+      "verification": "No gate, threshold or hard-fail rule weakened: the seven-part filter is reproduced verbatim and all seven still must hold, and filter 5 remains a hard gate. Diff-reviewed against CLAUDE.md's authoritative filter wording, which is unchanged. Access map entries verified live in the retro rather than copied from scout reports: achrnews.com, www.mcaa.org, cfma.org, mmh.com, constructionexec.com and abc.org all return 200 to a browser-UA GET while returning 403 to WebFetch; bizjournals.com, forconstructionpros.com, thefabricator.com, sdcexec.com and naw.org return a Cloudflare JS challenge to both. WebFetch confirmed unable to decode a compressed PDF and Read confirmed to error with 'pdftoppm is not installed', resolving the W3-A versus W3-B contradiction in the run record.",
+      "rollback": "git revert the upgrade(2026-08-08) commit; the KB CONFIRMED BY RUNS appends are additive and can be kept independently",
+      "commit": "staged for upgrade(2026-08-08), committed by the showrunner"
     }
   ],
   "scan_log": [
@@ -19,6 +41,12 @@
       "focus": "skipped, manual test run",
       "found": "agent infra instability handled by respawn-by-cause, and a DOM over canvas collision class that machine QA cannot see",
       "applied_or_parked": "parked, a dom-canvas collision pre-check helper as a future gate candidate (see out/2026-07-21/automation_retro.md)"
+    },
+    {
+      "run_date": "2026-08-08",
+      "focus": "(b) new documented mid-market AI case sources, fresh hunting grounds for the bank",
+      "found": "https://www.necaconvention.org/presentations/ is live and returns 64 open .pdf hrefs on /wp-content/uploads/2025/09/ (the uploads directory itself is 403, so harvest hrefs from the index). Demonstrated on that index that the non-AI-titled deck is where the numbers are: the session titled about AI is two Trimble employees with zero cost, while 'Innovation in Action' is three contractors, one itemising his own company's size and tool costs. abc.org, constructionexec.com, smacna.org, mheda.org and ifma.org all return 200 to a browser-UA GET; ifmaseattle.org serves a 202 JS interstitial. Biggest finding: six hosts the run recorded as 403 walls are 403 to WebFetch only and return 200 to a browser-UA GET, including achrnews.com, which wave 1 called a severe loss. Genuinely walled to both, by Cloudflare JS challenge: bizjournals.com, forconstructionpros.com, thefabricator.com, sdcexec.com, naw.org. betterbuildingssolutioncenter.energy.gov still down, now failing a TLS handshake from Bash as well as 503ing to WebFetch.",
+      "applied_or_parked": "APPLIED: the NECA venue, the non-AI-title rule and the per-tool access map into knowledge/kb/HUNTING_GROUNDS.md, plus scripts/fetch_pdf_text.py to make deck indexes readable at all. PARKED: scripts/fetch_page.py, a general browser-UA HTML fetcher, which is only useful to a scout if case-scout is granted Bash and that is a maintainer capability decision, not the upgrade engineer's. Parked with the measured evidence in knowledge/FIELD_NOTES.md 2026-08-08. Also parked: IRS Form 990 Part VII Section B as an untested cost-public-by-law seam, and a retry of archive.tech-con.agc.org/2026-session-presentations/ in two to four weeks."
     }
   ]
 }

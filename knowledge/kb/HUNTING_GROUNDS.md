@@ -177,8 +177,8 @@ answers:**
 | `www.mcaa.org` | 403 | **200** | `dev.mcaa.org` mirrors the Smart Solutions case index ONLY; its article URLs 404 |
 | `cfma.org` | 403 (chapters too) | **200** | CFMA Building Profits is written by contractor CFOs |
 | `mmh.com` | 403 | **200** | Productivity Achievement Awards |
-| `constructionexec.com` | 403 | **200** at `/topic/technology/` | |
-| `abc.org` | 403 | **200** at `/Technology/AI-Resource-Guide` | |
+| `constructionexec.com` | 403 | **200** at `/topic/technology/` | scout W3-A reported it "fetches fine"; the retro measured 403 to WebFetch an hour later. Treat per-tool status as the reliable column and re-test the cheap way. |
+| `abc.org` | 403 | **200** at `/Technology/AI-Resource-Guide` | same disagreement with W3-A, same resolution |
 | `bizjournals.com` | 400 on search | **403, Cloudflare JS challenge** | genuinely walled to both. Real loss. |
 | `forconstructionpros.com` | 403 | **403, Cloudflare JS challenge** | genuinely walled |
 | `thefabricator.com` | 403 | **403, Cloudflare JS challenge** | genuinely walled |
@@ -226,7 +226,11 @@ are worth recording: query craft compounds faster than anything else here.)*
   index returns 200 and 64 `.pdf` hrefs. Electrical contractors presenting to
   electrical contractors. The uploads DIRECTORY itself is 403, so you must
   harvest hrefs from the index page. NECA posts decks within days of the show.
-  **~50 of the 64 are non-AI titles and nobody has walked them.**
+  **~50 of the 64 are non-AI titles and nobody has walked them.** NECA 2026 runs
+  in Las Vegas and its decks should land at the same
+  `/wp-content/uploads/YYYY/MM/` pattern. `/2024-presentations/` 404s, so the
+  index path is not year-stamped and the current show's decks live at
+  `/presentations/`.
 - 2026-08-08: the NECA decks carry a footer reading "FOR REFERENCE OF NECA 2025
   CHICAGO CONVENTION ATTENDEES ONLY". They are published on an open,
   unauthenticated path, and that is where we read them, but prefer a second

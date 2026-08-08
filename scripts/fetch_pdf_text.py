@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""fetch_pdf_text.py — open a PDF from the web and read it as text.
+"""fetch_pdf_text.py, open a PDF from the web and read it as text.
 
 Why this exists. Conference decks are the only venue the 2026-08-08 restock
 found that carried a real itemised cost slide (Peckham Industries, AGC Tech
