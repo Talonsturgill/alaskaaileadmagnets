@@ -147,15 +147,20 @@ What the fact-checker actually does, in order.
    the article, and we have already been burned by exactly that.
 2. **Find the number in the page, verbatim.** If it is not there in those
    digits, it does not exist.
-3. **Find the baseline.** No baseline, no before-and-after claim.
-4. **Find the denominator.** Per what, across how many, over what period.
-5. **Identify who measured it,** and label accordingly.
-6. **Find the date.** Both the publication date and the date the work happened.
-7. **Find one limit** the source itself names. Every case ships with one.
-8. **Find the cost and the timeline.** Hard intake gate. Without both, the
+3. **Read the stat card against the body prose and the pull quote.** A vendor
+   page routinely disagrees with itself, and the stat card is usually the
+   outlier because a marketer compressed a sentence to fit it. When they
+   disagree, **the named human's quote wins** and the prose breaks the tie.
+   This caught a 2x baseline inflation on 2026-08-08 (see below).
+4. **Find the baseline.** No baseline, no before-and-after claim.
+5. **Find the denominator.** Per what, across how many, over what period.
+6. **Identify who measured it,** and label accordingly.
+7. **Find the date.** Both the publication date and the date the work happened.
+8. **Find one limit** the source itself names. Every case ships with one.
+9. **Find the cost and the timeline.** Hard intake gate. Without both, the
    case does not qualify, however good the story is.
-9. **Find a named human.** A quote with a name and a role.
-10. **Try to break it.** Search for a contradicting account. A case nobody
+10. **Find a named human.** A quote with a name and a role.
+11. **Try to break it.** Search for a contradicting account. A case nobody
     tried to disprove has not been checked.
 
 **When two sources disagree,** the one that read the full page wins over the
