@@ -133,3 +133,46 @@ would not name.
 each entry. Category-level findings belong here. Specific vendor facts do not
 live in this file at all: they live in the run's claims.json, verified that
 run, which is the only place a vendor fact is ever true.)*
+
+### 2026-08-08 (case file 2, shipped nothing)
+
+**"Who built it" is now the FIRST question, ahead of cost and timeline.**
+This is a change to the order of the intake filter and it was earned. Filter 3
+kills faster and kills more candidates than filter 5 does, and it kills them
+before a scout has fallen in love with the story.
+
+The mechanism, and it is a property of a whole category. **Case study libraries
+for self-hostable open-source tools systematically omit who did the building**,
+because the vendor's interest is in making it look effortless. The customer is
+presented as having configured a product when the actual artefact is a software
+project. Field Aerospace self-hosted an open-source workflow engine, then built
+a custom React front end and a Node.js backend over it and wired an API
+integration to a third-party data service. **No page names who did that work.**
+If it took an internal software team, Dana cannot copy it and the case is dead
+regardless of what the price turns out to be. One question converts the lead:
+*who built the front end, and how long did it take them?*
+Source: the n8n case study and the n8n case-study index, fetched by scouts S4
+and W2-A on 2026-08-08.
+
+The same category note applies to layer 2 in this file: a horizontal platform
+plus a custom front end is layer 3 wearing layer 2's label.
+
+**Two verified agent-washing exemplars, both worth a teaching slide.** These
+are the concrete instances the file's agent-washing section has been describing
+in the abstract:
+
+- **Choco** brands what the page itself describes as a rung 3 extraction step,
+  turning messy inbound orders into structured ones, "OrderAgent" and "AI
+  agents". Source: `choco.com`, fetched by scout S4.
+- **Kay.ai** brands what reads as rung 4 workflow execution the "first fully
+  autonomous AI agent". Source: the Kay.ai / JMG Insurance release, fetched by
+  scout S4.
+
+Neither page answers a single field-guide question in the rung 5 column. The
+house correction applies unchanged: name the rung plainly, then say the useful
+thing. It is usually the right product. Just do not pay agent prices for it.
+
+**A category note on the honest ones.** n8n's own case study for Field
+Aerospace calls the build "automation" rather than "agent", which is accurate
+and rare. Vendor honesty on the rung is a real positive signal about the vendor
+and it costs nothing to notice.

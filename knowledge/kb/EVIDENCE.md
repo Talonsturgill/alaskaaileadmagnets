@@ -193,3 +193,65 @@ each entry. See `README.md`.)*
 - 2026-07-25 (case file 2): a study described in secondary coverage as
   longitudinal across six health systems was, in its own methods section, a
   30 day pre/post survey. Read the methods section, every time.
+
+### 2026-08-08 (case file 2, shipped nothing)
+
+- **Read a vendor's stat card against the vendor's own prose and pull quotes.
+  Add this to the verification protocol.** The n8n case study for Field
+  Aerospace disagrees with itself in three places: the stat card says "25
+  minutes (vs 3-4 weeks before)", the body prose says "about two weeks of work
+  from multiple contributors", and Shawn Tatum's named pull quote says
+  "probably two weeks of three or four people". Two of three say two weeks.
+  The likely mechanism is a marketer collapsing "three or four people, two
+  weeks" into "3-4 weeks", which **inflates the baseline by about 2x**.
+  The defensible number is the named human's, because the prose agrees with it.
+  This is a fast, cheap, repeatable check and it caught a real defect.
+  Source: the n8n Field Aerospace case study, fetched by scouts S4 and W2-A.
+- **The synthetic case study has a signature, and it is first names.** A vendor
+  blog published a distributor case study for "Meridian Supply Co." with a
+  first-name-only "Marcus, operations director" and suspiciously tidy numbers
+  (41 hours a week, 4.7 to 1.6 minutes). Composite, almost certainly.
+  **The tell stack: a generic-plausible company name, a source with no surname
+  and no verifiable title, round or too-clean figures, and no second page
+  anywhere naming the company.** Do not use it. Source: scout S2.
+- **A company newsroom that links straight to the vendor's case study is a
+  strong negative signal, and it is the cheapest check available.** Field
+  Aerospace's own newsroom carries "Using AI for Client Responsiveness" whose
+  href points back at the n8n page. The company did not write anything, it
+  linked the vendor. That reliably predicts no independent account exists
+  anywhere. **Check the newsroom href before spending searches on trade press.**
+  Source: scout W2-A.
+- **Vendor case studies are now 4 for 4 (arguably 6 for 6) on the same
+  omission profile, and it is the FORMAT, not sloppiness.** Choco/Colony Foods,
+  WizCommerce/Howard Elliott, Hatch/Wilson, n8n/Field Aerospace, plus six
+  Paperless Parts studies killed at intake on the base rate. Every one gives
+  the bottleneck, a named human and a before-and-after. Every one omits cost,
+  decision-to-working timeline and headcount. **Treat a vendor case study as a
+  source for the BOTTLENECK and the NAME only, never as a candidate.** The
+  entry above under "Vendor case study" understated this: the omission is not
+  a tendency, it is the genre.
+- **Two more press-release-laundering tells confirmed in the wild.** A trade
+  piece on Palmer Holland was a rewrite of the company's own release, with
+  launch language, an aspirational CIO quote, no independent number and no
+  limit named. A Farm Equipment "practical guide" was bylined by the vendor
+  itself. Source: scouts W3-B and S2.
+- **Three more disqualifying shapes worth naming, all caught this run.** A
+  company that BUILT the tool and now RESELLS it is a vendor in this story, not
+  an adopter (Dairyland Power Cooperative; also Summit Electric, "Summit
+  developed an AI-enabled tool"). An operator quoted as an independent customer
+  who is now the vendor's COO has a commercial interest (Armstrong Plumbing).
+  And a deck full of genuinely good numbers may contain **no AI at all**
+  (Casella Construction: HR software plus Microsoft Power Platform). Check the
+  premise before checking the numbers.
+- **The absent-baseline and cherry-picked-window patterns showed up together.**
+  A municipal utility reported savings "from about $15,000 to a quarter million
+  in one month" with no baseline period and no definition of what the savings
+  measure against. One month is not a result. Source: scout W3-B.
+- **Podcast episode titles carrying dollar figures are an artefact, not a
+  lead.** Both instances found across two waves traced to machine-generated
+  podcast-aggregation pages we cannot trust. Do not chase them again.
+  Source: scouts S1 and W2-B.
+- **Podcast transcripts are, as a category, closed to this fetcher.** No
+  transcript was reachable for Acquisition Collective, FWD WholeStory, Toolbox
+  for the Trades, Bridging the Gap or Distribution Talk. Budget accordingly:
+  the audio seam is real and it does not publish.
