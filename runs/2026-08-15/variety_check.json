@@ -1,0 +1,240 @@
+{
+  "run_date": "2026-08-15",
+  "fails": [],
+  "warns": [
+    "slide-01.html x slide-02.html: shared text scaffold (layout IoU 0.83, image corr 0.13, palette 0.85)",
+    "slide-01.html x slide-05.html: shared text scaffold (layout IoU 0.75, image corr -0.24, palette 0.17)",
+    "slide-02.html x slide-05.html: shared text scaffold (layout IoU 0.74, image corr -0.17, palette 0.04)",
+    "slide-03.html x slide-08.html: shared text scaffold (layout IoU 0.59, image corr -0.51, palette 0.05)",
+    "slide-03.html x slide-09.html: shared text scaffold (layout IoU 0.59, image corr -0.34, palette 0.05)",
+    "slide-04.html x slide-07.html: shared text scaffold (layout IoU 0.56, image corr 0.31, palette 0.93)",
+    "slide-04.html x slide-08.html: shared text scaffold (layout IoU 0.55, image corr 0.45, palette 0.94)",
+    "slide-05.html x slide-08.html: shared text scaffold (layout IoU 0.56, image corr -0.15, palette 0.04)",
+    "slide-06.html x slide-07.html: shared text scaffold (layout IoU 0.57, image corr -0.12, palette 0.02)",
+    "slide-06.html x slide-08.html: shared text scaffold (layout IoU 0.62, image corr -0.30, palette 0.02)",
+    "slide-07.html x slide-08.html: shared text scaffold (layout IoU 0.66, image corr 0.42, palette 0.98)",
+    "deck median layout IoU 0.48 is high"
+  ],
+  "pairs": [
+    {
+      "pair": "slide-01.html x slide-02.html",
+      "layout_iou": 0.833,
+      "image_corr": 0.129,
+      "palette_sim": 0.852
+    },
+    {
+      "pair": "slide-01.html x slide-03.html",
+      "layout_iou": 0.27,
+      "image_corr": 0.001,
+      "palette_sim": 0.17
+    },
+    {
+      "pair": "slide-01.html x slide-04.html",
+      "layout_iou": 0.305,
+      "image_corr": 0.224,
+      "palette_sim": 0.828
+    },
+    {
+      "pair": "slide-01.html x slide-05.html",
+      "layout_iou": 0.745,
+      "image_corr": -0.243,
+      "palette_sim": 0.168
+    },
+    {
+      "pair": "slide-01.html x slide-06.html",
+      "layout_iou": 0.406,
+      "image_corr": -0.222,
+      "palette_sim": 0.154
+    },
+    {
+      "pair": "slide-01.html x slide-07.html",
+      "layout_iou": 0.426,
+      "image_corr": 0.165,
+      "palette_sim": 0.838
+    },
+    {
+      "pair": "slide-01.html x slide-08.html",
+      "layout_iou": 0.459,
+      "image_corr": 0.301,
+      "palette_sim": 0.842
+    },
+    {
+      "pair": "slide-01.html x slide-09.html",
+      "layout_iou": 0.262,
+      "image_corr": 0.233,
+      "palette_sim": 0.851
+    },
+    {
+      "pair": "slide-02.html x slide-03.html",
+      "layout_iou": 0.254,
+      "image_corr": 0.119,
+      "palette_sim": 0.044
+    },
+    {
+      "pair": "slide-02.html x slide-04.html",
+      "layout_iou": 0.242,
+      "image_corr": -0.05,
+      "palette_sim": 0.943
+    },
+    {
+      "pair": "slide-02.html x slide-05.html",
+      "layout_iou": 0.74,
+      "image_corr": -0.172,
+      "palette_sim": 0.041
+    },
+    {
+      "pair": "slide-02.html x slide-06.html",
+      "layout_iou": 0.397,
+      "image_corr": -0.216,
+      "palette_sim": 0.024
+    },
+    {
+      "pair": "slide-02.html x slide-07.html",
+      "layout_iou": 0.481,
+      "image_corr": 0.044,
+      "palette_sim": 0.943
+    },
+    {
+      "pair": "slide-02.html x slide-08.html",
+      "layout_iou": 0.431,
+      "image_corr": 0.023,
+      "palette_sim": 0.954
+    },
+    {
+      "pair": "slide-02.html x slide-09.html",
+      "layout_iou": 0.246,
+      "image_corr": 0.124,
+      "palette_sim": 0.923
+    },
+    {
+      "pair": "slide-03.html x slide-04.html",
+      "layout_iou": 0.474,
+      "image_corr": -0.321,
+      "palette_sim": 0.041
+    },
+    {
+      "pair": "slide-03.html x slide-05.html",
+      "layout_iou": 0.356,
+      "image_corr": -0.01,
+      "palette_sim": 0.875
+    },
+    {
+      "pair": "slide-03.html x slide-06.html",
+      "layout_iou": 0.359,
+      "image_corr": 0.121,
+      "palette_sim": 0.53
+    },
+    {
+      "pair": "slide-03.html x slide-07.html",
+      "layout_iou": 0.472,
+      "image_corr": -0.424,
+      "palette_sim": 0.046
+    },
+    {
+      "pair": "slide-03.html x slide-08.html",
+      "layout_iou": 0.585,
+      "image_corr": -0.514,
+      "palette_sim": 0.046
+    },
+    {
+      "pair": "slide-03.html x slide-09.html",
+      "layout_iou": 0.588,
+      "image_corr": -0.335,
+      "palette_sim": 0.051
+    },
+    {
+      "pair": "slide-04.html x slide-05.html",
+      "layout_iou": 0.355,
+      "image_corr": -0.097,
+      "palette_sim": 0.042
+    },
+    {
+      "pair": "slide-04.html x slide-06.html",
+      "layout_iou": 0.486,
+      "image_corr": -0.186,
+      "palette_sim": 0.031
+    },
+    {
+      "pair": "slide-04.html x slide-07.html",
+      "layout_iou": 0.563,
+      "image_corr": 0.314,
+      "palette_sim": 0.932
+    },
+    {
+      "pair": "slide-04.html x slide-08.html",
+      "layout_iou": 0.552,
+      "image_corr": 0.451,
+      "palette_sim": 0.944
+    },
+    {
+      "pair": "slide-04.html x slide-09.html",
+      "layout_iou": 0.529,
+      "image_corr": 0.273,
+      "palette_sim": 0.923
+    },
+    {
+      "pair": "slide-05.html x slide-06.html",
+      "layout_iou": 0.524,
+      "image_corr": 0.175,
+      "palette_sim": 0.542
+    },
+    {
+      "pair": "slide-05.html x slide-07.html",
+      "layout_iou": 0.549,
+      "image_corr": -0.337,
+      "palette_sim": 0.044
+    },
+    {
+      "pair": "slide-05.html x slide-08.html",
+      "layout_iou": 0.561,
+      "image_corr": -0.151,
+      "palette_sim": 0.039
+    },
+    {
+      "pair": "slide-05.html x slide-09.html",
+      "layout_iou": 0.352,
+      "image_corr": -0.016,
+      "palette_sim": 0.06
+    },
+    {
+      "pair": "slide-06.html x slide-07.html",
+      "layout_iou": 0.569,
+      "image_corr": -0.12,
+      "palette_sim": 0.025
+    },
+    {
+      "pair": "slide-06.html x slide-08.html",
+      "layout_iou": 0.621,
+      "image_corr": -0.3,
+      "palette_sim": 0.024
+    },
+    {
+      "pair": "slide-06.html x slide-09.html",
+      "layout_iou": 0.427,
+      "image_corr": -0.188,
+      "palette_sim": 0.03
+    },
+    {
+      "pair": "slide-07.html x slide-08.html",
+      "layout_iou": 0.657,
+      "image_corr": 0.423,
+      "palette_sim": 0.982
+    },
+    {
+      "pair": "slide-07.html x slide-09.html",
+      "layout_iou": 0.546,
+      "image_corr": 0.406,
+      "palette_sim": 0.946
+    },
+    {
+      "pair": "slide-08.html x slide-09.html",
+      "layout_iou": 0.545,
+      "image_corr": 0.388,
+      "palette_sim": 0.944
+    }
+  ],
+  "value_arc": 0.756,
+  "deck_median_image_corr": -0.005,
+  "deck_median_layout_iou": 0.477,
+  "verdict": "WARN"
+}

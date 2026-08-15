@@ -1,0 +1,94 @@
+{
+  "run_date": "2026-08-15",
+  "case_file_no": 2,
+  "deck": {
+    "hero_structure": "lamp-lit handset and invoice still-life, display knocked into the sodium falloff",
+    "atmosphere": "sodium lamp haze in a dark dispatch room with a cold window beyond",
+    "depth_technique": "cabinet-oblique relief racked against one PBR-lit focal object with real contact shadows",
+    "line_voice": "cased transit routing with junction dots and hop-overs on a four weight ladder",
+    "continuity_device": "seven tick threshold gate that changes shape each slide, plus a custody colour arc where blue means a person holds the call and amber means the machine does",
+    "hook_archetype": "artifact evidence hook",
+    "palette_family": "night dispatch board, copper and furnace flame",
+    "type_pairing": "Bricolage Grotesque display with Manrope body and JetBrains Mono telemetry",
+    "narrative_structure": "single call procedural, ring to resolution",
+    "render_ladder_top": "akthree",
+    "variance_dials": {"design_variance": 4, "visual_density": 3, "type_temperature": 2},
+    "palette": {
+      "shop_night": "#080D14",
+      "steel_cabinet": "#16232F",
+      "pipe_blue": "#7FA8C4",
+      "copper_conduit": "#B9744A",
+      "furnace_flame": "#E8623A",
+      "sodium_lamp": "#E2A03F",
+      "chalk_cream": "#F2ECE0",
+      "flag_gold": "#FFC72C",
+      "snow": "#F4F8FF"
+    },
+    "custody_law": "pipe_blue = a person holds the call. furnace_flame = the machine holds it. flag_gold appears ONLY at the threshold where custody changes hands, one device per slide."
+  },
+  "slides": [
+    {
+      "n": 1, "role": "COVER", "mode": "OBJECT",
+      "layout_family": "full-bleed rendered still-life, display knocked into the lamp falloff",
+      "art_system": "akthree PBR desk still-life, handset and curled invoice under a steel lamp cone",
+      "value": "dark", "temperature": "warm",
+      "custom_note": "The only photographically rendered real object in the deck, every later slide is drawn rather than lit."
+    },
+    {
+      "n": 2, "role": "THE COMPANY", "mode": "SCENE",
+      "layout_family": "horizon band interior, copy on a lower dark plate",
+      "art_system": "cabinet-oblique shop bay at 9pm with service van masses and board glow",
+      "value": "dark", "temperature": "warm sodium",
+      "custom_note": "The only slide with a human scale environment in it and zero diagram ink anywhere."
+    },
+    {
+      "n": 3, "role": "THE BOTTLENECK", "mode": "DOCUMENT",
+      "layout_family": "full-bleed paper field with a torn right edge and a stamped figure",
+      "art_system": "halftone plate invoice with rotated screen dots and a gold rubber stamp",
+      "value": "light", "temperature": "cool paper",
+      "custom_note": "The deck's only paper white surface and its only halftone screen texture."
+    },
+    {
+      "n": 4, "role": "THE BUILD", "mode": "DIAGRAM",
+      "layout_family": "central mechanism with a left leader line stack",
+      "art_system": "cabinet-oblique threshold gate with nine tokens over and one falling through into a lit channel",
+      "value": "dark", "temperature": "cool steel with one gold",
+      "custom_note": "The only slide where the seven tick gate is drawn at full scale as the subject rather than as furniture."
+    },
+    {
+      "n": 5, "role": "THE CURRICULUM", "mode": "DATA",
+      "layout_family": "big number tile over a deep negative field with one annotation",
+      "art_system": "parallel projected bar pair with a notch physically milled out of the taller bar",
+      "value": "light", "temperature": "cool",
+      "custom_note": "The only real chart here, and the only quantity in the deck that belongs to the vendor arguing against himself."
+    },
+    {
+      "n": 6, "role": "THE RECEIPTS", "mode": "DOCUMENT",
+      "layout_family": "right aligned figure column on a ruled ledger strip",
+      "art_system": "board green ledger rules with a drawn ceiling bracket and an unresolved fade below it",
+      "value": "mid", "temperature": "warm",
+      "custom_note": "The only slide where a number is drawn as a bound rather than as a point value."
+    },
+    {
+      "n": 7, "role": "WHAT IT TOOK", "mode": "DIAGRAM",
+      "layout_family": "lower third horizontal rail with the head set upper left",
+      "art_system": "ninety day punch card rail where everything not on the record is a physically punched hole",
+      "value": "dark", "temperature": "cool",
+      "custom_note": "The only slide that draws what we do not know as actual holes cut through the card."
+    },
+    {
+      "n": 8, "role": "YOUR VERSION", "mode": "FIELD",
+      "layout_family": "edge to edge generative field with a small knockout window",
+      "art_system": "year long call dot drift with eleven dense cold snap clusters spiking amber",
+      "value": "dark", "temperature": "cold blue with amber spikes",
+      "custom_note": "The only generative particle field, and the only slide whose density is driven by temperature."
+    },
+    {
+      "n": 9, "role": "CLOSE", "mode": "DOCUMENT",
+      "layout_family": "full frame lattice with an asymmetric brand plate low right",
+      "art_system": "one hundred sixty eight cell week lattice with night and weekend cells hollowed to outline",
+      "value": "mid-dark", "temperature": "warm gold",
+      "custom_note": "The only slide that states the whole thesis as a shape with no sentence underneath it."
+    }
+  ]
+}

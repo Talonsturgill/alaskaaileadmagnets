@@ -1,0 +1,87 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#080D14;}
+ body{position:relative;}
+ #art{position:absolute;inset:0;width:1080px;height:1350px;}
+ .brand{position:absolute;left:650px;top:76px;width:350px;height:88px;text-align:right;
+   background:linear-gradient(90deg,rgba(8,13,20,0) 0%,rgba(8,13,20,.80) 38%);border-radius:4px;padding-top:4px;box-sizing:border-box;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#7FA8C4;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:186px;top:112px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#FFC72C;letter-spacing:.16em;}
+ .head{position:absolute;left:186px;top:158px;width:700px;height:130px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:90%;
+   color:#F4F8FF;line-height:1.04;letter-spacing:-.015em;}
+ .bplate{position:absolute;left:168px;top:288px;width:744px;height:330px;background:#0a0f17;border-radius:5px;}
+ .lplate{position:absolute;left:168px;top:622px;width:748px;height:648px;background:#0a0f17;border-radius:5px;}
+ .body{position:absolute;left:186px;top:306px;width:708px;height:262px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:31px;line-height:1.40;color:#C6D2DE;}
+ .lb{position:absolute;left:186px;width:706px;font-family:"Manrope",sans-serif;font-size:28px;line-height:1.32;}
+ .lk{font-family:"JetBrains Mono",monospace;font-size:24px;letter-spacing:.10em;display:block;margin-bottom:3px;text-transform:uppercase;}
+ .lb b{font-weight:700;color:#F4F8FF;}
+ .axis{position:absolute;font-family:"JetBrains Mono",monospace;font-size:24px;color:#7FA8C4;letter-spacing:.10em;}
+ .fchip{position:absolute;font-family:"JetBrains Mono",monospace;font-size:24px;color:#C6D2DE;background:#0a0f17;padding:5px 10px;border-radius:3px;white-space:nowrap;}
+ .src{position:absolute;left:186px;top:1156px;width:712px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.30;color:#9AA8B6;}
+</style></head><body>
+<canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+<div class="bplate"></div><div class="lplate"></div>
+<div class="brand" data-zone="BRAND" data-knockout>
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/></svg>
+  <div class="cnt">08 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD" data-knockout>YOUR VERSION</div>
+<div class="head" id="head" data-zone="HEAD" data-knockout>Put it where Wilson has it, on nights and weekends only.</div>
+<div class="body" data-zone="BODY" data-knockout>Mechanical, plumbing, restoration, property management and fuel delivery all run an after hours line. Anchorage does not get a smooth overflow curve, it gets a handful of nights a year when every marginal furnace in town quits inside six hours. Start on nights, weekends and overflow only.</div>
+<div class="lb" data-zone="FOOTER" data-knockout style="top:638px;color:#F2ECE0;font-weight:700;font-size:27px;border-left:4px solid #FFC72C;padding-left:18px;box-sizing:border-box;"><span class="lk" style="color:#FFC72C;">Monday.</span>Pull last winter's after hours recordings and count how many became booked jobs. Free, one afternoon.</div>
+<div class="lb" data-zone="FOOTER" data-knockout style="top:762px;color:#C6D2DE;"><span class="lk" style="color:#7FA8C4;">Where it stops.</span>This never became an AI call center. Wilson's own people still answer nine calls in ten.</div>
+<div class="lb" data-zone="FOOTER" data-knockout style="top:878px;color:#C6D2DE;"><b>Under a dozen after hours calls on a bad night, skip the AI.</b> Use a written intake script, a phone tree that texts the on-call tech, and a booking page that works on a phone.</div>
+<div class="lb" data-zone="FOOTER" data-knockout style="top:1030px;color:#C6D2DE;"><b style="color:#E8623A;">Roughly 1,500 to 5,000 dollars a month here for the after hours slice.</b> It is usage priced, so model it on January and not April.</div>
+<div class="src" data-zone="FOOTER" data-knockout>The nine in ten is the owner's own figure. The Anchorage dollar range and the cold snap pattern are our analysis, not fetched figures.</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=1350;
+  const bg=cx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,'#0a1119'); bg.addColorStop(.5,'#0c1520'); bg.addColorStop(1,'#070b11');
+  cx.fillStyle=bg; cx.fillRect(0,0,W,H);
+  // a year of nights. Base density is low. An irregular run of cold snaps spikes
+  // amber. The count is deliberately NOT legible as a number, per the honesty
+  // gate ruling that a quantified Anchorage weather claim is our analysis.
+  const rnd=AK.rng(20260815);
+  const COLS=365, X0=44, X1=1036, span=X1-X0;
+  const snaps=new Set(); { let c=0; while(snaps.size<11){ const v=Math.floor(rnd()*COLS); if(v>24&&v<341) snaps.add(v); if(++c>500) break; } }
+  const snapArr=[...snaps];
+  for(let i=0;i<COLS;i++){
+    const x=X0+(i/COLS)*span;
+    let near=0; for(const s of snapArr){ const d=Math.abs(i-s); if(d<7) near=Math.max(near,1-d/7); }
+    const n=Math.round(5+near*66);
+    for(let k=0;k<n;k++){
+      const y=118+rnd()*1160;
+      const depth=rnd();
+      const r=1.0+depth*2.8;
+      if(near>0.35 && rnd()<near){
+        cx.fillStyle='rgba(232,98,58,'+(0.36+near*0.60*depth)+')';
+      } else {
+        cx.fillStyle='rgba(127,168,196,'+(0.13+0.40*depth)+')';
+      }
+      cx.beginPath(); cx.arc(x+(rnd()-0.5)*4,y,r,0,7); cx.fill();
+    }
+  }
+  // the gate becomes the rung 1 floor line, gate state 8
+  cx.strokeStyle='#FFC72C'; cx.lineWidth=3; cx.setLineDash([16,11]);
+  cx.beginPath(); cx.moveTo(X0,1300); cx.lineTo(X1,1300); cx.stroke(); cx.setLineDash([]);
+  for(let i=0;i<7;i++){ cx.fillStyle='#8a6a10'; cx.fillRect(X0+40+i*((span-80)/6),1292,3,10); }
+  cx.strokeStyle='rgba(127,168,196,.22)'; cx.lineWidth=1;
+  cx.beginPath(); cx.moveTo(X0,1306); cx.lineTo(X1,1306); cx.stroke();
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.05,bloom:0.24,dither:true}); }catch(e){} }
+  AK.fitText(document.getElementById('head'),{min:46,max:58,maxLines:2});
+  resolve();
+});
+</script></body></html>

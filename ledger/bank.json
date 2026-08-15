@@ -936,7 +936,7 @@
     },
     {
       "id": "bank-017",
-      "status": "candidate",
+      "status": "shipped",
       "company": "The Wilson Companies (Wilson Plumbing, Heating, Cooling & Electric Inc.)",
       "location": "Akron and Northeast Ohio",
       "size": "200 plus employees, 40 plus million dollars revenue, founded 1958 by Ralph and Theresa Wilson, third generation family ownership",
@@ -958,7 +958,8 @@
       ],
       "alaska_translation": "Anchorage mechanical, plumbing and HVAC contractors run the identical after hours phone problem, and heating season makes the no heat call at 9pm an emergency with a price attached.",
       "date_added": "2026-08-15",
-      "note": "SELECTED for case file 2. The vendor's own admission that full autonomy books roughly 5 percent lower than the hybrid design is the best rung 4 versus rung 5 teaching artifact any run has found."
+      "note": "SELECTED for case file 2. The vendor's own admission that full autonomy books roughly 5 percent lower than the hybrid design is the best rung 4 versus rung 5 teaching artifact any run has found.",
+      "shipped_run": "2026-08-15"
     },
     {
       "id": "bank-018",
@@ -1096,7 +1097,7 @@
     "Progressive Grocer Bashas piece",
     "CCJ Samsara dashcam crash rate study"
   ],
-  "ship_ready_count": 1,
+  "ship_ready_count": 0,
   "par": 8,
   "par_note": "2026-08-15: bank restocked by two waves (7 scouts). Ship-ready count is 1, still far below par of 8. The structural finding of the run is that every hunting ground carries exactly one half of what the filter needs and never the same half: trade press names the operator and omits the price, public record names the price and omits the deployment, vendor libraries describe the build and omit both. The one ground that delivered BOTH was an operator-to-operator PODCAST (ownedandoperated.com), where peers disclose casually because the audience would smell a dodge. That is the highest-yield ground this repo has found and wave three should mine it and its equivalents in freight, distribution and clinic operations."
 }

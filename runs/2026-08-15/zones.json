@@ -1,0 +1,429 @@
+{
+  "_doc": "Named rectangles in design coordinates (1080x1350), list form [x,y,w,h]. Every text element declares data-zone and its box must lie inside the declared rect (6px tolerance). art_rects are the genuinely BUSY painted regions, NOT whole canvases, because a full-frame ART rect would fail every text node on a full-bleed slide and that is not what the gate is for. Text may enter a busy region only on a declared data-knockout plate.",
+  "slides": {
+    "slide-01.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          650,
+          920,
+          440
+        ],
+        "FOOTER": [
+          80,
+          1100,
+          920,
+          170
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          0,
+          1080,
+          616
+        ]
+      ],
+      "knockout_plates": [],
+      "note": "The still life occupies the upper frame. A motivated lamp falloff, not a scrim, carries the display below it."
+    },
+    "slide-02.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          676,
+          920,
+          230
+        ],
+        "BODY": [
+          80,
+          884,
+          880,
+          300
+        ],
+        "FOOTER": [
+          80,
+          1168,
+          920,
+          100
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ],
+        "ART": [
+          0,
+          0,
+          1080,
+          660
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          0,
+          1080,
+          660
+        ]
+      ],
+      "knockout_plates": [
+        {
+          "name": "kicker",
+          "x": 80,
+          "y": 590,
+          "w": 300,
+          "h": 40
+        }
+      ],
+      "note": "Art terminates at y658 and an opaque plate carries every text block below it. The kicker sits inside ART on a knockout."
+    },
+    "slide-03.html": {
+      "zones": {
+        "HEAD": [
+          96,
+          88,
+          790,
+          310
+        ],
+        "BODY": [
+          96,
+          424,
+          700,
+          300
+        ],
+        "DATA": [
+          92,
+          780,
+          540,
+          292
+        ],
+        "FOOTER": [
+          92,
+          1086,
+          580,
+          156
+        ],
+        "BRAND": [
+          556,
+          84,
+          348,
+          84
+        ]
+      },
+      "art_rects": [
+        [
+          612,
+          1206,
+          468,
+          144
+        ],
+        [
+          640,
+          742,
+          320,
+          286
+        ]
+      ],
+      "knockout_plates": [],
+      "note": "Light slide. Paper is the ground so contrast is dark ink on cream. The halftone and the gold stamp are the only busy regions and no text block enters either."
+    },
+    "slide-04.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          88,
+          740,
+          246
+        ],
+        "BODY": [
+          80,
+          348,
+          920,
+          338
+        ],
+        "FOOTER": [
+          80,
+          1198,
+          920,
+          66
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ],
+        "ART": [
+          0,
+          690,
+          1080,
+          500
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          690,
+          1080,
+          500
+        ]
+      ],
+      "knockout_plates": [
+        {
+          "name": "gate_labels",
+          "x": 90,
+          "y": 800,
+          "w": 700,
+          "h": 60
+        },
+        {
+          "name": "channel_label",
+          "x": 700,
+          "y": 1090,
+          "w": 340,
+          "h": 60
+        }
+      ],
+      "note": "The gate bar y and the drop channel x live in a shared GEO object. Canvas draws from it and every DOM label reads the same numbers, never retyped."
+    },
+    "slide-05.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          1064,
+          890,
+          208
+        ],
+        "DATA": [
+          70,
+          198,
+          940,
+          432
+        ],
+        "BODY": [
+          80,
+          604,
+          900,
+          216
+        ],
+        "FOOTER": [
+          80,
+          804,
+          910,
+          254
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ]
+      },
+      "art_rects": [
+        [
+          118,
+          240,
+          844,
+          290
+        ]
+      ],
+      "knockout_plates": [],
+      "note": "Light slide, the deck's second brightness peak. Bars are PARALLEL PROJECTED, never perspective, per DESIGN_DOCTRINE 7."
+    },
+    "slide-06.html": {
+      "zones": {
+        "HEAD": [
+          462,
+          88,
+          530,
+          220
+        ],
+        "DATA": [
+          100,
+          314,
+          900,
+          760
+        ],
+        "FOOTER": [
+          86,
+          1084,
+          910,
+          190
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ]
+      },
+      "art_rects": [
+        [
+          110,
+          400,
+          290,
+          640
+        ]
+      ],
+      "knockout_plates": [],
+      "note": "THE KEEPABLE. The ceiling bracket sits at exactly half the 8,000 bar and the region beneath it fades out unresolved. The bound is the claim. No point value is drawn or written."
+    },
+    "slide-07.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          88,
+          440,
+          360
+        ],
+        "BODY": [
+          550,
+          142,
+          456,
+          404
+        ],
+        "FOOTER": [
+          76,
+          804,
+          928,
+          466
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ],
+        "ART": [
+          0,
+          560,
+          1080,
+          232
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          560,
+          1080,
+          232
+        ]
+      ],
+      "knockout_plates": [
+        {
+          "name": "rail_labels",
+          "x": 80,
+          "y": 762,
+          "w": 920,
+          "h": 80
+        }
+      ],
+      "note": "The punched holes ARE the unknown costs. Integration, data readiness and change are drawn as physical voids because only the licence layer is on the record."
+    },
+    "slide-08.html": {
+      "zones": {
+        "HEAD": [
+          186,
+          104,
+          706,
+          190
+        ],
+        "BODY": [
+          186,
+          300,
+          714,
+          318
+        ],
+        "FOOTER": [
+          76,
+          630,
+          930,
+          644
+        ],
+        "BRAND": [
+          650,
+          76,
+          350,
+          88
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          0,
+          1080,
+          1350
+        ]
+      ],
+      "knockout_plates": [
+        {
+          "name": "body_plate",
+          "x": 62,
+          "y": 290,
+          "w": 916,
+          "h": 286
+        },
+        {
+          "name": "labels_plate",
+          "x": 62,
+          "y": 572,
+          "w": 956,
+          "h": 706
+        }
+      ],
+      "note": "Generative field runs edge to edge, so ALL text sits on explicit opaque knockout plates declared here. Cluster density is a cold snap PATTERN and deliberately NOT a counted quantity, per the honesty gate ruling of 2026-08-15."
+    },
+    "slide-09.html": {
+      "zones": {
+        "HEAD": [
+          80,
+          88,
+          900,
+          294
+        ],
+        "BODY": [
+          80,
+          392,
+          876,
+          306
+        ],
+        "FOOTER": [
+          80,
+          1036,
+          500,
+          232
+        ],
+        "BRAND": [
+          596,
+          1036,
+          404,
+          236
+        ],
+        "ART": [
+          0,
+          700,
+          1080,
+          340
+        ]
+      },
+      "art_rects": [
+        [
+          0,
+          700,
+          1080,
+          340
+        ]
+      ],
+      "knockout_plates": [],
+      "note": "168 cells, one per hour of a week. Night and weekend cells are hollowed to outline. The thesis stated as a shape with no sentence under it. The logo lives in BRAND here, which satisfies logo_check."
+    }
+  }
+}

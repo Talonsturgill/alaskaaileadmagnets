@@ -1,0 +1,95 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#080D14;}
+ body{position:relative;}
+ #art{position:absolute;left:0;top:560px;width:1080px;height:232px;}
+ .brand{position:absolute;left:650px;top:76px;width:350px;height:88px;text-align:right;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#7FA8C4;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:80px;top:96px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#FFC72C;letter-spacing:.16em;}
+ .head{position:absolute;left:80px;top:144px;width:430px;height:300px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:90%;
+   color:#F4F8FF;line-height:1.04;letter-spacing:-.015em;}
+ .body{position:absolute;left:556px;top:150px;width:444px;height:392px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:31px;line-height:1.40;color:#C6D2DE;}
+ .l1{position:absolute;left:104px;top:812px;width:896px;font-family:"Manrope",sans-serif;font-weight:700;font-size:28px;line-height:1.32;color:#F2ECE0;border-left:4px solid #FFC72C;padding-left:20px;box-sizing:border-box;}
+ .l2{position:absolute;left:80px;top:966px;width:920px;font-family:"Manrope",sans-serif;font-weight:400;font-size:27px;line-height:1.32;color:#C6D2DE;}
+ .l3{position:absolute;left:80px;top:1052px;width:920px;font-family:"Manrope",sans-serif;font-weight:400;font-size:27px;line-height:1.32;color:#C6D2DE;}
+ .src{position:absolute;left:80px;top:1176px;width:920px;font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.28;color:#9AA8B6;}
+ .hl{position:absolute;font-family:"JetBrains Mono",monospace;font-size:24px;color:#8FA6B8;
+   background:#0B1119;padding:4px 8px;border-radius:3px;white-space:nowrap;}
+</style></head><body>
+<canvas id="art" width="2160" height="464" style="width:1080px;height:232px;"></canvas>
+<div class="brand" data-zone="BRAND">
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/></svg>
+  <div class="cnt">07 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD">WHAT IT TOOK</div>
+<div class="head" id="head" data-zone="HEAD">The vendor says two weeks. The owner says 90 days to get it good.</div>
+<div class="body" data-zone="BODY">Avoca says a standard onboarding runs about two weeks and takes 3 to 4 hours of your call center manager's time. That is the vendor's own process, not a measurement of Wilson's. Wilson says it took about 90 days to get it working well, and he hedged it.</div>
+<div class="l1" data-zone="FOOTER">Only the subscription layer is on the record. Integration, data readiness and change cost are not disclosed anywhere, so those are the three numbers to make a vendor put in writing before you sign.</div>
+<div class="l2" data-zone="FOOTER">Timing. A 90 day ramp started in mid August is working by mid November, ahead of heating season.</div>
+<div class="l3" data-zone="FOOTER">Somebody owns this by name, the CSR manager or the dispatch supervisor, with listening time on the calendar. A tool nobody's job includes gets turned off in the second quarter.</div>
+<div class="src" data-zone="FOOTER">The two weeks and the 3 to 4 hours are Avoca describing its standard onboarding. The 90 days is the owner's own estimate.</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+const CARD={TOP:560,X:60,Y:18,W:960,H:196, KNOWN_X:92, KNOWN_W:300, HOLES_X:470};
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=232;
+  cx.fillStyle='#070b11'; cx.fillRect(0,0,W,H);
+  // the card, a physical object with thickness
+  cx.fillStyle='rgba(0,0,0,.6)'; cx.fillRect(CARD.X+6,CARD.Y+12,CARD.W,CARD.H);
+  cx.fillStyle='#16232F'; cx.fillRect(CARD.X,CARD.Y,CARD.W,CARD.H);
+  cx.fillStyle='#26394a'; cx.fillRect(CARD.X,CARD.Y,CARD.W,3);          // top lip
+  cx.fillStyle='#0a121a'; cx.fillRect(CARD.X,CARD.Y+CARD.H-3,CARD.W,3);
+  cx.strokeStyle='rgba(127,168,196,.10)'; cx.lineWidth=1;                // hair weight grid
+  for(let x=CARD.X+18;x<CARD.X+CARD.W;x+=22){ cx.beginPath(); cx.moveTo(x,CARD.Y+8); cx.lineTo(x,CARD.Y+CARD.H-8); cx.stroke(); }
+  // KNOWN, the two disclosed durations, drawn as solid blocks
+  const BY=CARD.Y+40, BH=48;
+  cx.fillStyle='#B9744A'; cx.fillRect(CARD.KNOWN_X,BY,64,BH);            // about two weeks
+  cx.fillStyle='#8E5533'; cx.fillRect(CARD.KNOWN_X,BY+BH,64,5);
+  cx.fillStyle='#7FA8C4'; cx.fillRect(CARD.KNOWN_X+76,BY,236,BH);        // about 90 days
+  cx.fillStyle='#5E8AA8'; cx.fillRect(CARD.KNOWN_X+76,BY+BH,236,5);
+  // the gate lies flat as the rail, ticks become the day stations, gate state 7
+  cx.fillStyle='#FFC72C'; cx.fillRect(CARD.KNOWN_X,BY+BH+22,312,4);
+  for(let i=0;i<7;i++){ cx.fillStyle='#8a6a10'; cx.fillRect(CARD.KNOWN_X+i*50,BY+BH+18,3,12); }
+  // UNKNOWN, punched THROUGH the card. The inner shadow is what makes them read
+  // as voids rather than as dark circles.
+  const holes=[0,1,2];
+  for(const i of holes){
+    const cxp=CARD.HOLES_X+70+i*175, cyp=BY+BH/2+4, r=36;
+    cx.save(); cx.beginPath(); cx.arc(cxp,cyp,r,0,7); cx.clip();
+    cx.fillStyle='#050810'; cx.fillRect(cxp-r,cyp-r,r*2,r*2);
+    // key is upper left, so the NEAR lip shadows the upper left interior and the
+    // LOWER RIGHT inner wall catches the light. This is what makes it a hole.
+    cx.strokeStyle='rgba(0,2,5,.92)'; cx.lineWidth=7;
+    cx.beginPath(); cx.arc(cxp,cyp,r-3,Math.PI*0.75,Math.PI*1.75); cx.stroke();
+    cx.strokeStyle='rgba(127,168,196,.24)'; cx.lineWidth=5;
+    cx.beginPath(); cx.arc(cxp,cyp,r-3,Math.PI*0.10,Math.PI*0.72); cx.stroke();
+    cx.restore();
+    cx.strokeStyle='rgba(127,168,196,.45)'; cx.lineWidth=2;              // hard cut lip, upper left only
+    cx.beginPath(); cx.arc(cxp,cyp,r,Math.PI*1.02,Math.PI*1.72); cx.stroke();
+    cx.strokeStyle='rgba(5,8,16,.9)'; cx.lineWidth=1;
+    cx.beginPath(); cx.arc(cxp,cyp,r+1.5,0,7); cx.stroke();
+  }
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.05,bloom:0.16,dither:true}); }catch(e){} }
+  function hl(text,x,y,color){ const d=document.createElement('div'); d.className='hl';
+    d.setAttribute('data-zone','ART'); d.setAttribute('data-knockout','');
+    d.style.left=x+'px'; d.style.top=(CARD.TOP+y)+'px'; if(color) d.style.color=color;
+    d.textContent=text; document.body.appendChild(d); }
+  hl('TIME, ON THE RECORD', CARD.KNOWN_X-8, 6, '#FFC72C');
+  hl('COST, NOT DISCLOSED ANYWHERE', CARD.HOLES_X+14, 6, '#9AA8B6');
+  hl('INTEGRATION', CARD.HOLES_X+8, 172);
+  hl('DATA', CARD.HOLES_X+214, 172);
+  hl('CHANGE', CARD.HOLES_X+372, 172);
+  AK.fitText(document.getElementById('head'),{min:42,max:56,maxLines:4});
+  resolve();
+});
+</script></body></html>

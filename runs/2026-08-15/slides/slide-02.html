@@ -1,0 +1,105 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#080D14;}
+ body{position:relative;}
+ #art{position:absolute;left:0;top:0;width:1080px;height:700px;}
+ .plate{position:absolute;left:0;top:660px;width:1080px;height:690px;background:#0B1119;}
+ .gold2{position:absolute;left:0;top:660px;width:1080px;height:3px;background:#FFC72C;}
+
+ .brand{position:absolute;left:660px;top:80px;width:340px;height:80px;text-align:right;}
+ .brand{background:linear-gradient(90deg,rgba(11,17,25,0) 0%,rgba(11,17,25,.78) 38%);border-radius:4px;padding-top:4px;box-sizing:border-box;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#7FA8C4;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:80px;top:686px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#FFC72C;letter-spacing:.16em;}
+ .head{position:absolute;left:80px;top:730px;width:920px;height:160px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:90%;
+   color:#F4F8FF;line-height:1.04;letter-spacing:-.015em;}
+ .body{position:absolute;left:80px;top:892px;width:880px;height:280px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:32px;line-height:1.40;color:#C6D2DE;}
+ .foot{position:absolute;left:80px;top:1175px;width:920px;height:90px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.32;color:#8FA6B8;}
+</style></head><body>
+<canvas id="art" width="2160" height="1400" style="width:1080px;height:700px;"></canvas>
+<div class="plate"></div><div class="gold2"></div>
+<div class="brand" data-zone="BRAND" data-knockout>
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/></svg>
+  <div class="cnt">02 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD">THE COMPANY</div>
+<div class="head" id="head" data-zone="HEAD">They answered their own phones around the clock.</div>
+<div class="body" data-zone="BODY">Wilson Plumbing, Heating, Cooling and Electric started in Akron Ohio in 1958, the shop Ralph and Theresa Wilson opened. Third generation runs it now. Over 200 people across the group by the CEO's own account, spread over more than one location. And they answered their own phones 24 hours a day.</div>
+<div class="foot" data-zone="FOOTER">Founding per the company's own site. Headcount by the CEO's own account, and it covers the whole group, not the Akron shop alone.</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=700;
+  const sky=cx.createLinearGradient(0,0,0,H);
+  sky.addColorStop(0,'#0a111b'); sky.addColorStop(.62,'#111a24'); sky.addColorStop(1,'#0c131c');
+  cx.fillStyle=sky; cx.fillRect(0,0,W,H);
+  // far building mass, atmospheric lerp toward the sky
+  cx.fillStyle='#0e1620'; cx.fillRect(0,300,W,120);
+  // cabinet-oblique bay: three depth planes, hero frame in front
+  const OB=0.5, ANG=-0.62;
+  function box(x,y,w,h,d,fTop,fSide,fFace){
+    const dx=Math.cos(ANG)*d*OB, dy=Math.sin(ANG)*d*OB;
+    cx.fillStyle=fTop; cx.beginPath(); cx.moveTo(x,y); cx.lineTo(x+dx,y+dy); cx.lineTo(x+w+dx,y+dy); cx.lineTo(x+w,y); cx.closePath(); cx.fill();
+    cx.fillStyle=fSide; cx.beginPath(); cx.moveTo(x+w,y); cx.lineTo(x+w+dx,y+dy); cx.lineTo(x+w+dx,y+h+dy); cx.lineTo(x+w,y+h); cx.closePath(); cx.fill();
+    cx.fillStyle=fFace; cx.fillRect(x,y,w,h);
+  }
+  // far wall so the vans stand in a room, plus seven bay posts, gate state 2
+  cx.fillStyle='#0E1620'; cx.fillRect(0,300,W,170);
+  cx.strokeStyle='#1B2A38'; cx.lineWidth=1.5;
+  cx.beginPath(); cx.moveTo(0,470); cx.lineTo(W,470); cx.stroke();
+  for(let i=0;i<7;i++){ const px=150+i*130;
+    cx.fillStyle='rgba(11,17,25,.85)'; cx.fillRect(px,300,7,170);
+    cx.fillStyle='rgba(127,168,196,.10)'; cx.fillRect(px+7,300,2,170); }
+  cx.fillStyle='#12202c'; cx.fillRect(196,352,150,86);   // parts shelf, one piece of human furniture
+  cx.strokeStyle='#22394a'; cx.lineWidth=2; cx.strokeRect(196,352,150,86);
+  cx.beginPath(); cx.moveTo(196,394); cx.lineTo(346,394); cx.stroke();
+  // the shop apron, sodium spill
+  const spill=cx.createRadialGradient(905,520,20,905,520,430);
+  spill.addColorStop(0,'rgba(226,160,63,.30)'); spill.addColorStop(1,'rgba(226,160,63,0)');
+  cx.fillStyle='#0d151f'; cx.fillRect(0,420,W,H-420);
+  cx.fillStyle=spill; cx.fillRect(0,300,W,H-300);
+  // three service vans, scale gradient front to back
+  const vans=[[86,392,214,86,0.55],[286,376,258,102,0.75],[512,352,318,128,1.0]];
+  for (const [vx,vy,vw,vh,s] of vans){
+    cx.save(); cx.fillStyle='rgba(5,10,16,.62)'; cx.beginPath();       // contact shadow, away from the window key
+    cx.moveTo(vx-14,vy+vh+8); cx.lineTo(vx+vw-40,vy+vh+8); cx.lineTo(vx+vw-64,vy+vh+30); cx.lineTo(vx-38,vy+vh+30);
+    cx.closePath(); cx.fill(); cx.restore();
+    const t=1-s;
+    const face='rgb('+Math.round(22+t*16)+','+Math.round(35+t*18)+','+Math.round(47+t*20)+')';
+    box(vx,vy,vw,vh,58*s,'#26333f',face,'#16232F');
+    cx.fillStyle='rgba(127,168,196,'+(0.20*s+0.06)+')';
+    cx.fillRect(vx+10,vy+12,vw*0.42,vh*0.30);          // windscreen
+    cx.strokeStyle='rgba(127,168,196,.30)'; cx.lineWidth=1;   // hair weight, panel seams
+    cx.beginPath(); cx.moveTo(vx+vw*0.55,vy); cx.lineTo(vx+vw*0.55,vy+vh); cx.stroke();
+    cx.strokeStyle='#2A3E4E'; cx.lineWidth=2;        // fine weight, silhouette
+    cx.strokeRect(vx,vy,vw,vh);
+    cx.fillStyle='#080d13';                                    // wheels
+    cx.beginPath(); cx.arc(vx+vw*0.22,vy+vh,13*s+5,0,7); cx.fill();
+    cx.beginPath(); cx.arc(vx+vw*0.80,vy+vh,13*s+5,0,7); cx.fill();
+  }
+  // the lit window, the whole point of the slide, somebody is in there at 9pm
+  const glow=cx.createRadialGradient(905,236,8,905,236,150);
+  glow.addColorStop(0,'rgba(226,160,63,.85)'); glow.addColorStop(1,'rgba(226,160,63,0)');
+  cx.fillStyle=glow; cx.fillRect(760,110,320,260);
+  cx.fillStyle='#E2A03F'; cx.fillRect(852,196,104,74);
+  cx.fillStyle='rgba(11,17,25,.55)'; cx.fillRect(898,196,5,74);
+  // hero weight, the bay door frame occluding in front
+  cx.strokeStyle='#1B2A38'; cx.lineWidth=3.5;
+  cx.beginPath(); cx.moveTo(34,150); cx.lineTo(34,H); cx.moveTo(1046,150); cx.lineTo(1046,H); cx.stroke();
+  for (let i=0;i<2200;i++){ const x=Math.random()*W,y=300+Math.random()*(H-300);
+    cx.fillStyle='rgba(127,168,196,'+(0.010+Math.random()*0.026)+')'; cx.fillRect(x,y,2,2); }
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.05,bloom:0.20,dither:true}); }catch(e){} }
+  AK.fitText(document.getElementById('head'),{min:48,max:64,maxLines:2});
+  resolve();
+});
+</script></body></html>

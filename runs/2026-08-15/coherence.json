@@ -1,0 +1,116 @@
+{
+  "run_date": "2026-08-15",
+  "case_file_no": 2,
+  "thesis": "A 200 person family trades company put a machine on its after hours phone, kept its own people on the day shift, and stopped paying anybody to sit up all night waiting for a call.",
+  "vocabulary_lock": {
+    "the_bottleneck": "the after hours phone (never 'customer experience', never 'the call center problem', never 'communications')",
+    "the_thing_bought": "a voice platform (Avoca). Never 'an AI agent', never 'a bot'.",
+    "the_people": "CSRs on the day shift. Never 'agents', which would collide with the ladder vocabulary.",
+    "the_rung": "rung 4, a workflow. Named in plain words on slide 4 and again on slide 5.",
+    "units": "dollars per month everywhere. Seconds for the threshold. Days for the ramp. Never mix in hours."
+  },
+  "slides": [
+    {
+      "n": 1,
+      "role": "COVER",
+      "promise": "makes the reader want to know what an ordinary trades company was paying to answer a phone at night, and what they did about it",
+      "pays": null
+    },
+    {
+      "n": 2,
+      "role": "THE COMPANY",
+      "promise": "makes the reader think that is basically us, and plants that this shop ran its own phones around the clock",
+      "pays": 1
+    },
+    {
+      "n": 3,
+      "role": "THE BOTTLENECK",
+      "promise": "makes the cost concrete and asks what you could possibly put on those hours instead",
+      "pays": 2
+    },
+    {
+      "n": 4,
+      "role": "THE BUILD",
+      "promise": "shows the mechanism and the seven second line, and opens the question of whether the machine would do better alone",
+      "pays": 3
+    },
+    {
+      "n": 5,
+      "role": "THE CURRICULUM",
+      "promise": "answers that question with the seller's own number and makes the reader want to know what the arrangement actually bought Wilson",
+      "pays": 4
+    },
+    {
+      "n": 6,
+      "role": "THE RECEIPTS",
+      "promise": "gives the keepable bounded number and opens what signing up for this would take",
+      "pays": 5
+    },
+    {
+      "n": 7,
+      "role": "WHAT IT TOOK",
+      "promise": "gives the plan and its honest holes, and opens whether any of it survives the trip north",
+      "pays": 6
+    },
+    {
+      "n": 8,
+      "role": "YOUR VERSION",
+      "promise": "lands it in Anchorage, names where it does not work, and leaves one thing to do Monday",
+      "pays": 7
+    },
+    {
+      "n": 9,
+      "role": "CLOSE",
+      "promise": "seals the thesis as a shape and makes the single ask",
+      "pays": 8
+    }
+  ],
+  "open_loops": [
+    {
+      "opened_on": 1,
+      "closed_on": 2,
+      "loop": "what kind of company was paying that"
+    },
+    {
+      "opened_on": 2,
+      "closed_on": 3,
+      "loop": "they ran their own phones around the clock, so what was the outside bill for"
+    },
+    {
+      "opened_on": 3,
+      "closed_on": 4,
+      "loop": "what could you possibly put on those hours instead"
+    },
+    {
+      "opened_on": 4,
+      "closed_on": 5,
+      "loop": "would the machine do better with the person taken out of it"
+    },
+    {
+      "opened_on": 5,
+      "closed_on": 6,
+      "loop": "if the human checkpoint is where the money is, what did that arrangement buy Wilson"
+    },
+    {
+      "opened_on": 6,
+      "closed_on": 7,
+      "loop": "what would signing up for this actually take"
+    },
+    {
+      "opened_on": 7,
+      "closed_on": 8,
+      "loop": "does any of it survive the trip north"
+    },
+    {
+      "opened_on": 8,
+      "closed_on": 9,
+      "loop": "what do I actually do Monday"
+    }
+  ],
+  "uncuttable_roles": [
+    "THE RECEIPTS",
+    "WHAT IT TOOK",
+    "YOUR VERSION"
+  ],
+  "honesty_spine": "Every number on every slide carries its label in the same breath. The dominant label is that these are the owner's own figures, said on a podcast he co-hosts, in episodes his vendor sponsors. There is no independent corroboration and the deck never implies there is. The cost after-figure is drawn and written as a BOUND, never as a point value."
+}

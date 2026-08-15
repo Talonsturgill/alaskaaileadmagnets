@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#F2ECE0;}
+ body{position:relative;}
+ #art{position:absolute;inset:0;width:1080px;height:1350px;}
+ .brand{position:absolute;left:560px;top:88px;width:340px;height:76px;text-align:right;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#45413A;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:96px;top:96px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#6B3D18;letter-spacing:.16em;}
+ .head{position:absolute;left:96px;top:150px;width:780px;height:230px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:86%;
+   color:#1A1712;line-height:1.03;letter-spacing:-.015em;}
+ .body{position:absolute;left:96px;top:432px;width:690px;height:290px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:32px;line-height:1.42;color:#241F19;}
+ .fig{position:absolute;left:96px;top:790px;width:520px;height:140px;
+   font-family:"JetBrains Mono",monospace;font-weight:700;font-size:118px;color:#1A1712;
+   font-variant-numeric:tabular-nums;letter-spacing:-.03em;}
+ .figlbl{position:absolute;left:100px;top:972px;width:520px;
+   font-family:"Manrope",sans-serif;font-weight:700;font-size:31px;color:#6B3D18;}
+ .foot{position:absolute;left:96px;top:1092px;width:570px;height:150px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.34;color:#4A463C;}
+</style></head><body>
+<canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+<div class="brand" data-zone="BRAND">
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#8A5A34"/></svg>
+  <div class="cnt">03 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD">THE BOTTLENECK</div>
+<div class="head" id="head" data-zone="HEAD">8,000 dollars a month, on top of the desk they already staffed.</div>
+<div class="body" data-zone="BODY">Wilson answered his own phones around the clock and still paid an outside answering service 8,000 dollars a month. He says the service got worse after it was acquired. "I remember what 8,000 a month was," the owner said on the podcast he co-hosts.</div>
+<div class="fig" data-zone="DATA">8,000</div>
+<div class="figlbl" data-zone="DATA">dollars a month, outside answering service</div>
+<div class="foot" data-zone="FOOTER">The owner's own figure, said on the podcast he co-hosts, in an episode his vendor sponsors</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=1350;
+  // paper ground with a raking light from upper left
+  const rake=cx.createLinearGradient(0,0,760,1350);
+  rake.addColorStop(0,'#F7F2E8'); rake.addColorStop(.55,'#F2ECE0'); rake.addColorStop(1,'#E2DACA');
+  cx.fillStyle=rake; cx.fillRect(0,0,W,H);
+  // fibre texture, the slide must survive the zoom test
+  for (let i=0;i<26000;i++){ const x=AK.rng()()*W, y=AK.rng()()*H, a=0.020+AK.rng()()*0.05;
+    cx.fillStyle=(AK.rng()()>0.5?'rgba(120,105,80,':'rgba(255,252,244,')+(a*2.4)+')';
+    cx.fillRect(x,y,AK.rng()()>0.85?3:1,AK.rng()()>0.93?2:1); }
+  // torn right edge, seeded 1D walk, with a curl shadow so the sheet has thickness
+  let tx=1006; cx.beginPath(); cx.moveTo(W,0); cx.lineTo(tx,0);
+  for(let y=0;y<=H;y+=4){ tx += (AK.rng()()-0.5)*22; if(AK.rng()()>0.965) tx += (AK.rng()()-0.5)*54; tx=Math.max(962,Math.min(1042,tx)); cx.lineTo(tx,y); }
+  cx.lineTo(W,H); cx.closePath();
+  cx.fillStyle='#DCD3C1'; cx.fill();
+  cx.save(); cx.filter='blur(7px)'; cx.strokeStyle='rgba(90,80,62,.40)'; cx.lineWidth=9;
+  cx.beginPath(); cx.moveTo(1006,0);
+  let sx=1006; for(let y=0;y<=H;y+=9){ sx += 0; cx.lineTo(1004,y); } cx.stroke(); cx.restore();
+  // safety-green ruling, ledger furniture
+  cx.strokeStyle='rgba(110,143,115,.34)'; cx.lineWidth=1;
+  for(let y=790;y<=1010;y+=44){ cx.beginPath(); cx.moveTo(96,y); cx.lineTo(940,y); cx.stroke(); }
+  cx.strokeStyle='rgba(110,143,115,.13)';
+  for(let y=174;y<=746;y+=44){ cx.beginPath(); cx.moveTo(96,y); cx.lineTo(958,y); cx.stroke(); }
+  cx.strokeStyle='rgba(110,143,115,.20)'; cx.lineWidth=1;
+  for(let y=1054;y<=1306;y+=44){ cx.beginPath(); cx.moveTo(96,y); cx.lineTo(600,y); cx.stroke(); }
+  // the gold rubber stamp, seven serrations, gate state 3, pressed by hand at 4 degrees
+  cx.save(); cx.translate(788,880); cx.rotate(-0.075);
+  cx.save(); cx.translate(4,7); cx.globalAlpha=.24; cx.strokeStyle='#7a5a1a'; cx.lineWidth=9;
+  cx.beginPath(); cx.arc(0,0,132,0,7); cx.stroke(); cx.restore();
+  cx.strokeStyle='#B9744A'; cx.lineWidth=11; cx.globalAlpha=.55;
+  cx.beginPath(); cx.arc(0,0,132,0,7); cx.stroke();
+  cx.globalAlpha=1; cx.strokeStyle='#FFC72C'; cx.lineWidth=8;
+  cx.beginPath(); cx.arc(0,0,132,0,7); cx.stroke();
+  cx.lineWidth=6;
+  for(let i=0;i<7;i++){ const a=-Math.PI/2 + i*(Math.PI*2/7);
+    cx.beginPath(); cx.moveTo(Math.cos(a)*132,Math.sin(a)*132); cx.lineTo(Math.cos(a)*156,Math.sin(a)*156); cx.stroke(); }
+  cx.strokeStyle='#B9744A'; cx.lineWidth=3; cx.globalAlpha=.7;
+  cx.beginPath(); cx.arc(0,0,100,0,7); cx.stroke(); cx.globalAlpha=1;
+  cx.font='700 92px "JetBrains Mono", monospace'; cx.textAlign='center'; cx.textBaseline='middle';
+  cx.fillStyle='#B9744A'; cx.globalAlpha=.55; cx.fillText('8,000', 2, 4);
+  cx.globalAlpha=1; cx.fillStyle='#E0A420'; cx.fillText('8,000', 0, 0);
+  for(let i=0;i<170;i++){ cx.fillStyle='rgba(242,236,224,'+(0.30+AK.rng()()*0.5)+')';
+    cx.fillRect(-118+AK.rng()()*236, -34+AK.rng()()*68, 2+AK.rng()()*4, 1+AK.rng()()*3); }
+  cx.restore();
+  // halftone screen, lower right, texture only and never under a text block
+  for(let y=1214;y<H;y+=13){ for(let x=612;x<W;x+=13){
+    const d=Math.min(1,((y-1214)/150+(x-612)/430)*0.80);
+    const r=1.0+d*3.6; cx.fillStyle='rgba(127,168,196,.42)';
+    cx.beginPath(); cx.arc(x+((y/13)%2)*6.5, y, r, 0, 7); cx.fill(); } }
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.075,bloom:0.0,dither:true}); }catch(e){} }
+  AK.fitText(document.getElementById('head'),{min:52,max:70,maxLines:3});
+  resolve();
+});
+</script></body></html>

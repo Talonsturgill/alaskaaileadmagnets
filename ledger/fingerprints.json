@@ -58,6 +58,57 @@
    ],
    "note": "Case File No. 2, the deck the maintainer REJECTED. Recorded deliberately, and it is the most important entry in this file: it is the look no future run may reproduce. Measured at 0.978 median pairwise image correlation, 0.565 median layout overlap and a 0.059 value arc. Recorded here rather than via its own run branch so the cross-run engine remembers it regardless of what happens to that branch.",
    "outcome": "rejected"
+  },
+  {
+   "run_date": "2026-08-15",
+   "case_file_no": 2,
+   "slides": [
+    {
+     "name": "slide-01.html",
+     "mode": null,
+     "fp": "JyYmIE0sCSIjIiEhISEhIC0tKjBcHggfKScmJR8bHSQyMjEwLi4lLS0rKikkHyEnNjQ1NTItJisrLTAvLy8uKjo6MyowVzoxTDEgIiIiISpWUD91sNLJtr5vBhkcEAkqFzrA187Hyc3MWwkhMRYOKS06bpioqKmeXhEGCQsJCg0oIx0nSW9iMB8jHx0XFRYVKC4vLiUjJiMiIyIiHycpJRF1jaF9gKGbemRqfoSWeAwOV1FCQUdWWExKQFhITjQNCmhsVIR1hn2FiGaObH5HAwhCWlRbSV5gPnlXWjcLEAwIYHh0fF1WdWlzb3dVBwwMDQAAAAAAAQAEAAAABA0MDAwYGBgXGBARDhAQEA8LDAwMISUiJCckIyMlICMjEw0MDBQZGhYZGA4QEA8REBEODAwLCwsLCwsLCwsLCwsLDAw="
+    },
+    {
+     "name": "slide-02.html",
+     "mode": null,
+     "fp": "EREREREREREREREREhIRERISEhISEhISEhIRDxATExIUFBMUFBQUFBQUEhk/VTcYFhUVFRUVFRUUFRIid69iHBYUFBUUExQVGRwfKVNqSSMVGx8fJigfJTYwJSQuPTUtFSEnICUnISEhIR8bKTo2MRUSExQSEhQVGB8kKjxBOzMUExMTExQTFh8mLjY7PjkyGxcZGhgYFxgdIygsMDIzLhInJCUcGhshHxwcHx0YERIMSmVaZV5eW0tMTVRXOAsRDz1QSkhCUysFCwsKCQ0REBAeHx8fIR4iJiYkIycYDxAPKCwoLiwrKyonKy0rEhAQDyUqKCspKiooKykuLBYPEBAkKSgoKRwcHR4dHRgPEBAQICMfICQaGRgaGhgbGxUQDx4aFRYXFxkYFxcYGBYQEBAQDw8PDw8ODg8ODg4PEBA="
+    },
+    {
+     "name": "slide-03.html",
+     "mode": null,
+     "fp": "8vHw8PDv7+/u7u7u7vLZz/Lv7u3s9vX29/X18ezt1s/2zKi6sbTOxbbBya/M9dTP98agtJ2eoKebmqzX2/PUz/bGmJnC3dLO18/S9vDv1c/y39DR6vn3+Pb39ezs79XP8ejm5+De39zd3d3q7O7Vz/Ldz9DN0tLQ0c7f7evt1M/x39TV1NHW1dTS4+zp7NTP8d3N0dHO0dHR0ubs6erUz+/m4OHi397h4d/p4+Xp09Dt8fHw8vLv6+vq3N3d5NTQ97HBwIiJwe7o2NfYx83Uz/LLwsayr9Lr6NfR2NDQ0tDt5Nbb3t/Z5eTj2tzY3dPQ7dvNz83V4eTk4+Db3OHR0Ore1tvX19jS0t3h4d/f0dDp3NbW2N/e3Nzd397d3tHP5ubl5OPi4eDg3dvZ19bKyeTj4uHg4N/e3dnW1NLSyMg="
+    },
+    {
+     "name": "slide-04.html",
+     "mode": null,
+     "fp": "DA0NDQ4NDg4NDg4MDA0NDAwQEQ0EBgUFBgQFCQ8TEQwKS0s9XkVORV1VTB0IDQwMClJjXi0bIR8hKSISCw0MDAwjISMKBQYGBQQFCQoKDAwLGBkbHyAfISIgISAhIRELDCEoKSUjJyspKSomKCoaCgsiKSgkJiQgICAhHSAiFAsMGBsaGRwSDA4NDQ4ODg0MCxwdGx4eHx4aGh0ZHBgQCw4VFxQUFRYTDg8PDw4ODQ4ODxISEhIREhMTEBMPEBAODhAQExUOExAHBwoTCQUKDwkgT0tLTEtLSlMpGjdKIAkJHDs4ODg4ODg4REk8VjsPDQkCAwMDAwMEACZHHAkSEAsLDQwMDAwMDAoeMR4XCwoLDQwNDgwMDw8PGRsdGQ0LCyUqJysoKiAaHRoaGxsSCwwRExMSExMMCQoKCgoKCww="
+    },
+    {
+     "name": "slide-05.html",
+     "mode": null,
+     "fp": "8vHx8fDw8PDv7+/u7ezs7PHx7+/v7+7v7+/u7uvl5uvw8fT09PPz7+7s7ezr7e3r8e3Z2NjY1uvq3+De4tfk7PTdmJybm5fm3pSSlZiI1+/z3Jufnp6b6Nl9gYCAfNzt89qVmZiYlOfYe35+fnfa7vDfs7W1s7Xo26Chop6h4Oft6d3g3eHu6+fe4Nzp7+jn7NbKzsnO0tTRysrJzNzp5+vSzs/Rz9DPz87R083Q5Obr2NLT09nn5uXk4uPj4+Tl68/Ex8PHwMLBxMHHwNHo5OrFvMXJx8fKyMnIy8PU5+Pp1c7U4t/f3dzd3d7b3uTk6OPe3trh39vd39/f3t3k4+nGyLnHysjMv7++w8Hh5OLprJWQpI+SkqPCwL++3+Pi5czGy87HysPY7unq6uPi4uXr7Orp6+rr5eDh4eDi4uI="
+    },
+    {
+     "name": "slide-06.html",
+     "mode": null,
+     "fp": "5eXl5OTj4+Pj4uHh4N/f4OXk5OPj4+Hc29zj5OHd297k4+Pj4uPcr6OioKWorNzf4+Pi4uHj2pqyure4tLPV3+Li4eHg4N3B1+Dd3t3d3Nzh4eHh4eLbxr65vLi6ts/e4tqmpKHM383U2dnY19ja2+LXioeBvd/AwcTFxsTH2drh1oiFgL7fycjGyc3W1NjZ4NaSj4i74dfd393d3NzZ2N7Xs7Onvd3DxsfHxsbH1dje1Z2al8TawczNzM3LydLX3Ni+vbvN2c7U1dTS2djW1tvZ0dHQ1NXAv8C8vsDG09ba2tfX1tbUu726urq9ztHU2dnX1tbY1cDGz8zLzMvN1NrNx8nGx8bDyMjJyMPH0NPYzsnNycbJyMvQ0M7N0NLS19fX1tfW1dXV1NPT09LS0tbV1NTU09PT0tLS0tLS0tI="
+    },
+    {
+     "name": "slide-07.html",
+     "mode": null,
+     "fp": "DAsMDAwNDQwMDAwMDQ0NDA0WDhEPBgkMCwoKCg0SEQwKPkFOREs3BxwhHiAgDgsMCkRQWkpYJgMkKygoJiQQCwpOXExgUy0THiUmJSMqFAoKNTs1OTRFHR0lIyUnJxoLDAYGBwYHBAgkJyYmJigYCwwMCwsLCwwKHyMjKCEUFAsLGhsbHxsUGBgbGx0fFBMMCUttfoB3KRYXIhIgHBUjDQwqMjMzMSMhIiIgIiEiIQ0MEhEQEBATFBYTFBMUFhAMChs2Njc4NjEyNjM6MzQeCgkeOSspListKi8qKy8tJgsLICgbHBoUFBYTFhQVGQ8LDB8iIyYhFxgaGhkcGg8NDAsiKSMmKCcmKyUbIB8NCwwMGyEgHxwbHR0aFhYYFwwMDBMTExQREhMRExQTFRUNDAwLCgoKCwsKCwoKCgoKDAw="
+    },
+    {
+     "name": "slide-08.html",
+     "mode": null,
+     "fp": "EBAPEBAQEhISEhISEhEREBERFBMVEw0LCgsLCAwVEhESEy5GQko9TEI8RD0xDxQREhY0a15cW2ZlXmRiLhkcEBEYHCsmIiQlJSMlKg8UGxESGhooKSYoKCclJCgQExoTEhkbKSUjKSknJycoGRQbEhIZHCkoKSwpKSgqKisWFxISGh0fFRkXGRgaGBgYGRsTFR0bJhkOEA8OEBAPDBUdExQdITY3NjY3NTU1OC4WGhISGBkgGyEaFxgXGBgSFBoSERYaKSgqJiYoHhoZDxQbEREXITovNDMyMy4yMyoTFxAPGBwrJB0dHR4gIB4aExgQDxYZJyQeHSIgHiAfGRMXDg4TGCUjJSIbGxgaGhARFQ0MFBciHx8dHh0bHhsZERMLDBYWGRobFxsaGxkTEhMVCw0QEA8PDw8PDg4PEBAREQ0="
+    },
+    {
+     "name": "slide-09.html",
+     "mode": null,
+     "fp": "DAwNDQ0NDg4ODg4ODQwMDAwRDw8NDQYFBQUEBAcMDAwMQkVJPUpRRURSSVtQCA0MCk1nZlZkaVcfISIkHQsMDAsiLC8rKCsjBgcGBggMDAwMCQYGBwcGCA4ODg8MCwwMCyQqKSgpJyopKScrHw0MDAwgHx8gHQ8ODg8ODA4ODAwKGTc1MjMyMTIwLjcwDQwMCR9IQUA5OD9GKBUZGAsLDAoPDQ4NFSITDA4LEhITEQoIFCMjGk+af3Z2e0gkRxcJCRQhIRhRoJqemqdYFycZCQkVIyMfNFBLSkpONR4kGwkJDhUREhEJCg4MCxIVFA0JCxUWFBQXFhcQCwsLBgkfCgwgJiMiIyMhEAwNCyE6MgsLHBYRFBEQEQ4MDBEdIxoMDBISEBUQCgsMDAwLCwwNDAwLCwsLCwwMDAwMDAwMDAw="
+    }
+   ]
   }
  ]
 }

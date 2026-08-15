@@ -72,3 +72,54 @@ What it means in practice:
   correct as emitted and gets passed through unmodified.
 
 Unchanged: this routine drafts and never sends.
+
+## 2026-08-15 — Case File 002, The Wilson Companies
+
+**The bank woke empty.** Sixteen entries, zero ship-ready, not one with a
+disclosed cost. Two restock waves and seven scouts were needed before a case
+existed. That is the single biggest schedule risk this routine carries and it
+is structural, not an accident of lazy past runs.
+
+**Every hunting ground carries exactly one half of what the filter needs, and
+never the same half.** Trade press names the operator and omits the price.
+Public record names the price and omits the deployment. Vendor libraries
+describe the build and omit both. The one ground that delivered BOTH was an
+operator-to-operator podcast, where peers disclose casually because the
+audience would smell a dodge.
+
+**Four scouts independently surfaced the same company and independently killed
+it for the same reason.** CJB Industries' disclosed 300,000 dollars bought a
+data historian and a quality system, and the actual AI was still in future
+tense on a page updated April 2026. Convergent kills raise confidence. Read the
+verbs, "expects to" is not a result.
+
+**The runner-up died on the cost gate and there was no fallback.** Grand Island
+Express was excellent on every other axis. The most cost-candid format in
+trucking contains the words cost, price, paid and dollar exactly zero times.
+The run proceeded on one case with no safety net, which was survivable this
+time and should not be relied on again.
+
+**The fact-checker killed the briefed hero numbers and the case got better.**
+The operator refuses the AI attribution on his own headcount drop twice, naming
+a compensation change. What survived is smaller and more copyable: the cut came
+out of overnight and weekend coverage while his people still answer nine calls
+in ten inside seven seconds. A confound volunteered by the person who did the
+project is more credible than a clean number.
+
+**The honesty gate earned its position before the art.** It caught a quantified
+Anchorage weather claim ("eleven nights a year") that was our analysis wearing
+the clothes of a fetched fact, in front of the one audience with personal
+counter-evidence. That number was already hard-coded into the slide 8 art spec.
+Had the gate run after the build, the fix would have been a retrofit.
+
+**A gate that cannot see cannot judge.** render.py truncated every reported text
+node to 80 characters, so coherence_check could not verify any authored sentence
+longer than that and failed 58 fidelity checks on correct copy. Fixed to 600.
+When a gate fails loudly on work you believe is right, suspect the gate's
+instrument before you suspect the work.
+
+**Layout yields to copy, and it costs something.** A pixel critic called slide
+8's covered particle field the deck's worst craft defect and proposed opening a
+full-bleed band. That would have meant deleting the honest limit, the rung 1
+answer, or the Monday action. The copy stayed and the weaker art shipped,
+recorded here rather than hidden.

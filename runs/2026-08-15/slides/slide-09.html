@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#080D14;}
+ body{position:relative;}
+ #art{position:absolute;left:0;top:700px;width:1080px;height:340px;}
+ .kick{position:absolute;left:80px;top:96px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#FFC72C;letter-spacing:.16em;}
+ .head{position:absolute;left:80px;top:146px;width:900px;height:220px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:90%;
+   color:#F4F8FF;line-height:1.03;letter-spacing:-.015em;}
+ .body{position:absolute;left:80px;top:400px;width:850px;height:150px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:32px;line-height:1.40;color:#C6D2DE;}
+ .ask{position:absolute;left:104px;top:566px;width:840px;height:120px;font-family:"Bricolage Grotesque",sans-serif;
+   font-weight:700;font-stretch:90%;font-size:42px;line-height:1.10;color:#F4F8FF;border-left:4px solid #FFC72C;padding-left:22px;box-sizing:border-box;}
+ .offer{position:absolute;left:80px;top:1042px;width:490px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:29px;line-height:1.34;color:#E2A03F;}
+ .srcline{position:absolute;left:80px;top:1214px;width:480px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;color:#9AA8B6;letter-spacing:.06em;}
+ .bwrap{position:absolute;left:600px;top:1040px;width:400px;height:230px;text-align:right;}
+ .logo{width:60px;height:auto;display:inline-block;}
+ .mark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-stretch:88%;font-size:34px;color:#F4F8FF;letter-spacing:.02em;margin-top:6px;}
+ .site{font-family:"JetBrains Mono",monospace;font-size:24px;color:#9AA8B6;letter-spacing:.10em;margin-top:6px;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#9AA8B6;letter-spacing:.10em;margin-top:10px;}
+</style></head><body>
+<canvas id="art" width="2160" height="680" style="width:1080px;height:340px;"></canvas>
+<div class="kick" data-zone="HEAD">CASE FILE NO. 002</div>
+<div class="head" id="head" data-zone="HEAD">Put the machine on the shift nobody wanted.</div>
+<div class="body" data-zone="BODY">Wilson kept his people on the day shift and stopped paying anybody to sit up all night waiting for a call. That was the whole project.</div>
+<div class="ask" data-zone="BODY">Save this one for the next time somebody pitches you an AI call center.</div>
+<div class="offer" data-zone="FOOTER">We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.</div>
+<div class="srcline" data-zone="FOOTER">Sources in comments</div>
+<div class="bwrap" data-zone="BRAND">
+  <img class="logo" src="@@ASSETS@@/alaskaaipic.png" alt="Alaska.Ai">
+  <div class="mark">ALASKA.AI</div>
+  <div class="site">alaskaaihq.com</div>
+  <div class="cnt">&#10022; 09 / 09</div>
+</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=340;
+  cx.fillStyle='#070b11'; cx.fillRect(0,0,W,H);
+  // 168 cells, one per hour of a week. Day-shift weekday cells are filled.
+  // Night cells and every weekend cell are hollowed to outline. The thesis,
+  // drawn as a shape, with no sentence underneath it.
+  const X0=126, Y0=34, CW=34, CH=32, GAP=2;
+  cx.fillStyle='rgba(0,0,0,.55)'; cx.fillRect(X0-14+6,Y0-14+10,24*(CW+GAP)+20,7*(CH+GAP)+20);
+  cx.fillStyle='#101a24'; cx.fillRect(X0-14,Y0-14,24*(CW+GAP)+20,7*(CH+GAP)+20);
+  cx.fillStyle='#1b2a37'; cx.fillRect(X0-14,Y0-14,24*(CW+GAP)+20,2);
+  for(let d=0;d<7;d++){
+    for(let h=0;h<24;h++){
+      const x=X0+h*(CW+GAP), y=Y0+d*(CH+GAP);
+      const weekend=(d>=5);
+      const day=(h>=7 && h<18);
+      const gold=(d===1 && h===21);            // the one gold cell, 9pm Tuesday
+      if (gold){
+        cx.fillStyle='#FFC72C'; cx.fillRect(x,y,CW,CH);
+        cx.fillStyle='#c9971c'; cx.fillRect(x,y+CH-3,CW,3);
+      } else if (day && !weekend){
+        cx.fillStyle='#7FA8C4'; cx.fillRect(x,y,CW,CH);
+        cx.fillStyle='rgba(255,255,255,.10)'; cx.fillRect(x,y,CW,2);
+      } else {
+        cx.strokeStyle='#3C5364'; cx.lineWidth=1.5;
+        cx.strokeRect(x+0.75,y+0.75,CW-1.5,CH-1.5);
+      }
+    }
+  }
+  // the lattice gets a literal anchor and one annotation, per DESIGN_DOCTRINE 9.4
+  cx.fillStyle='#7FA8C4'; cx.font='400 21px "JetBrains Mono", monospace'; cx.textAlign='right';
+  ['M','T','W','T','F','S','S'].forEach((d,i)=>cx.fillText(d, X0-14, Y0+i*(CH+GAP)+CH*0.72));
+  cx.textAlign='center'; cx.fillStyle='#5E7C93';
+  [[0,'12A'],[6,'6A'],[12,'12P'],[18,'6P']].forEach(([h,s])=>
+    cx.fillText(s, X0+h*(CW+GAP)+CW/2, Y0+7*(CH+GAP)+30));
+  const gx=X0+21*(CW+GAP)+CW/2, gy=Y0+1*(CH+GAP);
+  cx.strokeStyle='#FFC72C'; cx.lineWidth=1.5;
+  cx.beginPath(); cx.moveTo(gx,gy-4); cx.lineTo(gx,gy-26); cx.lineTo(gx-92,gy-26); cx.stroke();
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.045,bloom:0.18,dither:true}); }catch(e){} }
+  const chip=document.createElement('div');
+  chip.setAttribute('data-zone','ART'); chip.setAttribute('data-knockout','');
+  chip.style.cssText='position:absolute;left:498px;top:'+(700+gy-52)+'px;font-family:"JetBrains Mono",monospace;'
+    +'font-size:24px;color:#FFC72C;background:#0a0f17;padding:5px 10px;border-radius:3px;white-space:nowrap;';
+  chip.textContent='9PM TUESDAY, THE MACHINE PICKS UP'; document.body.appendChild(chip);
+  AK.fitText(document.getElementById('head'),{min:52,max:72,maxLines:2});
+  resolve();
+});
+</script></body></html>
