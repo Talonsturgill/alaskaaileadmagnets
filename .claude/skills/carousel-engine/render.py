@@ -103,7 +103,11 @@ IN_PAGE_QA_JS = """
     if (cs.display === "none" || cs.visibility === "hidden" || parseFloat(cs.opacity) === 0) continue;
     const r = el.getBoundingClientRect();
     if (r.width === 0 || r.height === 0) continue;
-    const txt = el.textContent.trim().replace(/\\s+/g, " ").slice(0, 80);
+    // 2026-08-15: was slice(0,80). The coherence gate matches AUTHORED SENTENCES
+    // against this string, so an 80-char cap made every sentence longer than that
+    // structurally unverifiable and the gate failed decks whose copy was correct.
+    // Every other consumer re-slices for display only, so widening is safe.
+    const txt = el.textContent.trim().replace(/\\s+/g, " ").slice(0, 600);
     const fs = parseFloat(cs.fontSize);
     const fam = cs.fontFamily.split(",")[0].trim().replace(/["']/g, "");
     // For SVG text the ink is `fill`, not CSS `color`; the fill attribute or
