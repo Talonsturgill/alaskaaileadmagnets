@@ -3,8 +3,8 @@
   "warns": [
     "slide 5 role 'THE CURRICULUM' is outside the grammar",
     "slide 1: numeral 002 on the slide traces to no claim in claims.json",
-    "slide 8: numeral 5,000 on the slide traces to no claim in claims.json",
     "slide 8: numeral 1,500 on the slide traces to no claim in claims.json",
+    "slide 8: numeral 5,000 on the slide traces to no claim in claims.json",
     "slide 9: numeral 002 on the slide traces to no claim in claims.json"
   ],
   "slides": [
@@ -57,8 +57,8 @@
       "file": "slide-08.html",
       "fails": [],
       "warns": [
-        "numeral 5,000 on the slide traces to no claim in claims.json",
-        "numeral 1,500 on the slide traces to no claim in claims.json"
+        "numeral 1,500 on the slide traces to no claim in claims.json",
+        "numeral 5,000 on the slide traces to no claim in claims.json"
       ]
     },
     {

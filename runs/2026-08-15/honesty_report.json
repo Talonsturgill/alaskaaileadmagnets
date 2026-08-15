@@ -1,0 +1,22 @@
+{
+  "run_date": "2026-08-15",
+  "gate": "case-critic",
+  "verdict": "REVISE then applied",
+  "required_fixes": 15,
+  "all_applied": true,
+  "caught": [
+    "unsupported 'at night' scoping of the 8,000 on the cover and in the caption",
+    "an acquisition detail asserted as fact with no verbatim support, now attributed to the speaker",
+    "a quantified Anchorage weather claim ('eleven nights a year') that was our analysis wearing the clothes of a fetched fact, de-quantified to 'a handful of nights'",
+    "the receipts headline led with the source's uncertainty instead of the win, which made the keepable slide a picture of our doubt",
+    "a merged vendor/owner timeline that read as one figure",
+    "the agent-washing correction was missing the generosity clause that AGENTIC_LITERACY requires",
+    "a staffing row that reintroduced by implication the attribution the operator refuses"
+  ],
+  "declined": "The c10 booking-rate yardstick on slide 8. The critic itself flagged it as the one place hard ban 3 could re-enter and the run held that line.",
+  "flow_critic": {
+    "verdict": "SHIP",
+    "required_fixes": 0,
+    "note": "Nine slides, zero removable, zero reorderable, every loop paid, vocabulary lock held, honesty spine held."
+  }
+}

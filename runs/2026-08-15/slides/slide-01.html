@@ -58,18 +58,42 @@ window.renderReady = (async () => {
                   ambient:{color:0x0e151f,i:0.6} });
       AKT.ground(R,{color:0x121b26,y:0,roughness:0.80});
       const g = new THREE.Group();
-      const paper = AKT.mat.clay(0xE8DDC2,{roughness:0.94});
+      // the bill, printed to a CanvasTexture so the desk lamp lights the figure
+      const inv=document.createElement('canvas'); inv.width=560; inv.height=720;
+      const ic=inv.getContext('2d');
+      ic.fillStyle='#E8DDC2'; ic.fillRect(0,0,560,720);
+      for(let i=0;i<11000;i++){ ic.fillStyle='rgba('+(Math.random()>.5?'120,105,80':'255,252,244')+','+(0.03+Math.random()*0.08)+')';
+        ic.fillRect(Math.random()*560,Math.random()*720,1,1); }
+      ic.fillStyle='#1A1712'; ic.fillRect(52,66,340,8);
+      ic.font='700 27px monospace'; ic.fillStyle='#3A342B';
+      ic.fillText('ANSWERING SERVICE', 52, 126);
+      ic.strokeStyle='rgba(185,116,74,.40)'; ic.lineWidth=2;
+      for(let y=182;y<=470;y+=52){ ic.beginPath(); ic.moveTo(52,y); ic.lineTo(508,y); ic.stroke(); }
+      ic.font='400 23px monospace'; ic.fillStyle='#5A5348';
+      ['AFTER HOURS','WEEKENDS','OVERFLOW'].forEach((s,i)=>ic.fillText(s,60,214+i*52));
+      ic.textAlign='right';
+      ['','',''].forEach(()=>{});
+      ic.fillText('MONTHLY', 508, 370);
+      ic.textAlign='left';
+      ic.strokeStyle='#1A1712'; ic.lineWidth=3;
+      ic.beginPath(); ic.moveTo(52,540); ic.lineTo(508,540); ic.stroke();
+      ic.font='700 86px monospace'; ic.fillStyle='#1A1712';
+      ic.textAlign='right'; ic.fillText('8,000', 508, 630);
+      const invTex=new THREE.CanvasTexture(inv);
+      invTex.anisotropy=4;
+      const paper = new THREE.MeshStandardMaterial({map:invTex,roughness:0.94,metalness:0});
+      const paperPlain = AKT.mat.clay(0xE8DDC2,{roughness:0.94});
       // the invoice, square to the desk, with one corner lifted and curling
       const sheet = new THREE.Mesh(new THREE.BoxGeometry(2.5,0.03,3.3), paper);
       sheet.position.set(-0.62,0.015,0.30); sheet.rotation.y=-0.16; g.add(sheet);
-      const curl = new THREE.Mesh(new THREE.BoxGeometry(2.5,0.028,0.85), paper);
+      const curl = new THREE.Mesh(new THREE.BoxGeometry(2.5,0.028,0.85), paperPlain);
       curl.position.set(-0.50,0.17,-1.28); curl.rotation.set(-0.46,-0.16,0); g.add(curl);
       // a second sheet under it, so the stack has thickness
       const under = new THREE.Mesh(new THREE.BoxGeometry(2.44,0.022,3.2), AKT.mat.clay(0xd6cbb0,{roughness:0.95}));
       under.position.set(-0.56,-0.008,0.36); under.rotation.y=-0.13; g.add(under);
       // the phone, base plus cradle plus handset, the object that rings
       const steel = AKT.mat.steel({roughness:0.34,metalness:0.86,color:0x30404f});
-      const dark  = AKT.mat.plastic(0x0e1620,{roughness:0.46});
+      const dark  = AKT.mat.plastic(0x1c2836,{roughness:0.40});
       const ph = new THREE.Group();
       const base = new THREE.Mesh(new THREE.BoxGeometry(1.95,0.34,1.30), steel);
       base.position.y=0.17; ph.add(base);

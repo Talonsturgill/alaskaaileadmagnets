@@ -3,7 +3,13 @@
     {
       "file": "slide-01.html",
       "fails": [],
-      "warns": []
+      "warns": [
+        "canvas raster text 'ANSWERING SERVICE' drawn via fillText -- ships as a bitmap in the vector PDF (invisible to the LinkedIn ranker, copy_sync, and accessibility); move meaningful labels to DOM/SVG",
+        "canvas raster text 'AFTER HOURS' drawn via fillText -- ships as a bitmap in the vector PDF (invisible to the LinkedIn ranker, copy_sync, and accessibility); move meaningful labels to DOM/SVG",
+        "canvas raster text 'WEEKENDS' drawn via fillText -- ships as a bitmap in the vector PDF (invisible to the LinkedIn ranker, copy_sync, and accessibility); move meaningful labels to DOM/SVG",
+        "canvas raster text 'OVERFLOW' drawn via fillText -- ships as a bitmap in the vector PDF (invisible to the LinkedIn ranker, copy_sync, and accessibility); move meaningful labels to DOM/SVG",
+        "canvas raster text 'MONTHLY' drawn via fillText -- ships as a bitmap in the vector PDF (invisible to the LinkedIn ranker, copy_sync, and accessibility); move meaningful labels to DOM/SVG"
+      ]
     },
     {
       "file": "slide-02.html",
@@ -49,6 +55,6 @@
     }
   ],
   "fails": 0,
-  "warns": 1,
+  "warns": 6,
   "verdict": "WARN"
 }
