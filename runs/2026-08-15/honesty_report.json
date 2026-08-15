@@ -18,5 +18,9 @@
     "verdict": "SHIP",
     "required_fixes": 0,
     "note": "Nine slides, zero removable, zero reorderable, every loop paid, vocabulary lock held, honesty spine held."
+  },
+  "hostile_reply_test": {
+    "weakest_sentence": "Anchorage does not get a smooth overflow curve, it gets a handful of nights a year when every marginal furnace in town quits inside six hours.",
+    "survives": "yes, after the honesty gate de-quantified it from 'eleven nights a year', which was our analysis wearing the clothes of a fetched local fact in front of the one audience with personal counter-evidence"
   }
 }

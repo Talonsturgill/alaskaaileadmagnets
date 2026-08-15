@@ -38,5 +38,54 @@
     "Caption opened '200-plus' to '200 plus' to match slide 1 and house voice"
   ],
   "note_on_recompute": "The score was computed BEFORE the cover fix. The three changes since are strictly improvements to the two lowest-scoring criteria (artwork craft 7, thumb-stop cover 8) and to one copy-consistency defect. The number is therefore conservative and is NOT re-inflated here. Per the run contract, this is stated plainly rather than recomputed.",
-  "reader_verdict": "i_could_do_that"
+  "reader_verdict": "i_could_do_that",
+  "weighted_total": 8.16,
+  "ship": true,
+  "criteria": [
+    {
+      "name": "identification",
+      "score": 9
+    },
+    {
+      "name": "the door",
+      "score": 9
+    },
+    {
+      "name": "number survives thursday",
+      "score": 7
+    },
+    {
+      "name": "agentic literacy",
+      "score": 9
+    },
+    {
+      "name": "narrative coherence",
+      "score": 8
+    },
+    {
+      "name": "artwork craft",
+      "score": 7
+    },
+    {
+      "name": "variety",
+      "score": 7
+    },
+    {
+      "name": "translation",
+      "score": 9
+    },
+    {
+      "name": "thumb stop cover",
+      "score": 8
+    },
+    {
+      "name": "copy voice",
+      "score": 8
+    },
+    {
+      "name": "deliverable completeness",
+      "score": 8
+    }
+  ],
+  "editor_notes_for_email": "GATES. machine_qa PASS. layout_check WARN, 0 fails. variety_check WARN, 0 fails, median layout IoU 0.48, value arc 0.756. coherence_check WARN, 0 fails, 5 warns. logo_check PASS. caption_check PASS, 734 chars, hook 114. style_lint clean. assemble PASS, vector, 2.42 MB, 9 pages. No hard fails. THRESHOLD NOTE. 8.16 clears the 8.0 rung for a 3-plus revision run. Against the 8.3 base threshold for a 0 to 2 revision run this would be below by 0.14, so the count matters and it is recorded honestly rather than rounded up. THE NUMBER PREDATES THE LAST FIX. The scorer caught that the cover's printed invoice had never actually shipped, an edit anchor silently no-opped, and the ledger had recorded a technique that did not exist. That is now fixed and the cover carries a real bill. The three changes since scoring only improve the two lowest criteria, so 8.16 is conservative and is not re-inflated. KNOWN WEAKNESS. Slide 8's particle field is largely covered by its text plates. Opening it would have meant deleting the honest limit, the rung 1 answer or the Monday action, so the copy stayed and the weaker art shipped. THE CASE'S CEILING. Zero independent corroboration, six routes attempted. Every fact traces to the owner, the podcast he co-hosts, or his vendor, and both episodes carry vendor sponsor credits. The deck discloses this on slide 6 and in the first comment."
 }
