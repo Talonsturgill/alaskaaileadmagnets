@@ -102,9 +102,14 @@
       "loop": "does any of it survive the trip north"
     },
     {
-      "opened_on": 8,
+      "opened_on": 5,
       "closed_on": 9,
-      "loop": "what do I actually do Monday"
+      "loop": "they market always-on agents and an AI workforce, so what do I say the next time somebody pitches me one"
+    },
+    {
+      "opened_on": 8,
+      "closed_on": 8,
+      "loop": "what do I actually do Monday, closed on the same slide by the Monday action"
     }
   ],
   "uncuttable_roles": [
@@ -112,5 +117,6 @@
     "WHAT IT TOOK",
     "YOUR VERSION"
   ],
-  "honesty_spine": "Every number on every slide carries its label in the same breath. The dominant label is that these are the owner's own figures, said on a podcast he co-hosts, in episodes his vendor sponsors. There is no independent corroboration and the deck never implies there is. The cost after-figure is drawn and written as a BOUND, never as a point value."
+  "honesty_spine": "Every number on every slide carries its label in the same breath. The dominant label is that these are the owner's own figures, said on a podcast he co-hosts, in episodes his vendor sponsors. There is no independent corroboration and the deck never implies there is. The cost after-figure is drawn and written as a BOUND, never as a point value.",
+  "flow_critic": "SHIP, zero required fixes, 2026-08-15. Nine slides, zero removable, zero reorderable, every loop paid, vocabulary lock held, honesty spine held. Its paperwork correction is applied here, the deck closes the Monday loop ON slide 8 and slide 9 pays a longer-span loop opened by the vendor marketing language on slide 5."
 }
