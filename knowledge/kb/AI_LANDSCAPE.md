@@ -154,3 +154,34 @@ research lab every time, because Dana can only walk through a door their size.
 *(Appended by the upgrade-engineer each retro, with the URL that established
 each entry. This file goes stale fastest, so corrections here are worth more
 than anywhere else in the knowledge base.)*
+
+- 2026-08-15 (case file 2, retro scan): **adoption in the trades is broad and
+  shallow, and it is size-blind.** A Housecall Pro survey of over 400 US home
+  service contractors found "over 70% have tried AI tools" with "about 40% now
+  using AI actively in their businesses", and, the line that matters for our
+  reader, "From solo owner-operators to 50+-person companies, small shops are
+  embracing AI nearly as much as large ones." The named uses are "automating
+  marketing, customer service, scheduling and paperwork", not field work.
+  Source: https://www.pmmag.com/articles/106575-70-of-home-service-professionals-now-use-ai-to-cut-admin-work-not-field-jobs-housecall-pro-report-finds
+  (Housecall Pro's own page states it as "In 2025, over 70% of Pros in Housecall
+  Pro's survey reported using AI tools, with nearly 40% actively using AI in
+  their business",
+  https://www.housecallpro.com/resources/field-home-service-industry-trends/ ).
+  Vendor-run survey of its own customer base, so label it that way and never use
+  it as a fear line. It is useful as scale-orientation: Dana is not late.
+- 2026-08-15 (case file 2, retro scan): a platform-data number worth holding for
+  any after-hours story, from Housecall Pro's own booking data: "Across jobs
+  booked online on Housecall Pro, 41% come in after hours when many businesses
+  aren't responding actively." Source:
+  https://www.housecallpro.com/resources/field-home-service-industry-trends/
+  Platform-owner data about its own platform. Verify fresh before it ships.
+- 2026-08-15 (case file 2, retro scan): **the voice AI category is where
+  agent-washing is thickest right now.** Vendors market "always-on agents" and
+  an "AI workforce"; the shipped case's own vendor co-founder is on record that
+  the human-in-the-loop hybrid books better than full autonomy, which is a rung 4
+  answer. The honest line to teach: a voice system running fixed steps, wired
+  into ONE system of record, that stops and hands to a person when a caller gets
+  frustrated, is rung 4 and is usually the right buy. Rung 5 would mean the
+  system chooses its own steps and tools at run time, and nothing fetched this
+  run described that in field service. Source:
+  https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services

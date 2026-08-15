@@ -136,3 +136,27 @@ run got backwards.
 *(Appended by the upgrade-engineer each retro, with the URL that established
 each entry. Real disclosed figures are the most valuable thing this file can
 accumulate: every one of them makes the next run's smell test sharper.)*
+
+- 2026-08-15 (case file 2): **the incumbent cost is often the disclosable one.**
+  A 200-plus person Ohio home services group disclosed the price of what the AI
+  REPLACED, not what the AI cost: "we went from $8,000 a month to our answering
+  service to, I honestly don't actually know what Evoke could cost, but I
+  remember what 8,000 a month was." That is a real, operator-said, per-month
+  before-figure and it satisfies the cost gate honestly, with the denominator
+  named (the outside answering service only, not the internal 24/7 call centre).
+  Source: https://www.ownedandoperated.com/post/www-ownedandoperated-com-post-owned-and-operated-194---this-ai-transformed-customer-service--heres-how-avoca-did-it
+  **Scouting consequence:** when the AI price is unsayable, hunt the price of the
+  thing it displaced. Operators remember the invoice they used to pay.
+- 2026-08-15 (case file 2): a municipal utility's five-year computer-vision
+  asset-inspection contract came in at **248,000 dollars over five years, about
+  50,000 a year**, board approved and therefore public record. That is the first
+  hard multi-year SaaS figure this file holds for a vision deployment at a small
+  operator, and it sits well inside the "four-to-five-figure annual commitment"
+  band above rather than the six-figure one. Source:
+  https://wtvbam.com/2026/01/01/877163/ with the deployment described at
+  https://www.publicpower.org/periodical/article/coldwater-board-public-utilities-deploying-ai-prevent-grid-outages
+- 2026-08-15 (case file 2): the yield order in "where cost gets disclosed" above
+  is **wrong for this series and should be read as podcasts first.** Conference
+  talks and trade press interviews produced zero disclosed costs across seven
+  scouts; an operator-to-operator podcast produced one in a single query, and
+  public procurement produced the other. Everything else was silence.

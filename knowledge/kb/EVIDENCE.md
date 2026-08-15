@@ -193,3 +193,52 @@ each entry. See `README.md`.)*
 - 2026-07-25 (case file 2): a study described in secondary coverage as
   longitudinal across six health systems was, in its own methods section, a
   30 day pre/post survey. Read the methods section, every time.
+- 2026-08-15 (case file 2): **THE FETCH LAYER CAN FABRICATE. Treat it as a
+  hazard, not a tool.** On one long page the fetcher returned roughly eighty
+  bullet points that were not on the page, including invented statistics, in
+  fluent and plausible form. This nearly reached a slide. **The mitigation that
+  worked, and is now standing practice for any page longer than a few screens:**
+  ask narrow enumerated questions ("quote the full sentence containing each of
+  these words, and say NOT PRESENT if absent") instead of "summarise", and
+  cross-check every quoted string across TWO independent renderings of the same
+  URL before trusting it. Anything that survives only one rendering is labelled
+  SINGLE RENDERING and cannot carry a slide. Established across the fetches
+  behind https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services
+  and recorded per claim in `runs/2026-08-15/claims.json`.
+- 2026-08-15 (case file 2): **SEO poisoning of operator language is real and it
+  is new.** The exact disclosure phrases this knowledge base recommends ("what
+  it cost us", "we pay about", "paid for itself", "we spent about") now return
+  almost pure AI-vendor listicles. One scout measured 14 of 20 searches
+  returning zero fetchable operator pages; two others hit the same wall
+  independently. **The word "AI" poisons a cost query outright.** Search the
+  bottleneck plus the dollar figure with no AI word, then find the AI inside the
+  article; or find the deployment first and chase the company by name.
+  Reproduced in the retro's own frontier scan, where every generic query
+  returned vendor blogs such as https://www.retellai.com/blog/best-voice-ai-solutions-for-home-service-contractors
+  and https://superdupr.com/blog/ai-answering-service-home-services
+- 2026-08-15 (case file 2): **read the verbs.** Wave one killed at least three
+  otherwise-good stories whose every number was a projection stated ahead of
+  launch. "Expects to", "will", "anticipated" and "projected" are kills, not
+  numbers. Extension and MEP success stories in particular get written when the
+  engagement ends, which is usually before the AI reaches production. Established
+  on https://www.nist.gov/mep/successstories/2024/cjb-industries-chemical-manufacturer-enhances-efficiency-and-quality-ai
+  where the disclosed 300,000 dollars bought a data historian and a quality
+  system and the generative-AI work was still future tense on a page updated
+  April 2026.
+- 2026-08-15 (case file 2): **the agentic label and the measured number are
+  inversely correlated.** Across four scouts' reading, the deployments carrying
+  "agentic" in the headline named zero companies, zero numbers and zero costs,
+  and the deployments with real measured numbers called themselves nothing at
+  all. Useful as a smell test and as teaching. Same evidence base as the restock
+  notes in `runs/2026-08-15/restock_notes.md`.
+- 2026-08-15 (case file 2, retro scan): **in voice AI, almost every published
+  number is a CONTAINMENT number, and containment is not resolution.** The
+  distinction, stated plainly on a vendor CEO's own blog (label it as such):
+  "A call is contained if the customer hangs up. It's resolved if their problem
+  is fixed" and "Many vendors quote 'containment rate' (calls that don't reach a
+  human) rather than resolution rate (issues actually solved). These are not the
+  same number." Source: https://irisagent.com/blog/voice-ai-customer-service-2026-benchmarks/
+  (IrisAgent, written by its CEO and co-founder, sells the category; the page
+  cites no survey with a sample size). **The question to ask any voice AI case:
+  how many of those contained calls called back.** Booked-call and answer-rate
+  claims are the same trap in a different coat.
