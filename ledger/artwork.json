@@ -15,7 +15,11 @@
       "palette_family": "house dark arctic with gold",
       "type_pairing": "Fraunces display with Space Grotesk body and JetBrains Mono telemetry",
       "narrative_structure": "proof, receipts, translation",
-      "variance_dials": {"design_variance": 2, "visual_density": 2, "type_temperature": 3},
+      "variance_dials": {
+        "design_variance": 2,
+        "visual_density": 2,
+        "type_temperature": 3
+      },
       "new_techniques_logged": []
     },
     {
@@ -31,8 +35,44 @@
       "palette_family": "glacial river and sonar screen",
       "type_pairing": "Instrument Serif display with Archivo body and JetBrains Mono telemetry",
       "narrative_structure": "status quo, identification, arrival, reality check, receipts, catch, translation fork, seal",
-      "variance_dials": {"design_variance": 3, "visual_density": 3, "type_temperature": 4},
-      "new_techniques_logged": ["cf-spine shared panorama painter (assets/js/cf-spine.js)", "phantom dash grammar for proposed elements", "provenance stamp chip system", "fractured tally strokes as error admission"]
+      "variance_dials": {
+        "design_variance": 3,
+        "visual_density": 3,
+        "type_temperature": 4
+      },
+      "new_techniques_logged": [
+        "cf-spine shared panorama painter (assets/js/cf-spine.js)",
+        "phantom dash grammar for proposed elements",
+        "provenance stamp chip system",
+        "fractured tally strokes as error admission"
+      ]
+    },
+    {
+      "run_date": "2026-08-15",
+      "case_file_no": 2,
+      "slide_count": 9,
+      "hero_structure": "lamp-lit handset and invoice still-life, display knocked into the sodium falloff",
+      "atmosphere": "sodium lamp haze in a dark dispatch room with a cold window beyond",
+      "depth_technique": "cabinet-oblique relief racked against one PBR-lit focal object with real contact shadows",
+      "line_voice": "cased transit routing with junction dots and hop-overs on a four weight ladder",
+      "continuity_device": "seven tick threshold gate that changes shape each slide, plus a custody colour arc where blue means a person holds the call and amber means the machine does",
+      "hook_archetype": "artifact evidence hook",
+      "palette_family": "night dispatch board, copper and furnace flame",
+      "type_pairing": "Bricolage Grotesque display with Manrope body and JetBrains Mono telemetry",
+      "narrative_structure": "single call procedural, ring to resolution",
+      "render_ladder_top": "akthree",
+      "variance_dials": {
+        "design_variance": 4,
+        "visual_density": 3,
+        "type_temperature": 2
+      },
+      "new_techniques_logged": [
+        "akthree PBR desk still-life with the invoice printed to a CanvasTexture so the lamp lights the figure",
+        "the cost BOUND drawn as a gold dashed ceiling at exactly half the before bar with the region beneath fading out unresolved, so a range is drawn as a range and never faked as a point",
+        "undisclosed costs drawn as physical holes punched through a card, shaded so the near lip shadows the upper left interior and the lower right inner wall catches the light",
+        "custody colour law, blue while a person holds the call, amber while the machine does, gold only at the line where it changes hands",
+        "168 cell week lattice with night and weekend cells hollowed to outline, the thesis stated as a shape"
+      ]
     }
   ]
 }

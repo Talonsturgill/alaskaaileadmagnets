@@ -357,3 +357,26 @@ because knowing what does not work is half of what they came for.
 
 *(Appended by the upgrade-engineer each retro. Every entry names the URL that
 established it. See `README.md`.)*
+
+- 2026-08-15 (case file 2): **the after-hours front office (voice AI on the
+  inbound phone) is a live mid-market pattern and it fits our filter better than
+  most.** Shape: bought not built, onboarded from pre-built templates chosen by
+  business size and service type plus a customer-filled knowledge base, wired
+  into ONE system of record (a field service management platform) to book the
+  job, with a designed handoff to a human CSR when the caller sounds frustrated.
+  Rung 4. The displaced cost (an outside answering service) is usually
+  disclosable even when the new price is not, which is what makes this pattern
+  survive our hard cost gate. Established on
+  https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services
+  and https://www.ownedandoperated.com/post/www-ownedandoperated-com-post-owned-and-operated-194---this-ai-transformed-customer-service--heres-how-avoca-did-it
+  **The number to demand from any case in this pattern is the accept, override
+  or callback rate**, not the answer rate. See the containment-versus-resolution
+  entry in `EVIDENCE.md`.
+- 2026-08-15 (case file 2): **a confound volunteered by the operator is a
+  quality signal, not a defect.** In this run the owner twice refused to
+  attribute his own headcount drop to the AI, naming a compensation change
+  instead. The fact-checker killed the briefed hero number and the smaller
+  surviving claim (coverage moved off overnight and weekends while nine calls in
+  ten were still answered inside seven seconds) was more copyable and more
+  credible. Prefer the story where the operator argues against his own best
+  number. Source: same two episode pages as above.

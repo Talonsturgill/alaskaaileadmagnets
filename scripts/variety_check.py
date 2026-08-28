@@ -271,6 +271,15 @@ def check_within_deck(slides, out):
     med_i = float(np.median([p["layout_iou"] for p in out["pairs"]]))
     out["deck_median_image_corr"] = round(med_c, 3)
     out["deck_median_layout_iou"] = round(med_i, 3)
+
+    # The retro (VARIETY.md, "the closest pair, by eye") has to look at the two
+    # most similar slides. Until 2026-08-15 that number was printed to the
+    # console and never persisted, so the 2026-08-15 retro was handed the wrong
+    # pair from a hand read of pairs[]. Persist the ranking the console already
+    # computes, so the retro reads a number instead of scanning a matrix.
+    ranked = sorted(out["pairs"], key=lambda p: -(p["layout_iou"] + p["image_corr"]))
+    out["closest_pairs"] = ranked[:5]
+    out["closest_pair"] = ranked[0]["pair"] if ranked else None
     if med_c >= DECK_CORR_FAIL:
         out["fails"].append(
             f"deck median image correlation {med_c:.2f} >= {DECK_CORR_FAIL} — the contact "
@@ -404,7 +413,7 @@ def main():
     for w in out["warns"]:
         print(f"warn: {w}")
     if out["pairs"]:
-        worst = sorted(out["pairs"], key=lambda p: -(p["layout_iou"] + p["image_corr"]))[:5]
+        worst = out.get("closest_pairs") or []
         print("closest pairs:")
         for p in worst:
             print(f"    {p['pair']}  IoU {p['layout_iou']}  corr {p['image_corr']}  "

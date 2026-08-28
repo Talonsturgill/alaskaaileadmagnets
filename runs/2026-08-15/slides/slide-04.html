@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#080D14;}
+ body{position:relative;}
+ #art{position:absolute;left:0;top:690px;width:1080px;height:500px;}
+ .brand{position:absolute;left:660px;top:80px;width:340px;height:80px;text-align:right;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#7FA8C4;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:80px;top:96px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#FFC72C;letter-spacing:.16em;}
+ .head{position:absolute;left:80px;top:145px;width:740px;height:185px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:90%;
+   color:#F4F8FF;line-height:1.04;letter-spacing:-.015em;}
+ .body{position:absolute;left:80px;top:352px;width:920px;height:232px;
+   font-family:"Manrope",sans-serif;font-weight:400;font-size:31px;line-height:1.40;color:#C6D2DE;}
+ .src{position:absolute;left:80px;top:600px;width:920px;height:78px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.36;color:#8FA6B8;}
+ .rung{position:absolute;left:80px;top:1210px;width:920px;height:58px;
+   font-family:"Manrope",sans-serif;font-weight:700;font-size:30px;color:#E2A03F;}
+ .lbl{position:absolute;font-family:"JetBrains Mono",monospace;font-size:24px;
+   background:#0B1119;border:1px solid #24384a;border-radius:3px;padding:6px 10px;white-space:nowrap;}
+</style></head><body>
+<canvas id="art" width="2160" height="1000" style="width:1080px;height:500px;"></canvas>
+<div class="brand" data-zone="BRAND">
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#FFC72C"/></svg>
+  <div class="cnt">04 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD">THE BUILD</div>
+<div class="head" id="head" data-zone="HEAD">Nine calls in ten still get a person.</div>
+<div class="body" data-zone="BODY">Wilson wanted a seven second pickup and says his people hit it on nine calls in ten. The voice platform takes the tenth call and the whole night. Per Avoca's product description it writes the job into ServiceTitan, checks technician arrival times, and hands a heated caller to a person.</div>
+<div class="src" data-zone="BODY">The seven second pickup and the nine in ten are the owner's own figures. The ServiceTitan write and the handoff are Avoca's description of its own product.</div>
+<div class="rung" data-zone="FOOTER">Rung 4 on the ladder, a workflow. A person drew the steps, the machine does not pick them.</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+// ONE SOURCE OF TRUTH. The canvas draws from GEO and every DOM label reads the
+// same numbers. No coordinate is retyped anywhere (instinct i-006).
+const GEO={ TOP:690, GATE_Y:250, BAR_X:110, BAR_W:860, BAR_H:16,
+            CH_X:702, CH_W:132, CH_TOP:266, CH_H:196, BENCH_X:880, BENCH_Y:300 };
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=500;
+  const bg=cx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,'#0a1018'); bg.addColorStop(1,'#070b11');
+  cx.fillStyle=bg; cx.fillRect(0,0,W,H);
+  // hair weight, the rail bed grid
+  cx.strokeStyle='rgba(127,168,196,.10)'; cx.lineWidth=1;
+  for(let x=40;x<W;x+=36){ cx.beginPath(); cx.moveTo(x,40); cx.lineTo(x,GEO.GATE_Y-6); cx.stroke(); }
+  cx.strokeStyle='rgba(127,168,196,.045)';
+  for(let x=40;x<W;x+=36){ cx.beginPath(); cx.moveTo(x,GEO.GATE_Y+30); cx.lineTo(x,H-24); cx.stroke(); }
+  // the drop channel, machine custody, lit amber from inside
+  const ch=cx.createLinearGradient(0,GEO.CH_TOP,0,GEO.CH_TOP+GEO.CH_H);
+  ch.addColorStop(0,'rgba(232,98,58,.62)'); ch.addColorStop(1,'rgba(232,98,58,0)');
+  cx.fillStyle='#0d131c'; cx.fillRect(GEO.CH_X,GEO.CH_TOP,GEO.CH_W,GEO.CH_H);
+  cx.fillStyle=ch; cx.fillRect(GEO.CH_X,GEO.CH_TOP,GEO.CH_W,GEO.CH_H);
+  cx.strokeStyle='#E8623A'; cx.lineWidth=2;
+  cx.beginPath(); cx.moveTo(GEO.CH_X,GEO.CH_TOP); cx.lineTo(GEO.CH_X,GEO.CH_TOP+GEO.CH_H);
+  cx.moveTo(GEO.CH_X+GEO.CH_W,GEO.CH_TOP); cx.lineTo(GEO.CH_X+GEO.CH_W,GEO.CH_TOP+GEO.CH_H); cx.stroke();
+  // the raised bench on the far side, a real dimensional node with a cast shadow
+  cx.fillStyle='rgba(0,0,0,.55)'; cx.fillRect(GEO.BENCH_X+11,GEO.BENCH_Y+16,150,30);
+  cx.fillStyle='#20303e'; cx.fillRect(GEO.BENCH_X,GEO.BENCH_Y,150,30);
+  cx.fillStyle='#2c4152'; cx.fillRect(GEO.BENCH_X,GEO.BENCH_Y-7,150,7);
+  cx.strokeStyle='#7FA8C4'; cx.lineWidth=2; cx.strokeRect(GEO.BENCH_X,GEO.BENCH_Y-7,150,37);
+  // the gate bar, the threshold, the only gold. Seven ticks = seven seconds.
+  // the bar is cut where custody changes hands, so the tenth call falls through a
+  // real opening rather than through an asserted colour. Cabinet-oblique relief.
+  const segs=[[GEO.BAR_X, GEO.CH_X-GEO.BAR_X],[GEO.CH_X+GEO.CH_W, GEO.BAR_X+GEO.BAR_W-(GEO.CH_X+GEO.CH_W)]];
+  const OBX=12, OBY=-9;
+  for(const [sx,sw] of segs){
+    cx.fillStyle='rgba(0,0,0,.62)'; cx.fillRect(sx+6,GEO.GATE_Y+11,sw,GEO.BAR_H);
+    cx.fillStyle='#FFD966'; cx.beginPath();                       // top face
+    cx.moveTo(sx,GEO.GATE_Y); cx.lineTo(sx+OBX,GEO.GATE_Y+OBY);
+    cx.lineTo(sx+sw+OBX,GEO.GATE_Y+OBY); cx.lineTo(sx+sw,GEO.GATE_Y); cx.closePath(); cx.fill();
+    cx.fillStyle='#C79A1E'; cx.beginPath();                       // side face
+    cx.moveTo(sx+sw,GEO.GATE_Y); cx.lineTo(sx+sw+OBX,GEO.GATE_Y+OBY);
+    cx.lineTo(sx+sw+OBX,GEO.GATE_Y+GEO.BAR_H+OBY); cx.lineTo(sx+sw,GEO.GATE_Y+GEO.BAR_H); cx.closePath(); cx.fill();
+    cx.fillStyle='#FFC72C'; cx.fillRect(sx,GEO.GATE_Y,sw,GEO.BAR_H);   // front face
+    cx.fillStyle='#8a6a10'; cx.fillRect(sx,GEO.GATE_Y+GEO.BAR_H,sw,4);
+  }
+  for(let i=0;i<7;i++){ const x=GEO.BAR_X+70+i*((GEO.BAR_W-140)/6);
+    if (x>GEO.CH_X-14 && x<GEO.CH_X+GEO.CH_W) continue;
+    cx.fillStyle='#5c4408'; cx.fillRect(x+OBX*0.5,GEO.GATE_Y+OBY*0.5,4,GEO.BAR_H-4); }
+  // nine tokens ride over, one falls through. c16 drawn.
+  const overXs=[150,215,280,345,410,475,540,605,655];
+  cx.lineWidth=2;
+  for(const x of overXs){
+    cx.strokeStyle='rgba(127,168,196,.55)';                 // fine weight, token paths
+    cx.beginPath(); cx.moveTo(x,44); cx.lineTo(x,GEO.GATE_Y-22); cx.stroke();
+    cx.fillStyle='#7FA8C4'; cx.beginPath(); cx.arc(x,GEO.GATE_Y-30,13,0,7); cx.fill();
+    cx.fillStyle='#0a1018'; cx.beginPath(); cx.arc(x,GEO.GATE_Y-30,5,0,7); cx.fill();  // junction dot
+  }
+  const fx=GEO.CH_X+GEO.CH_W/2;
+  cx.strokeStyle='rgba(232,98,58,.85)'; cx.lineWidth=3;      // standard weight, the exception path
+  cx.beginPath(); cx.moveTo(fx,44); cx.lineTo(fx,GEO.CH_TOP+150); cx.stroke();
+  cx.fillStyle='#E8623A'; cx.beginPath(); cx.arc(fx,GEO.CH_TOP+150,15,0,7); cx.fill();
+  // and hands back to a person, the arc onto the bench
+  cx.strokeStyle='#7FA8C4'; cx.lineWidth=3; cx.setLineDash([9,7]);
+  cx.beginPath(); cx.moveTo(fx+16,GEO.CH_TOP+150);
+  cx.quadraticCurveTo(GEO.BENCH_X-40,GEO.CH_TOP+156,GEO.BENCH_X+56,GEO.BENCH_Y-12); cx.stroke();
+  cx.setLineDash([]);
+  cx.strokeStyle='rgba(127,168,196,.55)'; cx.lineWidth=1.5;   // leader from the plate to the path
+  cx.beginPath(); cx.moveTo(GEO.BENCH_X+56,GEO.BENCH_Y+30); cx.lineTo(GEO.BENCH_X+56,GEO.BENCH_Y+108); cx.stroke();
+  cx.fillStyle='#7FA8C4'; cx.beginPath(); cx.arc(GEO.BENCH_X+56,GEO.BENCH_Y-14,11,0,7); cx.fill();
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.045,bloom:0.26,dither:true}); }catch(e){} }
+  // DOM labels on knockout plates, positioned FROM GEO, never retyped
+  function lbl(text,x,y,color){ const d=document.createElement('div'); d.className='lbl';
+    d.setAttribute('data-zone','ART'); d.setAttribute('data-knockout','');
+    d.style.left=x+'px'; d.style.top=(GEO.TOP+y)+'px'; d.style.color=color;
+    d.textContent=text; document.body.appendChild(d); }
+  lbl('9 IN 10 ANSWERED BY A PERSON', 96, GEO.GATE_Y-118, '#7FA8C4');
+  lbl('SEVEN SECONDS', GEO.BAR_X+GEO.BAR_W-236, GEO.GATE_Y-52, '#FFC72C');
+  lbl('THE TENTH CALL', GEO.CH_X-16, GEO.CH_TOP+188, '#E8623A');
+  lbl('BACK TO A PERSON', 700, GEO.BENCH_Y+122, '#7FA8C4');
+  AK.fitText(document.getElementById('head'),{min:52,max:70,maxLines:2});
+  resolve();
+});
+</script></body></html>

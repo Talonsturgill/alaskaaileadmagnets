@@ -1,0 +1,219 @@
+{
+  "run_date": "2026-08-15",
+  "case_file_no": 2,
+  "slides": [
+    {
+      "n": 1,
+      "role": "COVER",
+      "kicker": "CASE FILE NO. 002",
+      "headline": "8,000 dollars a month for somebody else to answer the phone.",
+      "body": "Akron Ohio. Founded 1958. 200 plus people in the group.",
+      "labels": [],
+      "source_labels": [
+        "The 8,000 and the headcount are the owner's own figures, said on the podcast he co-hosts"
+      ],
+      "claims_used": [
+        "c01",
+        "c02",
+        "c03"
+      ]
+    },
+    {
+      "n": 2,
+      "role": "THE COMPANY",
+      "kicker": "THE COMPANY",
+      "headline": "They answered their own phones around the clock.",
+      "body": "Wilson Plumbing, Heating, Cooling and Electric started in Akron Ohio in 1958, the shop Ralph and Theresa Wilson opened. Third generation runs it now. Over 200 people across the group by the CEO's own account, spread over more than one location. And they answered their own phones 24 hours a day.",
+      "labels": [],
+      "source_labels": [
+        "Founding per the company's own site. Headcount by the CEO's own account, and it covers the whole group, not the Akron shop alone."
+      ],
+      "claims_used": [
+        "c01",
+        "c02",
+        "c07"
+      ]
+    },
+    {
+      "n": 3,
+      "role": "THE BOTTLENECK",
+      "kicker": "THE BOTTLENECK",
+      "headline": "8,000 dollars a month, on top of the desk they already staffed.",
+      "body": "John Wilson answered his own phones around the clock and still paid an outside answering service 8,000 dollars a month. He says the service got worse after it was acquired. \"I remember what 8,000 a month was,\" the owner said on the podcast he co-hosts.",
+      "labels": [],
+      "source_labels": [
+        "The owner's own figure, said on the podcast he co-hosts, in an episode his vendor sponsors"
+      ],
+      "claims_used": [
+        "c03"
+      ]
+    },
+    {
+      "n": 4,
+      "role": "THE BUILD",
+      "kicker": "THE BUILD",
+      "headline": "Nine calls in ten still get a person.",
+      "body": "Wilson wanted a seven second pickup and says his people hit it on nine calls in ten. The voice platform takes the tenth call and the whole night. Per Avoca's product description it writes the job into ServiceTitan, checks technician arrival times, and hands a heated caller to a person.",
+      "labels": [
+        "Rung 4 on the ladder, a workflow. A person drew the steps, the machine does not pick them.",
+        "9 IN 10 ANSWERED BY A PERSON",
+        "SEVEN SECONDS",
+        "THE TENTH CALL",
+        "BACK TO A PERSON"
+      ],
+      "source_labels": [
+        "The seven second pickup and the nine in ten are the owner's own figures. The ServiceTitan write and the handoff are Avoca's description of its own product."
+      ],
+      "claims_used": [
+        "c16",
+        "c17",
+        "c18"
+      ],
+      "notes": "The four uppercase strings are the diagram labels on the gate art, added to the record after the art build per NARRATIVE_COHERENCE rule 1, if a string is on a slide it is in the record."
+    },
+    {
+      "n": 5,
+      "role": "THE CURRICULUM",
+      "kicker": "THE CURRICULUM",
+      "headline": "The seller argued against his own product's autonomy.",
+      "body": "Avoca's co-founder Tyson Chen said full AI books about 5 percent lower than the hybrid with a person in it, and they steer bigger customers to the hybrid because every point of booking rate matters.",
+      "labels": [
+        "They market always-on agents and an AI workforce. This is a workflow with a person at the handoff, their own co-founder says that version books better, and for this job it is the right thing to buy.",
+        "Hybrid, a person in it",
+        "Full AI, no person",
+        "about 5 percent lower"
+      ],
+      "source_labels": [
+        "The 5 percent is Avoca's own aggregate across its customers, not a Wilson number. The marketing words are Avoca's own."
+      ],
+      "claims_used": [
+        "c13",
+        "c19"
+      ],
+      "notes": "The three short strings are the chart's direct end labels and the notch annotation, added to the record per NARRATIVE_COHERENCE rule 1."
+    },
+    {
+      "n": 6,
+      "role": "THE RECEIPTS",
+      "kicker": "THE RECEIPTS",
+      "headline": "The bill dropped by more than half and the day shift held.",
+      "body": "The invoice went away and so did the overnight and weekend shifts.",
+      "labels": [
+        "Before. 8,000 dollars a month to an outside answering service, on top of their own phones staffed 24 hours.",
+        "After. Less than half of that, and the owner said out loud he did not know the exact figure.",
+        "Where the cut landed. Overnight and weekend coverage, and daytime maybe tightened by two people. He credits the AI and a compensation change together, not the AI alone.",
+        "8,000 A MONTH",
+        "LESS THAN HALF"
+      ],
+      "source_labels": [
+        "Every figure here is John Wilson's own, said on the podcast he co-hosts, in episodes his vendor sponsors. No independent account of this deployment exists."
+      ],
+      "claims_used": [
+        "c03",
+        "c04",
+        "c07",
+        "c09",
+        "c23"
+      ],
+      "notes": "The two short strings are the bar labels pinned to the canvas, added to the record per NARRATIVE_COHERENCE rule 1. The digits 3,500 appear nowhere on this slide by design."
+    },
+    {
+      "n": 7,
+      "role": "WHAT IT TOOK",
+      "kicker": "WHAT IT TOOK",
+      "headline": "The vendor says two weeks. The owner says 90 days to get it good.",
+      "body": "Avoca says a standard onboarding runs about two weeks and takes 3 to 4 hours of your call center manager's time. That is the vendor's own process, not a measurement of Wilson's. Wilson says it took about 90 days to get it working well, and he hedged it.",
+      "labels": [
+        "Only the subscription layer is on the record. Integration, data readiness and change cost are not disclosed anywhere, so those are the three numbers to make a vendor put in writing before you sign.",
+        "Timing. A 90 day ramp started in mid August is working by mid November, ahead of heating season.",
+        "Somebody owns this by name, the CSR manager or the dispatch supervisor, with listening time on the calendar. A tool nobody's job includes gets turned off in the second quarter.",
+        "TIME, ON THE RECORD",
+        "COST, NOT DISCLOSED ANYWHERE",
+        "INTEGRATION",
+        "DATA",
+        "CHANGE"
+      ],
+      "source_labels": [
+        "The two weeks and the 3 to 4 hours are Avoca describing its standard onboarding. The 90 days is the owner's own estimate."
+      ],
+      "claims_used": [
+        "c14",
+        "c15"
+      ]
+    },
+    {
+      "n": 8,
+      "role": "YOUR VERSION",
+      "kicker": "YOUR VERSION",
+      "headline": "Put it where Wilson has it, on nights and weekends only.",
+      "body": "Mechanical, plumbing, restoration, property management and fuel delivery all run an after hours line. Anchorage does not get a smooth overflow curve, it gets a handful of nights a year when every marginal furnace in town quits inside six hours. Start on nights, weekends and overflow only.",
+      "labels": [
+        "Monday. Pull last winter's after hours recordings and count how many became booked jobs. Free, one afternoon.",
+        "Where it stops. This never became an AI call center. Wilson's own people still answer nine calls in ten.",
+        "Under a dozen after hours calls on a bad night, skip the AI. Use a written intake script, a phone tree that texts the on-call tech, and a booking page that works on a phone.",
+        "Roughly 1,500 to 5,000 dollars a month here for the after hours slice. It is usage priced, so model it on January and not April."
+      ],
+      "source_labels": [
+        "The nine in ten is the owner's own figure. The Anchorage dollar range and the cold snap pattern are our analysis, not fetched figures."
+      ],
+      "claims_used": [
+        "c16",
+        "c15",
+        "c07"
+      ]
+    },
+    {
+      "n": 9,
+      "role": "CLOSE",
+      "kicker": "CASE FILE NO. 002",
+      "headline": "Put the machine on the shift nobody wanted.",
+      "body": "Wilson kept his people on the day shift and stopped paying anybody to sit up all night waiting for a call. That was the whole project. Save this one for the next time somebody pitches you an AI call center.",
+      "labels": [
+        "We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.",
+        "Sources in comments",
+        "alaskaaihq.com",
+        "9PM TUESDAY, THE MACHINE PICKS UP"
+      ],
+      "source_labels": [],
+      "claims_used": [
+        "c07",
+        "c16"
+      ]
+    }
+  ],
+  "post_copy": "A 200 plus person family trades company in Ohio paid an outside service 8,000 dollars a month to answer the phone.\n\nThat is the owner's own figure, said on the podcast he co-hosts. They put a voice platform on nights and weekends, kept their people on the day shift, and stopped staffing the hours nobody wanted.\n\nThe deck covers the build, the before and after, what onboarding takes, and where this does not work here.\n\nWe do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.\n\nIf you run an after hours line, what does it cost you once you count the service, the on-call pay and the jobs that booked somewhere else?\n\n#HomeServices #FieldServiceManagement #AlaskaBusiness",
+  "hook_chars": 114,
+  "total_chars": 734,
+  "hashtags": [
+    "#HomeServices",
+    "#FieldServiceManagement",
+    "#AlaskaBusiness"
+  ],
+  "offer_line_included_once": true,
+  "first_comment": "Sources, primary first\n\nWilson Plumbing, Heating, Cooling and Electric, About Us, the company's own site, founding year and family ownership https://www.wilsonplumbingandheating.com/about-us\n\nOwned and Operated episode 194, 22 January 2026, John Wilson on the 8,000 dollar answering service, the cost after, the seven second pickup and the 90 day ramp. Operator self reported on a podcast he co-hosts, the episode carries an Avoca sponsor credit and a first person Avoca ad read by Wilson himself https://www.ownedandoperated.com/post/www-ownedandoperated-com-post-owned-and-operated-194---this-ai-transformed-customer-service--heres-how-avoca-did-it\n\nOwned and Operated episode 173, 23 January 2026, John Wilson on the overnight and weekend coverage, and Avoca co-founder Tyson Chen on the 5 percent and on standard onboarding. Operator self reported plus vendor, the episode carries an Avoca sponsor credit https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services\n\nOwned and Operated about page, John Wilson bio, company size self reported by the owner https://www.ownedandoperated.com/about\n\nAvoca, vendor marketing site, product description and positioning language https://www.avoca.ai/\n\nNo independent account of this deployment was found. Every figure here traces to the owner, the podcast he co-hosts, or his vendor, and the deck says so on the slides.\n\nMore case files like this one at https://alaskaaihq.com\n\nNumbers from your own after hours line are welcome in the thread, especially the ugly ones.",
+  "document_title": "Case File No. 002, The 8,000 Dollar Night Phone",
+  "aftercare": [
+    "Drafts arrive daily and you own the cadence. Tuesday to Thursday, 8 to 11am Alaska time is the strongest window for this one.",
+    "Paste the first comment source block within 60 seconds of posting, before the first reader gets there.",
+    "Reply to every comment in the first 90 minutes. Threaded author replies are the single biggest reach lever you have.",
+    "At 48 hours, note the saves and the offer line replies. Saves are the number that matters for a document post."
+  ],
+  "claims_used": [
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "c07",
+    "c13",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c23"
+  ],
+  "notes_for_showrunner": "WHAT IS DELIBERATELY ABSENT. The figure 3,500 appears nowhere in this record, on any slide or in the caption. The after number ships only as the bound, less than half of the 8,000, with the owner's own admission that he did not know the exact figure (c04). c05, c06 and c08 are excluded entirely, so nothing here says the AI cut the call centre from 18 to 10 or saved 30,000 a month. c10 is excluded, so nothing here connects the booking rate to Avoca. Zero missed calls does not appear. WORD BUDGETS. Slides 5, 6 and 8 run past 50 words once labels are counted, deliberately. Per NARRATIVE_COHERENCE rule 2, layout yields to this copy. If a box will not hold, re-lay the slide and come back to the copywriter, do not trim a label. UNIT NOTE. Slide 7 carries 3 to 4 hours, the only hours in the deck. It is the vendor's own unit for onboarding effort and it is what makes bought-and-configured concrete, so it is an intentional exception to the units lock, not drift. VOCABULARY HELD. After hours phone, voice platform, CSRs on the day shift, dollars per month, seconds, days. LABEL DISCIPLINE. Every slide except the close carries a source label, written to be rendered adjacent to the number, not as a footer block. Slide 6 carries the no independent corroboration line, which is the honest ceiling for the whole deck. CAPTION. Hook 117 characters, total 729, offer line once and verbatim from brand.yaml, no colons, no URLs, three hashtags.",
+  "honesty_gate": "REVISE applied 2026-08-15. All 15 required fixes applied verbatim. Optional improvements taken were the slide 7 named-owner label and the slide 6 body de-duplication. One optional improvement was DECLINED, the c10 booking-rate yardstick on slide 8, because the critic itself flagged it as the one place hard ban 3 could re-enter and the run holds that line.",
+  "revision_note": "Two copy edits applied after the pixel-critic pass and recorded here rather than only in the HTML. '200-plus' opened to '200 plus' to match house voice. 'tightened by two' gained the noun 'people' because the critic found it unreadable without one."
+}

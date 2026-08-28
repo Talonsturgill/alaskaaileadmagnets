@@ -1,0 +1,92 @@
+{
+  "run_date": "2026-08-15",
+  "case_file_no": 2,
+  "bank_id": "bank-017",
+  "branch": "tsturg/wonderful-bell-oy73k4",
+  "phases": {
+    "wake": "done",
+    "restock": "done",
+    "selection": "done",
+    "verification": "done",
+    "translation": "done",
+    "directors_room": "done",
+    "storyboard": "done",
+    "copy": "done",
+    "honesty_gate": "done",
+    "art_build": "done",
+    "review_loop": "done",
+    "coherence_gate": "done",
+    "assemble": "done",
+    "scoring": "done",
+    "ship": "done",
+    "upgrade": "done",
+    "gmail": "done",
+    "retro": "done"
+  },
+  "artifacts": {
+    "plan": "out/2026-08-15/plan.md",
+    "run_state": "out/2026-08-15/run_state.json",
+    "restock_notes": "out/2026-08-15/restock_notes.md",
+    "selection": "out/2026-08-15/selection.md",
+    "claims": "out/2026-08-15/claims.json",
+    "translation": "out/2026-08-15/translation.md",
+    "storyboard": "out/2026-08-15/storyboard.md",
+    "copy": "out/2026-08-15/copy.json",
+    "deck_signature": "out/2026-08-15/deck_signature.json",
+    "coherence": "out/2026-08-15/coherence.json",
+    "zones": "out/2026-08-15/zones.json",
+    "caption": "out/2026-08-15/caption.txt",
+    "render": "out/2026-08-15/render",
+    "final": "out/2026-08-15/final"
+  },
+  "incidents": [
+    "Bank at wake had 0 ship-ready cases of 16. Two full restock waves (7 scouts) were required.",
+    "Grand Island Express killed DEAD ON COST after an exhaustive dedicated chase. No runner-up exists for this run.",
+    "CJB Industries surfaced independently by 4 scouts and killed by all of them: disclosed 300k bought data plumbing, AI still future tense as of the page's April 2026 update.",
+    "MEP ground proven structurally barren: NIST's 1,067-story archive contains exactly 3 AI stories ever, none from 2026.",
+    "HAZARD: fetch layer fabricated ~80 bullet points on a long page. Mitigation (narrow enumerated prompts + two independent renderings) relayed to the fact-checker mid-flight.",
+    "CRAFT: r.jina.ai defeats the HTTP 403 wall on Randall-Reilly properties. Proven this run.",
+    "Fact-check verdict SHIP but the BRIEFED HERO NUMBERS WERE KILLED. Operator refuses the AI attribution on the 18-to-10 headcount cut twice, in two episodes, naming a compensation change and 'better practices'. The real story is that the cut came out of overnight and weekend coverage while humans still answer 9 calls in 10 within 7 seconds.",
+    "ZERO independent corroboration for the selected case. Six routes attempted. Every fact traces to the owner, the podcast he co-hosts, or his vendor's site, and BOTH episodes carry vendor sponsor credits. Deck must label every number in the same breath.",
+    "ENGINE FIX: render.py truncated every reported text node to 80 chars, which made the coherence gate structurally unable to verify any authored sentence longer than that. It was failing 58 fidelity checks on correct copy. Raised the cap to 600. All other consumers re-slice for display only, so widening is safe.",
+    "Variety failed on median layout IoU 0.52. Fixed by RECOMPOSING slides 5, 7 and 8 (headline moved to the bottom on 5, body to a right column on 7, narrowed centred column on 8), never by recolouring. Median now 0.48.",
+    "The scorer caught that the cover's printed invoice never shipped. An edit anchor did not match and .replace() silently no-opped, and ledger/artwork.json had already recorded the technique as new. Fixed after scoring, the ledger claim is now true. Silent no-op string replacement is a real hazard when patching slide code.",
+    "The upgrade engineer corrected a wrong number in my retro. Closest pair is 07 x 08 at IoU 0.657, not 08 x 09 at 0.545. The ranking was printed to console and never persisted, now fixed in variety_check.py."
+  ],
+  "gates": {
+    "machine_qa": "PASS",
+    "layout_check": "WARN (0 fails)",
+    "variety_check": "WARN (0 fails, median IoU 0.477, corr -0.005, arc 0.756)",
+    "coherence_check": "WARN (0 fails, 5 warns)",
+    "logo_check": "PASS",
+    "caption_check": "PASS",
+    "style_lint": "clean",
+    "assemble": "vector 2.42 MB, 9 pages"
+  },
+  "score": {
+    "weighted": 8.16,
+    "threshold": 8.0,
+    "verdict": "SHIP",
+    "note": "computed before the cover invoice fix, conservative, not re-inflated"
+  },
+  "critics": {
+    "honesty_gate": "REVISE, 15 fixes all applied",
+    "flow_critic": "SHIP, 0 required fixes",
+    "pixel_critics": "3 passes, FIX, applied"
+  },
+  "upgrades": {
+    "commit": "1399d57",
+    "applied": [
+      "style_lint.py refuses curly quotes and em/en dashes in every mode, plus a --render-dir mode that lints rendered text nodes",
+      "variety_check.py persists closest_pair and closest_pairs"
+    ],
+    "logged": [
+      "the mid-run render.py 80 to 600 text cap fix"
+    ]
+  },
+  "gmail_draft_id": "r8036838944633882583",
+  "gmail_to": "docket@alaskaaihq.com",
+  "pinned_sha": "adfc2a879cffb31574d96728d9cd231f52b096d4",
+  "pr": "https://github.com/Talonsturgill/alaskaaileadmagnets/pull/6",
+  "complete": true
+}

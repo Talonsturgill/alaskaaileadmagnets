@@ -6,16 +6,16 @@
       "learned": "2026-07-21",
       "instinct": "Fit display headlines with AK.fitText inside renderReady instead of hand tuned font sizes. Hand sized hooks wrap an extra line and collide with the block below.",
       "evidence": "Engine proof slide-01 failed QA exactly this way before fitText max was tightened. Same recurring defect class in the sibling studio through 2026-07-09.",
-      "confidence": 0.8,
-      "last_confirmed": "2026-07-21"
+      "confidence": 0.85,
+      "last_confirmed": "2026-08-15"
     },
     {
       "id": "i-002",
       "learned": "2026-07-21",
       "instinct": "Give every absolutely positioned text block an explicit vertical budget. A bottom anchored block under a top anchored stack collides the moment content grows a line.",
       "evidence": "Engine proof slide-02 stats stack collided with the bottom honesty note until row padding and font were budgeted.",
-      "confidence": 0.7,
-      "last_confirmed": "2026-07-21"
+      "confidence": 0.75,
+      "last_confirmed": "2026-08-15"
     },
     {
       "id": "i-003",
@@ -38,24 +38,24 @@
       "learned": "2026-07-21",
       "instinct": "Vendor sourced numbers get the label in the same breath as the number, never in a footnote. Trust is the product this series sells.",
       "evidence": "House law restated as craft. Run 1 confirmed, the case-critic caught an unlabeled caption number and a mis-classed chip.",
-      "confidence": 0.8,
-      "last_confirmed": "2026-07-21"
+      "confidence": 0.85,
+      "last_confirmed": "2026-08-15"
     },
     {
       "id": "i-006",
       "learned": "2026-07-21",
       "instinct": "DOM chips and labels placed in the art zone must be checked against canvas data mark coordinates at plan time. Machine QA cannot see canvas, so these collisions survive to the pixel critics or to the reader.",
       "evidence": "Run 1 had two instances, the S3 chip row covered dashed series nodes and the S5 footer wrapped into the canvas cost stair.",
-      "confidence": 0.75,
-      "last_confirmed": "2026-07-21"
+      "confidence": 0.8,
+      "last_confirmed": "2026-08-15"
     },
     {
       "id": "i-007",
       "learned": "2026-07-21",
       "instinct": "The caption must never claim more than the most hedged slide supports. Write the hook FROM the verified claim text, not from the story's vibe.",
       "evidence": "Run 1's hook said one technician tallies every fish all season, c23 supports a technician counting fish images on video. The case-critic caught it, the fix was a near restatement of the state's own page.",
-      "confidence": 0.8,
-      "last_confirmed": "2026-07-21"
+      "confidence": 0.85,
+      "last_confirmed": "2026-08-15"
     },
     {
       "id": "i-008",
@@ -64,6 +64,30 @@
       "evidence": "Flow critic named S5 the bail point for exactly this reason on run 1, the tease was the fix.",
       "confidence": 0.65,
       "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-009",
+      "learned": "2026-08-15",
+      "instinct": "When a source hedges a number, ship the BOUND and never the point value. A guess with a hard ceiling from the person who signed the cheque satisfies the cost gate. A bare point figure lifted out of the same sentence does not.",
+      "evidence": "Wilson said he did not know what Avoca cost, then said 'definitely less than half' of a firmly remembered 8,000 and ballparked 3,500. The fact-checker ruled the bound shippable and the point figure not, and the transcript turned out not to mark who said the digits. The deck drew the bound as a dashed ceiling at exactly half a solid bar with the region beneath fading out unresolved, which is the honest picture of a range.",
+      "confidence": 0.85,
+      "last_confirmed": "2026-08-15"
+    },
+    {
+      "id": "i-010",
+      "learned": "2026-08-15",
+      "instinct": "When an operator volunteers a confound, carry it. It is the most credible thing in the case and it costs almost nothing to print.",
+      "evidence": "Wilson refused the AI attribution on his own headcount drop twice, naming a compensation change and better practices. The briefed hero numbers were killed and the case got BETTER, because the surviving story (the cut came out of overnight and weekend coverage while humans still answer nine in ten inside seven seconds) is smaller, more honest and more copyable.",
+      "confidence": 0.8,
+      "last_confirmed": "2026-08-15"
+    },
+    {
+      "id": "i-011",
+      "learned": "2026-08-15",
+      "instinct": "Operator-to-operator PODCASTS are the highest yield ground this repo has found for the cost gate. Peers disclose casually because the audience would smell a dodge. Every other ground carries exactly one half of what the filter needs and never the same half.",
+      "evidence": "Seven scouts across two waves. Trade press names the operator and omits the price, confirmed across seven verticals. Public record names the price and omits the deployment, NIST's 1,067-story MEP archive contains three AI stories ever and none from 2026. Vendor libraries describe the build and omit both. ownedandoperated.com produced the entire shipped case in a single domain-constrained query.",
+      "confidence": 0.8,
+      "last_confirmed": "2026-08-15"
     }
   ]
 }

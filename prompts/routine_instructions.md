@@ -221,8 +221,13 @@ the same breath. The offer line appears exactly once, exactly as configured.
 Then:
 ```
 python scripts/caption_check.py ...
-python scripts/style_lint.py ...
+python scripts/style_lint.py --file out/<date>/copy.json --json-field .
 ```
+
+`style_lint.py` refuses prose colons AND the banned glyphs (curly quotes,
+curly apostrophes, em and en dashes, per `config/brand.yaml`
+on_slide_text_rules). Fixing them here is free. Fixing them after the art build
+means editing live slide code.
 
 ## PHASE 5.5 — HONESTY GATE (BEFORE the art, not after)
 
@@ -263,10 +268,12 @@ python .claude/skills/carousel-engine/render.py --slides-dir out/<date>/slides -
 ## PHASE 7 — THE REVIEW LOOP (all four gates, every pass)
 
 This is the loop that produced the last run's defects, so it is now specified
-exactly. **After EVERY render, including every fix pass, run all four:**
+exactly. **After EVERY render, including every fix pass, run all four gates plus
+the on-slide house-style lint:**
 
 ```
 python .claude/skills/carousel-engine/qa.py       --render-dir out/<date>/render
+python scripts/style_lint.py --render-dir out/<date>/render
 python scripts/layout_check.py --render-dir out/<date>/render --zones out/<date>/zones.json
 python scripts/variety_check.py --render-dir out/<date>/render --signature out/<date>/deck_signature.json
 python scripts/coherence_check.py --render-dir out/<date>/render --copy out/<date>/copy.json \

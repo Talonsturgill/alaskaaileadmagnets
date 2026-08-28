@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+ html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#E8DDC2;}
+ body{position:relative;}
+ #art{position:absolute;inset:0;width:1080px;height:1350px;}
+ .brand{position:absolute;left:650px;top:76px;width:350px;height:88px;text-align:right;}
+ .cnt{font-family:"JetBrains Mono",monospace;font-size:24px;color:#45413A;letter-spacing:.10em;}
+ .pol{position:absolute;right:118px;top:6px;}
+ .kick{position:absolute;left:470px;top:96px;font-family:"JetBrains Mono",monospace;font-size:24px;color:#7A4526;letter-spacing:.16em;}
+ .head{position:absolute;left:470px;top:144px;width:518px;height:150px;
+   font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:86%;
+   color:#1A1712;line-height:1.03;letter-spacing:-.015em;}
+ .sub{position:absolute;left:470px;top:322px;width:518px;height:56px;
+   font-family:"Manrope",sans-serif;font-weight:700;font-size:31px;color:#3A342B;}
+ .row{position:absolute;left:470px;width:518px;font-family:"Manrope",sans-serif;font-weight:400;
+   font-size:28px;line-height:1.34;color:#241F19;}
+ .rk{font-family:"JetBrains Mono",monospace;font-size:24px;color:#7A4526;letter-spacing:.10em;display:block;margin-bottom:4px;text-transform:uppercase;}
+ .foot{position:absolute;left:92px;top:1092px;width:900px;height:170px;
+   font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.34;color:#43403A;}
+</style></head><body>
+<canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+<div class="brand" data-zone="BRAND">
+  <svg class="pol" width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 1 L20.2 13.8 L33 17 L20.2 20.2 L17 33 L13.8 20.2 L1 17 L13.8 13.8 Z" fill="#8A5A34"/></svg>
+  <div class="cnt">06 / 09</div>
+</div>
+<div class="kick" data-zone="HEAD">THE RECEIPTS</div>
+<div class="head" id="head" data-zone="HEAD">The bill dropped by more than half and the day shift held.</div>
+<div class="sub" data-zone="DATA">The invoice went away and so did the overnight and weekend shifts.</div>
+<div class="row" data-zone="DATA" style="top:436px;"><span class="rk">Before.</span>8,000 dollars a month to an outside answering service, on top of their own phones staffed 24 hours.</div>
+<div class="row" data-zone="DATA" style="top:660px;"><span class="rk">After.</span>Less than half of that, and the owner said out loud he did not know the exact figure.</div>
+<div class="row" data-zone="DATA" style="top:850px;"><span class="rk">Where the cut landed.</span>Overnight and weekend coverage, and daytime maybe tightened by two people. He credits the AI and a compensation change together, not the AI alone.</div>
+<div class="foot" data-zone="FOOTER">Every figure here is John Wilson's own, said on the podcast he co-hosts, in episodes his vendor sponsors. No independent account of this deployment exists.</div>
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260815);
+  const cv=document.getElementById('art'), cx=cv.getContext('2d'); cx.scale(2,2);
+  const W=1080,H=1350;
+  const g=cx.createLinearGradient(0,0,640,1350);
+  g.addColorStop(0,'#EFE6CF'); g.addColorStop(1,'#DED2B4');
+  cx.fillStyle=g; cx.fillRect(0,0,W,H);
+  for (let i=0;i<22000;i++){ const x=AK.rng()()*W,y=AK.rng()()*H,a=0.016+AK.rng()()*0.045;
+    cx.fillStyle=(AK.rng()()>0.5?'rgba(110,95,68,':'rgba(255,250,238,')+a+')'; cx.fillRect(x,y,1,1); }
+  // ledger safety-green ruling
+  cx.strokeStyle='rgba(110,143,115,.30)'; cx.lineWidth=1;
+  for(let y=392;y<=1040;y+=44){ cx.beginPath(); cx.moveTo(462,y); cx.lineTo(996,y); cx.stroke(); }
+  cx.strokeStyle='rgba(110,143,115,.15)';
+  for(let y=1084;y<=1330;y+=44){ cx.beginPath(); cx.moveTo(92,y); cx.lineTo(996,y); cx.stroke(); }
+  // hairline spine down the sheet
+  cx.strokeStyle='rgba(90,80,62,.22)'; cx.lineWidth=2;
+  cx.beginPath(); cx.moveTo(438,300); cx.lineTo(438,1046); cx.stroke();
+  // ------- THE HONESTY DEVICE -------
+  // The BEFORE bar is drawn at full height. The AFTER value is NOT drawn.
+  // A hard dashed CEILING sits at exactly half the before bar and the region
+  // beneath it fades out unresolved. The bracket is the claim (c04).
+  const BX=132, BW=228, BTOP=430, BBOT=1010, BH=BBOT-BTOP;
+  cx.fillStyle='rgba(90,70,40,.20)'; cx.fillRect(BX+7,BTOP+9,BW,BH);
+  const bar=cx.createLinearGradient(0,BTOP,0,BBOT);
+  bar.addColorStop(0,'#C4834F'); bar.addColorStop(1,'#9E6238');
+  cx.fillStyle=bar; cx.fillRect(BX,BTOP,BW,BH);
+  cx.save(); cx.globalAlpha=.14; cx.strokeStyle='#2B2620'; cx.lineWidth=1;
+  for(let x=BX+7;x<BX+BW;x+=10){ cx.beginPath(); cx.moveTo(x,BTOP+3); cx.lineTo(x,BBOT-3); cx.stroke(); } cx.restore();
+  const HALF=BTOP+BH/2;
+  // everything below the ceiling is unresolved, so it is erased back toward paper
+  const fade=cx.createLinearGradient(0,HALF,0,BBOT);
+  fade.addColorStop(0,'rgba(233,225,203,.10)'); fade.addColorStop(.55,'rgba(233,225,203,.80)'); fade.addColorStop(1,'rgba(233,225,203,.98)');
+  cx.fillStyle=fade; cx.fillRect(BX-2,HALF,BW+4,BBOT-HALF);
+  cx.save(); cx.globalAlpha=.5; cx.strokeStyle='#9E6238'; cx.lineWidth=1.5; cx.setLineDash([3,7]);
+  cx.strokeRect(BX,HALF,BW,BBOT-HALF); cx.setLineDash([]); cx.restore();
+  // the gate becomes the ceiling bracket, gate state 6, hero weight, inward serifs
+  cx.strokeStyle='#FFC72C'; cx.lineWidth=5; cx.setLineDash([14,9]);
+  cx.beginPath(); cx.moveTo(BX-40,HALF); cx.lineTo(BX+BW+40,HALF); cx.stroke(); cx.setLineDash([]);
+  cx.lineWidth=5;
+  cx.beginPath(); cx.moveTo(BX-40,HALF); cx.lineTo(BX-40,HALF+22);
+                  cx.moveTo(BX+BW+40,HALF); cx.lineTo(BX+BW+40,HALF+22); cx.stroke();
+  // the before bar's own cap rule
+  cx.strokeStyle='#6B4526'; cx.lineWidth=3;
+  cx.beginPath(); cx.moveTo(BX,BTOP); cx.lineTo(BX+BW,BTOP); cx.stroke();
+  cx.fillStyle='#1A1712'; cx.font='700 30px "JetBrains Mono", monospace'; cx.textAlign='center';
+  if (window.AKPOST){ try{ AKPOST.grade(cv,{grain:0.075,bloom:0,dither:true}); }catch(e){} }
+  AK.fitText(document.getElementById('head'),{min:48,max:64,maxLines:2});
+  // canvas-pinned labels for the bar, on opaque plates so their contrast is (text,plate) only
+  function pin(text,x,y,color){ const d=document.createElement('div');
+    d.setAttribute('data-zone','DATA'); d.setAttribute('data-knockout','');
+    d.style.cssText='position:absolute;left:'+x+'px;top:'+y+'px;font-family:"JetBrains Mono",monospace;'
+      +'font-size:24px;color:'+color+';background:#EFE6CF;padding:4px 8px;border-radius:3px;white-space:nowrap;';
+    d.textContent=text; document.body.appendChild(d); }
+  pin('8,000 A MONTH', BX-14, BTOP-44, '#6B4526');
+  pin('LESS THAN HALF', BX-18, HALF-46, '#7A5A08');
+  resolve();
+});
+</script></body></html>

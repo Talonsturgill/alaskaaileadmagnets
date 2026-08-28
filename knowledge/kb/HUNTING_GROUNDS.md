@@ -127,3 +127,78 @@ has sat in the bank.
 
 *(Appended by the upgrade-engineer each retro. Searches that worked, verbatim,
 are worth recording: query craft compounds faster than anything else here.)*
+
+- 2026-08-15 (case file 2): **every ground carries exactly one half of the
+  qualifying filter and never the same half.** Trade press names the operator,
+  the bottleneck and the outcome and omits the price, confirmed across seven
+  verticals in one run. Public record and grant documents name the price and
+  omit what was built or whether it reached production. Vendor libraries
+  describe the build and omit both. Plan restock around which half a ground
+  gives you, and pair grounds deliberately. Source: the seven-scout hunt
+  recorded in `runs/2026-08-15/restock_notes.md`, with the ground-by-ground
+  evidence at nist.gov/mep/successstories, publicpower.org and
+  fleetowner.com.
+- 2026-08-15 (case file 2): **the ground that gave BOTH halves was an
+  operator-to-operator podcast.** One domain-constrained query into
+  ownedandoperated.com produced the entire shipped case, including a dollar
+  figure the owner said out loud. Peers disclose to peers because the audience
+  would smell a dodge. Source:
+  https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services
+  Promote operator podcasts from "underused" to first stop for any cost-gated
+  restock.
+- 2026-08-15 (case file 2): **domain-constrained search produced every usable
+  lead across seven scouts. Unconstrained search produced nothing usable in any
+  ground.** Pick the domain first, then search inside it.
+- 2026-08-15 (case file 2): **`r.jina.ai/<url>` defeats the HTTP 403 wall** on
+  Randall-Reilly properties that were previously locked out entirely. Proven by
+  retrieving
+  https://www.ccjdigital.com/ccj-innovators/article/15744393/grand-island-express-boosts-fleet-efficiency-with
+  as https://r.jina.ai/https://www.ccjdigital.com/... . CCJ Innovators is the
+  best cost-disclosure format in trucking, so this reopens a ground. Treat the
+  proxied text as a fetched page, and re-read it for the fabrication hazard in
+  `EVIDENCE.md` before quoting.
+- 2026-08-15 (case file 2): **NIST's MEP archive has a faceted keyword search**
+  at `https://www.nist.gov/mep/successstories?k=<term>`, which makes the whole
+  ground checkable in two fetches. Result, with certainty: the 1,067-story
+  archive contains exactly THREE AI stories ever and none from 2026. **The MEP
+  ground is structurally barren for our filter for at least two quarters.** Do
+  not spend a scout on it. Source: https://www.nist.gov/mep/successstories
+- 2026-08-15 (case file 2): **the two-step that works on public bodies.** The
+  association trade magazine names the deployment and omits the price, then the
+  LOCAL NEWS OUTLET COVERING THE BOARD MEETING prints the contract number.
+  Proven on Coldwater Board of Public Utilities (Michigan): deployment at
+  https://www.publicpower.org/periodical/article/coldwater-board-public-utilities-deploying-ai-prevent-grid-outages
+  then 248,000 dollars over five years at https://wtvbam.com/2026/01/01/877163/
+  Search the utility or district name plus "board approved" on the local
+  station or paper, never the national association.
+- 2026-08-15 (case file 2): EDGAR full-text search is fetchable as JSON at
+  `https://efts.sec.gov/LATEST/search-index?q=%22phrase+a%22+%22phrase+b%22&dateRange=custom&startdt=&enddt=`
+  which gives obliged disclosure without fighting the HTML app. Untested for
+  yield on our size band; small-caps are usually above it.
+- 2026-08-15 (case file 2): **blocked to our fetcher** (403/429/refused or
+  blank): ccjdigital.com and overdriveonline.com (use r.jina.ai), achrnews.com,
+  ecmag.com, mcaa.org, mdm.com, qsrmagazine.com, restaurantbusinessonline.com,
+  franchisetimes.com, bizjournals.com, staffingindustry.com PDFs,
+  homehealthcarenews.com, businessinsider.com, and gamep.org (renders blank on
+  three attempts across two waves, retire it). **Confirmed fetchable:**
+  nist.gov, fleetowner.com, contractormag.com, industryweek.com and Endeavor
+  Business Media generally; truckingdive.com, constructiondive.com,
+  supplychaindive.com, restaurantdive.com, hoteldive.com and Industry Dive
+  generally; route-fifty.com, digitalcommerce360.com, n8n.io, inddist.com,
+  industrialsupplymagazine.com, virginiabusiness.com, publicpower.org,
+  akbizmag.com, phcppros.com, ownedandoperated.com, pmmag.com, and
+  quicktransportsolutions.com (free FMCSA carrier records, excellent for
+  verifying the headcount of any trucking candidate).
+  **Publisher-level blocking is not a rule:** pmmag.com fetched cleanly in the
+  2026-08-15 retro scan (https://www.pmmag.com/articles/106575-70-of-home-service-professionals-now-use-ai-to-cut-admin-work-not-field-jobs-housecall-pro-report-finds)
+  while its BNP Media sibling achrnews.com stayed blocked. Test the domain, do
+  not infer it.
+- 2026-08-15 (case file 2): grounds that returned nothing usable and should not
+  get another scout without a new angle: trade association AI content (MCAA,
+  NAW, Distribution Strategy Group), MEP and extension AI explainer blogs (IMEC,
+  Catalyst Connection, WMEP, MAGNET), aggregate MEP impact reports (they name no
+  company by construction), state "Industry 4.0" grant programs (the phrase
+  means metal-cutting machines with network ports; one 500,000 dollar Iowa award
+  read in full was weld cells, a plasma cutter, a brake press and an ERP
+  upgrade, zero AI), and municipal general-government procurement (a perfect
+  cost disclosure attached to an entity Dana cannot be is still a kill).

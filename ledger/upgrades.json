@@ -1,24 +1,76 @@
 {
-  "_doc": "The automation change trail. Entries appended by the upgrade engineer phase, one commit per run's set, message prefixed upgrade(<date>):. Schema per entry, run_date, kind (fix | improvement), area, change, trigger, files (array), verification, rollback, commit. scan_log entries, run_date, focus, found, applied_or_parked.",
-  "entries": [
-    {
-      "run_date": "2026-07-21",
-      "kind": "improvement",
-      "area": "gates",
-      "change": "scripts/logo_check.py, every deck must carry the brand logo, enforced in the art build phase and as a scorer hard fail",
-      "trigger": "Maintainer rule set mid-run, the logo rides every carousel post",
-      "files": ["scripts/logo_check.py", "config/brand.yaml", "config/scoring_rubric.yaml", "prompts/routine_instructions.md", "knowledge/CASE_CRAFT.md"],
-      "verification": "PASS on the live deck (slide-08 carries the logo), FAIL on a reconstruction without it, full deck QA green with the logo present",
-      "rollback": "delete scripts/logo_check.py and the references in the four files listed",
-      "commit": "rides the run commit, Phase 11 executed by showrunner under the fallback"
-    }
-  ],
-  "scan_log": [
-    {
-      "run_date": "2026-07-21",
-      "focus": "skipped, manual test run",
-      "found": "agent infra instability handled by respawn-by-cause, and a DOM over canvas collision class that machine QA cannot see",
-      "applied_or_parked": "parked, a dom-canvas collision pre-check helper as a future gate candidate (see out/2026-07-21/automation_retro.md)"
-    }
-  ]
+ "_doc": "The automation change trail. Entries appended by the upgrade engineer phase, one commit per run's set, message prefixed upgrade(<date>):. Schema per entry, run_date, kind (fix | improvement), area, change, trigger, files (array), verification, rollback, commit. scan_log entries, run_date, focus, found, applied_or_parked.",
+ "entries": [
+  {
+   "run_date": "2026-07-21",
+   "kind": "improvement",
+   "area": "gates",
+   "change": "scripts/logo_check.py, every deck must carry the brand logo, enforced in the art build phase and as a scorer hard fail",
+   "trigger": "Maintainer rule set mid-run, the logo rides every carousel post",
+   "files": [
+    "scripts/logo_check.py",
+    "config/brand.yaml",
+    "config/scoring_rubric.yaml",
+    "prompts/routine_instructions.md",
+    "knowledge/CASE_CRAFT.md"
+   ],
+   "verification": "PASS on the live deck (slide-08 carries the logo), FAIL on a reconstruction without it, full deck QA green with the logo present",
+   "rollback": "delete scripts/logo_check.py and the references in the four files listed",
+   "commit": "rides the run commit, Phase 11 executed by showrunner under the fallback"
+  },
+  {
+   "run_date": "2026-08-15",
+   "kind": "fix",
+   "area": "engine",
+   "change": "render.py reports each text node up to 600 characters instead of 80, so the coherence gate can see a full authored sentence",
+   "trigger": "The coherence gate failed 58 fidelity checks on correct copy during Phase 7 of run 2026-08-15. The gate's instrument, not the copy, was wrong: every reported text node was truncated at 80 chars. Fixed by the showrunner mid-run under the failure protocol; logged here by the upgrade engineer for the trail.",
+   "files": [
+    ".claude/skills/carousel-engine/render.py"
+   ],
+   "verification": "Applied and verified in commit 4f76952 during the run (58 false fidelity failures cleared, deck passed). Re-verified in the retro: fresh render of samples/engine-proof reports a 188-char node intact, render 3/3 OK warnings=0, qa.py verdict PASS.",
+   "rollback": "revert the slice(0, 600) back to slice(0, 80) in render.py; the coherence gate goes blind again",
+   "commit": "4f76952 (mid-run), logged in upgrade(2026-08-15)"
+  },
+  {
+   "run_date": "2026-08-15",
+   "kind": "improvement",
+   "area": "gates",
+   "change": "style_lint.py now refuses the banned glyphs (curly quotes, curly apostrophes, em dash, en dash) in every mode, and gains a --render-dir mode that lints every RENDERED on-slide text node out of render_report.json for those glyphs plus prose colons. Wired into Phase 5 and Phase 7 of the run contract.",
+   "trigger": "config/brand.yaml on_slide_text_rules bans em/en dashes and requires straight quotes on slides, and caption_check.py has enforced exactly that on the caption since 2026-07-21, but NOTHING enforced it on slides or on copy.json. The 2026-08-15 deck carried mixed apostrophe characters until a pixel critic caught them by eye and requested a lint that did not exist. Linting the rendered nodes rather than the HTML catches entities (&rsquo;) and escapes in the form the reader sees.",
+   "files": [
+    "scripts/style_lint.py",
+    "prompts/routine_instructions.md"
+   ],
+   "verification": "Clean on this run's 85 on-slide text nodes, clean on samples/engine-proof's 36, clean on runs/2026-08-15/copy.json. FAILS a reconstruction of the defect: a planted curly apostrophe and em dash in one rendered node produced 'FAIL: slide-02.html: curly apostrophe' and 'FAIL: slide-02.html: em dash', exit 1. Pre-existing prose-colon behaviour unchanged (fires on a prose colon, still exempts 4:30 and URLs). Engine regression: render.py + qa.py re-run on samples/engine-proof (3/3 OK, QA PASS) and on out/2026-08-15/slides (9/9 OK, per-slide QA fails/warns identical to the shipped machine_qa.json).",
+   "rollback": "remove glyph_violations/lint_render_dir and the two call sites in scripts/style_lint.py, and the two lines added to prompts/routine_instructions.md",
+   "commit": "code landed in d8713c4 (swept in by a concurrent showrunner commit during the retro); knowledge base, ledger and retro in upgrade(2026-08-15)"
+  },
+  {
+   "run_date": "2026-08-15",
+   "kind": "improvement",
+   "area": "gates",
+   "change": "variety_check.py persists closest_pair and closest_pairs (top five by layout_iou + image_corr) into its JSON report. Report-only; no threshold, rule or verdict changed.",
+   "trigger": "VARIETY.md requires the retro to name and eyeball the closest pair. The ranking was printed to the console and thrown away, so the retro had to hand-scan a 36-row pair matrix and the number that reached the 2026-08-15 retro was wrong (08 x 09 at 0.545 reported; the real closest pair is 07 x 08 at IoU 0.657, corr 0.423, palette 0.982).",
+   "files": [
+    "scripts/variety_check.py"
+   ],
+   "verification": "Re-ran on out/2026-08-15/render: exactly two new keys (closest_pair, closest_pairs), closest_pair = 'slide-07.html x slide-08.html', every pre-existing field byte-identical to the pre-change report, verdict WARN, exit 0. Re-ran on a fresh full re-render of the deck with identical output. Console list unchanged.",
+   "rollback": "delete the ranked/closest_pairs/closest_pair block in check_within_deck and restore the local sort in main()",
+   "commit": "code landed in e587431 (swept in by a concurrent showrunner commit during the retro); knowledge base, ledger and retro in upgrade(2026-08-15)"
+  }
+ ],
+ "scan_log": [
+  {
+   "run_date": "2026-07-21",
+   "focus": "skipped, manual test run",
+   "found": "agent infra instability handled by respawn-by-cause, and a DOM over canvas collision class that machine QA cannot see",
+   "applied_or_parked": "parked, a dom-canvas collision pre-check helper as a future gate candidate (see out/2026-07-21/automation_retro.md)"
+  },
+  {
+   "run_date": "2026-08-15",
+   "focus": "voice AI in field service, and where the honest rung 4 versus rung 5 line sits in that category",
+   "found": "(1) Almost every published number in this category is a CONTAINMENT number and containment is not resolution: 'A call is contained if the customer hangs up. It's resolved if their problem is fixed' and 'Many vendors quote containment rate rather than resolution rate. These are not the same number' (https://irisagent.com/blog/voice-ai-customer-service-2026-benchmarks/, vendor CEO byline, no sample size). (2) Trades adoption is broad, shallow and size-blind: over 400 US home service contractors surveyed, 'over 70% have tried AI tools', 'about 40% are now using AI actively', 'From solo owner-operators to 50+-person companies, small shops are embracing AI nearly as much as large ones' (https://www.pmmag.com/articles/106575-70-of-home-service-professionals-now-use-ai-to-cut-admin-work-not-field-jobs-housecall-pro-report-finds). (3) Platform data for any after-hours story: '41% [of jobs booked online] come in after hours' (https://www.housecallpro.com/resources/field-home-service-industry-trends/). (4) pmmag.com fetches cleanly while BNP sibling achrnews.com is blocked, so publisher-level blocking is not a rule. (5) Nothing fetched described a rung 5 deployment in field service; every product runs fixed steps into one system of record with a designed human handoff. (6) SEO poisoning reproduced: every generic operator-cost query returned vendor listicles.",
+   "applied_or_parked": "applied to knowledge/kb/AI_LANDSCAPE.md, EVIDENCE.md, HUNTING_GROUNDS.md and DEPLOYMENT_PATTERNS.md as dated CONFIRMED BY RUNS entries with URLs. No code change; the containment-versus-resolution question is now a fact-checker prior, not a gate."
+  }
+ ]
 }

@@ -1,0 +1,74 @@
+{
+  "fails": [],
+  "warns": [
+    "slide 5 role 'THE CURRICULUM' is outside the grammar",
+    "slide 1: numeral 002 on the slide traces to no claim in claims.json",
+    "slide 8: numeral 1,500 on the slide traces to no claim in claims.json",
+    "slide 8: numeral 5,000 on the slide traces to no claim in claims.json",
+    "slide 9: numeral 002 on the slide traces to no claim in claims.json"
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "file": "slide-01.html",
+      "fails": [],
+      "warns": [
+        "numeral 002 on the slide traces to no claim in claims.json"
+      ]
+    },
+    {
+      "n": 2,
+      "file": "slide-02.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 3,
+      "file": "slide-03.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 4,
+      "file": "slide-04.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 5,
+      "file": "slide-05.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 6,
+      "file": "slide-06.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 7,
+      "file": "slide-07.html",
+      "fails": [],
+      "warns": []
+    },
+    {
+      "n": 8,
+      "file": "slide-08.html",
+      "fails": [],
+      "warns": [
+        "numeral 1,500 on the slide traces to no claim in claims.json",
+        "numeral 5,000 on the slide traces to no claim in claims.json"
+      ]
+    },
+    {
+      "n": 9,
+      "file": "slide-09.html",
+      "fails": [],
+      "warns": [
+        "numeral 002 on the slide traces to no claim in claims.json"
+      ]
+    }
+  ],
+  "verdict": "WARN"
+}

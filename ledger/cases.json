@@ -20,6 +20,26 @@
         "https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts"
       ],
       "outcome_notes": "First live run, driven in-session as the manual test. Score 8.39 ship at round 3 threshold 8.0. Fact-check killed the intended payoff (c31) and the honest version shipped. 28 verified claims, honesty gate two rounds, pixel critics three rounds, flow critic ship 8.5."
+    },
+    {
+      "run_date": "2026-08-15",
+      "case_file_no": 2,
+      "bank_id": "bank-017",
+      "company": "The Wilson Companies (Wilson Plumbing, Heating, Cooling and Electric Inc.), Akron Ohio",
+      "industry": "home_services_trades",
+      "capability": "voice_ai_booking_workflow",
+      "flavor": "case_file",
+      "angle": "A 1958 family trades shop paid 8,000 a month for somebody else to answer the phone, put an off the shelf voice platform on nights and weekends, kept its people on the day shift, and stopped staffing the hours nobody wanted. The curriculum payload is the vendor's own co-founder saying full autonomy books about 5 percent lower than the hybrid with a person in it.",
+      "headline": "8,000 dollars a month for somebody else to answer the phone.",
+      "evidence_strength": "medium, single source with a vendor relationship running through it",
+      "sources_lead": [
+        "https://www.ownedandoperated.com/post/www-ownedandoperated-com-post-owned-and-operated-194---this-ai-transformed-customer-service--heres-how-avoca-did-it",
+        "https://www.ownedandoperated.com/post/owned-and-operated-173-we-booked-400-calls-a-week-how-avoca-ai-is-shaping-home-services",
+        "https://www.wilsonplumbingandheating.com/about-us",
+        "https://www.ownedandoperated.com/about",
+        "https://www.avoca.ai/"
+      ],
+      "outcome_notes": "Bank woke at 0 ship-ready of 16, so two restock waves (7 scouts) were required. Runner-up Grand Island Express died on the cost gate after an exhaustive chase, leaving no fallback. Fact-check returned SHIP but KILLED the briefed hero numbers, the operator refuses the AI attribution on the 18-to-10 headcount cut twice. The real story turned out better, the cut came out of overnight and weekend coverage while humans still answer nine calls in ten inside seven seconds. Honesty gate returned REVISE with 15 fixes, all applied. Three pixel critics returned FIX. Cost ships as a BOUND, the digits 3,500 appear nowhere. ZERO independent corroboration, disclosed on slide 6."
     }
   ]
 }
