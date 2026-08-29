@@ -1593,6 +1593,798 @@
     ],
     "to_promote": "Employee count, one before-and-after dispatch number (jobs per tech per day, override rate, or overtime hours), what Probook costs per month, and how long from decision to working."
    }
+  },
+  {
+   "id": "bank-025",
+   "company": "La Crosse County Public Safety Communications",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "candidate",
+   "location": "La Crosse County, Wisconsin",
+   "size": "The county's 24/7 dispatch center. On the record from a fetched page: 'His county has at least four dispatchers per shift.' COUNTY-WIDE HEADCOUNT NOT YET VERIFIED; the county HR page returned 403. This is the one open item on filter 1 and the fact-checker must close it.",
+   "industry": "public sector emergency communications and dispatch",
+   "capability": "voice_agent_non_emergency_call_triage",
+   "bottleneck": "The dispatch center had become the default phone number for everything. Roughly 105,000 non-emergency calls a year, about parking tickets, court times, accident reports and who to call at which village hall, feeding through a center whose people are trained to handle emergencies. Cory Lynch: 'By virtue of being a 24/7 department, we've just become a default,' and separately, 'It's been really hard to hire and keep staff on.'",
+   "build": "They bought Aurelian's voice AI agent, 'Ava', and pointed it at the non-emergency line only. Ava answers, works out what the caller needs, collects the location, then either forwards the caller to the right municipality or department or texts them the information. It listens for hot words suggesting crime, violence or danger and routes those immediately to a human dispatcher. A caller can ask for a human at any point. The center meets the vendor every other week to work through dispatcher feedback and tune it.",
+   "pattern_id": "P9",
+   "ladder_rung": {
+    "rung": 4,
+    "why": "The steps were drawn by people at build time: answer, classify intent, collect location, route or text, escalate on keyword match, hand to a human on request. The model does not choose the path or pick its own tools. It is a workflow with a model in it plus escalation rules, and the biweekly tuning meeting is the human owning the loop. A clean agent-washing teaching case: the vendor says agent, the honest rung is 4, and rung 4 is the right answer here.",
+    "vendor_calls_it": "agent"
+   },
+   "numbers": [
+    {
+     "value": "41,000 calls handled since May 5",
+     "what": "cumulative, one dispatch center, May 5 2025 to early December 2025",
+     "source_url": "https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html",
+     "sourcing": "per the county's operations supervisor, reported by News 8000 (WKBT)"
+    },
+    {
+     "value": "roughly 65 percent",
+     "what": "share of those 41,000 handled without a dispatcher answering the phone. A CONTAINMENT metric, not a resolution metric. No satisfaction or resolution figure exists on any fetched page.",
+     "source_url": "https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html",
+     "sourcing": "per the county's operations supervisor, reported by News 8000"
+    },
+    {
+     "value": "140,000 calls for service in 2024, of which 35,000 were 911, so roughly 105,000 non-emergency",
+     "what": "THE BASELINE. One county, calendar year 2024.",
+     "source_url": "https://www.weau.com/2025/12/12/la-crosse-county-utilizing-ai-non-emergency-calls/",
+     "sourcing": "reported by WEAU, figures from the county"
+    },
+    {
+     "value": "around 42,000 non-emergency calls since May",
+     "what": "second independent report of the same measure, mid-December 2025",
+     "source_url": "https://www.weau.com/2025/12/12/la-crosse-county-utilizing-ai-non-emergency-calls/",
+     "sourcing": "reported by WEAU"
+    }
+   ],
+   "cost": {
+    "disclosed": true,
+    "value": "Around $67,000 in year one and $81,000 in year two, priced on call volume. Milwaukee Magazine: 'Ava, which costs La Crosse, based on call volume, around $67,000 its first year and $81,000 its second, approximate to one employee with benefits.' WEAU independently describes it as 'the $70,000 system.'",
+    "what_it_covers": "Reads as the subscription. Unclear whether integration and staff time sit inside the figure. Pricing is usage-based rather than per seat, which is why year two is higher.",
+    "source_url": "https://www.milwaukeemag.com/wisconsin-ai-911-calls/",
+    "corroboration": "Two independent second cost points on the SAME vendor and pattern at other agencies: Grand Traverse County MI at $60,000 year one and $72,000 thereafter on a three-year term, and Spokane WA at $95,000 annually on a two-year term with six weeks of preparation."
+   },
+   "timeline": "Adopted May 2025; began taking calls May 5, 2025; the results above are the first seven months. The DECISION-TO-CONTRACT interval is not disclosed on any page fetched, so this is a go-live date plus a measured ramp rather than a full decision-to-working duration. County board or public safety committee minutes from late 2024 or early 2025 are where to close it.",
+   "named_human": {
+    "name": "Cory Lynch",
+    "role": "Operations supervisor, La Crosse County Public Safety Communications",
+    "quote": "This morning we crossed over the 41,000 calls handled by the system mark since May 5th",
+    "source_url": "https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html"
+   },
+   "limit_named_by_source": "Two, and they are unusually good. Lynch names the human ceiling himself: 'The dispatcher is picking up nuances of changes in inflection and background noises that I personally don't see AI being able to take over.' And the SAME PRODUCT failed publicly at another agency: Ozaukee County Sheriff's Office launched Ava 24/7, hit misrouted calls, confusion between 'sheriff' and 'deputy', and trouble with background noise such as shouting and music, and cut it back to two hours a day while the vendor worked through it. That is a sourced, same-product failure and it is the honest scoping sentence for anyone copying this.",
+   "evidence_strength": "strong",
+   "skepticism": "Five independently fetched outlets carry the story and two carry a cost figure, which is unusually good corroboration. But the operational numbers are all self-reported by the county to local press and nobody audited them. The 65 percent is a CONTAINMENT metric, exactly the P9 failure mode the knowledge base warns about: a call that ended without the caller getting what they needed still counts as handled. The two cost figures differ slightly ($70,000 versus $67,000 rising to $81,000) because they come from different outlets and framings.",
+   "sources": [
+    "https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html",
+    "https://www.weau.com/2025/12/12/la-crosse-county-utilizing-ai-non-emergency-calls/",
+    "https://www.milwaukeemag.com/wisconsin-ai-911-calls/",
+    "https://www.wpr.org/news/wisconsin-counties-ai-non-emergency-calls-waukesha-la-crosse",
+    "https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/",
+    "https://www.police1.com/911-and-dispatch/wis-counties-turn-to-ai-to-manage-non-emergency-police-calls",
+    "https://www.ozaukeepress.com/content/after-few-hiccups-ava-settling-sheriff%E2%80%99s-office"
+   ],
+   "alaska_translation": "Any Anchorage operation whose main line has become the default number for everything: utilities and co-ops, clinic groups, tour and lodge operators in season, credit unions, trades dispatch desks, and municipal and borough service lines. The local sharpener is the labour market, because the bottleneck here is not call volume alone, it is that the desk is hard to staff and harder to keep staffed.",
+   "icp_segments": [
+    "utilities_coops",
+    "municipal",
+    "trades",
+    "clinic_groups",
+    "tourism_lodging"
+   ],
+   "notes": "THE ONLY BANK VERDICT ACROSS EIGHT SCOUTS AND TWO WAVES on 2026-08-29. Its cost line is the best-shaped disclosure this series has ever had, because the operator framed it in headcount terms rather than dollars alone.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck in vivid operator language",
+     "bought and pointed at one job, not built",
+     "a measurable before and after against a stated baseline year",
+     "COST CLASS DISCLOSED and independently corroborated at two other agencies",
+     "a named human on the record with verbatim quotes across three outlets",
+     "2025",
+     "an honest limit named by the source, plus a sourced same-product failure at another agency",
+     "honest rung 4 with a genuine agent-washing lesson"
+    ],
+    "missing": [
+     "employee count for La Crosse County government is unverified, so the 50 to 1,000 band is untested",
+     "the decision-to-working interval is not disclosed, only the go-live date and a seven-month ramp"
+    ],
+    "to_promote": "CLOSE BEFORE SHIP: county headcount, and the decision-to-working interval from county board or public safety committee minutes. If headcount cannot be established, the entity to describe is the dispatch center itself, which the sources put at at least four dispatchers per shift."
+   }
+  },
+  {
+   "id": "bank-026",
+   "company": "Field Aerospace",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Oklahoma City, with Toronto and Cincinnati",
+   "size": "approximately 250 employees, per the n8n case study page fetched this run",
+   "industry": "aerospace modification and defense contracting",
+   "capability": "proposal_drafting_workflow",
+   "bottleneck": "Proposal writing. Solicitations routinely run past 50 pages and, per Senior Program Manager Shawn Tatum, getting a general proposal to the 80 percent stage 'would have taken us probably two weeks of three or four people.' They were also missing opportunities because thousands of government solicitations publish constantly and nobody could read them all.",
+   "build": "A self-hosted n8n deployment plus an internal React and Node.js web application. Non-technical staff upload a solicitation, a webhook fires the workflow, which extracts requirements, drafts a proposal against an internal library of approved reference material, builds a requirements matrix, and screens new opportunities through the Deltek GovWin API. Drafts come back in Markdown, marked as AI-generated starting points, and export into Microsoft Teams for human review.",
+   "pattern_id": "P3",
+   "ladder_rung": {
+    "rung": 4,
+    "why": "Multiple model calls in a fixed order that a person designed, with a human review checkpoint before anything goes out. The GovWin opportunity screening edges toward rung 5 but the case study does not show the system choosing its own path.",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "two weeks of three to four people, down to 25 minutes",
+     "what": "time to an 80 percent complete proposal draft, per proposal",
+     "source_url": "https://n8n.io/case-studies/field-aerospace/",
+     "sourcing": "vendor"
+    },
+    {
+     "value": "hours down to 15 to 20 minutes",
+     "what": "requirements extraction, per solicitation",
+     "source_url": "https://n8n.io/case-studies/field-aerospace/",
+     "sourcing": "vendor"
+    },
+    {
+     "value": "about $30,000 in annual software costs eliminated",
+     "what": "two legacy tools retired. A SAVING, not a spend.",
+     "source_url": "https://n8n.io/case-studies/field-aerospace/",
+     "sourcing": "vendor"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "Not disclosed. The only dollar figure is a saving. No licence, hosting or build cost appears anywhere."
+   },
+   "timeline": "Not disclosed anywhere on the page.",
+   "named_human": {
+    "name": "Shawn Tatum",
+    "role": "Senior Program Manager",
+    "quote": "A general proposal to get to the 80% stage would have taken us probably two weeks of three or four people",
+    "source_url": "https://n8n.io/case-studies/field-aerospace/"
+   },
+   "limit_named_by_source": "Drafts return in Markdown, are clearly marked as AI-generated starting points, and go to Teams for review. The 80 percent figure is itself the limit: the last 20 percent is still human. The CIO's win-rate line is forward-looking, not a measured result.",
+   "evidence_strength": "medium",
+   "skepticism": "Vendor case study, baseline is the company's recollection, nobody audited the 25 minutes. Bigger structural worry for filter 3: they stood up self-hosted n8n and wrote a React and Node.js application, which reads more like build than buy, and the page does not say whether that was a weekend of one internal developer or a project.",
+   "sources": [
+    "https://n8n.io/case-studies/field-aerospace/"
+   ],
+   "alaska_translation": "This is the ANCSA subsidiary bottleneck exactly. Federal proposal and compliance load at a 250 person shop, which is the single most recognisable back-office pain in the Anchorage mid-market.",
+   "icp_segments": [
+    "ancsa_subsidiaries",
+    "engineering_permitting",
+    "construction"
+   ],
+   "notes": "THE BEST INTERVIEW TARGET IN THE BANK. Two questions convert it: what did the whole thing run in year one including the internal app, and how many weeks from deciding to the first proposal out the door. Jim Webster, CIO, is the person to ask.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "50 to 1000 employees (approximately 250) and not a technology company",
+     "ONE named bottleneck in operator language",
+     "a measurable before and after",
+     "a named human with a verbatim quote",
+     "2024 or later",
+     "a limit named by the source"
+    ],
+    "missing": [
+     "cost class: nothing (HARD GATE)",
+     "timeline: nothing (HARD GATE)",
+     "buy-not-build is genuinely in question: self-hosted n8n plus a custom React and Node.js app"
+    ],
+    "to_promote": "Cost, timeline, and an honest account of how much internal engineering the app took."
+   }
+  },
+  {
+   "id": "bank-027",
+   "company": "Grand Traverse County Central Dispatch",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Grand Traverse County, Michigan",
+   "size": "Not stated. The article notes 3.5 open positions unfilled and that one full-time equivalent would be eliminated.",
+   "industry": "public sector emergency communications",
+   "capability": "voice_agent_non_emergency_call_triage",
+   "bottleneck": "Most calls into central dispatch are not 911 calls. Deputy Director Corey LeCureux: 'It's a little-known fact that most calls taken by central dispatch are not 911 calls.' 54,500 non-emergency calls a year, up to 60 percent of which do not need an emergency dispatcher.",
+   "build": "Proposed three-year contract with Aurelian AI for an AI call-taking system that identifies and routes non-emergency calls to other government departments, funded from the existing 911 telephone surcharge.",
+   "pattern_id": "P9",
+   "ladder_rung": {
+    "rung": 4,
+    "why": "Same architecture as the La Crosse deployment. Fixed steps, keyword escalation, human routing on doubt.",
+    "vendor_calls_it": "agent"
+   },
+   "numbers": [
+    {
+     "value": "up to 35,000 calls a year, roughly 1,200 staff hours",
+     "what": "PROJECTION ONLY, against 54,500 non-emergency calls a year",
+     "source_url": "https://www.govtech.com/public-safety/michigan-county-mulls-ai-powered-911-dispatch-software",
+     "sourcing": "reported by GovTech, projection from county officials"
+    }
+   ],
+   "cost": {
+    "disclosed": true,
+    "value": "$60,000 first year, $72,000 annually thereafter, three-year contract, funded from the existing 911 surcharge",
+    "what_it_covers": "unclear, reads as subscription",
+    "source_url": "https://www.govtech.com/public-safety/michigan-county-mulls-ai-powered-911-dispatch-software"
+   },
+   "timeline": "Board decision to implementation targeted for July 2025.",
+   "named_human": {
+    "name": "Corey LeCureux",
+    "role": "Deputy Director",
+    "quote": "if there's any doubt about the urgency, we will route them to a human being",
+    "source_url": "https://www.govtech.com/public-safety/michigan-county-mulls-ai-powered-911-dispatch-software"
+   },
+   "limit_named_by_source": "Anything with doubt about urgency routes to a human. No post-deployment results in the article.",
+   "evidence_strength": "medium",
+   "skepticism": "A pre-deployment 'county mulls' article. Every operational number in it is a projection, not a measurement.",
+   "sources": [
+    "https://www.govtech.com/public-safety/michigan-county-mulls-ai-powered-911-dispatch-software"
+   ],
+   "alaska_translation": "Same as La Crosse.",
+   "icp_segments": [
+    "municipal",
+    "utilities_coops"
+   ],
+   "notes": "ITS VALUE TO THIS RUN IS AS AN INDEPENDENT SECOND COST POINT on the same vendor and pattern, which strengthens the La Crosse cost slide. Fetch again in six months for actual results.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "cost disclosed with a contract term",
+     "ONE named bottleneck",
+     "bought not built",
+     "a named human",
+     "2025"
+    ],
+    "missing": [
+     "a measurable before and after: everything is projection (HARD)"
+    ],
+    "to_promote": "Post-deployment results."
+   }
+  },
+  {
+   "id": "bank-028",
+   "company": "Spokane Regional Emergency Communications",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Spokane County, Washington",
+   "size": "Not stated on the fetched page.",
+   "industry": "public sector emergency communications",
+   "capability": "voice_agent_non_emergency_call_triage",
+   "bottleneck": "Crime Check takes more than 250,000 calls a year and nearly half do not involve a crime; 28 percent are general questions or report requests.",
+   "build": "Prepared AI in partnership with Axon, routing non-emergency calls. Explicitly does not touch 911 or life-threatening calls.",
+   "pattern_id": "P9",
+   "ladder_rung": {
+    "rung": 4,
+    "why": "Intent classification and routing inside fixed rules with a hard carve-out for emergencies.",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "250,000+ Crime Check calls a year, nearly 50 percent not crimes, 28 percent general questions or report requests",
+     "what": "annual, one call centre",
+     "source_url": "https://www.spokesman.com/stories/2025/nov/18/spokane-county-taps-ai-system-to-route-non-emergen/",
+     "sourcing": "reported by The Spokesman-Review, figures from the agency"
+    }
+   ],
+   "cost": {
+    "disclosed": true,
+    "value": "$95,000 annually under a two-year contract",
+    "source_url": "https://www.spokesman.com/stories/2025/nov/18/spokane-county-taps-ai-system-to-route-non-emergen/"
+   },
+   "timeline": "Announced November 18 2025, testing November 19 2025, launch expected end of 2025 after SIX WEEKS OF PREPARATION. That six-week figure is the cleanest decision-to-working data point found for this pattern.",
+   "named_human": {
+    "name": "Kim Arredondo",
+    "role": "Deputy Director",
+    "quote": "QUOTE TRUNCATED IN FETCH. Not usable until recaptured verbatim.",
+    "source_url": "https://www.spokesman.com/stories/2025/nov/18/spokane-county-taps-ai-system-to-route-non-emergen/"
+   },
+   "limit_named_by_source": "The AI will not handle 911 calls or life-threatening emergencies; dispatchers retain those.",
+   "evidence_strength": "medium",
+   "skepticism": "Announcement-stage coverage. No post-launch results yet, and the quotes came back truncated so none is usable verbatim as fetched.",
+   "sources": [
+    "https://www.spokesman.com/stories/2025/nov/18/spokane-county-taps-ai-system-to-route-non-emergen/"
+   ],
+   "alaska_translation": "Same as La Crosse.",
+   "icp_segments": [
+    "municipal"
+   ],
+   "notes": "Value to this run is the SIX WEEK preparation figure, a genuine decision-to-working data point for this pattern, plus a third cost point. Must be recaptured verbatim by the fact-checker before any use.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "cost disclosed with a term",
+     "a timeline disclosed",
+     "ONE named bottleneck",
+     "bought not built",
+     "2025"
+    ],
+    "missing": [
+     "a measurable before and after: no post-launch results exist yet (HARD)",
+     "quotes truncated in fetch"
+    ],
+    "to_promote": "Post-launch results and a verbatim quote."
+   }
+  },
+  {
+   "id": "bank-029",
+   "company": "Mountain View Electric Association",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "east and south of Colorado Springs, about 5,000 square miles",
+   "size": "58,000 members. Employee count not stated on the fetched page.",
+   "industry": "rural electric cooperative",
+   "capability": "cv_vegetation_management_planning",
+   "bottleneck": "Planning and budgeting the right-of-way vegetation program. Deciding which miles of line to trim, in what order, and what it would cost took months before a crew touched a tree.",
+   "build": "Bought Sheltera, a vegetation management platform that reads satellite imagery and LiDAR to identify and rank tree hotspots along the lines, and used the output to scope and bid trimming work. Deployed September 2024.",
+   "pattern_id": "P7",
+   "ladder_rung": {
+    "rung": 3,
+    "why": "Imagery in, ranked risk out, humans decide what to do about it. A model at one fixed point in a planning process.",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "months down to two weeks",
+     "what": "planning and budgeting cycle, per cycle",
+     "source_url": "https://www.nrucfc.coop/content/solutions/en/stories/energy-tech/turning-ai-into-member-value.html",
+     "sourcing": "reported by CFC Solutions, figures from the cooperative"
+    },
+    {
+     "value": "56 miles trimmed in 136 days against a projected 336 days",
+     "what": "one program, one co-op",
+     "source_url": "https://www.nrucfc.coop/content/solutions/en/stories/energy-tech/turning-ai-into-member-value.html",
+     "sourcing": "reported by CFC Solutions"
+    },
+    {
+     "value": "about 40 percent",
+     "what": "cost reduction on the trimming work. Base unclear.",
+     "source_url": "https://www.nrucfc.coop/content/solutions/en/stories/energy-tech/turning-ai-into-member-value.html",
+     "sourcing": "reported by CFC Solutions"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "No subscription or contract figure. The 40 percent is a saving, not a price."
+   },
+   "timeline": "Deployed September 2024. Decision-to-working duration not stated.",
+   "named_human": {
+    "name": "Efrain Aviles, Jr.",
+    "role": "Owner, Arbol Tree Service and Landscaping, the co-op's trimming contractor",
+    "quote": "NOT CAPTURED VERBATIM. Needs a verbatim pull before use.",
+    "source_url": "https://www.nrucfc.coop/content/solutions/en/stories/energy-tech/turning-ai-into-member-value.html"
+   },
+   "limit_named_by_source": "None named on the fetched page, which is itself a flag.",
+   "evidence_strength": "medium",
+   "skepticism": "Published by the co-op sector's own lender, peer-facing and reasonably candid, but no cost, no named limit, no employee count, and the 40 percent has no stated base.",
+   "sources": [
+    "https://www.nrucfc.coop/content/solutions/en/stories/energy-tech/turning-ai-into-member-value.html"
+   ],
+   "alaska_translation": "Railbelt co-ops plan remote work seasons under exactly this constraint, where a season missed is a year lost. NOTE: this is computer vision, which the rotation law puts off the table for 2026-08-29.",
+   "icp_segments": [
+    "utilities_coops"
+   ],
+   "notes": "Off-rotation for this run (computer vision shipped 2026-07-21). Hold for a later run.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck",
+     "bought not built",
+     "a measurable before and after",
+     "2024 or later"
+    ],
+    "missing": [
+     "cost class (HARD GATE)",
+     "decision-to-working timeline (HARD GATE)",
+     "employee count",
+     "no limit named by the source",
+     "quote not verbatim"
+    ],
+    "to_promote": "What Sheltera costs a co-op of this size, how long from signing to first usable map, a headcount, and a verbatim quote."
+   }
+  },
+  {
+   "id": "bank-030",
+   "company": "Artesia General Hospital",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "southeastern New Mexico",
+   "size": "25-bed rural hospital with clinics. Employee count not stated.",
+   "industry": "rural hospital and clinic group",
+   "capability": "ambient_clinical_documentation",
+   "bottleneck": "Two-plus hours of charting after every shift. Dr. Peter Jewell sees 20 to 25 patients a day and was finishing notes at 7 to 7:30pm.",
+   "build": "Microsoft Dragon Copilot, an ambient listening assistant integrated through their TruBridge electronic health record. Records the visit, drafts the note, updates the chart.",
+   "pattern_id": "P6",
+   "ladder_rung": {
+    "rung": 3,
+    "why": "One model call at one fixed point. Conversation in, structured note out, clinician reviews and signs. Jewell says it plainly: 'It's not making decisions; I'm making all the decisions still.'",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "from 7 to 7:30pm down to 5 to 5:30pm",
+     "what": "end of workday, ONE physician, 20 to 25 patients a day",
+     "source_url": "https://searchlightnm.org/at-one-rural-new-mexico-hospital-doctors-turn-to-ai-tools/",
+     "sourcing": "reported by Searchlight New Mexico, self reported by the physician"
+    },
+    {
+     "value": "one patient in thousands declined",
+     "what": "patient refusal rate, one physician's practice",
+     "source_url": "https://searchlightnm.org/at-one-rural-new-mexico-hospital-doctors-turn-to-ai-tools/",
+     "sourcing": "reported by Searchlight New Mexico, self reported"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "No subscription, budget or payment figure anywhere on the page."
+   },
+   "timeline": "Adopted roughly two years before the May 2026 article, so about 2024. Rollout duration not stated.",
+   "named_human": {
+    "name": "Dr. Peter Jewell",
+    "role": "Family medicine physician",
+    "quote": "It's not making decisions; I'm making all the decisions still.",
+    "source_url": "https://searchlightnm.org/at-one-rural-new-mexico-hospital-doctors-turn-to-ai-tools/"
+   },
+   "limit_named_by_source": "Occasional errors on doctor names and medical billing terminology.",
+   "evidence_strength": "medium",
+   "skepticism": "Good independent nonprofit journalism with a named clinician and a real limit, but the result is one physician's self-reported day length, not a measured cohort, and there is no cost anywhere.",
+   "sources": [
+    "https://searchlightnm.org/at-one-rural-new-mexico-hospital-doctors-turn-to-ai-tools/"
+   ],
+   "alaska_translation": "The nearest shape to an Alaska rural operation found this run: a small hospital rather than a health system, in a place where recruiting a physician is the binding constraint.",
+   "icp_segments": [
+    "clinic_groups",
+    "rural_health"
+   ],
+   "notes": "The Jewell quote is one of the best plain-language rung explanations found across both waves and is worth keeping regardless of whether this ships.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck",
+     "bought and configured",
+     "a named human with an excellent verbatim quote",
+     "a limit named by the source"
+    ],
+    "missing": [
+     "cost class (HARD GATE)",
+     "decision-to-working timeline (HARD GATE)",
+     "employee count",
+     "the result is one physician's self-report, not a cohort"
+    ],
+    "to_promote": "Cost per provider per month, rollout duration, headcount, and a cohort-level number."
+   }
+  },
+  {
+   "id": "bank-031",
+   "company": "Southeast Alabama Rural Health Associates",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Troy, Alabama, 13 locations",
+   "size": "13 locations. Headcount and provider count not stated.",
+   "industry": "federally qualified health center, multi-site clinic group",
+   "capability": "ambient_clinical_documentation",
+   "bottleneck": "Documentation burden on providers, charting eating into the day and into face-to-face time with patients.",
+   "build": "Sunoh.ai ambient AI medical scribe integrated with the eClinicalWorks EHR the practice already ran, deployed across the practice locations.",
+   "pattern_id": "P6",
+   "ladder_rung": {
+    "rung": 3,
+    "why": "One model call at one fixed point. Audio in, structured note out, human signs it.",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "15 percent",
+     "what": "provider efficiency improvement, SELF-REPORTED BY ONE clinician and generalised to the organisation in the headline. No baseline.",
+     "source_url": "https://www.businesswire.com/news/home/20260204980598/en/eClinicalWorks-and-Sunoh.ai-Boost-Provider-Efficiency-by-15-at-Southeast-Alabama-Rural-Health-Associates",
+     "sourcing": "vendor press release, self-reported by the customer"
+    },
+    {
+     "value": "about one hour",
+     "what": "daily time saved per provider, across an unstated number of providers",
+     "source_url": "https://www.businesswire.com/news/home/20260204980598/en/eClinicalWorks-and-Sunoh.ai-Boost-Provider-Efficiency-by-15-at-Southeast-Alabama-Rural-Health-Associates",
+     "sourcing": "vendor press release"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "None in the release. Sunoh publishes list pricing publicly, but a vendor list price is not what this customer paid and does not satisfy the gate."
+   },
+   "timeline": "None stated.",
+   "named_human": {
+    "name": "Dr. Ben Smith, DO, FAAFP",
+    "role": "Chief Medical Officer",
+    "quote": "Sunoh.ai has transformed my efficiency by 15%.",
+    "source_url": "https://www.businesswire.com/news/home/20260204980598/en/eClinicalWorks-and-Sunoh.ai-Boost-Provider-Efficiency-by-15-at-Southeast-Alabama-Rural-Health-Associates"
+   },
+   "limit_named_by_source": "None. That absence is the tell: a two-vendor joint announcement with a single customer quote and no baseline.",
+   "evidence_strength": "weak",
+   "skepticism": "Vendor press release, single self-reported figure from one clinician generalised to the organisation in the headline, no baseline, no denominator, no cost, no timeline, no headcount.",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260204980598/en/eClinicalWorks-and-Sunoh.ai-Boost-Provider-Efficiency-by-15-at-Southeast-Alabama-Rural-Health-Associates"
+   ],
+   "alaska_translation": "Independent practices and behavioral health groups here carry the same charting load with a harder recruiting market behind it.",
+   "icp_segments": [
+    "clinic_groups"
+   ],
+   "notes": "Kept only because multi-site clinic groups are a named coverage gap and the CMO is on the record.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck",
+     "bought and configured into an EHR they already ran",
+     "a named human",
+     "2026"
+    ],
+    "missing": [
+     "cost class (HARD GATE)",
+     "timeline (HARD GATE)",
+     "employee count",
+     "no baseline and no limit"
+    ],
+    "to_promote": "Cost per provider per month, a rollout duration, a headcount, and a cohort-level number rather than one clinician's estimate."
+   }
+  },
+  {
+   "id": "bank-032",
+   "company": "Turtle (Turtle and Hughes, Inc.)",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Clark, New Jersey, 17 locations",
+   "size": "Over 800 employees across the US, Canada, Mexico and Puerto Rico, per the company's own Our Story page fetched this run. Fourth-generation family-owned, founded 1923, certified woman-owned. A 150-person salesforce.",
+   "industry": "electrical and industrial distribution",
+   "capability": "dynamic_pricing_and_order_entry_matching",
+   "bottleneck": "The quote desk. Brian Fitzgerald, SVP Digital Operations, on order entry: 'Literally everything was by hand. Infor has some capabilities to upload Excel spreadsheets, but adoption was minuscule at best because it's not easy. This made us slower, even on the simplest quotes.' On pricing, prices were set by individual salespeople off static models and personal judgment, so the same customer got different numbers.",
+   "build": "Two bought-and-configured deployments. An Infor Industry AI dynamic pricing widget embedded in the Order Entry screen of Infor CloudSuite Distribution, refreshing weekly off historical transactions, COMEX commodity costs and customer segmentation, showing the rep a recommended price plus a range; the rep still decides. And Canals AI order entry automation on their Infor SX.e ERP, where reps submit handwritten notes and partial descriptions, the model surfaces candidate matches, the rep picks, and after roughly five orders it starts selecting on its own.",
+   "pattern_id": "P10",
+   "ladder_rung": {
+    "rung": 3,
+    "why": "Both builds are one model call at one fixed point in a process humans designed. Pricing widget suggests, rep accepts or overrides. Canals suggests line items, rep confirms, a fixed integration writes to the ERP.",
+    "vendor_calls_it": "automation"
+   },
+   "numbers": [
+    {
+     "value": "12 weeks",
+     "what": "concept to live deployment of the AI pricing widget, quoted verbatim by the named CTO",
+     "source_url": "https://www.infor.com/blog/turtle-ai-cloud-distribution-success",
+     "sourcing": "vendor customer story, said by David Magee, CTO"
+    },
+    {
+     "value": "over $700,000",
+     "what": "incremental US revenue, four months, PARTIAL rollout. No total-revenue denominator, so it cannot be turned into a percentage.",
+     "source_url": "https://www.constellationr.com/case-study/2025/brian-fitzgerald",
+     "sourcing": "company award submission"
+    },
+    {
+     "value": "98 percent faster item pricing, quote turnaround from 3 to 30 minutes down to seconds",
+     "what": "per item priced in the order entry screen",
+     "source_url": "https://www.infor.com/blog/turtle-ai-cloud-distribution-success",
+     "sourcing": "vendor"
+    },
+    {
+     "value": "57 percent against a company-wide historical average of about 20 percent",
+     "what": "quote hit rate on Canals-processed transactions only. THE BASE SWITCHES between the two figures being compared.",
+     "source_url": "https://www.canals.ai/case-studies/turtle-grows-top-bottom-lines",
+     "sourcing": "vendor"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "Not disclosed by Turtle, Infor or Canals. The only public anchor is Infor's AWS Marketplace listing for Infor Augmented Intelligence for Distribution, which lists at $250,000 for a 12-month contract under 75,000 predictions, rising to $600,000 at under 600,000 predictions, plus AWS infrastructure. That is a vendor LIST PRICE standing in for what this customer paid, which per ECONOMICS.md does not satisfy the gate.",
+    "source_url": "https://aws.amazon.com/marketplace/pp/prodview-nt7wn2dkonmqq"
+   },
+   "timeline": "Pricing widget, 12 weeks from concept to live, quoted by the CTO. Canals order entry, a two-week proof of concept then roughly one month to live across the inside sales team.",
+   "named_human": {
+    "name": "David Magee",
+    "role": "Chief Technology Officer and Chief Information Security Officer",
+    "quote": "Technology is only valuable if the business owns it. With Infor, we've been able to let the business lead and IT support that innovation...we were able to go from concept to live deployment in just 12 weeks.",
+    "source_url": "https://www.infor.com/blog/turtle-ai-cloud-distribution-success"
+   },
+   "limit_named_by_source": "Infor's own customer story states that Turtle's earlier AI pricing attempts FAILED even though the company had an in-house data scientist. It also scopes the $700,000 honestly as a four-month partial-rollout figure. And Fitzgerald names the Canals boundary himself: about five orders of rep correction before the model selects reliably on its own.",
+   "evidence_strength": "medium",
+   "skepticism": "Three sources carry it, but the numbers are all Turtle's own and unaudited. The 57 percent versus 20 percent comparison switches base, which is the classic narrow-task-wide-claim shape and must be labelled if ever used.",
+   "sources": [
+    "https://www.constellationr.com/case-study/2025/brian-fitzgerald",
+    "https://www.infor.com/blog/turtle-ai-cloud-distribution-success",
+    "https://www.canals.ai/case-studies/turtle-grows-top-bottom-lines",
+    "http://www.turtle.com/our-story/",
+    "https://aws.amazon.com/marketplace/pp/prodview-nt7wn2dkonmqq"
+   ],
+   "alaska_translation": "Distribution here runs the same quote desk against longer lead times. But see the note: the product class is out of reach.",
+   "icp_segments": [
+    "distribution"
+   ],
+   "notes": "IMPORTANT AND IT APPLIES TO THE WHOLE INFOR CLUSTER (Turtle, Endries, Team Air, Grosfillex, State Electric): this family of stories sits behind a product listing at a quarter of a million dollars a year and up. Even if someone hands us the cost, it is above Dana's reach and will never feel copyable. Weight future hunting toward vendors whose customers are 50 to 300 person companies, not toward ERP-attached AI.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "50 to 1000 employees (800+) and not a technology company",
+     "ONE named bottleneck in vivid operator language",
+     "bought not built, and they FAILED at building it in house first, which is a gift of a teaching detail",
+     "a measurable before and after",
+     "a named human with a verbatim quote",
+     "2024 or later",
+     "timeline disclosed verbatim by the CTO",
+     "a limit named by the source"
+    ],
+    "missing": [
+     "cost class: not disclosed, and the only public anchor is a vendor list price which does not satisfy the gate (HARD GATE)",
+     "and even with cost, the product class is above the reader's reach, which fails the door test"
+    ],
+    "to_promote": "An operator statement of what Turtle actually paid. But see notes: the price class may disqualify it on the reader gate regardless."
+   }
+  },
+  {
+   "id": "bank-033",
+   "company": "Endries International, Inc.",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Brillion, Wisconsin, with DCs in Wisconsin, Georgia, California, Ontario, Manitoba, the Netherlands and England",
+   "size": "Roughly $500 million revenue, 750,000-plus SKUs. HEADCOUNT NOT CLOSED: neither the award submission nor the company About page gives one.",
+   "industry": "industrial fastener distribution",
+   "capability": "parts_matching_for_quoting",
+   "bottleneck": "The quote desk. Over 150,000 keyword searches a year to match parts, up to 30 minutes per search, and a 500-part RFQ took at least three days to turn around. Separately, 20 percent of inventory commitment forms sat open past expiration.",
+   "build": "Infor Industry AI for parts matching plus an Infor Augmented Intelligence Service subscription on Infor CloudSuite Distribution. A rep uploads a spreadsheet of parts and an ensemble pattern-matching model returns top candidates per line. Infor RPA with OCR handles inventory commitment forms and proof-of-delivery digitisation.",
+   "pattern_id": "P10",
+   "ladder_rung": {
+    "rung": 3,
+    "why": "One model call at one fixed point. Spreadsheet in, ranked part matches out, a human picks. The RPA piece is rung 1 rules with OCR in front.",
+    "vendor_calls_it": "automation"
+   },
+   "numbers": [
+    {
+     "value": "3 days down to 1 day",
+     "what": "RFQ quote turnaround on a 500-part quote",
+     "source_url": "https://www.constellationr.com/case-study/2024/todd-fischer",
+     "sourcing": "company award submission"
+    },
+    {
+     "value": "9,000 hours a year total (7,500 from AI parts matching, 1,200 ICF, 260 proof-of-delivery)",
+     "what": "company-wide, no headcount denominator given",
+     "source_url": "https://www.infor.com/blog/endries-customer-story",
+     "sourcing": "vendor"
+    },
+    {
+     "value": "under 90 days for the AI, under one month for the RPA",
+     "what": "time to value, per workflow",
+     "source_url": "https://www.constellationr.com/case-study/2024/todd-fischer",
+     "sourcing": "company award submission"
+    },
+    {
+     "value": "30 percent increase",
+     "what": "customer win rate. NO BASELINE. Unusable without a denominator.",
+     "source_url": "https://www.infor.com/blog/endries-customer-story",
+     "sourcing": "vendor"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "Not disclosed. Same AWS Marketplace list-price anchor as Turtle ($250,000 to $600,000 on a 12-month contract), and the same objection: list price, not what Endries paid."
+   },
+   "timeline": "Under 90 days from start to ROI on the AI parts matching, under one month on the RPA.",
+   "named_human": {
+    "name": "Michael Knight",
+    "role": "Chief Executive Officer",
+    "quote": "We don't have data scientists on our payroll. When we have an idea, we engage with Infor's data scientists through our subscription.",
+    "source_url": "https://www.infor.com/blog/endries-customer-story"
+   },
+   "limit_named_by_source": "Todd Fischer, VP and Corporate Information Officer, says they wanted to start with pricing as the first AI application and deliberately backed off, starting with parts matching instead. That is the source naming its own scoping limit: they picked the low-cost-of-error job first.",
+   "evidence_strength": "medium",
+   "skepticism": "Two sources but both are effectively the company talking, one to an awards jury and one to its vendor. Hours-saved carries no headcount denominator. The 30 percent win-rate increase has no baseline. CONTRADICTION LOGGED: Infor calls Endries family-owned; the company's own About page says Wolseley Industrial Group acquired it in 2005. The company page wins.",
+   "sources": [
+    "https://www.constellationr.com/case-study/2024/todd-fischer",
+    "https://www.infor.com/blog/endries-customer-story",
+    "https://www.endries.com/content/about-endries",
+    "https://aws.amazon.com/marketplace/pp/prodview-nt7wn2dkonmqq"
+   ],
+   "alaska_translation": "Same as Turtle, and the same price-class caveat applies.",
+   "icp_segments": [
+    "distribution"
+   ],
+   "notes": "The Knight quote ('We don't have data scientists on our payroll') is close to the thesis of this whole series and is worth keeping. But see the Infor cluster note on bank-025-adjacent entry for Turtle: the product class is out of Dana's reach.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck in operator language",
+     "bought not built, explicitly",
+     "a measurable before and after",
+     "a named human with an excellent verbatim quote",
+     "2024 or later",
+     "timeline disclosed",
+     "a scoping limit named by the source"
+    ],
+    "missing": [
+     "cost class (HARD GATE)",
+     "employee count unverified, so the 50-1000 band is untested",
+     "the product class is above the reader's reach"
+    ],
+    "to_promote": "A fetched headcount and an order-of-magnitude cost. Note MDM's 'Inside the AI Strategies of Turtle and Endries' covers both and is blocked to our fetcher."
+   }
+  },
+  {
+   "id": "bank-034",
+   "company": "Perth County Ingredients",
+   "added": "2026-08-29",
+   "last_verified": "2026-08-29",
+   "status": "lead",
+   "location": "Perth County, Ontario",
+   "size": "Not disclosed anywhere fetched. Likely under the 50-person floor, which is the main risk.",
+   "industry": "food processing (dried egg products)",
+   "capability": "condition_based_maintenance",
+   "bottleneck": "One hundred percent of maintenance work was reactive. No maintenance cover on afternoon and night shifts, so as production ramped the plant lived on after-hours emergency call-ins.",
+   "build": "Fiix CMMS from Rockwell Automation, cloud-based, wired to the plant's PLCs through partner Majik Systems so equipment condition streams in live, plus the Fiix Asset Risk Predictor for condition-based and predictive triggers. Rolled out to seven more facilities.",
+   "pattern_id": "P8",
+   "ladder_rung": {
+    "rung": 2,
+    "why": "Mostly thresholds and condition rules over live PLC data with a risk-scoring model on top. The honest reading is that the win came from having the data at all and from moving work from reactive to scheduled.",
+    "vendor_calls_it": "unstated"
+   },
+   "numbers": [
+    {
+     "value": "decreased 54 percent from a stated baseline of 100 percent reactive",
+     "what": "reactive maintenance share of work orders, plant-wide",
+     "source_url": "https://www.constellationr.com/case-study/2024/tom-dufton",
+     "sourcing": "company award submission"
+    },
+    {
+     "value": "dropped 47 percent",
+     "what": "after-hours emergency call-ins, plant-wide",
+     "source_url": "https://www.constellationr.com/case-study/2024/tom-dufton",
+     "sourcing": "company award submission"
+    },
+    {
+     "value": "$40,000 annually, described as a 300 percent return on investment",
+     "what": "from real-time asset condition monitoring specifically",
+     "source_url": "https://www.constellationr.com/case-study/2024/tom-dufton",
+     "sourcing": "company award submission"
+    }
+   ],
+   "cost": {
+    "disclosed": false,
+    "value": "No cost figure is stated. An investment of roughly $10,000 to $13,000 can be DERIVED from the $40,000 at 300 percent ROI, but that is arithmetic on an unstated ROI definition, not a disclosure, and must never be presented as one."
+   },
+   "timeline": "Not stated. No start date and no decision-to-working duration.",
+   "named_human": {
+    "name": "Tom Dufton",
+    "role": "Maintenance and Project Manager",
+    "quote": "We are proud that we now have a stable work environment and have had no Maintenance turnover in the last 7 years.",
+    "source_url": "https://www.constellationr.com/case-study/2024/tom-dufton"
+   },
+   "limit_named_by_source": "The submission frames the journey as a ladder climbed in order, 100 percent reactive to preventive to condition-based to predictive. That is the source telling you the predictive part came last and rested on everything before it.",
+   "evidence_strength": "weak",
+   "skepticism": "Single source, the company's own award submission. No headcount, no timeline, no start date, no cost. The 300 percent ROI has no stated definition. The zero-turnover-in-seven-years line suggests the deployment is considerably older than the 2024 submission date.",
+   "sources": [
+    "https://www.constellationr.com/case-study/2024/tom-dufton"
+   ],
+   "alaska_translation": "Processing lines and marine engine shops here run the same reactive-maintenance trap, sharpened because a part that is wrong ships by barge or by air.",
+   "icp_segments": [
+    "seafood_processing",
+    "machine_shops"
+   ],
+   "notes": "The ladder framing (reactive to preventive to condition-based to predictive) is a good teaching artifact for the AGENTIC_LITERACY curriculum even if the case never ships.",
+   "qualification": {
+    "filter_version": "2026-07-28",
+    "holds": [
+     "not a technology company",
+     "ONE named bottleneck",
+     "bought and configured",
+     "a measurable before and after against a stated baseline",
+     "a named human with a verbatim quote"
+    ],
+    "missing": [
+     "cost class (HARD GATE)",
+     "timeline (HARD GATE)",
+     "employee count, probably under the 50 floor",
+     "deployment date probably well before 2024"
+    ],
+    "to_promote": "Cost, an implementation window, and a headcount."
+   }
   }
  ],
  "interview_leads": [
@@ -1609,8 +2401,8 @@
   "Progressive Grocer Bashas piece",
   "CCJ Samsara dashcam crash rate study"
  ],
- "ship_ready_count": 0,
+ "ship_ready_count": 1,
  "par": 8,
  "par_note": "Par is 8 SHIP-READY cases, meaning cost and timeline both disclosed. Below par, Phase 1 spawns up to four scouts in parallel.",
- "_restock_2026_08_29": "Wave 1 of the 2026-08-29 restock ran four scouts across four hunting grounds and returned ZERO bank verdicts. Eight new leads were added (bank-017 to bank-024). Every one of them failed the same hard gate: no disclosed cost. See out/2026-08-29/restock_notes.md for the structural finding, which is that award submissions, vendor blogs, trade press and MEP writeups are all written to win something and cost is the one number that never helps you win."
+ "_restock_2026_08_29": "Wave 1 of the 2026-08-29 restock ran four scouts across four hunting grounds and returned ZERO bank verdicts. Eight new leads were added (bank-017 to bank-024). Every one of them failed the same hard gate: no disclosed cost. See out/2026-08-29/restock_notes.md for the structural finding, which is that award submissions, vendor blogs, trade press and MEP writeups are all written to win something and cost is the one number that never helps you win. WAVE 2 added bank-025 to bank-034 and produced the run's ONLY bank verdict: bank-025, La Crosse County Public Safety Communications, which clears the cost gate with a figure the operator framed in headcount terms. Wave 2's structural finding is that PUBLIC SAFETY ANSWERING POINTS are the richest cost-disclosure vein touched so far, because 911 funding comes from a public surcharge and local press prints the figure next to the result: four agencies disclosed a hard annual number on the same product inside one session."
 }

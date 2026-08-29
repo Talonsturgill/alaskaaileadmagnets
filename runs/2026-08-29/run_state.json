@@ -1,13 +1,13 @@
 {
   "run_date": "2026-08-29",
   "case_file_no": 2,
-  "bank_id": null,
+  "bank_id": "bank-025",
   "branch": "tsturg/wonderful-bell-exirov",
   "branch_note": "Session harness designates tsturg/wonderful-bell-exirov as the development branch for this run. The contract's default claude/case-file-<date> is overridden by that designation. Delivery links are commit-pinned to the pushed SHA, so this does not affect delivery.",
   "phases": {
     "wake": "done",
-    "restock": "pending",
-    "selection": "pending",
+    "restock": "done",
+    "selection": "done",
     "verification": "pending",
     "translation": "pending",
     "directors_room": "pending",
@@ -26,7 +26,8 @@
   },
   "artifacts": {
     "plan": "out/2026-08-29/plan.md",
-    "restock_notes": "out/2026-08-29/restock_notes.md"
+    "restock_notes": "out/2026-08-29/restock_notes.md",
+    "selection": "out/2026-08-29/selection.md"
   },
   "incidents": [
     {
@@ -40,6 +41,13 @@
       "phase": "restock",
       "incident": "CONTRADICTION between two scouts. Both fetched https://www.servicetitan.com/press/bill-joplins-air-conditioning-and-heating-books-over-90-of-calls-with-servicetitan-ai-voice-agent on 2026-08-29 and returned DIFFERENT verbatim quotes attributed to the same named human, Randi Thompson.",
       "resolution": "Neither quote is usable. The contract resolves contradictions in favour of the agent that read the page, and here both did, so the quote is simply unproven. Logged on bank-021; must be re-fetched and matched character for character before any use."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "selection",
+      "incident": "Two restock waves, eight scouts, twenty-four candidates, ONE bank verdict. No qualifying runner-up exists.",
+      "resolution": "Selected bank-025 La Crosse County Public Safety Communications. Recorded explicitly in selection.md that if verification kills it the run writes a post-mortem rather than swapping to a case that fails the same hard gate La Crosse passes. Kill conditions named in writing."
     }
-  ]
+  ],
+  "case": "La Crosse County Public Safety Communications"
 }

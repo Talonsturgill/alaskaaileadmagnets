@@ -174,3 +174,141 @@ already-worked company list:
 
 *(Wave 2 results and the run's outcome are recorded below this line once the
 scouts return.)*
+
+---
+
+## WAVE 2 RESULTS — one bank verdict out of twenty-four candidates
+
+| Ground | Candidates | Banked | Killed |
+|---|---|---|---|
+| SuperNova archive, worked systematically | 4 | 0 | 8 |
+| Public records: MEP paged by year + state grant lists | 2 | 0 | 8 |
+| Conference sessions, operator panels, podcasts | 4 | 0 | 8 |
+| Priced buildable deployments (public sector, low-code, co-ops) | 6 | **1** | 7 |
+
+**`bank-025` La Crosse County Public Safety Communications is the run's only
+qualifying case**, and it came from the vein nobody in this project had ever
+worked: public-safety answering points.
+
+### Why that vein worked, and it is a keeper
+
+911 funding comes from a public surcharge, so the contract value is public and
+local press routinely prints the figure next to the result. **Four agencies
+disclosed a hard annual number on the same product inside one search session:**
+La Crosse at $67k year one and $81k year two, Grand Traverse MI at $60k then
+$72k on a three-year term, Spokane WA at $95k on two years, Ozaukee at roughly
+$70k. Nothing else in eight scout-runs produced a single absolute price.
+
+Two craft findings worth more than the case:
+
+1. **Search the FAILURE.** One fetch of "After a few hiccups, Ava settling in
+   at sheriff's office" in the Ozaukee Press produced a same-product,
+   different-agency account of routing errors and background-noise confusion
+   that forced the system back to two hours a day. That is the limit slide,
+   sourced, for one query. Do this every run.
+2. **The long-form regional magazine, not the TV station, carries the
+   operator's own cost framing.** Milwaukee Magazine had the sentence nobody
+   else did, "approximate to one employee with benefits," which is a better
+   cost line for Dana than any dollar figure standing alone.
+
+### The conference-and-podcast ground: a clean negative result
+
+Wave 1 established that award submissions and trade press print results and
+never money. **Wave 2 establishes that written conference recaps do not fix
+that, for a specific and fixable reason: the peer question that gets cost said
+out loud happens in the Q&A, and the Q&A is exactly what recaps omit.**
+
+Worse, the agendas are vendor-dominated. Across roughly 40 sessions at Applied
+AI for Distributors 2025 and 2026 — the two most on-target distribution events
+in existence — the number led by an actual distributor describing their own
+deployment is near zero. 2025 was 19 sessions, all vendors. Same at ENR
+FutureTech, where the operators on the AI agent panel were Hensel Phelps and
+McCarthy, both far outside our band.
+
+Trade podcast episode PAGES publish summaries, not transcripts. Toolbox for the
+Trades, MakingChips, Manufacturing Happy Hour, Home Service Expert and Collision
+Vision were all checked; in every case the candid moment is inside audio nobody
+transcribed to a fetchable page. **This ground is real but it needs a transcript
+source, not a search engine.**
+
+### The single most actionable finding of the whole run
+
+The one page in two waves that printed a real cost class AND a real timeline for
+a mid-market company was not a conference recap, an award submission or a vendor
+case study. **It was a trade reporter who asked.** Don Davis at Distribution
+Strategy Group got "less than $50,000" and a December-to-April window out of the
+Howard Elliott Collection in a plain news interview. (That company is 11 to 50
+employees, below our floor, so it is not a case — but the *route* is the finding.)
+
+**Next wave should identify the two or three reporters in each vertical who ask
+what it cost, and read their back catalogue, rather than searching for the
+disclosure.** Don Davis is the first name on that list. The Colorado Sun's
+distribution coverage is the second.
+
+### The Infor cluster, and a price-class rule worth keeping
+
+Turtle, Endries, Team Air, Grosfillex and State Electric all sit behind Infor
+Augmented Intelligence, which lists on AWS Marketplace at **$250,000 for a
+12-month contract rising to $600,000**, plus infrastructure. Even handed an
+invoice, that is not a door Dana can walk through.
+
+**New rule for the hunt: weight toward vendors whose customers are 50 to 300
+person companies, not toward ERP-attached AI.** And a genuinely new
+cost-hunting ground nobody here has used: **cloud marketplace listings**, where
+vendors who refuse to publish a price page will publish a listing.
+
+### Grounds now confirmed DRY, so no future run re-buys them
+
+- **NIST MEP for AI.** The index supports keyword filtering
+  (`?k=<full phrase>`; `k=AI` is too short a token and returns everything).
+  Across the entire 1,067-story corpus, all years: "artificial intelligence"
+  returns 3, "machine learning" 2, "chatbot" 2, "generative" 4, heavily
+  overlapping. Deduplicated, **the whole MEP network has published exactly two
+  AI deployment stories**, and in both the dollar figure attaches to something
+  other than the AI. Retire this vein for at least two quarters.
+- **The SuperNova archive is now substantially worked.** Twelve pages,
+  `?page=0` to `?page=11`; pages 0 and 1 are the entire recency-compliant
+  universe, about 80 entries, all triaged. The remaining Dana-shaped seam is
+  thin.
+- **Microsoft Power Platform case studies.** Index fetched in full; with
+  Dunaway already worked, essentially every remaining entry is a global
+  enterprise, a bank, a university or a technology vendor.
+- **State Industry 4.0 grant lists.** The cost-by-construction premise is real
+  but the plumbing fights you: states publish as PDF (Maryland) or Excel (Iowa),
+  neither of which the fetcher reads, and this sandbox cannot parse a saved PDF.
+  The one route that works is regional press republishing the list with both
+  numbers per company. Base rate is also poor: in the one full recipient table
+  read (Conexus Indiana, 43 companies), roughly 5 percent of line items were AI
+  or ML and none had a case study behind it.
+
+### Quote asset worth keeping regardless of what ships
+
+Jenni Detert, VP of Information Technology at Endries International, to the
+Colorado Sun on an automation that went wrong: **"we had just kind of automated
+chaos."** Her own correction was that they should have found the root cause of
+the exceptions rather than automating around them. An independent reporter, a
+named operator, admitting a failure mode. That is the most trustworthy sentence
+found across both waves and it belongs in the knowledge base.
+
+### Scout disagreements logged
+
+- **Team Air timeline.** One wave-2 scout found "three agents deployed in under
+  two weeks" on the Infor blog; another reported it appears on no page it
+  fetched. Not a true contradiction — they fetched different URLs, and only the
+  Infor blog carries it. The Constellation submission does not.
+- **Dunaway's ladder rung.** One scout called it rung 4, another rung 3. Both
+  read the same architecture. Immaterial to this run since Dunaway is not
+  shipping, but worth noting that the rung call is genuinely arguable when a
+  build chains retrieval, a citation checker and generation.
+- **Dunaway buy-vs-build.** Wave 2 raised a filter-3 concern wave 1 did not:
+  they wrote a custom Azure Functions BM25 paragraph matcher, which is more
+  build than buy. Recorded on `bank-017`.
+
+### Unverified pointer, explicitly NOT banked
+
+A search result described Lynas Foodservice going from 240 customers a week
+with four people to over 1,000 a week with two, within four weeks of going live
+on Choco's OrderAgent. **The page was never fetched, so nothing about it is
+asserted and no company from it entered the bank.** A future scout should fetch
+it first and go around the vendor. It is Northern Ireland rather than the lower
+48.
