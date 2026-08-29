@@ -1,0 +1,103 @@
+{
+  "run_date": "2026-08-29",
+  "case_file_no": 2,
+  "thesis": "A dispatch desk that had become the county's default number for everything bought one voice workflow, pointed it at the routine line only, and left the line where a wrong answer hurts somebody completely alone.",
+  "_thesis_note": "The deck's one idea is the BOUNDARY, not the machine. Everything good here follows from where the line got drawn, and the Ozaukee beat is structural proof rather than a disclaimer, because the same product went sideways sixty miles away when somebody drew it too wide.",
+  "vocabulary_lock": {
+    "the_line": "Called 'the routine line' on every slide. The precise phrase 'non-emergency line' appears exactly ONCE, on slide 4, where the mechanism is defined.",
+    "the_system": "Called 'the voice workflow' or 'Ava'. Never 'the AI'.",
+    "the_desk": "Called 'the desk' or 'the dispatch desk'. The word 'county' never appears in a headline position.",
+    "units": "Calls, always. Never minutes, never hours, never tickets."
+  },
+  "hard_copy_rules": [
+    "The string '105,000' appears on exactly ONE slide (2). The string '65 percent' appears on exactly ONE slide (6). NO slide contains both, and no slide performs or implies arithmetic between them. Machine-greppable and it will be grepped.",
+    "The 65 percent always travels with its base and its verb in the same breath: it is a share of the 41,000 calls the system TOOK, and it counts calls that ENDED, not calls that got ANSWERED.",
+    "'Approximate to one employee with benefits' is attributed to Milwaukee Magazine in the same breath, every time. It is never put in Cory Lynch's mouth or the county's.",
+    "The timeline is only ever 'several months of training before it took its first call on 5 May 2025'. Never 'several months from decision to working'. Spokane's six weeks is off limits under any framing because it is a different vendor.",
+    "No freed hour is ever converted into a dollar. They kept all four dispatchers per shift.",
+    "The Ozaukee beat always carries the vendor-receptive clause. Cutting it makes the slide a hit piece and an inaccurate one."
+  ],
+  "slides": [
+    {
+      "n": 1, "role": "COVER",
+      "promise": "That question is landing on the same desk that answers 911, and something concrete happened about it",
+      "pays": null
+    },
+    {
+      "n": 2, "role": "THE COMPANY",
+      "promise": "A desk with four people on it and six seats it cannot fill is taking a hundred thousand of those a year, so what happens when the wrong one lands",
+      "pays": 1
+    },
+    {
+      "n": 3, "role": "THE BOTTLENECK",
+      "promise": "This is what it costs when the real call arrives mid-conversation, so what did they actually do about it",
+      "pays": 2
+    },
+    {
+      "n": 4, "role": "THE BUILD",
+      "promise": "They rebuilt one line and left the other untouched, and step four says escalate on a word, so which words and who chose them",
+      "pays": 3
+    },
+    {
+      "n": 5, "role": "THE BUILD",
+      "promise": "The gate is a list a person typed, which means the machine is matching words rather than judging urgency, so how much of the load actually moved",
+      "pays": 4
+    },
+    {
+      "n": 6, "role": "THE RECEIPTS",
+      "promise": "It moved a lot, and one outcome nobody has ever published, so does it work like this everywhere it is bought",
+      "pays": 5
+    },
+    {
+      "n": 7, "role": "THE BOTTLENECK",
+      "promise": "It does not, and the difference was where the boundary went, so what would I actually be signing up for",
+      "pays": 6
+    },
+    {
+      "n": 8, "role": "WHAT IT TOOK",
+      "promise": "A price that rises as it works, a ramp with no start date on the record, and an owner who runs the desk, so where does my own boundary go",
+      "pays": 7
+    },
+    {
+      "n": 9, "role": "YOUR VERSION",
+      "promise": "Here is the line to point it at, the harder local version of what broke Ozaukee, and the cheaper answer if your volume is small",
+      "pays": 8
+    },
+    {
+      "n": 10, "role": "CLOSE",
+      "promise": null,
+      "pays": 9
+    }
+  ],
+  "loop_ledger": {
+    "1_opens": "why is that question landing there",
+    "2_pays_1": "because it is the only line that always picks up",
+    "2_opens": "what happens when the wrong call lands",
+    "3_pays_2": "the caller goes on hold and starts over with somebody else",
+    "3_opens": "what did they do",
+    "4_pays_3": "rebuilt one line, left the other alone",
+    "4_opens": "which words escalate, and who chose them",
+    "5_pays_4": "a person typed the list, and nobody has published it",
+    "5_opens": "did it move anything",
+    "6_pays_5": "41,000 calls, about 65 percent contained, four dispatchers kept",
+    "6_opens": "does it always work",
+    "7_pays_6": "not at Ozaukee, where the boundary was drawn too wide",
+    "7_opens": "what would this take",
+    "8_pays_7": "about one hire a year, rising, several months of training, owned by the desk",
+    "8_opens": "where does my boundary go",
+    "9_pays_8": "the ten-minute line, not the house-or-hand line, and rung 1 if your volume is small",
+    "10_pays_9": "the ask"
+  },
+  "removability_test": {
+    "1": "Remove it and the deck has no recognition open; Dana never hears their own Tuesday first.",
+    "2": "Remove it and Dana never identifies; every downstream number lands on a stranger.",
+    "3": "Remove it and the bottleneck is a statistic instead of a January night.",
+    "4": "Remove it and the reader never learns the rung or sees the untouched line, which is the thesis.",
+    "5": "Remove it and the curriculum payload goes with it, plus slide 9 loses its payoff object.",
+    "6": "Uncuttable by doctrine, and it is the screenshot.",
+    "7": "Remove it and the deck is a vendor page. This slide is why slide 6 is believable.",
+    "8": "Uncuttable by doctrine, and it carries the one thing no vendor says out loud.",
+    "9": "Uncuttable by doctrine, and it is where 'I could do that' either happens or does not.",
+    "10": "Remove it and there is no ask and no mark."
+  }
+}

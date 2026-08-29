@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#0E1A26; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#7E95AE; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#5F7592; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:214px; width:352px; height:200px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 80; font-size:58px; line-height:1.02;
+    letter-spacing:-0.016em; color:#F4F8FF; }
+
+  .body { position:absolute; left:80px; top:472px; width:352px;
+    font-family:"Manrope",sans-serif; font-weight:400; font-size:32px;
+    line-height:1.40; color:#C6D4E2; }
+  .body b { color:#F4F8FF; font-weight:600; }
+
+  /* the typed form header rides the sheet, so it carries a knockout plate */
+  .formhead { position:absolute; left:520px; top:214px; width:452px;
+    box-sizing:border-box; padding:12px 16px; background:#E4DAC4;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:31px;
+    letter-spacing:0.05em; color:#14202C; }
+
+  .formnote { position:absolute; left:520px; top:1074px; width:452px;
+    box-sizing:border-box; padding:10px 14px; background:#E4DAC4;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.02em; line-height:1.34; color:#5E5442; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">THE LIST</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>05 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#0E1A26" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <!-- state 05: one barbed arrow branches up and lands on the upper conductor -->
+      <line x1="2" y1="32" x2="94" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <line x1="56" y1="32" x2="56" y2="19" stroke="#E8A33D" stroke-width="2"/>
+      <path d="M56 14 L52 21 L56 19 L60 21 Z" fill="#E8A33D"/>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">A person typed the list</div>
+
+    <div class="body" data-zone="BODY" data-block="body">If somebody in trouble calls the routine line, the system picks up certain hot words and sends them to a 911 dispatcher, per the county's operations supervisor. <b>That list is not something the model worked out. Somebody sat down and typed it.</b> The machine is matching words, not judging urgency.</div>
+
+    <div class="formhead" data-zone="ART" data-block="formhead" data-knockout>HOT WORDS &middot; ESCALATE TO 911</div>
+    <div class="formnote" data-zone="ART" data-block="formnote" data-knockout>NO SOURCE WE FETCHED LISTS THE WORDS</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* one source of truth: the sheet, and everything pinned to it */
+  const S = { x: 494, y: 172, w: 506, h: 1002, rot: 0.026 };
+
+  /* ---- dark console shell the sheet is taped to -------------------------- */
+  const g = cx.createLinearGradient(0, 0, W, H);
+  g.addColorStop(0, '#12202E'); g.addColorStop(0.5, '#0E1A26'); g.addColorStop(1, '#0A1420');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+  // brushed shell texture, hairline, so the dark half is never a dead fill
+  cx.strokeStyle = 'rgba(140,178,214,0.045)'; cx.lineWidth = 0.75;
+  for (let y = 120; y < H - 60; y += 7) {
+    cx.beginPath(); cx.moveTo(60, y); cx.lineTo(470, y + 3); cx.stroke();
+  }
+
+  /* ---- the sheet, rotated, with a lifting top edge ----------------------- */
+  cx.save();
+  cx.translate(S.x + S.w / 2, S.y + S.h / 2);
+  cx.rotate(S.rot);
+  cx.translate(-S.w / 2, -S.h / 2);
+
+  // layered elevation shadow (#45): geometric series, darkened bg hue, never black
+  for (const [o, a] of [[1, 0.20], [2, 0.18], [4, 0.16], [8, 0.13], [16, 0.10], [30, 0.07]]) {
+    cx.fillStyle = `rgba(5,10,17,${a})`;
+    cx.fillRect(o * 0.6, o * 1.2, S.w, S.h);
+  }
+
+  // paper
+  cx.fillStyle = '#E4DAC4'; cx.fillRect(0, 0, S.w, S.h);
+  // paper tooth
+  for (let i = 0; i < 4200; i++) {
+    const x = AK.rng(i * 7 + 3)() * S.w, y = AK.rng(i * 11 + 9)() * S.h;
+    cx.fillStyle = `rgba(110,96,72,${(0.02 + AK.rng(i * 5 + 1)() * 0.05).toFixed(3)})`;
+    cx.fillRect(x, y, 1.4, 1.4);
+  }
+  // warm key falling across the sheet from upper left
+  const pg = cx.createLinearGradient(0, 0, S.w, S.h);
+  pg.addColorStop(0, 'rgba(255,244,216,0.50)');
+  pg.addColorStop(0.6, 'rgba(255,244,216,0)');
+  pg.addColorStop(1, 'rgba(90,76,56,0.16)');
+  cx.fillStyle = pg; cx.fillRect(0, 0, S.w, S.h);
+
+  // punched hole row down the left edge
+  for (let i = 0; i < 11; i++) {
+    const hy = 70 + i * 86;
+    cx.fillStyle = '#0E1A26';
+    cx.beginPath(); cx.arc(30, hy, 9, 0, Math.PI * 2); cx.fill();
+    cx.strokeStyle = 'rgba(90,76,56,0.35)'; cx.lineWidth = 1;
+    cx.beginPath(); cx.arc(30, hy, 9.8, 0, Math.PI * 2); cx.stroke();
+  }
+
+  // EIGHT numbered rules, each carrying a REDACTION SLUG.
+  // No source we fetched names the words, so no word is invented. The slugs are
+  // inked bars, which give the eye a made mark rather than an empty rule.
+  cx.font = '500 22px "JetBrains Mono", monospace';
+  cx.textBaseline = 'middle';
+  for (let i = 0; i < 8; i++) {
+    const ry = 262 + i * 84;
+    cx.fillStyle = '#6E6046';
+    cx.fillText(String(i + 1).padStart(2, '0'), 70, ry);
+    // the ruled line
+    cx.strokeStyle = 'rgba(20,32,44,0.30)'; cx.lineWidth = 1.25;
+    cx.beginPath(); cx.moveTo(116, ry + 20); cx.lineTo(S.w - 56, ry + 20); cx.stroke();
+    // the redaction slug, varying width, seeded
+    const wSlug = 130 + AK.rng(i * 13 + 7)() * 190;
+    cx.fillStyle = '#1B2836';
+    cx.fillRect(120, ry - 15, wSlug, 30);
+    // a hint of ink bleed at the slug edge
+    cx.fillStyle = 'rgba(27,40,54,0.34)';
+    cx.fillRect(120, ry + 15, wSlug, 3);
+  }
+
+  // coffee ring, lower right, so the sheet reads as used
+  cx.save();
+  cx.strokeStyle = 'rgba(126,92,44,0.24)'; cx.lineWidth = 7;
+  cx.beginPath(); cx.arc(S.w - 118, S.h - 128, 52, 0.3, 5.6); cx.stroke();
+  cx.strokeStyle = 'rgba(126,92,44,0.13)'; cx.lineWidth = 2;
+  cx.beginPath(); cx.arc(S.w - 118, S.h - 128, 58, 0.5, 5.4); cx.stroke();
+  cx.restore();
+
+  // THE RED PEN lying across the lower third, with a real cast shadow
+  cx.save();
+  cx.translate(140, S.h - 196); cx.rotate(-0.52);
+  cx.fillStyle = 'rgba(6,12,20,0.34)';
+  cx.fillRect(6, 12, 322, 20);
+  const pen = cx.createLinearGradient(0, 0, 0, 20);
+  pen.addColorStop(0, '#E0604B'); pen.addColorStop(0.5, '#C13A28'); pen.addColorStop(1, '#8E2519');
+  cx.fillStyle = pen; cx.fillRect(0, 0, 306, 20);
+  // barrel bands and a nib
+  cx.fillStyle = '#2A2A2E'; cx.fillRect(258, 0, 22, 20);
+  cx.fillStyle = '#B8B4AC'; cx.fillRect(280, 3, 12, 14);
+  cx.beginPath(); cx.moveTo(292, 4); cx.lineTo(316, 10); cx.lineTo(292, 16); cx.closePath();
+  cx.fillStyle = '#8E2519'; cx.fill();
+  cx.restore();
+  cx.restore();
+
+  /* ---- the GOLD PAPERCLIP at the top left, this slide's whole gold budget - */
+  cx.save();
+  cx.translate(S.x + 34, S.y + 6); cx.rotate(0.22);
+  cx.strokeStyle = '#FFC72C'; cx.lineWidth = 5; cx.lineCap = 'round';
+  cx.beginPath();
+  cx.moveTo(0, 74); cx.lineTo(0, 18);
+  cx.quadraticCurveTo(0, 0, 17, 0); cx.quadraticCurveTo(34, 0, 34, 18);
+  cx.lineTo(34, 88); cx.quadraticCurveTo(34, 104, 17.5, 104);
+  cx.quadraticCurveTo(11, 104, 11, 88); cx.lineTo(11, 30);
+  cx.stroke();
+  cx.restore();
+
+  /* ---- ONE arrow leaving the sheet through the TOP edge ------------------ */
+  /* Nothing else crosses the boundary. It points toward where the untouched
+     911 conductor lives on the previous slide. */
+  cx.save();
+  cx.strokeStyle = '#E8A33D'; cx.lineWidth = 2.4;
+  cx.beginPath();
+  cx.moveTo(792, 214); cx.lineTo(792, 96);
+  cx.stroke();
+  cx.fillStyle = '#E8A33D';
+  cx.beginPath();
+  cx.moveTo(792, 78); cx.lineTo(784, 100); cx.lineTo(792, 93); cx.lineTo(800, 100);
+  cx.closePath(); cx.fill();
+  cx.restore();
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: -0.02, saturation: 1.05, contrast: 1.07, filmic: true,
+    lift: [0.006, 0.008, 0.016], gain: [1.016, 1.0, 0.980], vignette: 0.24,
+    bloom: { threshold: 0.78, strength: 0.20, radius: 7 },
+    grain: { amount: 0.04, size: 2, seed: 20260829 }, dither: true, sharpen: 0.28
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 42, max: 60, maxLines: 3 });
+  resolve();
+});
+</script>
+</body>
+</html>

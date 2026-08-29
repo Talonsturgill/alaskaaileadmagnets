@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#050A12; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#7E93AE; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#5C7086; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:206px; width:600px; height:250px;
+    box-sizing:border-box; padding:0;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 82; font-size:62px; line-height:1.03;
+    letter-spacing:-0.016em; color:#F4F8FF; }
+
+  .plate { position:absolute; left:80px; top:452px; width:720px;
+    box-sizing:border-box; padding:34px 36px 30px 36px;
+    background:rgba(9,17,28,0.955); border-left:4px solid #D8452F; }
+  .body { font-family:"Manrope",sans-serif; font-weight:400; font-size:33px;
+    line-height:1.40; color:#D2DEEA; }
+  .chip { margin-top:26px; font-family:"JetBrains Mono",monospace;
+    font-weight:500; font-size:24px; letter-spacing:0.07em; color:#8FA6BE; }
+
+  .dial { position:absolute; left:700px; top:1010px; width:300px;
+    box-sizing:border-box; padding:10px 8px; background:rgba(6,12,20,0.94);
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.05em; line-height:1.3; color:#E0E9F3; text-align:center; }
+
+  .src { position:absolute; left:80px; top:1226px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.06em; color:#6F849B; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">DRAWN TOO WIDE</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>07 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#050A12" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <!-- state 07: the lower conductor swells and TOUCHES the upper one,
+           with a red blocked cap where they meet -->
+      <path d="M2 34 L44 34 L58 20 L94 20" fill="none" stroke="#2F6BB0" stroke-width="9"
+            stroke-linejoin="miter" stroke-linecap="butt"/>
+      <line x1="60" y1="10" x2="60" y2="24" stroke="#D8452F" stroke-width="3.5"/>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">The same product went sideways at another Wisconsin desk</div>
+
+    <div class="plate" data-zone="BODY" data-block="body" data-knockout>
+      <div class="body">Ozaukee County bought the same product and went live around the clock in week one. Callers asked for a sheriff when they meant a deputy. Shouting and music confused it. They cut it back to two hours a day while the vendor worked through it, and the sheriff says the vendor has been receptive.</div>
+      <div class="chip">SAME PRODUCT. SAME VENDOR. DIFFERENT BOUNDARY.</div>
+    </div>
+
+    <div class="dial" data-zone="DATA" data-block="dial" data-knockout>TWO HOURS<br>OF TWENTY-FOUR</div>
+
+    <div class="src" data-zone="FOOTER" data-block="src">OZAUKEE PRESS, MAY 2026</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  const K = {
+    panel: { x: 150, y: 856, w: 470, h: 250 },   // the SAME console, wide and cold
+    dialC: { x: 850, y: 872, r: 96 },
+    // three interference sources, one per named confusion (c46, c47)
+    sources: [[1180, 300], [1240, 760], [1090, 1180]]
+  };
+
+  /* ---- coldest ground in the deck ---------------------------------------- */
+  const g = cx.createLinearGradient(0, 0, W, H);
+  g.addColorStop(0, '#070D18'); g.addColorStop(0.5, '#050A12'); g.addColorStop(1, '#040810');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+
+  /* ---- INTERFERENCE RING FIELD (#13), washing in from OFF FRAME RIGHT ----- */
+  /* brightness = sum of sin(dist * f + phase) from three sources, thresholded
+     into bands. Authored CALM at the left edge so the type column sits over the
+     quietest region by construction. */
+  const img = cx.createImageData(W, H);
+  const d = img.data;
+  for (let y = 0; y < H; y += 1) {
+    for (let x = 0; x < W; x += 1) {
+      let v = 0;
+      for (let s = 0; s < 3; s++) {
+        const dx = x - K.sources[s][0], dy = y - K.sources[s][1];
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        v += Math.sin(dist * 0.055 + s * 2.1);
+      }
+      v /= 3;
+      // amplitude ramp: silent at the left, violent at the right
+      const ramp = Math.pow(Math.max(0, (x - 120) / (W - 120)), 1.9);
+      const band = (Math.abs(v) > 0.62 ? 1 : 0) * ramp;
+      const a = band * 78;
+      const i = (y * W + x) * 4;
+      d[i] = 110; d[i + 1] = 148; d[i + 2] = 196; d[i + 3] = a;
+    }
+  }
+  const off = document.createElement('canvas');
+  off.width = W; off.height = H;
+  off.getContext('2d').putImageData(img, 0, 0);
+  cx.drawImage(off, 0, 0);
+
+  /* ---- the SAME console, but here BOTH buttons are on the machine --------- */
+  const P = K.panel;
+  cx.fillStyle = '#0A1520';
+  cx.fillRect(P.x, P.y, P.w, P.h);
+  cx.strokeStyle = 'rgba(150,186,220,0.20)'; cx.lineWidth = 1.25;
+  cx.strokeRect(P.x, P.y, P.w, P.h);
+  // two buttons, BOTH inside the boundary this time
+  for (let i = 0; i < 2; i++) {
+    const byy = P.y + 44 + i * 108;
+    cx.fillStyle = i === 0 ? '#2A2118' : '#0C1826';
+    cx.fillRect(P.x + 40, byy, 300, 74);
+    cx.strokeStyle = 'rgba(150,186,220,0.24)'; cx.lineWidth = 1.6;
+    cx.strokeRect(P.x + 40, byy, 300, 74);
+  }
+
+  /* ---- THE BOUNDARY, DRAWN TOO WIDE. It encloses the WHOLE panel. -------- */
+  cx.save();
+  cx.setLineDash([30, 5, 6, 5, 6, 5]);
+  cx.strokeStyle = 'rgba(200,220,240,0.62)'; cx.lineWidth = 2;
+  cx.strokeRect(P.x - 42, P.y - 46, P.w + 84, P.h + 92);
+  cx.restore();
+
+  /* ---- three arrows travelling toward it, STOPPING DEAD at red caps ------- */
+  /* The deck's single red, and its only appearance. */
+  const targets = [
+    [P.x + P.w + 42, P.y + 40],
+    [P.x + P.w + 42, P.y + 128],
+    [P.x + P.w + 42, P.y + 216]
+  ];
+  targets.forEach((t, i) => {
+    const fromX = t[0] + 190 + i * 26;
+    cx.strokeStyle = 'rgba(150,186,220,0.75)'; cx.lineWidth = 2;
+    cx.beginPath(); cx.moveTo(fromX, t[1]); cx.lineTo(t[0] + 16, t[1]); cx.stroke();
+    // the blocked cap: a short heavy red bar across the arrow's nose
+    cx.strokeStyle = '#D8452F'; cx.lineWidth = 5;
+    cx.beginPath(); cx.moveTo(t[0] + 10, t[1] - 15); cx.lineTo(t[0] + 10, t[1] + 15); cx.stroke();
+  });
+
+  /* ---- 24-HOUR DIAL: a lit wedge of EXACTLY 30 degrees (2 of 24) ---------- */
+  const D = K.dialC;
+  cx.strokeStyle = 'rgba(150,186,220,0.30)'; cx.lineWidth = 1.6;
+  cx.beginPath(); cx.arc(D.x, D.y, D.r, 0, Math.PI * 2); cx.stroke();
+  // 24 hour ticks
+  for (let h = 0; h < 24; h++) {
+    const a = -Math.PI / 2 + h * (Math.PI * 2 / 24);
+    const inner = h % 6 === 0 ? D.r - 16 : D.r - 8;
+    cx.strokeStyle = 'rgba(150,186,220,0.40)'; cx.lineWidth = h % 6 === 0 ? 2 : 1;
+    cx.beginPath();
+    cx.moveTo(D.x + Math.cos(a) * inner, D.y + Math.sin(a) * inner);
+    cx.lineTo(D.x + Math.cos(a) * D.r, D.y + Math.sin(a) * D.r);
+    cx.stroke();
+  }
+  // the lit wedge: 2 hours of 24 = exactly 30.0 degrees
+  const start = -Math.PI / 2;
+  const sweep = (2 / 24) * Math.PI * 2;
+  const wg = cx.createRadialGradient(D.x, D.y, 8, D.x, D.y, D.r);
+  wg.addColorStop(0, 'rgba(255,196,74,0.85)');
+  wg.addColorStop(1, 'rgba(232,163,61,0.42)');
+  cx.fillStyle = wg;
+  cx.beginPath(); cx.moveTo(D.x, D.y);
+  cx.arc(D.x, D.y, D.r - 4, start, start + sweep); cx.closePath(); cx.fill();
+  cx.strokeStyle = '#FFC72C'; cx.lineWidth = 2;
+  cx.beginPath(); cx.moveTo(D.x, D.y);
+  cx.arc(D.x, D.y, D.r - 4, start, start + sweep); cx.closePath(); cx.stroke();
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: -0.12, saturation: 1.02, contrast: 1.15, filmic: true,
+    lift: [0.005, 0.011, 0.026], gain: [0.986, 0.998, 1.030], vignette: 0.38,
+    bloom: { threshold: 0.70, strength: 0.30, radius: 9 },
+    grain: { amount: 0.05, size: 2, seed: 20260829 }, dither: true, sharpen: 0.26
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 40, max: 58, maxLines: 4 });
+  resolve();
+});
+</script>
+</body>
+</html>

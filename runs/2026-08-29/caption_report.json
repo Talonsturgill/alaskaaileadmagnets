@@ -1,0 +1,13 @@
+{
+  "chars": 701,
+  "hook": "A 24/7 dispatch desk with four people on it had become the default number for parking ticket questions and court times.",
+  "hook_len": 119,
+  "hashtags": [
+    "#DispatchOps",
+    "#AlaskaBusiness",
+    "#AgenticWorkflows"
+  ],
+  "fails": [],
+  "warns": [],
+  "verdict": "PASS"
+}

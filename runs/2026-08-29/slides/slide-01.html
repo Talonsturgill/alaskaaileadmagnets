@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#0A1119; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:88px; width:580px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.16em; color:#8FA6BE; line-height:1.36; }
+  .kicker b { color:#DCD2BC; font-weight:500; }
+
+  .counter { position:absolute; left:880px; top:90px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.10em; color:#6E85A4; }
+
+  .hook { position:absolute; left:80px; top:204px; width:880px; height:330px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+    font-variation-settings:"wdth" 88;
+    font-size:126px; line-height:1.0; letter-spacing:-0.022em; color:#F4F8FF; }
+
+  .strap { position:absolute; left:80px; top:560px; width:920px;
+    font-family:"Manrope",sans-serif; font-weight:500; font-size:36px;
+    line-height:1.34; color:#A9BCD1; }
+
+  .chip { position:absolute; left:96px; top:1128px; width:392px; height:88px;
+    box-sizing:border-box; padding:21px 24px 0 24px;
+    background:#070C13; border-left:4px solid #FFC72C;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:29px;
+    letter-spacing:0.09em; color:#F4F8FF; line-height:1.42; }
+
+  .pair { position:absolute; left:80px; top:172px; width:96px; height:44px; }
+
+  /* the stamped legend on the lit button. DOM, never canvas: it is a real word
+     the reader reads, so it ships as vector in the PDF. Its box is derived from
+     the same litX/litY the canvas plate is drawn from. */
+  .btnlab { position:absolute; left:258px; top:824px; width:232px; height:38px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.04em; color:#14202C; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="BRAND" data-block="kicker">CASE FILE <b>NO. 002</b><br>LA CROSSE COUNTY, WISCONSIN</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>01 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#0A1119" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <line x1="2" y1="32" x2="39" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <line x1="57" y1="32" x2="94" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+    </svg>
+
+    <div class="hook" id="hook" data-zone="HEAD" data-block="hook">How do I pay a parking ticket?</div>
+    <div class="strap" data-zone="BODY" data-block="strap">It lands on the same desk that answers 911.</div>
+    <div class="btnlab" data-zone="ART" data-block="btnlab" data-knockout>911 EMERGENCY</div>
+    <div class="chip" data-zone="ART" data-block="chip" data-knockout>41,000 CALLS<br>IN SEVEN MONTHS</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akcolor.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* ---- ONE SOURCE OF TRUTH for every coordinate on this slide ----------- */
+  const K = {
+    ox: 150, oy: 752, pw: 812, ph: 292,   // console front face
+    d: 104,                                // cabinet-oblique depth
+    // button geometry, derived from the face so nothing is retyped
+    get dx(){ return this.d * Math.cos(Math.PI/4); },
+    get dy(){ return -this.d * Math.sin(Math.PI/4); },
+    bw: 300, bh: 78,
+    get litX(){ return this.ox + 74; },  get litY(){ return this.oy + 52; },
+    get darkX(){ return this.ox + 74; }, get darkY(){ return this.oy + 176; }
+  };
+
+  /* ---- the room: falloff to near black, never pure black ---------------- */
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0.00, '#070C13'); g.addColorStop(0.40, '#0A1119');
+  g.addColorStop(0.74, '#0C1721'); g.addColorStop(1.00, '#080D15');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+
+  // warm bounce pooling off the lit button, so the void has light in it
+  const b = cx.createRadialGradient(K.litX + 150, K.litY + 40, 30, K.litX + 150, K.litY + 40, 640);
+  b.addColorStop(0, 'rgba(232,163,61,0.20)');
+  b.addColorStop(0.45, 'rgba(232,163,61,0.055)');
+  b.addColorStop(1, 'rgba(232,163,61,0)');
+  cx.fillStyle = b; cx.fillRect(0, 560, W, H - 560);
+
+  /* ---- long shadow (#48), thrown down-right from one global light ------- */
+  cx.save();
+  cx.fillStyle = 'rgba(3,6,11,0.62)';
+  cx.beginPath();
+  cx.moveTo(K.ox - 6, K.oy + K.ph);
+  cx.lineTo(K.ox + K.pw + 6, K.oy + K.ph);
+  cx.lineTo(K.ox + K.pw + 210, K.oy + K.ph + 196);
+  cx.lineTo(K.ox - 96, K.oy + K.ph + 196);
+  cx.closePath(); cx.fill();
+  cx.restore();
+
+  /* ---- console body, cabinet oblique (#39). three faces, one light ------ */
+  // top lid, lightest
+  cx.fillStyle = '#1B2B3D';
+  cx.beginPath();
+  cx.moveTo(K.ox, K.oy); cx.lineTo(K.ox + K.pw, K.oy);
+  cx.lineTo(K.ox + K.pw + K.dx, K.oy + K.dy); cx.lineTo(K.ox + K.dx, K.oy + K.dy);
+  cx.closePath(); cx.fill();
+  // right wall, darkest
+  cx.fillStyle = '#0A131D';
+  cx.beginPath();
+  cx.moveTo(K.ox + K.pw, K.oy); cx.lineTo(K.ox + K.pw + K.dx, K.oy + K.dy);
+  cx.lineTo(K.ox + K.pw + K.dx, K.oy + K.dy + K.ph); cx.lineTo(K.ox + K.pw, K.oy + K.ph);
+  cx.closePath(); cx.fill();
+  // front face, mid, with a vertical material ramp built in OKLCH
+  const fg = cx.createLinearGradient(K.ox, K.oy, K.ox, K.oy + K.ph);
+  fg.addColorStop(0, '#24374C'); fg.addColorStop(0.55, '#1A2838');
+  fg.addColorStop(1, '#101B27');
+  cx.fillStyle = fg; cx.fillRect(K.ox, K.oy, K.pw, K.ph);
+  // machined lip highlight along the front top edge
+  cx.strokeStyle = 'rgba(206,226,245,0.26)'; cx.lineWidth = 1.25;
+  cx.beginPath(); cx.moveTo(K.ox, K.oy + 0.6); cx.lineTo(K.ox + K.pw, K.oy + 0.6); cx.stroke();
+  // hairline scaffolding on the lid, so a large fill is never a dead region
+  cx.strokeStyle = 'rgba(150,180,210,0.07)'; cx.lineWidth = 0.75;
+  for (let i = 1; i < 9; i++) {
+    const t = i / 9;
+    cx.beginPath();
+    cx.moveTo(K.ox + K.pw * t, K.oy);
+    cx.lineTo(K.ox + K.pw * t + K.dx, K.oy + K.dy);
+    cx.stroke();
+  }
+
+  /* ---- UPPER BUTTON, LIT. neon triple layer (#80) ----------------------- */
+  for (const [pad, a, blur] of [[26, 0.16, 26], [12, 0.34, 12], [4, 0.62, 4]]) {
+    cx.save();
+    cx.shadowColor = 'rgba(255,178,60,0.95)'; cx.shadowBlur = blur;
+    cx.fillStyle = `rgba(255,190,74,${a})`;
+    cx.fillRect(K.litX - pad / 2, K.litY - pad / 2, K.bw + pad, K.bh + pad);
+    cx.restore();
+  }
+  const lg = cx.createLinearGradient(0, K.litY, 0, K.litY + K.bh);
+  lg.addColorStop(0, '#FFD98A'); lg.addColorStop(1, '#E9922B');
+  cx.fillStyle = lg; cx.fillRect(K.litX, K.litY, K.bw, K.bh);
+  // stamped ivory label plate, smaller than the button so amber haloes it
+  cx.fillStyle = '#EDE6D6';
+  // the plate only. The legend itself is the .btnlab DOM node, so it stays
+  // vector in the PDF and stays readable to the ranker and to screen readers.
+  cx.fillRect(K.litX + 34, K.litY + 20, K.bw - 68, 38);
+
+  /* ---- LOWER BUTTON, DARK, COVER REMOVED -------------------------------- */
+  cx.fillStyle = '#07101A'; cx.fillRect(K.darkX, K.darkY, K.bw, K.bh);
+  cx.strokeStyle = '#243951'; cx.lineWidth = 2;
+  cx.strokeRect(K.darkX, K.darkY, K.bw, K.bh);
+  // three exposed conductors, CASED (#79) with junction dots (#76)
+  for (let i = 0; i < 3; i++) {
+    const yy = K.darkY + 22 + i * 17;
+    cx.strokeStyle = '#04080E'; cx.lineWidth = 8;
+    cx.beginPath(); cx.moveTo(K.darkX + 24, yy); cx.lineTo(K.darkX + K.bw - 34, yy); cx.stroke();
+    cx.strokeStyle = '#3E80C8'; cx.lineWidth = 3.5;
+    cx.beginPath(); cx.moveTo(K.darkX + 24, yy); cx.lineTo(K.darkX + K.bw - 34, yy); cx.stroke();
+    cx.fillStyle = '#5A9BDD';
+    cx.beginPath(); cx.arc(K.darkX + K.bw - 34, yy, 5, 0, Math.PI * 2); cx.fill();
+  }
+
+  /* ---- THE LIFTED COVER PLATE, lying on the desk beside it -------------- */
+  cx.save();
+  cx.translate(K.darkX + K.bw + 210, K.darkY + 74);
+  cx.rotate(-0.30);
+  cx.fillStyle = 'rgba(3,6,11,0.66)';
+  cx.fillRect(-140 + 14, -34 + 20, K.bw, K.bh);
+  const pg = cx.createLinearGradient(0, -34, 0, -34 + K.bh);
+  pg.addColorStop(0, '#31485F'); pg.addColorStop(1, '#17242F');
+  cx.fillStyle = pg; cx.fillRect(-140, -34, K.bw, K.bh);
+  cx.strokeStyle = 'rgba(206,226,245,0.20)'; cx.lineWidth = 1.25;
+  cx.strokeRect(-140, -34, K.bw, K.bh);
+  // two screw holes, so it reads as a cover and not a card
+  cx.fillStyle = '#0A121B';
+  for (const sx of [-140 + 18, -140 + K.bw - 18]) {
+    cx.beginPath(); cx.arc(sx, -34 + K.bh / 2, 5, 0, Math.PI * 2); cx.fill();
+  }
+  cx.restore();
+
+  /* ---- film grade, once, over the whole art canvas ---------------------- */
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: -0.04, saturation: 1.07, contrast: 1.11, filmic: true,
+    lift: [0.008, 0.012, 0.022], gain: [1.02, 1.0, 0.972], vignette: 0.26,
+    bloom: { threshold: 0.68, strength: 0.44, radius: 10 },
+    grain: { amount: 0.028, size: 2, seed: 20260829 },
+    aberration: 0, dither: true, sharpen: 0.30
+  });
+
+  AK.fitText(document.getElementById('hook'), { min: 88, max: 126, maxLines: 3 });
+  resolve();
+});
+</script>
+</body>
+</html>

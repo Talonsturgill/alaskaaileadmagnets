@@ -15,7 +15,11 @@
       "palette_family": "house dark arctic with gold",
       "type_pairing": "Fraunces display with Space Grotesk body and JetBrains Mono telemetry",
       "narrative_structure": "proof, receipts, translation",
-      "variance_dials": {"design_variance": 2, "visual_density": 2, "type_temperature": 3},
+      "variance_dials": {
+        "design_variance": 2,
+        "visual_density": 2,
+        "type_temperature": 3
+      },
       "new_techniques_logged": []
     },
     {
@@ -31,8 +35,46 @@
       "palette_family": "glacial river and sonar screen",
       "type_pairing": "Instrument Serif display with Archivo body and JetBrains Mono telemetry",
       "narrative_structure": "status quo, identification, arrival, reality check, receipts, catch, translation fork, seal",
-      "variance_dials": {"design_variance": 3, "visual_density": 3, "type_temperature": 4},
-      "new_techniques_logged": ["cf-spine shared panorama painter (assets/js/cf-spine.js)", "phantom dash grammar for proposed elements", "provenance stamp chip system", "fractured tally strokes as error admission"]
+      "variance_dials": {
+        "design_variance": 3,
+        "visual_density": 3,
+        "type_temperature": 4
+      },
+      "new_techniques_logged": [
+        "cf-spine shared panorama painter (assets/js/cf-spine.js)",
+        "phantom dash grammar for proposed elements",
+        "provenance stamp chip system",
+        "fractured tally strokes as error admission"
+      ]
+    },
+    {
+      "run_date": "2026-08-29",
+      "case_file_no": 2,
+      "slide_count": 10,
+      "hero_structure": "telco punchdown block and two console buttons, cabinet oblique",
+      "atmosphere": "cold night dispatch room against warm archive paper, alternating",
+      "depth_technique": "cabinet oblique parallel projection with cased conductors and layered elevation shadow",
+      "line_voice": "telco drafting: butt caps, miter joins, junction dots at real landings, hop-overs where lines cross without connecting, phantom dash for exception paths",
+      "palette_note": "slate and snow with one amber accent, one gold budget per slide, a single functional red reserved to slide 7",
+      "continuity_devices": [
+        "THE PAIR glyph, one conductor state per slide",
+        "the empty third slot, introduced on 6, returns cut by the right edge on 9, at hero scale on 10, never filled"
+      ],
+      "modes": [
+        "OBJECT",
+        "DATA",
+        "SCENE",
+        "DIAGRAM",
+        "DOCUMENT",
+        "DATA",
+        "FIELD",
+        "DOCUMENT",
+        "DIAGRAM",
+        "OBJECT"
+      ],
+      "render_ladder_top": "akthree",
+      "signature_move": "two opposed terminations on the receipts slide: the contained branch ends in an open phantom dash with no terminator glyph, the answered branch ends in a solid filled dot. Containment is not resolution, drawn.",
+      "second_move": "the missing decision date drawn as a bar whose left terminus feathers to nothing and whose right end is a hard tick at the one date we have"
     }
   ]
 }

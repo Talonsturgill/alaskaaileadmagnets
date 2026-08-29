@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#060A11; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#8FA9C9; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#55698A; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:210px; width:800px; height:130px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 84; font-size:68px; line-height:1.02;
+    letter-spacing:-0.018em; color:#F4F8FF; }
+
+  /* the quote rides an explicit opaque plate, inside ART */
+  .plate { position:absolute; left:104px; top:520px; width:720px;
+    box-sizing:border-box; padding:38px 40px 34px 40px;
+    background:rgba(14,26,38,0.965); border-left:4px solid #E8A33D; }
+  .quote { font-family:"Manrope",sans-serif; font-weight:400; font-size:35px;
+    line-height:1.40; color:#EAF1F9; }
+  .attrib { margin-top:26px; font-family:"JetBrains Mono",monospace;
+    font-weight:400; font-size:24px; letter-spacing:0.03em; color:#B4C4D6; }
+  .also { margin-top:22px; font-family:"Manrope",sans-serif; font-weight:500;
+    font-size:32px; line-height:1.38; color:#C6D4E2; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">THE HOLD</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>03 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#060A11" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <!-- state 03: the line detours into a hold kink that doubles back -->
+      <path d="M2 32 H30 V22 H52 V32 H94" fill="none" stroke="#2F6BB0" stroke-width="3.5"
+            stroke-linejoin="miter" stroke-linecap="butt"/>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">Then the accident call comes in</div>
+
+    <div class="plate" data-zone="BODY" data-block="quote" data-knockout>
+      <div class="quote">"Then we have to put that caller on hold to answer a 911 call that could be for an accident, and then picking the caller back up and having them start their story over again if it happens to be another dispatcher that answers it."</div>
+      <div class="attrib">CORY LYNCH, OPERATIONS SUPERVISOR, TO WEAU</div>
+      <div class="also">Lynch also says it has been really hard to hire and keep staff on.</div>
+    </div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* one source of truth */
+  const K = { horizon: 880, lamp: { x: 742, y: 1006, r: 15 } };
+
+  /* ---- cold room, falling to near black ---------------------------------- */
+  const g = cx.createLinearGradient(0, 200, 0, H);
+  g.addColorStop(0.00, '#070C14'); g.addColorStop(0.46, '#0A121C');
+  g.addColorStop(0.78, '#0B1420'); g.addColorStop(1.00, '#05080E');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+
+  /* ---- depth-weighted wireframe room (#36): lineWidth = k/z --------------- */
+  // far wall lines first, thinnest and dimmest; near lines last, heavier.
+  const vpx = 620, vpy = K.horizon - 130;
+  for (let i = 0; i < 16; i++) {
+    const z = 1 + i * 0.42;
+    const a = 0.20 / z, lw = 1.9 / z;
+    cx.strokeStyle = `rgba(120,158,196,${a.toFixed(3)})`; cx.lineWidth = lw;
+    const y = K.horizon + i * 26;
+    cx.beginPath(); cx.moveTo(-60, y); cx.lineTo(W + 60, y + 14); cx.stroke();
+  }
+  for (let i = -7; i <= 9; i++) {
+    const z = 1 + Math.abs(i) * 0.30;
+    cx.strokeStyle = `rgba(120,158,196,${(0.16 / z).toFixed(3)})`;
+    cx.lineWidth = 1.6 / z;
+    cx.beginPath(); cx.moveTo(vpx + i * 34, vpy); cx.lineTo(vpx + i * 210, H + 40); cx.stroke();
+  }
+
+  /* ---- the console bench, seen from behind an empty chair ----------------- */
+  cx.fillStyle = '#0D1926';
+  cx.beginPath();
+  cx.moveTo(150, 902); cx.lineTo(980, 872); cx.lineTo(1010, 1058); cx.lineTo(126, 1092);
+  cx.closePath(); cx.fill();
+  cx.strokeStyle = 'rgba(150,186,220,0.16)'; cx.lineWidth = 1.25;
+  cx.beginPath(); cx.moveTo(150, 902); cx.lineTo(980, 872); cx.stroke();
+
+  // three unlit line lamps, and ONE lit. the lit one is the slide's gold budget.
+  for (let i = 0; i < 4; i++) {
+    const x = 452 + i * 96, y = 1010 - i * 3;
+    if (i === 3) continue;
+    cx.fillStyle = '#16283A';
+    cx.beginPath(); cx.arc(x, y, 13, 0, Math.PI * 2); cx.fill();
+    cx.strokeStyle = 'rgba(140,175,210,0.20)'; cx.lineWidth = 1;
+    cx.stroke();
+  }
+  // the lit hold lamp, neon triple layer (#80)
+  for (const [r, a, blur] of [[46, 0.10, 34], [26, 0.22, 16], [15, 0.95, 5]]) {
+    cx.save(); cx.shadowColor = 'rgba(255,180,70,0.9)'; cx.shadowBlur = blur;
+    cx.fillStyle = r === 15 ? '#FFC24A' : `rgba(255,180,70,${a})`;
+    cx.beginPath(); cx.arc(K.lamp.x, K.lamp.y, r, 0, Math.PI * 2); cx.fill();
+    cx.restore();
+  }
+
+  /* ---- volumetric shafts (#46) fanning UP from the lamp, with motes ------- */
+  cx.save();
+  cx.globalCompositeOperation = 'lighter';
+  for (let i = 0; i < 7; i++) {
+    const t = i / 6, spread = 92 + t * 190;
+    const a = 0.040 + (1 - Math.abs(t - 0.5) * 2) * 0.062;
+    const grd = cx.createLinearGradient(K.lamp.x, K.lamp.y, K.lamp.x - 130, 300);
+    grd.addColorStop(0, `rgba(255,186,84,${a.toFixed(3)})`);
+    grd.addColorStop(1, 'rgba(255,186,84,0)');
+    cx.fillStyle = grd;
+    cx.beginPath();
+    cx.moveTo(K.lamp.x, K.lamp.y);
+    cx.lineTo(K.lamp.x - 190 - spread * 0.5 + i * 22, 286);
+    cx.lineTo(K.lamp.x - 120 - spread * 0.5 + i * 22, 286);
+    cx.closePath(); cx.fill();
+  }
+  // dust motes living inside the beam
+  for (let i = 0; i < 210; i++) {
+    const t = AK.rng(i * 11 + 3)();
+    const x = K.lamp.x - 40 - t * 300 + (AK.rng(i * 7 + 9)() - 0.5) * 250;
+    const y = K.lamp.y - t * 690 - AK.rng(i * 5 + 4)() * 40;
+    if (y < 290) continue;
+    const a = 0.06 + AK.rng(i * 3 + 6)() * 0.30 * (1 - t);
+    cx.fillStyle = `rgba(255,214,150,${a.toFixed(3)})`;
+    cx.beginPath(); cx.arc(x, y, 0.7 + AK.rng(i * 13 + 2)() * 1.5, 0, Math.PI * 2); cx.fill();
+  }
+  cx.restore();
+
+  /* ---- THE EMPTY CHAIR, a dark repoussoir shape bleeding off the bottom --- */
+  cx.fillStyle = '#04070C';
+  cx.beginPath();
+  cx.moveTo(258, H + 20); cx.lineTo(238, 1146);
+  cx.quadraticCurveTo(246, 1052, 330, 1042);
+  cx.lineTo(556, 1030);
+  cx.quadraticCurveTo(632, 1032, 636, 1104);
+  cx.lineTo(650, H + 20);
+  cx.closePath(); cx.fill();
+  // one rim of cold light along the chair back, so it reads as an object
+  cx.strokeStyle = 'rgba(126,168,208,0.30)'; cx.lineWidth = 2;
+  cx.beginPath();
+  cx.moveTo(238, 1146); cx.quadraticCurveTo(246, 1052, 330, 1042); cx.lineTo(556, 1030);
+  cx.quadraticCurveTo(632, 1032, 636, 1104);
+  cx.stroke();
+
+  /* ---- cold window at frame right, with snow ticks ----------------------- */
+  const wg = cx.createLinearGradient(946, 300, 1080, 760);
+  wg.addColorStop(0, 'rgba(58,96,142,0.30)'); wg.addColorStop(1, 'rgba(30,54,84,0.05)');
+  cx.fillStyle = wg; cx.fillRect(946, 316, 134, 430);
+  cx.strokeStyle = 'rgba(140,180,220,0.20)'; cx.lineWidth = 1.25;
+  cx.strokeRect(946, 316, 134, 430);
+  for (let i = 0; i < 90; i++) {
+    const x = 950 + AK.rng(i * 9 + 1)() * 126, y = 320 + AK.rng(i * 17 + 5)() * 422;
+    cx.fillStyle = `rgba(214,232,250,${(0.10 + AK.rng(i * 3 + 7)() * 0.32).toFixed(3)})`;
+    cx.fillRect(x, y, 1.6, 3.2);
+  }
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: -0.10, saturation: 1.05, contrast: 1.14, filmic: true,
+    lift: [0.006, 0.010, 0.020], gain: [1.024, 1.0, 0.964], vignette: 0.34,
+    bloom: { threshold: 0.62, strength: 0.50, radius: 12 },
+    grain: { amount: 0.05, size: 2, seed: 20260829 },
+    aberration: 0.5, dither: true, sharpen: 0.26
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 48, max: 70, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

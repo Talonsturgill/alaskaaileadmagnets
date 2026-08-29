@@ -75,3 +75,4 @@ a bank case or local proof behind them.
 | Machine and process shops | Silent tool failure, scrap | Predictive maintenance (workflow) | 005 |
 | Grocery | Freshness against long lead times | Demand forecasting (workflow) | 012 |
 | High volume paperwork (ANC, legal, title) | Classification at scale | Fine tuned small models you own (workflow) | 003 |
+| Municipal and public safety desks (city, borough, utility, co-op member service) | One 24/7 line has become the default number for every routine question, so staff put routine callers on hold to take the ones that matter | Voice workflow on the ROUTINE line only, hot-word escalation back to a person, human on request at any time (rung 4). Never on the line where a wrong route costs a house or a hand | Case File 002 (2026-08-29) |
