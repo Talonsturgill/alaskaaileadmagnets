@@ -8,8 +8,8 @@
     "wake": "done",
     "restock": "done",
     "selection": "done",
-    "verification": "pending",
-    "translation": "pending",
+    "verification": "done",
+    "translation": "done",
     "directors_room": "pending",
     "storyboard": "pending",
     "copy": "pending",
@@ -27,7 +27,9 @@
   "artifacts": {
     "plan": "out/2026-08-29/plan.md",
     "restock_notes": "out/2026-08-29/restock_notes.md",
-    "selection": "out/2026-08-29/selection.md"
+    "selection": "out/2026-08-29/selection.md",
+    "claims": "out/2026-08-29/claims.json",
+    "translation": "out/2026-08-29/translation.md"
   },
   "incidents": [
     {
@@ -47,7 +49,29 @@
       "phase": "selection",
       "incident": "Two restock waves, eight scouts, twenty-four candidates, ONE bank verdict. No qualifying runner-up exists.",
       "resolution": "Selected bank-025 La Crosse County Public Safety Communications. Recorded explicitly in selection.md that if verification kills it the run writes a post-mortem rather than swapping to a case that fails the same hard gate La Crosse passes. Kill conditions named in writing."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "verification",
+      "incident": "The fact-checker caught two factual errors the showrunner had introduced into selection.md and bank-025. (1) Spokane County was presented as a third cost point on the SAME product; it is a different vendor entirely (Prepared AI with Axon, not Aurelian), which also removed the six-week preparation figure that was the most tempting way to fill the timeline gap. (2) Two Cory Lynch quotes were carried in forms that do not exist on the page, one truncated and one silently smoothed. A third error was caught before it happened: 'approximate to one employee with benefits' is the reporter's prose, not a quote from any person.",
+      "resolution": "All corrected in claims.json, bank-025 and a visible addendum to selection.md. One overreaching line in selection.md ('two thirds of 105,000 calls a year') was corrected in place with the wrong version left visible, because it is the exact mistake the deck is most likely to make."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "verification",
+      "incident": "HARD GATE, timeline half: the decision-to-contract interval for La Crosse could not be established from any source. The county web estate returned 403 to every request and its meeting PDFs are not full-text indexed or extractable with available tools.",
+      "resolution": "SHOWRUNNER RULING: accepted narrowly. What survived is La Crosse-specific and sourced, the county's own statement that the platform underwent several months of intensive training before implementation, paired with a firm 5 May 2025 go-live. Dana's actual question is roughly how long before it worked, and that answers it. The deck states it exactly as scoped, never as a decision-to-working interval, and the delivery email flags it as this run's one soft edge."
     }
   ],
-  "case": "La Crosse County Public Safety Communications"
+  "case": "La Crosse County Public Safety Communications",
+  "decisions": [
+    {
+      "phase": "translation",
+      "decision": "The translator proposed pairing with Anchorage and Mat-Su live plow tracking as local proof. NOT USED on a slide this run: it would require re-fetching three URLs to become citable, and more importantly it is a second idea in a deck allowed one. The rung 1 point it makes is already carried, more cheaply and more locally, by the translation's Limit 4. Recorded in translation.md section 6 for a future run."
+    },
+    {
+      "phase": "translation",
+      "decision": "The out-migration and nonresident-workforce figures in ALASKA_TRANSLATION.md rule 5 are PRIORS and no page establishing them was fetched this run. The why-now frame therefore ships WITHOUT numbers. It works without them."
+    }
+  ]
 }

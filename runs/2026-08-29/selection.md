@@ -135,9 +135,15 @@ known, the term is known, and the operator framed the price as one employee
 with benefits. Dana can do that arithmetic in their head on Thursday.
 
 **4. Is there a number that makes Dana sit up?**
-**Yes.** Two thirds of 105,000 nuisance calls a year taken off the desk, for
-about the cost of one hire. Either half of that sentence is repeatable out
-loud.
+**Yes.** 41,000 calls taken off the desk in seven months, about 65 percent of
+them never reaching a dispatcher, for about the cost of one hire.
+
+*(Corrected after verification. This line originally read "two thirds of
+105,000 nuisance calls a year taken off the desk," which is precisely the
+error the fact-checker ruled against: the 65 percent is a share of the 41,000
+calls the system took, not of the county's annual 105,000. The wrong version
+is left visible here rather than silently swapped, because this is the exact
+mistake the deck is most likely to make.)*
 
 **5. Does Dana learn something about AI they did not know?**
 **Yes, three things.** What "agent" actually buys you and why this one is a
@@ -193,3 +199,73 @@ The case dies, and the run writes a post-mortem rather than swapping, if:
 the cost figures do not survive re-fetching; the decision-to-working interval
 cannot be established from any source; or the 41,000 / 65 percent figures turn
 out to rest on a base that makes them meaningless.
+
+---
+
+## POST-VERIFICATION ADDENDUM (2026-08-29)
+
+The fact-checker returned `case_viable: true` and the case ships. It also
+caught **two factual errors in this memo**, both of which are corrected here
+rather than quietly edited above, because the record of what we got wrong is
+worth more than a clean document.
+
+**Error 1, and it was mine: Spokane is not the same product.** This memo and
+`bank-025` both presented Spokane County's $95,000 contract and its six-week
+preparation window as a third cost point on the same vendor. It is not. The
+Spokesman-Review names **Prepared AI in partnership with Axon**, not Aurelian.
+Spokane corroborates that the price class holds across the category and
+nothing more. **The six-week figure is now formally off limits for this deck
+under any framing**, which matters because it was the most tempting thing
+available to fill the timeline gap.
+
+**Error 2: two quotes were carried in a form that does not exist on the page.**
+The "we've just become a default" line was truncated — the actual sentence
+continues "for anything…related to municipalities or police departments." And
+the inflection-and-background-noise line was silently smoothed; the page
+carries an ellipsis and an editorial bracket. The deck uses the short clean
+verbatim instead: *"I don't think AI will ever replace the human in a 911
+center."* Both are corrected in `claims.json` and in the bank.
+
+A third thing the fact-checker caught before it could become an error: **"approximate
+to one employee with benefits" is Milwaukee Magazine's own prose, not a quote
+from Cory Lynch or the county.** Putting it in anyone's mouth would be a
+fabricated quote.
+
+### The hard gate, ruled on
+
+**Cost HOLDS** and it is the best-documented cost this series has had.
+
+**Timeline is PARTIAL and I am accepting it narrowly.** The
+decision-to-contract date does not exist in any reachable source — the county
+web estate returns 403 to everything and its meeting PDFs are not full-text
+indexed. What survived is La Crosse-specific and sourced: the county's own
+announcement that the platform *"underwent several months of intensive
+training before implementation,"* paired with a firm go-live of 5 May 2025.
+
+I am accepting that because **Dana's actual question is "roughly how long
+before it worked," and that answers it.** The deck states it exactly as
+scoped and never as a decision-to-working interval, and **the delivery email
+flags it as this run's one soft edge.** That is the opposite of what the
+2026-07-25 run did, which was ship past a hard rule quietly.
+
+### The scoping rule that governs the whole deck
+
+The 65 percent is a share of **the 41,000 calls the system took**, not of the
+county's 105,000 annual non-emergency calls, and it counts calls that
+**ended**, not calls that got **answered**. No resolution, satisfaction,
+callback or complaint figure exists anywhere, including on the vendor's own
+page. Any slide that multiplies 65 percent by 105,000, or implies two thirds
+of the county's nuisance calls are gone, makes a claim no source supports.
+
+Written honestly the number is still excellent, and the honest version is the
+better story: a phone desk with four people on it took 41,000 calls off its
+own hands in seven months for about the price of one hire, and the county says
+it did not cut a single position.
+
+### One more directing consequence
+
+**Slide 2 describes the dispatch center, not the county.** The county headcount
+is uncorroborated and no county headcount goes on a slide. The desk is better
+evidenced, more specific, and the thing Dana actually recognises: at least four
+people on it at a time, open around the clock, authorised for 28 seats with 22
+filled.
