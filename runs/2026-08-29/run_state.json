@@ -18,11 +18,11 @@
     "review_loop": "done",
     "coherence_gate": "done",
     "assemble": "done",
-    "scoring": "in_progress",
-    "ship": "pending",
-    "upgrade": "pending",
-    "gmail": "pending",
-    "retro": "pending"
+    "scoring": "done",
+    "ship": "done",
+    "upgrade": "skipped",
+    "gmail": "done",
+    "retro": "done"
   },
   "artifacts": {
     "plan": "out/2026-08-29/plan.md",
@@ -91,6 +91,12 @@
       "phase": "review_loop",
       "incident": "Pixel critics returned REVISE on all ten slides. The single worst defect: on slide 8 a scotch rule was drawn at the dollar totals mid x-height, so ABOUT $67,000 and ABOUT $81,000 both rendered STRUCK THROUGH. Four machine gates and a full render pass had already gone green over it. Second worst: on slide 6 the 2024 annual baseline rule shared a left origin with the 41,000 bar, so the baseline read as SMALLER than seven months of calls, inverting the truth and creating exactly the shared-axis misread claims.json c04 and c09 forbid.",
       "resolution": "Slide 8 rebuilt: sum rule moved above the totals where invoice grammar puts it, pages re-laid so page two is visibly larger and runs off the right edge, both proportional gold rules re-drawn on ONE shared origin with the delta drawn as a measured tick. Slide 6: the baseline moved onto its own left origin 344px right of the bar, the empty slot emptied of the stroke that had been drawn inside it, both terminations enlarged to survive the 432px thumb, the seat row re-pitched to exactly four and four. Deck-wide: sourcing-label contrast raised off the floor, bodies raised to the 32px doctrine floor, slide 4 step numerals de-duplicated (the balloon carries the numeral, the label carries the step), slide 9 honesty label re-fitted to its plate, slide 1 canvas raster text moved to DOM. NOT fixed and disclosed: slide 3 renders very dark, slide 10 empty-slot ring reads as a near-black disc, edge-tease device missing on several slides."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "scoring",
+      "incident": "Scorer returned 6.90 against a 8.3 threshold, ship FALSE. Uncapped 7.14, capped by one hard fail: the shipped PDF document title carried an em dash. Weakest criterion Artwork craft at 5/10 (weight 0.11): slide 3 renders near-black with its scene effectively invisible, slide 10 closing object is semantically opaque, slide 7 carries unresolved ghost rectangles and a truncated dial.",
+      "resolution": "Em dash fixed by re-assembling from copy.json document_title. The artwork deficit is NOT fixed and the run is delivered as DO NOT POST YET, with the score, the weakest criterion and the named slides disclosed to the maintainer. An artwork round is required before this ships. Standing lesson recorded: never pass a reader-facing string at a tool call when the copy record already holds the corrected one."
     }
   ],
   "case": "La Crosse County Public Safety Communications",
@@ -127,5 +133,14 @@
       "coherence_check": "WARN (pass), 0 fails 4 warns",
       "assembly": "pdf_mode vector, 7.16 MB, 10 slides"
     }
+  },
+  "score": {
+    "weighted_total": 6.9,
+    "uncapped": 7.14,
+    "threshold": 8.3,
+    "ship": false,
+    "reader_verdict": "i_could_do_that",
+    "weakest_criterion": "Artwork craft and genuine detail",
+    "hard_fail": "PDF document title was assembled with an em dash. CLAUDE.md bans em dashes anywhere, zero exceptions. Caused by the showrunner passing a title at the assemble.py call instead of reading copy.json document_title, which already carried the corrected string. Re-assembled from the copy record; the title is now \"Case File No. 002, One Line Rebuilt and One Left Alone\"."
   }
 }

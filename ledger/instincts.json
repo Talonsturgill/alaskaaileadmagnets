@@ -82,6 +82,12 @@
       "learned": "2026-08-29",
       "instinct": "Never let a rule cross a number. On the slide whose job is handing the reader a figure to carry to their CFO, a mis-placed sum rule made both dollar totals read as struck through, which says voided.",
       "evidence": "Slide 8 shipped a scotch rule at the total's mid x-height for a full render pass and four machine gates without a single gate catching it. Only the pixel critic saw it. Machine gates check collisions between TEXT nodes and declared ART rects; a canvas rule inside a declared art rect crossing a knockout label is invisible to them."
+    },
+    {
+      "id": "i-012",
+      "learned": "2026-08-29",
+      "instinct": "Never hand-type a reader-facing string at a tool call. If the copy record holds it, read it from the copy record. Corrections that land in copy.json do not propagate to anything a human types by hand.",
+      "evidence": "copy.json carried a slide_copy_corrections entry that had already replaced an em-dashed document title, and the showrunner then typed an em-dashed title straight into the assemble.py --title flag. It shipped into the PDF metadata, which LinkedIn renders under the carousel, and cost the run its only hard fail and 0.24 of score."
     }
   ]
 }
