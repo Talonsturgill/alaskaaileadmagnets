@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#EDE6D6; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#554C3C; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#8A7E68; }
+
+  .head { position:absolute; left:80px; top:198px; width:880px; height:172px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 92; font-size:74px; line-height:1.02;
+    letter-spacing:-0.018em; color:#14202C; }
+
+  .raillab { position:absolute; left:80px; top:722px; width:250px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.04em; line-height:1.30; color:#14202C; }
+  .railsrc { position:absolute; left:80px; top:838px; width:236px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.04em; line-height:1.36; color:#3F4A57; }
+
+  .q { position:absolute; box-sizing:border-box; padding:14px 20px 0 20px;
+    height:58px; background:#14202C;
+    font-family:"Manrope",sans-serif; font-weight:600; font-size:31px;
+    color:#F4F8FF; white-space:nowrap; }
+
+  /* the desk's paragraph runs a NARROW MEASURE against the tally's wide one,
+     so the two never read as one column. The legend sits in the far corner. */
+  .body { position:absolute; left:80px; top:940px; width:720px;
+    font-family:"Manrope",sans-serif; font-weight:400; font-size:32px;
+    line-height:1.34; color:#26303C; }
+
+  .key { position:absolute; left:600px; top:1212px; width:400px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px;
+    letter-spacing:0.10em; color:#5A6270; }
+
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">THE DESK</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>02 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#EDE6D6" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#14202C" stroke-width="3.5"/>
+      <!-- state 02: the gap crowded shut by tally ticks pressing in -->
+      <line x1="2" y1="32" x2="30" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <line x1="66" y1="32" x2="94" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <g stroke="#2F6BB0" stroke-width="1.6">
+        <line x1="33" y1="26" x2="33" y2="38"/><line x1="37" y1="26" x2="37" y2="38"/>
+        <line x1="41" y1="26" x2="41" y2="38"/><line x1="45" y1="26" x2="45" y2="38"/>
+        <line x1="49" y1="26" x2="49" y2="38"/><line x1="53" y1="26" x2="53" y2="38"/>
+        <line x1="57" y1="26" x2="57" y2="38"/><line x1="61" y1="26" x2="61" y2="38"/>
+      </g>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">The only number that always picks up</div>
+
+    <div class="raillab" data-zone="DATA" data-block="rail">28 SEATS <br>AUTHORISED <br>/ 22 FILLED</div>
+    <div class="railsrc" data-zone="DATA" data-block="rail">PER THE VENDOR'S OWN CASE STUDY</div>
+
+    <div class="q" data-zone="ART" data-block="q1" data-knockout style="left:352px; top:452px;">How do I pay a parking ticket.</div>
+    <div class="q" data-zone="ART" data-block="q2" data-knockout style="left:352px; top:604px;">What time is court.</div>
+    <div class="q" data-zone="ART" data-block="q3" data-knockout style="left:352px; top:756px;">Can I talk to an inmate.</div>
+
+    <div class="body" data-zone="BODY" data-block="body">At least four dispatchers a shift, around the clock, per Milwaukee Magazine. Roughly 105,000 routine calls a year, per the county. Cory Lynch, the operations supervisor, says being a 24/7 department made them the default for anything to do with municipalities or police departments.</div>
+
+    <div class="key" data-zone="FOOTER" data-block="foot">ONE TICK IS 250 CALLS</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* one source of truth for this slide's geometry */
+  const K = {
+    rail: { x: 96, y: 420, cols: 4, rows: 7, gap: 46, r: 13 },
+    field:{ x: 336, y: 420, w: 640, h: 430, ticks: 420, perTick: 250 },
+    plateY: [452, 604, 756]
+  };
+
+  /* ---- paper ground with tooth ------------------------------------------ */
+  cx.fillStyle = '#EDE6D6'; cx.fillRect(0, 0, W, H);
+  // fibre tooth: seeded speckle, cheap and tileable in feel
+  for (let i = 0; i < 5200; i++) {
+    const x = AK.rng(i * 7 + 1)() * W, y = AK.rng(i * 13 + 5)() * H;
+    cx.fillStyle = `rgba(120,104,80,${(0.020 + AK.rng(i * 3 + 2)() * 0.045).toFixed(3)})`;
+    cx.fillRect(x, y, 1.4, 1.4);
+  }
+  // a faint warm key falling from upper left
+  const kg = cx.createLinearGradient(0, 0, W * 0.9, H);
+  kg.addColorStop(0, 'rgba(255,246,224,0.55)');
+  kg.addColorStop(0.55, 'rgba(255,246,224,0)');
+  kg.addColorStop(1, 'rgba(120,104,80,0.10)');
+  cx.fillStyle = kg; cx.fillRect(0, 0, W, H);
+
+  // ruled ledger lines across the sheet, hairline
+  cx.strokeStyle = 'rgba(20,32,44,0.09)'; cx.lineWidth = 0.75;
+  for (let y = 416; y <= 860; y += 24.5) {
+    cx.beginPath(); cx.moveTo(80, y); cx.lineTo(1000, y); cx.stroke();
+  }
+  // the vertical margin rule that separates the seat rail from the field
+  cx.strokeStyle = 'rgba(20,32,44,0.22)'; cx.lineWidth = 1.25;
+  cx.beginPath(); cx.moveTo(300, 408); cx.lineTo(300, 880); cx.stroke();
+
+  /* ---- SEAT RAIL: 28 authorised, 22 filled, 4 currently on shift -------- */
+  let seat = 0;
+  for (let r = 0; r < K.rail.rows; r++) {
+    for (let c = 0; c < K.rail.cols; c++) {
+      const x = K.rail.x + c * K.rail.gap, y = K.rail.y + r * K.rail.gap;
+      const filled = seat < 22;              // c38, vendor-labelled on the slide
+      const onShift = seat < 4;              // c37, at least four per shift
+      cx.beginPath(); cx.arc(x, y, K.rail.r, 0, Math.PI * 2);
+      if (filled) { cx.fillStyle = '#14202C'; cx.fill(); }
+      else {
+        cx.setLineDash([4, 3]); cx.strokeStyle = '#8A7E68'; cx.lineWidth = 1.6;
+        cx.stroke(); cx.setLineDash([]);
+      }
+      if (onShift) {                          // the deck's gold budget, here only
+        cx.beginPath(); cx.arc(x, y, K.rail.r + 6.5, 0, Math.PI * 2);
+        cx.strokeStyle = '#C9971A'; cx.lineWidth = 2.4; cx.stroke();
+      }
+      seat++;
+    }
+  }
+
+  /* ---- TALLY FIELD: 420 ticks at 250 calls each = 105,000 (c08) --------- */
+  const perRow = 30, rows = Math.ceil(K.field.ticks / perRow);
+  const stepX = K.field.w / perRow, stepY = K.field.h / rows;
+  cx.lineCap = 'butt';
+  for (let i = 0; i < K.field.ticks; i++) {
+    const r = Math.floor(i / perRow), c = i % perRow;
+    const group = c % 5;
+    // groups of five: the fifth stroke lies across the previous four
+    const bx = K.field.x + c * stepX + (Math.floor(c / 5) * 3);
+    const by = K.field.y + r * stepY;
+    const j1 = (AK.rng(i * 5 + 11)() - 0.5) * 2.2, j2 = (AK.rng(i * 5 + 17)() - 0.5) * 2.2;
+    cx.strokeStyle = 'rgba(20,32,44,0.86)'; cx.lineWidth = 1.9;
+    cx.beginPath();
+    if (group === 4) { cx.moveTo(bx - 15 + j1, by + 14 + j2); cx.lineTo(bx + 3 + j1, by - 2 + j2); }
+    else { cx.moveTo(bx + j1, by - 1 + j2); cx.lineTo(bx + j1 - 1.5, by + 13 + j2); }
+    cx.stroke();
+  }
+
+  /* ---- three leaders pulling three questions out of the field ----------- */
+  // Exactly three. No fourth leader may be added for composition.
+  const src = [[K.field.x + 92, 514], [K.field.x + 210, 666], [K.field.x + 60, 818]];
+  cx.strokeStyle = '#14202C'; cx.lineWidth = 1.25;
+  src.forEach((p, i) => {
+    const plateTop = K.plateY[i] + 29;
+    cx.beginPath();
+    cx.moveTo(p[0], p[1]);
+    cx.lineTo(p[0] - 26, p[1] - 26);
+    cx.lineTo(352 - 22, plateTop);
+    cx.stroke();
+    cx.fillStyle = '#14202C';
+    cx.beginPath(); cx.arc(p[0], p[1], 4.5, 0, Math.PI * 2); cx.fill();
+  });
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: 0.02, saturation: 1.02, contrast: 1.05, filmic: false,
+    lift: [0.004, 0.004, 0.002], gain: [1.0, 0.998, 0.988], vignette: 0.16,
+    grain: { amount: 0.03, size: 2, seed: 20260829 }, dither: true, sharpen: 0.22
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 52, max: 76, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,3737 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1350,
+    "scale": 2.0,
+    "px": [
+      2160,
+      2700
+    ]
+  },
+  "slides": [
+    {
+      "file": "slide-01.html",
+      "png": "slide-01.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "CASE FILE NO. 002LA CROSSE COUNTY, WISCONSIN",
+          "x": 80,
+          "y": 88,
+          "w": 580,
+          "h": 65,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 166, 190)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BRAND",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              88,
+              182,
+              31
+            ],
+            [
+              80,
+              121,
+              492,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "NO. 002",
+          "x": 262,
+          "y": 88,
+          "w": 128,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(220, 210, 188)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BRAND",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              262,
+              88,
+              128,
+              31
+            ]
+          ],
+          "anc": [
+            0
+          ]
+        },
+        {
+          "text": "01 / 10",
+          "x": 880,
+          "y": 90,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 133, 164)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              882,
+              90,
+              118,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "How do I pay a parking ticket?",
+          "x": 80,
+          "y": 204,
+          "w": 880,
+          "h": 330,
+          "font_px": 125.5,
+          "weight": "700",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "hook",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              191,
+              645,
+              151
+            ],
+            [
+              80,
+              317,
+              660,
+              151
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "It lands on the same desk that answers 911.",
+          "x": 80,
+          "y": 560,
+          "w": 920,
+          "h": 48,
+          "font_px": 36,
+          "weight": "500",
+          "family": "Manrope",
+          "color": "rgb(169, 188, 209)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "strap",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              559,
+              718,
+              49
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "911 EMERGENCY",
+          "x": 258,
+          "y": 824,
+          "w": 232,
+          "h": 38,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "btnlab",
+          "knockout": true,
+          "lines": [
+            [
+              274,
+              828,
+              200,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "41,000 CALLSIN SEVEN MONTHS",
+          "x": 96,
+          "y": 1128,
+          "w": 392,
+          "h": 88,
+          "font_px": 29,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "chip",
+          "knockout": true,
+          "lines": [
+            [
+              124,
+              1150,
+              240,
+              39
+            ],
+            [
+              124,
+              1191,
+              300,
+              39
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3297,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 16.7,
+          "variance": 679.3
+        }
+      ]
+    },
+    {
+      "file": "slide-02.html",
+      "png": "slide-02.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE DESK",
+          "x": 80,
+          "y": 96,
+          "w": 150,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(85, 76, 60)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              150,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "02 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(138, 126, 104)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "The only number that always picks up",
+          "x": 80,
+          "y": 198,
+          "w": 880,
+          "h": 172,
+          "font_px": 75.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              191,
+              843,
+              90
+            ],
+            [
+              80,
+              268,
+              244,
+              90
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "28 SEATS AUTHORISED / 22 FILLED",
+          "x": 80,
+          "y": 722,
+          "w": 250,
+          "h": 94,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "rail",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              722,
+              123,
+              31
+            ],
+            [
+              80,
+              753,
+              154,
+              31
+            ],
+            [
+              80,
+              784,
+              169,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "PER THE VENDOR'S OWN CASE STUDY",
+          "x": 80,
+          "y": 838,
+          "w": 236,
+          "h": 98,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(63, 74, 87)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "rail",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              838,
+              108,
+              31
+            ],
+            [
+              80,
+              871,
+              184,
+              31
+            ],
+            [
+              80,
+              903,
+              154,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "How do I pay a parking ticket.",
+          "x": 352,
+          "y": 452,
+          "w": 464,
+          "h": 58,
+          "font_px": 31,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "q1",
+          "knockout": true,
+          "lines": [
+            [
+              372,
+              466,
+              424,
+              42
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "What time is court.",
+          "x": 352,
+          "y": 604,
+          "w": 319,
+          "h": 58,
+          "font_px": 31,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "q2",
+          "knockout": true,
+          "lines": [
+            [
+              372,
+              618,
+              279,
+              42
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Can I talk to an inmate.",
+          "x": 352,
+          "y": 756,
+          "w": 373,
+          "h": 58,
+          "font_px": 31,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "q3",
+          "knockout": true,
+          "lines": [
+            [
+              372,
+              770,
+              333,
+              42
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "At least four dispatchers a shift, around the clock, per Milwaukee Magazine. Roughly 105,000 routine calls a year, per the county. Cory Lynch, the operations supervisor, says being a 24/7 department made them the default for anything to do with municipalities or police departments.",
+          "x": 80,
+          "y": 940,
+          "w": 720,
+          "h": 257,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(38, 48, 60)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              939,
+              635,
+              44
+            ],
+            [
+              80,
+              982,
+              711,
+              44
+            ],
+            [
+              80,
+              1025,
+              687,
+              44
+            ],
+            [
+              80,
+              1068,
+              644,
+              44
+            ],
+            [
+              80,
+              1111,
+              702,
+              44
+            ],
+            [
+              80,
+              1153,
+              696,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ONE TICK IS 250 CALLS",
+          "x": 600,
+          "y": 1212,
+          "w": 400,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(90, 98, 112)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "foot",
+          "knockout": false,
+          "lines": [
+            [
+              647,
+              1212,
+              353,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 2868,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 219.7,
+          "variance": 658.7
+        }
+      ]
+    },
+    {
+      "file": "slide-03.html",
+      "png": "slide-03.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE HOLD",
+          "x": 80,
+          "y": 96,
+          "w": 150,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 169, 201)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              150,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "03 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(85, 105, 138)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Then the accident call comes in",
+          "x": 80,
+          "y": 210,
+          "w": 800,
+          "h": 130,
+          "font_px": 69.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              203,
+              761,
+              84
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "\"Then we have to put that caller on hold to answer a 911 call that could be for an accident, and then picking the caller back up and having them start their story over again if it happens to be another dispatcher that answers it.\"",
+          "x": 148,
+          "y": 558,
+          "w": 636,
+          "h": 294,
+          "font_px": 35,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(234, 241, 249)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "quote",
+          "knockout": true,
+          "lines": [
+            [
+              148,
+              558,
+              634,
+              48
+            ],
+            [
+              148,
+              607,
+              622,
+              48
+            ],
+            [
+              148,
+              656,
+              580,
+              48
+            ],
+            [
+              148,
+              705,
+              567,
+              48
+            ],
+            [
+              148,
+              754,
+              550,
+              48
+            ],
+            [
+              148,
+              803,
+              579,
+              48
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CORY LYNCH, OPERATIONS SUPERVISOR, TO WEAU",
+          "x": 148,
+          "y": 878,
+          "w": 636,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(180, 196, 214)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "quote",
+          "knockout": true,
+          "lines": [
+            [
+              148,
+              878,
+              635,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Lynch also says it has been really hard to hire and keep staff on.",
+          "x": 148,
+          "y": 931,
+          "w": 636,
+          "h": 88,
+          "font_px": 32,
+          "weight": "500",
+          "family": "Manrope",
+          "color": "rgb(198, 212, 226)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "quote",
+          "knockout": true,
+          "lines": [
+            [
+              148,
+              931,
+              603,
+              44
+            ],
+            [
+              148,
+              975,
+              329,
+              44
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3029,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 9.9,
+          "variance": 62.5
+        }
+      ]
+    },
+    {
+      "file": "slide-04.html",
+      "png": "slide-04.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE BOUNDARY",
+          "x": 80,
+          "y": 96,
+          "w": 225,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 169, 201)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              225,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "04 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(85, 105, 138)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "They rebuilt one line and left the other alone",
+          "x": 80,
+          "y": 200,
+          "w": 880,
+          "h": 120,
+          "font_px": 65.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              194,
+              761,
+              79
+            ],
+            [
+              80,
+              261,
+              272,
+              79
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "911 \u00b7 UNTOUCHED",
+          "x": 648,
+          "y": 326,
+          "w": 352,
+          "h": 52,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "untouched",
+          "knockout": true,
+          "lines": [
+            [
+              712,
+              335,
+              274,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "01",
+          "x": 601,
+          "y": 429,
+          "w": 42,
+          "h": 42,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "b1",
+          "knockout": true,
+          "lines": [
+            [
+              608,
+              435,
+              29,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "02",
+          "x": 601,
+          "y": 535,
+          "w": 42,
+          "h": 42,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "b2",
+          "knockout": true,
+          "lines": [
+            [
+              608,
+              541,
+              29,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "03",
+          "x": 601,
+          "y": 669,
+          "w": 42,
+          "h": 42,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "b3",
+          "knockout": true,
+          "lines": [
+            [
+              608,
+              675,
+              29,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "04",
+          "x": 601,
+          "y": 775,
+          "w": 42,
+          "h": 42,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "b4",
+          "knockout": true,
+          "lines": [
+            [
+              608,
+              781,
+              29,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "05",
+          "x": 601,
+          "y": 881,
+          "w": 42,
+          "h": 42,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(255, 199, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "b5",
+          "knockout": true,
+          "lines": [
+            [
+              608,
+              887,
+              29,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ANSWER THENON-EMERGENCY LINE",
+          "x": 668,
+          "y": 440,
+          "w": 320,
+          "h": 67,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s1",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              439,
+              158,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "NON-EMERGENCY LINE",
+          "x": 668,
+          "y": 473,
+          "w": 284,
+          "h": 34,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s1",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              473,
+              284,
+              34
+            ]
+          ],
+          "anc": [
+            9
+          ]
+        },
+        {
+          "text": "ASK WHICH MUNICIPALITY ISSUED THE TICKET",
+          "x": 668,
+          "y": 546,
+          "w": 320,
+          "h": 101,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s2",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              545,
+              142,
+              34
+            ],
+            [
+              668,
+              579,
+              299,
+              34
+            ],
+            [
+              668,
+              612,
+              158,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "FORWARD, OR TEXT THE LINK",
+          "x": 668,
+          "y": 680,
+          "w": 320,
+          "h": 67,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s3",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              679,
+              315,
+              34
+            ],
+            [
+              668,
+              713,
+              63,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ESCALATE ON A WORD",
+          "x": 668,
+          "y": 786,
+          "w": 320,
+          "h": 34,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s4",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              785,
+              284,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "HUMAN ON REQUEST, ANY TIME",
+          "x": 668,
+          "y": 892,
+          "w": 320,
+          "h": 67,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(198, 214, 230)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "s5",
+          "knockout": false,
+          "lines": [
+            [
+              668,
+              891,
+              268,
+              34
+            ],
+            [
+              668,
+              925,
+              126,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ENGLISH AND SPANISH",
+          "x": 660,
+          "y": 980,
+          "w": 340,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(185, 198, 214)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "lang",
+          "knockout": false,
+          "lines": [
+            [
+              660,
+              980,
+              310,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "La Crosse bought it from a Seattle company called Aurelian. Every step above was drawn by a person before the phone ever rang. That is a workflow, rung 4 of five, and for this job rung 4 is the right answer. The vendor calls it an agent.",
+          "x": 80,
+          "y": 1024,
+          "w": 880,
+          "h": 174,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(198, 212, 226)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1023,
+              869,
+              44
+            ],
+            [
+              80,
+              1067,
+              847,
+              44
+            ],
+            [
+              80,
+              1110,
+              151,
+              44
+            ],
+            [
+              471,
+              1154,
+              416,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "That is a workflow, rung 4 of five, and for this job rung 4 is the right answer.",
+          "x": 80,
+          "y": 1110,
+          "w": 876,
+          "h": 88,
+          "font_px": 32,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              231,
+              1110,
+              724,
+              44
+            ],
+            [
+              80,
+              1154,
+              391,
+              44
+            ]
+          ],
+          "anc": [
+            16
+          ]
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3501,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 14.9,
+          "variance": 83.1
+        }
+      ]
+    },
+    {
+      "file": "slide-05.html",
+      "png": "slide-05.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE LIST",
+          "x": 80,
+          "y": 96,
+          "w": 150,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(126, 149, 174)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              150,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "05 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(95, 117, 146)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "A person typed the list",
+          "x": 80,
+          "y": 214,
+          "w": 352,
+          "h": 200,
+          "font_px": 59.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              208,
+              306,
+              71
+            ],
+            [
+              80,
+              269,
+              137,
+              71
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "If somebody in trouble calls the routine line, the system picks up certain hot words and sends them to a 911 dispatcher, per the county's operations supervisor. That list is not something the model worked out. Somebody sat down and typed it. The machine is matching words, not judging urgency.",
+          "x": 80,
+          "y": 472,
+          "w": 352,
+          "h": 672,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(198, 212, 226)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              472,
+              327,
+              44
+            ],
+            [
+              80,
+              517,
+              304,
+              44
+            ],
+            [
+              80,
+              562,
+              292,
+              44
+            ],
+            [
+              80,
+              606,
+              320,
+              44
+            ],
+            [
+              80,
+              651,
+              286,
+              44
+            ],
+            [
+              80,
+              696,
+              278,
+              44
+            ],
+            [
+              80,
+              741,
+              291,
+              44
+            ],
+            [
+              80,
+              786,
+              168,
+              44
+            ],
+            [
+              270,
+              965,
+              63,
+              44
+            ],
+            [
+              80,
+              1010,
+              303,
+              44
+            ],
+            [
+              80,
+              1054,
+              272,
+              44
+            ],
+            [
+              80,
+              1099,
+              125,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "That list is not something the model worked out. Somebody sat down and typed it.",
+          "x": 80,
+          "y": 786,
+          "w": 325,
+          "h": 223,
+          "font_px": 32,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              248,
+              786,
+              157,
+              44
+            ],
+            [
+              80,
+              830,
+              282,
+              44
+            ],
+            [
+              80,
+              875,
+              281,
+              44
+            ],
+            [
+              80,
+              920,
+              308,
+              44
+            ],
+            [
+              80,
+              965,
+              190,
+              44
+            ]
+          ],
+          "anc": [
+            3
+          ]
+        },
+        {
+          "text": "HOT WORDS \u00b7 ESCALATE TO 911",
+          "x": 520,
+          "y": 214,
+          "w": 452,
+          "h": 106,
+          "font_px": 31,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "formhead",
+          "knockout": true,
+          "lines": [
+            [
+              536,
+              226,
+              403,
+              41
+            ],
+            [
+              536,
+              267,
+              121,
+              41
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "NO SOURCE WE FETCHED LISTS THE WORDS",
+          "x": 520,
+          "y": 1074,
+          "w": 452,
+          "h": 84,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(94, 84, 66)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "formnote",
+          "knockout": true,
+          "lines": [
+            [
+              534,
+              1084,
+              387,
+              31
+            ],
+            [
+              534,
+              1116,
+              134,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [
+        {
+          "text": "01",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "02",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "03",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "04",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "05",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "06",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "07",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "08",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        }
+      ],
+      "render_ms": 3449,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 76.6,
+          "variance": 8173.2
+        }
+      ]
+    },
+    {
+      "file": "slide-06.html",
+      "png": "slide-06.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "THE RECEIPTS",
+          "x": 80,
+          "y": 96,
+          "w": 225,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 160, 178)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              225,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "06 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(110, 127, 147)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "41,000 calls in seven months",
+          "x": 80,
+          "y": 206,
+          "w": 880,
+          "h": 120,
+          "font_px": 85.5,
+          "weight": "700",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              197,
+              691,
+              103
+            ],
+            [
+              80,
+              283,
+              269,
+              103
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "2024 BASELINE PER THE COUNTYSHOWN ON ITS OWN SCALE",
+          "x": 420,
+          "y": 386,
+          "w": 580,
+          "h": 63,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(147, 163, 180)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "base",
+          "knockout": false,
+          "lines": [
+            [
+              420,
+              386,
+              430,
+              31
+            ],
+            [
+              420,
+              418,
+              338,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ABOUT 65 PERCENT NEVER REACHED A DISPATCHER",
+          "x": 80,
+          "y": 700,
+          "w": 677,
+          "h": 34,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "barlab",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              700,
+              677,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "THE REST REACHED ONE",
+          "x": 80,
+          "y": 740,
+          "w": 315,
+          "h": 34,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(159, 176, 194)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "barlab2",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              740,
+              315,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "BASE \u00b7 THE 41,000 CALLS THE SYSTEM TOOK",
+          "x": 80,
+          "y": 786,
+          "w": 640,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(232, 163, 61)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "baserule",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              786,
+              599,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "RESOLVED \u00b7 NOT PUBLISHED",
+          "x": 160,
+          "y": 836,
+          "w": 340,
+          "h": 62,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 160, 178)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "slot",
+          "knockout": false,
+          "lines": [
+            [
+              160,
+              836,
+              218,
+              31
+            ],
+            [
+              160,
+              867,
+              140,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "FOUR DISPATCHERS PER SHIFT,BEFORE AND AFTER",
+          "x": 700,
+          "y": 836,
+          "w": 300,
+          "h": 94,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 160, 178)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "seat",
+          "knockout": false,
+          "lines": [
+            [
+              700,
+              836,
+              246,
+              31
+            ],
+            [
+              700,
+              867,
+              154,
+              31
+            ],
+            [
+              700,
+              898,
+              246,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "About 65 percent of the calls the system took never reached a dispatcher, per the county's own count. That counts calls that ended, not calls that got answered. No resolution or complaint figure exists on any page we fetched, including the vendor's own.",
+          "x": 80,
+          "y": 900,
+          "w": 620,
+          "h": 300,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(201, 214, 227)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              899,
+              595,
+              44
+            ],
+            [
+              80,
+              942,
+              591,
+              44
+            ],
+            [
+              80,
+              985,
+              301,
+              44
+            ],
+            [
+              80,
+              1071,
+              576,
+              44
+            ],
+            [
+              80,
+              1113,
+              556,
+              44
+            ],
+            [
+              80,
+              1156,
+              200,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "That counts calls that ended, not calls that got answered.",
+          "x": 80,
+          "y": 985,
+          "w": 607,
+          "h": 87,
+          "font_px": 32,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              381,
+              985,
+              261,
+              44
+            ],
+            [
+              80,
+              1028,
+              607,
+              44
+            ]
+          ],
+          "anc": [
+            9
+          ]
+        },
+        {
+          "text": "COUNTY'S OWN COUNT, REPORTED BY NEWS 8000",
+          "x": 80,
+          "y": 1212,
+          "w": 920,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(147, 163, 180)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "src",
+          "knockout": false,
+          "lines": [
+            [
+              390,
+              1212,
+              610,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 2891,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 23.5,
+          "variance": 608.7
+        }
+      ]
+    },
+    {
+      "file": "slide-07.html",
+      "png": "slide-07.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "DRAWN TOO WIDE",
+          "x": 80,
+          "y": 96,
+          "w": 262,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(126, 147, 174)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              262,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "07 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(92, 112, 134)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "The same product went sideways at another Wisconsin desk",
+          "x": 80,
+          "y": 206,
+          "w": 600,
+          "h": 250,
+          "font_px": 57.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              201,
+              477,
+              69
+            ],
+            [
+              80,
+              260,
+              413,
+              69
+            ],
+            [
+              80,
+              319,
+              319,
+              69
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Ozaukee County bought the same product and went live around the clock in week one. Callers asked for a sheriff when they meant a deputy. Shouting and music confused it. They cut it back to two hours a day while the vendor worked through it, and the sheriff says the vendor has been receptive.",
+          "x": 120,
+          "y": 486,
+          "w": 644,
+          "h": 370,
+          "font_px": 33,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(210, 222, 234)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": true,
+          "lines": [
+            [
+              120,
+              486,
+              518,
+              45
+            ],
+            [
+              120,
+              532,
+              619,
+              45
+            ],
+            [
+              120,
+              578,
+              629,
+              45
+            ],
+            [
+              120,
+              625,
+              626,
+              45
+            ],
+            [
+              120,
+              671,
+              623,
+              45
+            ],
+            [
+              120,
+              717,
+              619,
+              45
+            ],
+            [
+              120,
+              763,
+              613,
+              45
+            ],
+            [
+              120,
+              809,
+              151,
+              45
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "SAME PRODUCT. SAME VENDOR. DIFFERENT BOUNDARY.",
+          "x": 120,
+          "y": 882,
+          "w": 644,
+          "h": 62,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 166, 190)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": true,
+          "lines": [
+            [
+              120,
+              882,
+              579,
+              31
+            ],
+            [
+              120,
+              913,
+              145,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "TWO HOURSOF TWENTY-FOUR",
+          "x": 700,
+          "y": 1010,
+          "w": 300,
+          "h": 82,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(224, 233, 243)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "dial",
+          "knockout": true,
+          "lines": [
+            [
+              780,
+              1020,
+              140,
+              31
+            ],
+            [
+              741,
+              1051,
+              218,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "OZAUKEE PRESS, MAY 2026",
+          "x": 80,
+          "y": 1226,
+          "w": 364,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(111, 132, 155)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "src",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1226,
+              364,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 3044,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 8.9,
+          "variance": 41.8
+        }
+      ]
+    },
+    {
+      "file": "slide-08.html",
+      "png": "slide-08.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "WHAT IT TOOK",
+          "x": 80,
+          "y": 96,
+          "w": 225,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(46, 58, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              225,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "08 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(106, 101, 88)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "The bill goes up as it works harder",
+          "x": 80,
+          "y": 206,
+          "w": 760,
+          "h": 130,
+          "font_px": 71.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              199,
+              723,
+              85
+            ],
+            [
+              80,
+              272,
+              182,
+              85
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "PRICED ON CALL VOLUME,NOT PER SEAT",
+          "x": 80,
+          "y": 392,
+          "w": 400,
+          "h": 63,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(42, 54, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c1",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              392,
+              327,
+              31
+            ],
+            [
+              80,
+              424,
+              179,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "SEVERAL MONTHS OF TRAININGBEFORE THE FIRST CALL,5 MAY 2025",
+          "x": 80,
+          "y": 490,
+          "w": 400,
+          "h": 95,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(42, 54, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c2",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              490,
+              387,
+              31
+            ],
+            [
+              80,
+              522,
+              327,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "5 MAY 2025",
+          "x": 80,
+          "y": 553,
+          "w": 400,
+          "h": 32,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c2",
+          "knockout": false,
+          "lines": [
+            [
+              324,
+              553,
+              149,
+              31
+            ]
+          ],
+          "anc": [
+            4
+          ]
+        },
+        {
+          "text": "OWNER \u00b7 THE OPERATIONSSUPERVISOR, NOT IT",
+          "x": 80,
+          "y": 700,
+          "w": 400,
+          "h": 63,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(42, 54, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c3",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              700,
+              89,
+              31
+            ],
+            [
+              198,
+              700,
+              223,
+              31
+            ],
+            [
+              80,
+              732,
+              268,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "\u00b7",
+          "x": 169,
+          "y": 700,
+          "w": 28,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c3",
+          "knockout": false,
+          "lines": [
+            [
+              176,
+              700,
+              15,
+              31
+            ]
+          ],
+          "anc": [
+            6
+          ]
+        },
+        {
+          "text": "CADENCE \u00b7 EVERY OTHERWEEK WITH THE VENDOR",
+          "x": 80,
+          "y": 814,
+          "w": 400,
+          "h": 63,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(42, 54, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c4",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              814,
+              119,
+              31
+            ],
+            [
+              227,
+              814,
+              179,
+              31
+            ],
+            [
+              80,
+              846,
+              298,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "\u00b7",
+          "x": 199,
+          "y": 814,
+          "w": 28,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "c4",
+          "knockout": false,
+          "lines": [
+            [
+              206,
+              814,
+              15,
+              31
+            ]
+          ],
+          "anc": [
+            8
+          ]
+        },
+        {
+          "text": "YEAR ONE",
+          "x": 510,
+          "y": 416,
+          "w": 134,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(107, 96, 80)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "y1",
+          "knockout": true,
+          "lines": [
+            [
+              510,
+              416,
+              134,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ABOUT $67,000",
+          "x": 510,
+          "y": 452,
+          "w": 360,
+          "h": 67,
+          "font_px": 56,
+          "weight": "700",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "y1t",
+          "knockout": true,
+          "lines": [
+            [
+              510,
+              452,
+              360,
+              67
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "YEAR TWO",
+          "x": 596,
+          "y": 616,
+          "w": 134,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(107, 96, 80)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "y2",
+          "knockout": true,
+          "lines": [
+            [
+              596,
+              616,
+              134,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ABOUT $81,000",
+          "x": 596,
+          "y": 652,
+          "w": 360,
+          "h": 67,
+          "font_px": 56,
+          "weight": "700",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "y2t",
+          "knockout": true,
+          "lines": [
+            [
+              596,
+              652,
+              360,
+              67
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "About $67,000 in year one and about $81,000 in year two, per Milwaukee Magazine, priced on call volume. That is not a price rise. That is the product working harder, invoiced. Milwaukee Magazine put the annual price at about one employee with benefits. If your calls triple in July, model your July.",
+          "x": 80,
+          "y": 950,
+          "w": 880,
+          "h": 261,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(38, 48, 60)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              949,
+              833,
+              44
+            ],
+            [
+              80,
+              993,
+              696,
+              44
+            ],
+            [
+              80,
+              1080,
+              800,
+              44
+            ],
+            [
+              80,
+              1123,
+              710,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "That is not a price rise. That is the product working harder, invoiced.",
+          "x": 80,
+          "y": 993,
+          "w": 857,
+          "h": 88,
+          "font_px": 32,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              776,
+              993,
+              162,
+              44
+            ],
+            [
+              80,
+              1036,
+              856,
+              44
+            ]
+          ],
+          "anc": [
+            14
+          ]
+        },
+        {
+          "text": "model your July.",
+          "x": 80,
+          "y": 1167,
+          "w": 233,
+          "h": 44,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(38, 48, 60)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1167,
+              233,
+              44
+            ]
+          ],
+          "anc": [
+            14
+          ]
+        },
+        {
+          "text": "PER MILWAUKEE MAGAZINE",
+          "x": 80,
+          "y": 1212,
+          "w": 348,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(46, 58, 70)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "src",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1212,
+              348,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 2800,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 219,
+          "variance": 173.2
+        }
+      ]
+    },
+    {
+      "file": "slide-09.html",
+      "png": "slide-09.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "YOUR VERSION",
+          "x": 80,
+          "y": 96,
+          "w": 225,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(138, 160, 184)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              225,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "09 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(106, 127, 151)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Point it where a wrong route costs ten minutes",
+          "x": 80,
+          "y": 206,
+          "w": 620,
+          "h": 130,
+          "font_px": 53.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "head",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              202,
+              552,
+              64
+            ],
+            [
+              80,
+              258,
+              348,
+              64
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "FORTY BELOW, NO HEAT.STAYS ON A PERSON.",
+          "x": 80,
+          "y": 356,
+          "w": 400,
+          "h": 62,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "up",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              356,
+              312,
+              31
+            ],
+            [
+              80,
+              387,
+              268,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "WHERE IS MY TECH.WHAT DO I OWE.RESEND THE INVOICE.",
+          "x": 80,
+          "y": 566,
+          "w": 400,
+          "h": 94,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(159, 180, 200)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "down",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              566,
+              253,
+              31
+            ],
+            [
+              80,
+              597,
+              208,
+              31
+            ],
+            [
+              80,
+              628,
+              283,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "MECHANICAL AND HEATINGWITH A 24/7 SERVICE LINE",
+          "x": 80,
+          "y": 676,
+          "w": 424,
+          "h": 62,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(192, 208, 224)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "g1",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              676,
+              327,
+              31
+            ],
+            [
+              80,
+              707,
+              357,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "UTILITY AND CO-OPMEMBER SERVICE",
+          "x": 80,
+          "y": 766,
+          "w": 424,
+          "h": 62,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(192, 208, 224)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "g2",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              766,
+              253,
+              31
+            ],
+            [
+              80,
+              797,
+              208,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "PROPERTY MANAGEMENT",
+          "x": 80,
+          "y": 856,
+          "w": 424,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(192, 208, 224)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "g3",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              856,
+              283,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "FREIGHT AND MARINE DISPATCH",
+          "x": 80,
+          "y": 896,
+          "w": 424,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(192, 208, 224)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "DATA",
+          "block": "g4",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              896,
+              402,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "YOUR VERSION \u00b7 DRAFTED HERE",
+          "x": 542,
+          "y": 328,
+          "w": 424,
+          "h": 88,
+          "font_px": 25,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "fh",
+          "knockout": true,
+          "lines": [
+            [
+              556,
+              338,
+              352,
+              34
+            ],
+            [
+              556,
+              372,
+              64,
+              34
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "OUR DRAFT, NOT LA CROSSE'S LIST",
+          "x": 526,
+          "y": 846,
+          "w": 474,
+          "h": 49,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(20, 32, 44)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "fs",
+          "knockout": true,
+          "lines": [
+            [
+              538,
+              855,
+              446,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "GAS",
+          "x": 632,
+          "y": 412,
+          "w": 361,
+          "h": 52,
+          "font_px": 34,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(27, 40, 54)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "hw1",
+          "knockout": true,
+          "lines": [
+            [
+              632,
+              417,
+              68,
+              47
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "SMOKE",
+          "x": 632,
+          "y": 502,
+          "w": 361,
+          "h": 50,
+          "font_px": 34,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(27, 40, 54)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "hw2",
+          "knockout": true,
+          "lines": [
+            [
+              632,
+              502,
+              118,
+              47
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "NO HEAT",
+          "x": 632,
+          "y": 583,
+          "w": 360,
+          "h": 49,
+          "font_px": 34,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(27, 40, 54)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "hw3",
+          "knockout": true,
+          "lines": [
+            [
+              632,
+              585,
+              141,
+              47
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "WATER EVERYWHERE",
+          "x": 632,
+          "y": 670,
+          "w": 361,
+          "h": 52,
+          "font_px": 34,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(27, 40, 54)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "hw4",
+          "knockout": true,
+          "lines": [
+            [
+              632,
+              670,
+              342,
+              52
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "CARBON MONOXIDE",
+          "x": 632,
+          "y": 750,
+          "w": 361,
+          "h": 50,
+          "font_px": 34,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(27, 40, 54)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "ART",
+          "block": "hw5",
+          "knockout": true,
+          "lines": [
+            [
+              632,
+              750,
+              322,
+              50
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Never point it where a wrong route costs a house or a hand. A caller here says a village name or a mile marker, which is a harder version of what broke Ozaukee. Test that before you sign. Under a few thousand routine calls a year, the honest answer is a better phone tree and an online payment page.",
+          "x": 80,
+          "y": 950,
+          "w": 880,
+          "h": 257,
+          "font_px": 32,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(198, 212, 226)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              949,
+              866,
+              44
+            ],
+            [
+              685,
+              1035,
+              244,
+              44
+            ],
+            [
+              80,
+              1078,
+              805,
+              44
+            ],
+            [
+              80,
+              1121,
+              878,
+              44
+            ],
+            [
+              80,
+              1163,
+              82,
+              44
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "A caller here says a village name or a mile marker, which is a harder version of what broke Ozaukee.",
+          "x": 80,
+          "y": 992,
+          "w": 869,
+          "h": 87,
+          "font_px": 32,
+          "weight": "600",
+          "family": "Manrope",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BODY",
+          "block": "body",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              992,
+              869,
+              44
+            ],
+            [
+              80,
+              1035,
+              605,
+              44
+            ]
+          ],
+          "anc": [
+            16
+          ]
+        },
+        {
+          "text": "WAUKESHA COUNTY RAN IT LIVE ABOUT 15 HOURS, THEN READ EVERY TRANSCRIPT",
+          "x": 440,
+          "y": 1216,
+          "w": 560,
+          "h": 62,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(220, 210, 188)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "first",
+          "knockout": false,
+          "lines": [
+            [
+              456,
+              1216,
+              544,
+              31
+            ],
+            [
+              501,
+              1247,
+              499,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [
+        {
+          "text": "01",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "02",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "03",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "04",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        },
+        {
+          "text": "05",
+          "fn": "fillText",
+          "font": "500 22px \"JetBrains Mono\", monospace"
+        }
+      ],
+      "render_ms": 3441,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 56.4,
+          "variance": 6521
+        }
+      ]
+    },
+    {
+      "file": "slide-10.html",
+      "png": "slide-10.png",
+      "console_errors": [],
+      "page_errors": [],
+      "overflow_warnings": [],
+      "fonts_missing": [],
+      "text_nodes": [
+        {
+          "text": "CASE FILE NO. 002",
+          "x": 80,
+          "y": 96,
+          "w": 318,
+          "h": 31,
+          "font_px": 24,
+          "weight": "500",
+          "family": "JetBrains Mono",
+          "color": "rgb(126, 147, 174)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              96,
+              318,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "10 / 10",
+          "x": 880,
+          "y": 96,
+          "w": 120,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(92, 112, 134)",
+          "decorative": true,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "kicker",
+          "knockout": false,
+          "lines": [
+            [
+              899,
+              96,
+              101,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "Milwaukee Magazine put the price at about one employee with benefits. La Crosse kept all four dispatchers.",
+          "x": 80,
+          "y": 196,
+          "w": 880,
+          "h": 230,
+          "font_px": 57.5,
+          "weight": "600",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "HEAD",
+          "block": "ask",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              191,
+              766,
+              69
+            ],
+            [
+              80,
+              252,
+              776,
+              69
+            ],
+            [
+              80,
+              313,
+              672,
+              69
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.",
+          "x": 80,
+          "y": 1030,
+          "w": 880,
+          "h": 92,
+          "font_px": 33,
+          "weight": "400",
+          "family": "Manrope",
+          "color": "rgb(198, 212, 226)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BRAND",
+          "block": "offer",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1030,
+              843,
+              45
+            ],
+            [
+              80,
+              1076,
+              857,
+              45
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "ALASKA.AI",
+          "x": 164,
+          "y": 1164,
+          "w": 153,
+          "h": 36,
+          "font_px": 30,
+          "weight": "700",
+          "family": "Bricolage Grotesque",
+          "color": "rgb(244, 248, 255)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BRAND",
+          "block": "brand",
+          "knockout": false,
+          "lines": [
+            [
+              164,
+              1164,
+              153,
+              36
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "alaskaaihq.com",
+          "x": 335,
+          "y": 1167,
+          "w": 235,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(143, 166, 190)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "BRAND",
+          "block": "brand",
+          "knockout": false,
+          "lines": [
+            [
+              335,
+              1167,
+              235,
+              31
+            ]
+          ],
+          "anc": []
+        },
+        {
+          "text": "SOURCES IN COMMENTS",
+          "x": 80,
+          "y": 1226,
+          "w": 310,
+          "h": 31,
+          "font_px": 24,
+          "weight": "400",
+          "family": "JetBrains Mono",
+          "color": "rgb(111, 132, 155)",
+          "decorative": false,
+          "overlap_ok": false,
+          "zone": "FOOTER",
+          "block": "srcnote",
+          "knockout": false,
+          "lines": [
+            [
+              80,
+              1226,
+              310,
+              31
+            ]
+          ],
+          "anc": []
+        }
+      ],
+      "body_overflow": false,
+      "canvas_text": [],
+      "render_ms": 6013,
+      "ok": true,
+      "canvases": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1350,
+          "bw": 2160,
+          "bh": 2700,
+          "area_frac": 1,
+          "backing_ratio": 2,
+          "sample_ok": true,
+          "mean": 12.8,
+          "variance": 207.8
+        }
+      ]
+    }
+  ]
+}

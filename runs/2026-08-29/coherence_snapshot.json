@@ -1,0 +1,142 @@
+{
+ "1": {
+  "text": [
+   "CASE FILE NO. 002LA CROSSE COUNTY, WISCONSIN",
+   "How do I pay a parking ticket?",
+   "It lands on the same desk that answers 911.",
+   "911 EMERGENCY",
+   "41,000 CALLSIN SEVEN MONTHS"
+  ],
+  "words": 29
+ },
+ "2": {
+  "text": [
+   "THE DESK",
+   "The only number that always picks up",
+   "28 SEATS AUTHORISED / 22 FILLED",
+   "PER THE VENDOR'S OWN CASE STUDY",
+   "How do I pay a parking ticket.",
+   "What time is court.",
+   "Can I talk to an inmate.",
+   "At least four dispatchers a shift, around the clock, per Milwaukee Magazine. Roughly 105,000 routine calls a year, per the county. Cory Lynch, the operations supervisor, says being a 24/7 department made them the default for anything to do with municipalities or police departments.",
+   "ONE TICK IS 250 CALLS"
+  ],
+  "words": 87
+ },
+ "3": {
+  "text": [
+   "THE HOLD",
+   "Then the accident call comes in",
+   "\"Then we have to put that caller on hold to answer a 911 call that could be for an accident, and then picking the caller back up and having them start their story over again if it happens to be another dispatcher that answers it.\"",
+   "CORY LYNCH, OPERATIONS SUPERVISOR, TO WEAU",
+   "Lynch also says it has been really hard to hire and keep staff on."
+  ],
+  "words": 73
+ },
+ "4": {
+  "text": [
+   "THE BOUNDARY",
+   "They rebuilt one line and left the other alone",
+   "911 \u00b7 UNTOUCHED",
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "ANSWER THENON-EMERGENCY LINE",
+   "ASK WHICH MUNICIPALITY ISSUED THE TICKET",
+   "FORWARD, OR TEXT THE LINK",
+   "ESCALATE ON A WORD",
+   "HUMAN ON REQUEST, ANY TIME",
+   "ENGLISH AND SPANISH",
+   "La Crosse bought it from a Seattle company called Aurelian. Every step above was drawn by a person before the phone ever rang. That is a workflow, rung 4 of five, and for this job rung 4 is the right answer. The vendor calls it an agent."
+  ],
+  "words": 92
+ },
+ "5": {
+  "text": [
+   "THE LIST",
+   "A person typed the list",
+   "If somebody in trouble calls the routine line, the system picks up certain hot words and sends them to a 911 dispatcher, per the county's operations supervisor. That list is not something the model worked out. Somebody sat down and typed it. The machine is matching words, not judging urgency.",
+   "HOT WORDS \u00b7 ESCALATE TO 911",
+   "NO SOURCE WE FETCHED LISTS THE WORDS"
+  ],
+  "words": 70
+ },
+ "6": {
+  "text": [
+   "THE RECEIPTS",
+   "41,000 calls in seven months",
+   "2024 BASELINE PER THE COUNTYSHOWN ON ITS OWN SCALE",
+   "ABOUT 65 PERCENT NEVER REACHED A DISPATCHER",
+   "THE REST REACHED ONE",
+   "BASE \u00b7 THE 41,000 CALLS THE SYSTEM TOOK",
+   "RESOLVED \u00b7 NOT PUBLISHED",
+   "FOUR DISPATCHERS PER SHIFT,BEFORE AND AFTER",
+   "About 65 percent of the calls the system took never reached a dispatcher, per the county's own count. That counts calls that ended, not calls that got answered. No resolution or complaint figure exists on any page we fetched, including the vendor's own.",
+   "COUNTY'S OWN COUNT, REPORTED BY NEWS 8000"
+  ],
+  "words": 95
+ },
+ "7": {
+  "text": [
+   "DRAWN TOO WIDE",
+   "The same product went sideways at another Wisconsin desk",
+   "Ozaukee County bought the same product and went live around the clock in week one. Callers asked for a sheriff when they meant a deputy. Shouting and music confused it. They cut it back to two hours a day while the vendor worked through it, and the sheriff says the vendor has been receptive.",
+   "SAME PRODUCT. SAME VENDOR. DIFFERENT BOUNDARY.",
+   "TWO HOURSOF TWENTY-FOUR",
+   "OZAUKEE PRESS, MAY 2026"
+  ],
+  "words": 79
+ },
+ "8": {
+  "text": [
+   "WHAT IT TOOK",
+   "The bill goes up as it works harder",
+   "PRICED ON CALL VOLUME,NOT PER SEAT",
+   "SEVERAL MONTHS OF TRAININGBEFORE THE FIRST CALL,5 MAY 2025",
+   "OWNER \u00b7 THE OPERATIONSSUPERVISOR, NOT IT",
+   "\u00b7",
+   "CADENCE \u00b7 EVERY OTHERWEEK WITH THE VENDOR",
+   "\u00b7",
+   "YEAR ONE",
+   "ABOUT $67,000",
+   "YEAR TWO",
+   "ABOUT $81,000",
+   "About $67,000 in year one and about $81,000 in year two, per Milwaukee Magazine, priced on call volume. That is not a price rise. That is the product working harder, invoiced. Milwaukee Magazine put the annual price at about one employee with benefits. If your calls triple in July, model your July."
+  ],
+  "words": 101
+ },
+ "9": {
+  "text": [
+   "YOUR VERSION",
+   "Point it where a wrong route costs ten minutes",
+   "FORTY BELOW, NO HEAT.STAYS ON A PERSON.",
+   "WHERE IS MY TECH.WHAT DO I OWE.RESEND THE INVOICE.",
+   "MECHANICAL AND HEATINGWITH A 24/7 SERVICE LINE",
+   "UTILITY AND CO-OPMEMBER SERVICE",
+   "PROPERTY MANAGEMENT",
+   "FREIGHT AND MARINE DISPATCH",
+   "YOUR VERSION \u00b7 DRAFTED HERE",
+   "OUR DRAFT, NOT LA CROSSE'S LIST",
+   "GAS",
+   "SMOKE",
+   "WATER EVERYWHERE",
+   "CARBON MONOXIDE",
+   "Never point it where a wrong route costs a house or a hand. A caller here says a village name or a mile marker, which is a harder version of what broke Ozaukee. Test that before you sign. Under a few thousand routine calls a year, the honest answer is a better phone tree and an online payment page.",
+   "WAUKESHA COUNTY RAN IT LIVE ABOUT 15 HOURS, THEN READ EVERY TRANSCRIPT"
+  ],
+  "words": 132
+ },
+ "10": {
+  "text": [
+   "CASE FILE NO. 002",
+   "Milwaukee Magazine put the price at about one employee with benefits. La Crosse kept all four dispatchers.",
+   "We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.",
+   "ALASKA.AI",
+   "alaskaaihq.com",
+   "SOURCES IN COMMENTS"
+  ],
+  "words": 48
+ }
+}

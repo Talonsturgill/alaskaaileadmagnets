@@ -1,0 +1,146 @@
+{
+  "run_date": "2026-08-29",
+  "case_file_no": 2,
+  "bank_id": "bank-025",
+  "branch": "tsturg/wonderful-bell-exirov",
+  "branch_note": "Session harness designates tsturg/wonderful-bell-exirov as the development branch for this run. The contract's default claude/case-file-<date> is overridden by that designation. Delivery links are commit-pinned to the pushed SHA, so this does not affect delivery.",
+  "phases": {
+    "wake": "done",
+    "restock": "done",
+    "selection": "done",
+    "verification": "done",
+    "translation": "done",
+    "directors_room": "done",
+    "storyboard": "done",
+    "copy": "done",
+    "honesty_gate": "done",
+    "art_build": "done",
+    "review_loop": "done",
+    "coherence_gate": "done",
+    "assemble": "done",
+    "scoring": "done",
+    "ship": "done",
+    "upgrade": "skipped",
+    "gmail": "done",
+    "retro": "done"
+  },
+  "artifacts": {
+    "plan": "out/2026-08-29/plan.md",
+    "restock_notes": "out/2026-08-29/restock_notes.md",
+    "selection": "out/2026-08-29/selection.md",
+    "claims": "out/2026-08-29/claims.json",
+    "translation": "out/2026-08-29/translation.md",
+    "deck_signature": "out/2026-08-29/deck_signature.json",
+    "coherence": "out/2026-08-29/coherence.json",
+    "zones": "out/2026-08-29/zones.json",
+    "storyboard": "out/2026-08-29/storyboard.md",
+    "variety_plan": "out/2026-08-29/variety_plan.json",
+    "copy": "out/2026-08-29/copy.json",
+    "slides": "out/2026-08-29/slides/",
+    "render": "out/2026-08-29/render/",
+    "thumbs": "out/2026-08-29/thumbs/",
+    "assembly": "runs/2026-08-29/assembly/",
+    "pdf": "runs/2026-08-29/assembly/carousel.pdf",
+    "contact_sheet": "runs/2026-08-29/assembly/contact_sheet.png"
+  },
+  "incidents": [
+    {
+      "date": "2026-08-29",
+      "phase": "restock",
+      "incident": "Restock wave 1 (four scouts, four grounds) returned ZERO bank verdicts. Fourteen candidates, eight banked as leads (bank-017..024), every one failing the cost hard gate. Structural cause identified and recorded in restock_notes.md: award submissions, vendor blogs, trade press and MEP writeups are all written to win something and cost is the one number that never helps you win.",
+      "resolution": "Wave 2 launched against the four veins wave 1 identified but never opened, rather than lowering the bar. Per the contract, a run that ships late beats a run that ships a case with no cost on the deck."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "restock",
+      "incident": "CONTRADICTION between two scouts. Both fetched https://www.servicetitan.com/press/bill-joplins-air-conditioning-and-heating-books-over-90-of-calls-with-servicetitan-ai-voice-agent on 2026-08-29 and returned DIFFERENT verbatim quotes attributed to the same named human, Randi Thompson.",
+      "resolution": "Neither quote is usable. The contract resolves contradictions in favour of the agent that read the page, and here both did, so the quote is simply unproven. Logged on bank-021; must be re-fetched and matched character for character before any use."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "selection",
+      "incident": "Two restock waves, eight scouts, twenty-four candidates, ONE bank verdict. No qualifying runner-up exists.",
+      "resolution": "Selected bank-025 La Crosse County Public Safety Communications. Recorded explicitly in selection.md that if verification kills it the run writes a post-mortem rather than swapping to a case that fails the same hard gate La Crosse passes. Kill conditions named in writing."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "verification",
+      "incident": "The fact-checker caught two factual errors the showrunner had introduced into selection.md and bank-025. (1) Spokane County was presented as a third cost point on the SAME product; it is a different vendor entirely (Prepared AI with Axon, not Aurelian), which also removed the six-week preparation figure that was the most tempting way to fill the timeline gap. (2) Two Cory Lynch quotes were carried in forms that do not exist on the page, one truncated and one silently smoothed. A third error was caught before it happened: 'approximate to one employee with benefits' is the reporter's prose, not a quote from any person.",
+      "resolution": "All corrected in claims.json, bank-025 and a visible addendum to selection.md. One overreaching line in selection.md ('two thirds of 105,000 calls a year') was corrected in place with the wrong version left visible, because it is the exact mistake the deck is most likely to make."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "verification",
+      "incident": "HARD GATE, timeline half: the decision-to-contract interval for La Crosse could not be established from any source. The county web estate returned 403 to every request and its meeting PDFs are not full-text indexed or extractable with available tools.",
+      "resolution": "SHOWRUNNER RULING: accepted narrowly. What survived is La Crosse-specific and sourced, the county's own statement that the platform underwent several months of intensive training before implementation, paired with a firm 5 May 2025 go-live. Dana's actual question is roughly how long before it worked, and that answers it. The deck states it exactly as scoped, never as a decision-to-working interval, and the delivery email flags it as this run's one soft edge."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "review_loop",
+      "incident": "ENGINE DEFECT found and patched. render.py truncated every extracted text node to 80 characters, so coherence_check could never see a full authored body and returned 24 false FAILs. Also truncated canvas text samples to 80.",
+      "resolution": "Raised the DOM text cap to 600 chars and the canvas sample cap to 200 in .claude/skills/carousel-engine/render.py. Coherence went 24 fails -> 0. This is a permanent engine fix and must be formalised by the upgrade-engineer in Phase 11."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "review_loop",
+      "incident": "VARIETY gate FAIL: deck median layout IoU 0.51 then 0.50, at or over the 0.50 fail line. Diagnosis: eight of ten slides shared one scaffold (kicker top-left, full-width head at rows 2-3, full-width body at rows 10-12, source bottom-left), and my earlier fix had flipped BOTH slide 04 and slide 08 the same way, making them twins at IoU 0.73 rather than breaking the pair.",
+      "resolution": "Recomposed rather than recoloured, per VARIETY.md. Slide 04: the 911 UNTOUCHED label moved to the far right end of the unbroken conductor, where the line leaves the frame. Slide 08: MIRRORED slide 04 instead of duplicating it, checklist and timeline ramp to the left, invoice pages and totals to the right. Slide 06: caveat body narrowed to a 620px measure against the 920px bar, source line to the opposite corner, seat row raised 30px to make the room. Slide 09: head set to the 620px width of the column it governs, Waukesha footnote to a right-aligned column under the sheet it belongs to. Slide 02: paragraph narrowed to 720px against the tally chart, legend to the far corner. Median IoU 0.51 -> 0.49."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "review_loop",
+      "incident": "Pixel critics returned REVISE on all ten slides. The single worst defect: on slide 8 a scotch rule was drawn at the dollar totals mid x-height, so ABOUT $67,000 and ABOUT $81,000 both rendered STRUCK THROUGH. Four machine gates and a full render pass had already gone green over it. Second worst: on slide 6 the 2024 annual baseline rule shared a left origin with the 41,000 bar, so the baseline read as SMALLER than seven months of calls, inverting the truth and creating exactly the shared-axis misread claims.json c04 and c09 forbid.",
+      "resolution": "Slide 8 rebuilt: sum rule moved above the totals where invoice grammar puts it, pages re-laid so page two is visibly larger and runs off the right edge, both proportional gold rules re-drawn on ONE shared origin with the delta drawn as a measured tick. Slide 6: the baseline moved onto its own left origin 344px right of the bar, the empty slot emptied of the stroke that had been drawn inside it, both terminations enlarged to survive the 432px thumb, the seat row re-pitched to exactly four and four. Deck-wide: sourcing-label contrast raised off the floor, bodies raised to the 32px doctrine floor, slide 4 step numerals de-duplicated (the balloon carries the numeral, the label carries the step), slide 9 honesty label re-fitted to its plate, slide 1 canvas raster text moved to DOM. NOT fixed and disclosed: slide 3 renders very dark, slide 10 empty-slot ring reads as a near-black disc, edge-tease device missing on several slides."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "scoring",
+      "incident": "Scorer returned 6.90 against a 8.3 threshold, ship FALSE. Uncapped 7.14, capped by one hard fail: the shipped PDF document title carried an em dash. Weakest criterion Artwork craft at 5/10 (weight 0.11): slide 3 renders near-black with its scene effectively invisible, slide 10 closing object is semantically opaque, slide 7 carries unresolved ghost rectangles and a truncated dial.",
+      "resolution": "Em dash fixed by re-assembling from copy.json document_title. The artwork deficit is NOT fixed and the run is delivered as DO NOT POST YET, with the score, the weakest criterion and the named slides disclosed to the maintainer. An artwork round is required before this ships. Standing lesson recorded: never pass a reader-facing string at a tool call when the copy record already holds the corrected one."
+    }
+  ],
+  "case": "La Crosse County Public Safety Communications",
+  "decisions": [
+    {
+      "phase": "translation",
+      "decision": "The translator proposed pairing with Anchorage and Mat-Su live plow tracking as local proof. NOT USED on a slide this run: it would require re-fetching three URLs to become citable, and more importantly it is a second idea in a deck allowed one. The rung 1 point it makes is already carried, more cheaply and more locally, by the translation's Limit 4. Recorded in translation.md section 6 for a future run."
+    },
+    {
+      "phase": "translation",
+      "decision": "The out-migration and nonresident-workforce figures in ALASKA_TRANSLATION.md rule 5 are PRIORS and no page establishing them was fetched this run. The why-now frame therefore ships WITHOUT numbers. It works without them."
+    },
+    {
+      "phase": "directors_room",
+      "decision": "Three lenses pitched. WINNER lens C (TWO LINES) for thesis and spine, because the boundary decision is genuinely the case's one idea and it makes the Ozaukee beat structural proof rather than a disclaimer. GRAFTED from lens A: the overheard-question cover ('How do I pay a parking ticket?') and the 28-seat roster that draws the hiring problem instead of describing it. GRAFTED from lens B: the two opposed line-terminations on the receipts slide (phantom dash for contained, solid dot for answered), the feathered ramp bar whose fuzzy left end IS the missing decision date, the redaction slugs, the 30-degree duty dial, and the four-axis pool-separation discipline."
+    },
+    {
+      "phase": "directors_room",
+      "decision": "Lens A honestly flagged that a 2am staging conflicts with c33 ('during the day especially'). RESOLVED: the bright paper slides carry the daytime register, the dark room is confined to the accident-call beat where it is defensible, and NO slide carries a time-of-day claim in any string."
+    }
+  ],
+  "gates": {
+    "variety_plan_only": "PASS",
+    "2026-08-29T-review-loop": {
+      "machine_qa": "WARN (pass) \u2014 one warn: slide 1 canvas fillText \"911 EMERGENCY\" ships as bitmap in the vector PDF",
+      "layout_check": "WARN (pass) \u2014 contrast warns on 02/08/09, widows on 06/08",
+      "variety_check": "WARN (pass) \u2014 deck median layout IoU 0.49, value arc 0.764",
+      "coherence_check": "WARN (pass) \u2014 fails=0, 4 warns (series numeral 002 on 01/10, derived legend numeral 250 on 02, bare \"it\" on the cover body)"
+    },
+    "final": {
+      "machine_qa": "PASS",
+      "layout_check": "WARN (pass)",
+      "variety_check": "WARN (pass), deck median layout IoU 0.49",
+      "coherence_check": "WARN (pass), 0 fails 4 warns",
+      "assembly": "pdf_mode vector, 7.16 MB, 10 slides"
+    }
+  },
+  "score": {
+    "weighted_total": 6.9,
+    "uncapped": 7.14,
+    "threshold": 8.3,
+    "ship": false,
+    "reader_verdict": "i_could_do_that",
+    "weakest_criterion": "Artwork craft and genuine detail",
+    "hard_fail": "PDF document title was assembled with an em dash. CLAUDE.md bans em dashes anywhere, zero exceptions. Caused by the showrunner passing a title at the assemble.py call instead of reading copy.json document_title, which already carried the corrected string. Re-assembled from the copy record; the title is now \"Case File No. 002, One Line Rebuilt and One Left Alone\"."
+  }
+}

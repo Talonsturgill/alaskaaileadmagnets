@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#151E28; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#8FA0B2; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#6E7F93; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:206px; width:880px; height:120px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+    font-variation-settings:"wdth" 96; font-size:82px; line-height:1.0;
+    letter-spacing:-0.022em; color:#F4F8FF; }
+
+  .baselab { position:absolute; left:420px; top:386px; width:580px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.04em; line-height:1.32; color:#93A3B4; }
+
+  .barlab  { position:absolute; font-family:"JetBrains Mono",monospace;
+    font-weight:500; font-size:25px; letter-spacing:0.03em; color:#F4F8FF; }
+  .barlab.small { color:#9FB0C2; }
+
+  .baserule { position:absolute; left:80px; top:786px; width:640px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.04em; color:#E8A33D; }
+
+  .slotlab { position:absolute; left:160px; top:836px; width:340px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.05em; color:#8FA0B2; }
+
+  .seatlab { position:absolute; left:700px; top:836px; width:300px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.04em; line-height:1.3; color:#8FA0B2; }
+
+  /* the caveat runs a NARROWER measure than the 920px bar above it, so the
+     paragraph can never be mistaken for a caption on that bar. */
+  .body { position:absolute; left:80px; top:900px; width:620px;
+    font-family:"Manrope",sans-serif; font-weight:400; font-size:32px;
+    line-height:1.34; color:#C9D6E3; }
+  .body b { color:#F4F8FF; font-weight:600; }
+
+  .src { position:absolute; left:80px; top:1212px; width:920px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.02em; color:#93A3B4; white-space:nowrap; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">THE RECEIPTS</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>06 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#151E28" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <!-- state 06: solid across, 65 percent FILLED and 35 percent open outline -->
+      <rect x="2" y="28.5" width="59.8" height="7" fill="#2F6BB0"/>
+      <rect x="61.8" y="28.5" width="32.2" height="7" fill="none" stroke="#2F6BB0" stroke-width="1.4"/>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">41,000 calls in seven months</div>
+
+    <div class="baselab" data-zone="DATA" data-block="base">2024 BASELINE PER THE COUNTY<br>SHOWN ON ITS OWN SCALE</div>
+
+    <div class="barlab" data-zone="DATA" data-block="barlab" style="left:80px; top:700px;">ABOUT 65 PERCENT NEVER REACHED A DISPATCHER</div>
+    <div class="barlab small" data-zone="DATA" data-block="barlab2" style="left:80px; top:740px;">THE REST REACHED ONE</div>
+
+    <div class="baserule" data-zone="DATA" data-block="baserule">BASE &middot; THE 41,000 CALLS THE SYSTEM TOOK</div>
+
+    <div class="slotlab" data-zone="DATA" data-block="slot">RESOLVED &middot; NOT PUBLISHED</div>
+    <div class="seatlab" data-zone="DATA" data-block="seat">FOUR DISPATCHERS PER SHIFT,<br>BEFORE AND AFTER</div>
+
+    <div class="body" data-zone="BODY" data-block="body">About 65 percent of the calls the system took never reached a dispatcher, per the county's own count. <b>That counts calls that ended, not calls that got answered.</b> No resolution or complaint figure exists on any page we fetched, including the vendor's own.</div>
+
+    <div class="src" data-zone="FOOTER" data-block="src">COUNTY'S OWN COUNT, REPORTED BY NEWS 8000</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* ---------------------------------------------------------------------
+     THE COMPOSITION IS THE HONESTY CONSTRAINT.
+     Two blocks, a 96px empty gutter between them, each with its own printed
+     scale note, and NO SHARED AXIS anywhere in frame. The annual baseline and
+     the 41,000 do not share a base and are drawn so they physically cannot be
+     read on one axis.
+     --------------------------------------------------------------------- */
+  const K = {
+    // THE BASELINE SITS ON ITS OWN LEFT EDGE, 344px right of the bar's.
+    // Two quantities that share no base may never share an axis.
+    base:  { x: 424, y: 462, w: 300, h: 6 },
+    gutter: 96,
+    bar:   { x: 80,  y: 560, w: 920, h: 74, split: 0.65 },  // 920px IS 41,000
+    slot:  { x: 102, y: 853, r: 21 },
+    seats: { x: 700, y: 798 }
+  };
+  const perPx = 41000 / K.bar.w;               // 44.6 calls per pixel
+
+  /* ---- pale slate ledger ground ----------------------------------------- */
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0, '#17212C'); g.addColorStop(0.5, '#151E28'); g.addColorStop(1, '#111922');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+  cx.strokeStyle = 'rgba(150,178,206,0.05)'; cx.lineWidth = 0.75;
+  for (let y = 374; y <= 900; y += 26) { cx.beginPath(); cx.moveTo(80, y); cx.lineTo(1000, y); cx.stroke(); }
+
+  /* ---- UPPER BLOCK: the 2024 baseline, on ITS OWN SCALE ------------------ */
+  /* A single flat rule with a FEATHERED right terminus. The feather is the
+     word "roughly", drawn. It carries no ticks and no shared axis. */
+  const bgrad = cx.createLinearGradient(K.base.x, 0, K.base.x + K.base.w, 0);
+  bgrad.addColorStop(0.0, '#7C8DA0');
+  bgrad.addColorStop(0.72, '#7C8DA0');
+  bgrad.addColorStop(1.0, 'rgba(124,141,160,0)');
+  cx.fillStyle = bgrad;
+  cx.fillRect(K.base.x, K.base.y, K.base.w, K.base.h);
+
+  /* ---- LOWER BLOCK: the hero bar. ITS WIDTH IS ITS OWN BASE. ------------- */
+  const bx = K.bar.x, by = K.bar.y, bw = K.bar.w, bh = K.bar.h;
+  const splitX = bx + bw * K.bar.split;
+
+  // cabinet-oblique depth on the bar, parallel projection, never perspective
+  const dd = 16, ddx = dd * Math.cos(Math.PI / 4), ddy = -dd * Math.sin(Math.PI / 4);
+  cx.fillStyle = '#20303F';
+  cx.beginPath();
+  cx.moveTo(bx, by); cx.lineTo(bx + bw, by);
+  cx.lineTo(bx + bw + ddx, by + ddy); cx.lineTo(bx + ddx, by + ddy);
+  cx.closePath(); cx.fill();
+
+  // contained portion, amber, 0.65 of the bar's OWN length
+  const ag = cx.createLinearGradient(0, by, 0, by + bh);
+  ag.addColorStop(0, '#E8A33D'); ag.addColorStop(1, '#C07C22');
+  cx.fillStyle = ag; cx.fillRect(bx, by, splitX - bx, bh);
+
+  // the remainder, open outline only
+  cx.strokeStyle = '#7C8DA0'; cx.lineWidth = 1.25;
+  cx.strokeRect(splitX, by, bx + bw - splitX, bh);
+
+  // the split rule at 0.65, heavier, with the gold tick that is this slide's
+  // entire gold budget
+  cx.strokeStyle = '#0D141B'; cx.lineWidth = 3.5;
+  cx.beginPath(); cx.moveTo(splitX, by - 10); cx.lineTo(splitX, by + bh + 10); cx.stroke();
+  cx.strokeStyle = '#FFC72C'; cx.lineWidth = 2;
+  cx.beginPath(); cx.moveTo(splitX, by - 22); cx.lineTo(splitX, by + bh + 22); cx.stroke();
+
+  /* ---- THE TWO TERMINATIONS. This is the slide's argument. --------------- */
+  // Contained branch: runs right and ENDS IN AN OPEN PHANTOM DASH (#67).
+  // No terminator glyph. It counts calls that ENDED, not calls that got ANSWERED.
+  cx.save();
+  cx.setLineDash([20, 12]);
+  cx.strokeStyle = '#E8A33D'; cx.lineWidth = 2.8;
+  cx.beginPath();
+  cx.moveTo(bx + 40, by + bh + 8);
+  cx.lineTo(bx + 40, by + bh + 30);
+  cx.lineTo(splitX - 30, by + bh + 30);
+  cx.stroke();
+  cx.restore();
+  // deliberately NO arrowhead, NO dot, NO tick. The line just stops.
+
+  // Answered branch: ends in a SOLID FILLED DOT. A dispatcher answering is a
+  // thing that actually happened and can be terminated.
+  cx.strokeStyle = '#5FBF8C'; cx.lineWidth = 2.4;
+  cx.beginPath();
+  cx.moveTo(bx + bw - 40, by + bh + 8);
+  cx.lineTo(bx + bw - 40, by + bh + 30);
+  cx.lineTo(splitX + 46, by + bh + 30);
+  cx.stroke();
+  cx.fillStyle = '#5FBF8C';
+  cx.beginPath(); cx.arc(splitX + 46, by + bh + 30, 9, 0, Math.PI * 2); cx.fill();
+  cx.strokeStyle = '#0A1119'; cx.lineWidth = 3;
+  cx.beginPath(); cx.arc(splitX + 46, by + bh + 30, 10.5, 0, Math.PI * 2); cx.stroke();
+
+  /* ---- THE EMPTY THIRD SLOT. Introduced here, never filled. -------------- */
+  cx.save();
+  cx.setLineDash([7, 5]);
+  cx.strokeStyle = '#7C8DA0'; cx.lineWidth = 2;
+  cx.beginPath(); cx.arc(K.slot.x, K.slot.y, K.slot.r, 0, Math.PI * 2); cx.stroke();
+  cx.restore();
+  // NOTHING is drawn inside the ring, now or on any later slide. A stroke in
+  // the slot would say the opposite of what the device exists to say.
+
+  /* ---- SEAT ROW: four before, four after, unchanged ---------------------- */
+  function headset(hx, hy, filled) {
+    cx.strokeStyle = filled ? '#C9D6E3' : 'rgba(124,141,160,0.5)';
+    cx.fillStyle = filled ? '#C9D6E3' : 'transparent';
+    cx.lineWidth = 2.4;
+    cx.beginPath(); cx.arc(hx, hy, 11, Math.PI, 0); cx.stroke();
+    cx.beginPath(); cx.arc(hx - 11, hy + 5, 4.5, 0, Math.PI * 2); cx.fill(); cx.stroke();
+    cx.beginPath(); cx.arc(hx + 11, hy + 5, 4.5, 0, Math.PI * 2); cx.fill(); cx.stroke();
+  }
+  // EXACTLY four, a divider, EXACTLY four. Equal pitch, equal span. An unequal
+  // before and after would silently claim a staffing change the county denied.
+  for (let i = 0; i < 4; i++) headset(K.seats.x + i * 38, K.seats.y, true);
+  cx.strokeStyle = 'rgba(124,141,160,0.55)'; cx.lineWidth = 1;
+  cx.beginPath(); cx.moveTo(K.seats.x + 138, K.seats.y - 24); cx.lineTo(K.seats.x + 138, K.seats.y + 26); cx.stroke();
+  for (let i = 0; i < 4; i++) headset(K.seats.x + 162 + i * 38, K.seats.y, true);
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: 0.0, saturation: 1.04, contrast: 1.06, filmic: true,
+    lift: [0.005, 0.007, 0.014], gain: [1.012, 1.0, 0.986], vignette: 0.18,
+    grain: { amount: 0.035, size: 2, seed: 20260829 }, dither: true, sharpen: 0.30
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 56, max: 86, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+{
+  "run_date": "2026-08-29",
+  "case_file_no": 2,
+  "document_title": "Case File No. 002, One Line Rebuilt and One Left Alone",
+  "slides": [
+    {
+      "n": 1,
+      "role": "COVER",
+      "kicker": "CASE FILE NO. 002",
+      "headline": "How do I pay a parking ticket?",
+      "body": "It lands on the same desk that answers 911.",
+      "labels": [
+        "LA CROSSE COUNTY, WISCONSIN",
+        "41,000 CALLS IN SEVEN MONTHS"
+      ],
+      "source_labels": [],
+      "claims": [
+        "c33",
+        "c27",
+        "c03",
+        "c01"
+      ]
+    },
+    {
+      "n": 2,
+      "role": "THE COMPANY",
+      "kicker": "THE DESK",
+      "headline": "The only number that always picks up",
+      "body": "At least four dispatchers a shift, around the clock, per Milwaukee Magazine. Roughly 105,000 routine calls a year, per the county. Cory Lynch, the operations supervisor, says being a 24/7 department made them the default for anything to do with municipalities or police departments.",
+      "labels": [
+        "28 SEATS AUTHORISED / 22 FILLED",
+        "How do I pay a parking ticket.",
+        "What time is court.",
+        "Can I talk to an inmate.",
+        "ONE TICK IS 250 CALLS"
+      ],
+      "source_labels": [
+        "PER THE VENDOR'S OWN CASE STUDY"
+      ],
+      "claims": [
+        "c37",
+        "c08",
+        "c31",
+        "c38",
+        "c33",
+        "c30"
+      ]
+    },
+    {
+      "n": 3,
+      "role": "THE BOTTLENECK",
+      "kicker": "THE HOLD",
+      "headline": "Then the accident call comes in",
+      "body": "\"Then we have to put that caller on hold to answer a 911 call that could be for an accident, and then picking the caller back up and having them start their story over again if it happens to be another dispatcher that answers it.\"",
+      "labels": [
+        "Lynch also says it has been really hard to hire and keep staff on."
+      ],
+      "source_labels": [
+        "CORY LYNCH, OPERATIONS SUPERVISOR, TO WEAU"
+      ],
+      "claims": [
+        "c34",
+        "c32",
+        "c30"
+      ]
+    },
+    {
+      "n": 4,
+      "role": "THE BUILD",
+      "kicker": "THE BOUNDARY",
+      "headline": "They rebuilt one line and left the other alone",
+      "body": "La Crosse bought it from a Seattle company called Aurelian. Every step above was drawn by a person before the phone ever rang. That is a workflow, rung 4 of five, and for this job rung 4 is the right answer. The vendor calls it an agent.",
+      "labels": [
+        "911 \u00b7 UNTOUCHED",
+        "ANSWER THE NON-EMERGENCY LINE",
+        "ASK WHICH MUNICIPALITY ISSUED THE TICKET",
+        "FORWARD, OR TEXT THE LINK",
+        "ESCALATE ON A WORD",
+        "HUMAN ON REQUEST, ANY TIME",
+        "ENGLISH AND SPANISH"
+      ],
+      "source_labels": [],
+      "claims": [
+        "c02",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c29"
+      ]
+    },
+    {
+      "n": 5,
+      "role": "THE BUILD",
+      "kicker": "THE LIST",
+      "headline": "A person typed the list",
+      "body": "If somebody in trouble calls the routine line, the system picks up certain hot words and sends them to a 911 dispatcher, per the county's operations supervisor. That list is not something the model worked out. Somebody sat down and typed it. The machine is matching words, not judging urgency.",
+      "labels": [
+        "HOT WORDS \u00b7 ESCALATE TO 911"
+      ],
+      "source_labels": [
+        "NO SOURCE WE FETCHED LISTS THE WORDS"
+      ],
+      "claims": [
+        "c25",
+        "c53",
+        "c30"
+      ]
+    },
+    {
+      "n": 6,
+      "role": "THE RECEIPTS",
+      "kicker": "THE RECEIPTS",
+      "headline": "41,000 calls in seven months",
+      "body": "About 65 percent of the calls the system took never reached a dispatcher, per the county's own count. That counts calls that ended, not calls that got answered. No resolution or complaint figure exists on any page we fetched, including the vendor's own.",
+      "labels": [
+        "2024 BASELINE PER THE COUNTY \u00b7 SHOWN ON ITS OWN SCALE",
+        "ABOUT 65 PERCENT NEVER REACHED A DISPATCHER",
+        "THE REST REACHED ONE",
+        "BASE \u00b7 THE 41,000 CALLS THE SYSTEM TOOK",
+        "RESOLVED \u00b7 NOT PUBLISHED",
+        "FOUR DISPATCHERS PER SHIFT, BEFORE AND AFTER"
+      ],
+      "source_labels": [
+        "COUNTY'S OWN COUNT, REPORTED BY NEWS 8000"
+      ],
+      "claims": [
+        "c03",
+        "c04",
+        "c53",
+        "c37",
+        "c36"
+      ]
+    },
+    {
+      "n": 7,
+      "role": "THE BOTTLENECK",
+      "kicker": "DRAWN TOO WIDE",
+      "headline": "The same product went sideways at another Wisconsin desk",
+      "body": "Ozaukee County bought the same product and went live around the clock in week one. Callers asked for a sheriff when they meant a deputy. Shouting and music confused it. They cut it back to two hours a day while the vendor worked through it, and the sheriff says the vendor has been receptive.",
+      "labels": [
+        "SAME PRODUCT. SAME VENDOR. DIFFERENT BOUNDARY.",
+        "TWO HOURS OF TWENTY-FOUR"
+      ],
+      "source_labels": [
+        "OZAUKEE PRESS, MAY 2026"
+      ],
+      "claims": [
+        "c44",
+        "c46",
+        "c47",
+        "c45",
+        "c48"
+      ]
+    },
+    {
+      "n": 8,
+      "role": "WHAT IT TOOK",
+      "kicker": "WHAT IT TOOK",
+      "headline": "The bill goes up as it works harder",
+      "body": "About $67,000 in year one and about $81,000 in year two, per Milwaukee Magazine, priced on call volume. That is not a price rise. That is the product working harder, invoiced. Milwaukee Magazine put the annual price at about one employee with benefits. If your calls triple in July, model your July.",
+      "labels": [
+        "YEAR ONE",
+        "ABOUT $67,000",
+        "YEAR TWO",
+        "ABOUT $81,000",
+        "PRICED ON CALL VOLUME, NOT PER SEAT",
+        "SEVERAL MONTHS OF TRAINING BEFORE THE FIRST CALL, 5 MAY 2025",
+        "OWNER \u00b7 THE OPERATIONS SUPERVISOR, NOT IT",
+        "CADENCE \u00b7 EVERY OTHER WEEK WITH THE VENDOR"
+      ],
+      "source_labels": [
+        "PER MILWAUKEE MAGAZINE"
+      ],
+      "claims": [
+        "c10",
+        "c11",
+        "c12",
+        "c14",
+        "c18",
+        "c01",
+        "c28",
+        "c30"
+      ]
+    },
+    {
+      "n": 9,
+      "role": "YOUR VERSION",
+      "kicker": "YOUR VERSION",
+      "headline": "Point it where a wrong route costs ten minutes",
+      "body": "Never point it where a wrong route costs a house or a hand. A caller here says a village name or a mile marker, which is a harder version of what broke Ozaukee. Test that before you sign. Under a few thousand routine calls a year, the honest answer is a better phone tree and an online payment page.",
+      "labels": [
+        "MECHANICAL AND HEATING WITH A 24/7 SERVICE LINE",
+        "UTILITY AND CO-OP MEMBER SERVICE",
+        "PROPERTY MANAGEMENT",
+        "FREIGHT AND MARINE DISPATCH",
+        "YOUR VERSION \u00b7 DRAFTED HERE",
+        "GAS",
+        "SMOKE",
+        "NO HEAT",
+        "WATER EVERYWHERE",
+        "CARBON MONOXIDE",
+        "FORTY BELOW, NO HEAT. STAYS ON A PERSON.",
+        "WHERE IS MY TECH. WHAT DO I OWE. RESEND THE INVOICE.",
+        "WAUKESHA COUNTY RAN IT LIVE ABOUT 15 HOURS, THEN READ EVERY TRANSCRIPT"
+      ],
+      "source_labels": [
+        "OUR DRAFT, NOT LA CROSSE'S LIST"
+      ],
+      "claims": [
+        "c27",
+        "c46",
+        "c47",
+        "c50"
+      ]
+    },
+    {
+      "n": 10,
+      "role": "CLOSE",
+      "kicker": "CASE FILE NO. 002",
+      "headline": "Milwaukee Magazine put the price at about one employee with benefits. La Crosse kept all four dispatchers.",
+      "body": "We do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.",
+      "labels": [
+        "SOURCES IN COMMENTS",
+        "ALASKA.AI",
+        "alaskaaihq.com"
+      ],
+      "source_labels": [],
+      "claims": [
+        "c12",
+        "c36",
+        "c37"
+      ]
+    }
+  ],
+  "post_copy": "A 24/7 dispatch desk with four people on it had become the default number for parking ticket questions and court times.\n\nThey bought a voice workflow, pointed it at the routine line, and left the 911 line alone. It took 41,000 calls in seven months, per the county's own count.\nMilwaukee Magazine put the annual price at about one employee with benefits.\n\nThe deck has the five steps, both years of the bill, and the Anchorage lines this fits.\n\nWe do this kind of analysis for Alaska businesses, free. If you want your operation looked at this way, say the word.\n\nWhat question does your after hours line get ten times a week that nobody is trained for?\n\n#DispatchOps #AlaskaBusiness #AgenticWorkflows",
+  "hook_chars": 119,
+  "total_chars": 701,
+  "hashtags": [
+    "#DispatchOps",
+    "#AlaskaBusiness",
+    "#AgenticWorkflows"
+  ],
+  "first_comment": "Sources, primary first\n\nNews 8000 (WKBT-TV, La Crosse), 2 December 2025, the 41,000 calls and the share handled without a dispatcher having to answer, https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html\n\nNews 8000 (WKBT-TV, La Crosse), 3 May 2025, the launch, the several months of training, and the county administrator saying staffing levels would not change, https://www.news8000.com/news/local-news/la-crosse/la-crosse-county-to-launch-ai-system-for-non-emergency-calls/article_2d7ec06a-3154-496f-9177-3bb033e78af0.html\n\nWEAU 13 News, 12 December 2025, the parking ticket and court time calls, the hold problem, and the 2024 call split, https://www.weau.com/2025/12/12/la-crosse-county-utilizing-ai-non-emergency-calls/\n\nWisconsin Public Radio, 2 December 2025, the operations supervisor on becoming the default number, https://www.wpr.org/news/wisconsin-counties-ai-non-emergency-calls-waukesha-la-crosse\n\nUrban Milwaukee reprinting Wisconsin Public Radio, 3 December 2025, the parking citation routing step and the hot word escalation, https://urbanmilwaukee.com/2025/12/03/two-wisconsin-counties-using-ai-to-handle-non-emergency-calls/\n\nMilwaukee Magazine, 24 April 2026, the year one and year two price, the call volume pricing basis, and the reporter's own one employee with benefits framing, https://www.milwaukeemag.com/wisconsin-ai-911-calls/\n\nOzaukee Press, 6 May 2026, the neighbouring sheriff's office pulling back to two hours a day and saying the vendor has been receptive, https://www.ozaukeepress.com/content/after-few-hiccups-ava-settling-sheriff%E2%80%99s-office\n\nGMToday and The Freeman, 18 November 2025, Waukesha County running it live about 15 hours and then reading the results, https://www.gmtoday.com/the_freeman/news/waukesha-county-ai-call-handling/article_650312e5-07d9-5c0e-8092-36f10f193ce7.html\n\nAurelian, the vendor's own case study, undated, the 28 authorised seats with 22 filled. Vendor page, labelled as such on the slide, https://www.aurelian.com/studies/lacrosse\n\nMore Case Files and the back catalogue live at https://alaskaaihq.com\n\nIf your after hours line runs on one person and a headset, add your own numbers or war stories below.",
+  "slide_copy_corrections": [
+    {
+      "slide": 2,
+      "field": "headline",
+      "was": "The only number in the county that always picks up",
+      "now": "The only number that always picks up",
+      "why": "coherence.json vocabulary lock bans the word county in a headline position. The desk is the identification object, not the employer."
+    },
+    {
+      "slide": 3,
+      "field": "labels",
+      "was": "He also says it has been really hard to hire and keep staff on.",
+      "now": "Lynch also says it has been really hard to hire and keep staff on.",
+      "why": "Dangling pronoun once the deck is reordered. Lynch is named on slide 2 so the noun is available."
+    },
+    {
+      "slide": 4,
+      "field": "labels",
+      "was": "911 EM-DASH UNTOUCHED",
+      "now": "911 MIDDOT UNTOUCHED",
+      "why": "brand.yaml bans em dashes in any on-slide string, zero exceptions."
+    },
+    {
+      "slide": 4,
+      "field": "body",
+      "was": "opened on a bare They",
+      "now": "La Crosse bought it from a Seattle company called Aurelian.",
+      "why": "Dangling pronoun. The English and Spanish fact (c29) moved to a label so the rung sentence, which never trims, keeps its room."
+    },
+    {
+      "slide": 6,
+      "field": "labels",
+      "was": "labels carrying em dashes",
+      "now": "middot separators",
+      "why": "Em dash banned. The base stays printed on the split rule, per the hard rule that the 65 percent never travels without its base."
+    },
+    {
+      "slide": 7,
+      "field": "headline",
+      "was": "The same product went sideways one county over",
+      "now": "The same product went sideways at another Wisconsin desk",
+      "why": "Vocabulary lock bans county in a headline, and one county over implies a proximity no fetched page supports. Ozaukee is named in the body where it is sourced."
+    },
+    {
+      "slide": 8,
+      "field": "labels",
+      "was": "a bare RAMP label",
+      "now": "SEVERAL MONTHS OF TRAINING BEFORE THE FIRST CALL, 5 MAY 2025",
+      "why": "WHAT IT TOOK must state the timeline in words, not only as a drawn bar, and in the one scoped form the fact-check allows. The bare label left the hard gate unstated in the copy record."
+    },
+    {
+      "slide": 9,
+      "field": "labels",
+      "was": "40 BELOW, NO HEAT.",
+      "now": "FORTY BELOW, NO HEAT.",
+      "why": "The numeral 40 traces to no claim and would flag in the numbers gate. Spelled out it reads the same and claims nothing."
+    },
+    {
+      "slide": 9,
+      "field": "body",
+      "was": "67 words",
+      "now": "59 words",
+      "why": "Slide 9 carries 13 labels plus a body. Trimmed with every load-bearing element intact, the rung 1 escape hatch included."
+    },
+    {
+      "slide": 10,
+      "field": "headline",
+      "was": "They spent about the price of one hire and kept all four dispatchers.",
+      "now": "Milwaukee Magazine put the price at about one employee with benefits. La Crosse kept all four dispatchers.",
+      "why": "THE MOST IMPORTANT CORRECTION IN THE RUN. 'The price of one hire' is Milwaukee Magazine's own prose (c12) and the hard rule says it carries that attribution in the same breath every single time. Unattributed it reads as the county's line, which would be a fabricated quote."
+    },
+    {
+      "slide": 0,
+      "field": "document_title",
+      "was": "title carrying an em dash",
+      "now": "Case File No. 002, One Line Rebuilt and One Left Alone",
+      "why": "Em dash banned everywhere. Set to the brand.yaml numbering pattern, 53 characters."
+    },
+    {
+      "slide": 10,
+      "field": "kicker",
+      "was": "CLOSE",
+      "now": "CASE FILE NO. 002",
+      "why": "Showrunner change at art build, made deliberately in the record rather than silently in the HTML. The close bookends the cover, which opens on the same kicker, and 'CLOSE' was a label for us rather than for the reader."
+    },
+    {
+      "slide": 4,
+      "was": "Step labels carried their own numeral (\"01 ANSWER THE NON-EMERGENCY LINE\").",
+      "now": "The numeral moved to the drafting balloon as a DOM node and the label carries only the step.",
+      "why": "The render printed every step number twice, once in the balloon and once in the label. A drafting callout names its number once. No verified content changed; the five steps and their claims (c22 to c26) are untouched."
+    }
+  ],
+  "aftercare": [
+    "Post it Tuesday to Thursday between 8 and 11am Alaska time. Drafts arrive daily, you own the cadence, so hold it a day rather than stacking it on another post.",
+    "Paste the FIRST COMMENT block within about 60 seconds of posting. The sources go there and nowhere else, and the close slide already promises them.",
+    "Reply substantively to every comment in the first 60 to 90 minutes. A dead first hour is rarely recovered, and threaded author replies do most of the reach work.",
+    "At 48 hours note the saves, not the likes. If anyone asks what their version would cost, reply with the offer, do not pitch it in the thread."
+  ],
+  "claims_used": [
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "c08",
+    "c10",
+    "c11",
+    "c12",
+    "c14",
+    "c18",
+    "c22",
+    "c23",
+    "c24",
+    "c25",
+    "c26",
+    "c27",
+    "c28",
+    "c29",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c36",
+    "c37",
+    "c38",
+    "c44",
+    "c45",
+    "c46",
+    "c47",
+    "c48",
+    "c50",
+    "c53"
+  ],
+  "offer_line_included_once": true
+}

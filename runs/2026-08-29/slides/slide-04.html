@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#0B141F; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#8FA9C9; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#55698A; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:200px; width:880px; height:120px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 86; font-size:64px; line-height:1.03;
+    letter-spacing:-0.016em; color:#F4F8FF; }
+
+  /* the label sits at the FAR END of the conductor, where the line leaves the
+     frame still unbroken. Naming it at its exit is the argument, not naming it
+     at its entrance. */
+  .untouched { position:absolute; left:648px; top:326px; width:352px;
+    box-sizing:border-box; padding:9px 14px; text-align:right; background:#0B141F;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:25px;
+    letter-spacing:0.13em; color:#F4F8FF; }
+
+  /* the balloon carries the numeral, the label carries the step. Printing the
+     number in both places is the drafting equivalent of saying it twice. */
+  .step { position:absolute; left:668px; width:320px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:25px;
+    letter-spacing:0.03em; line-height:1.34; color:#C6D6E6; }
+
+  .bnum { position:absolute; width:42px; height:42px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0; color:#C6D6E6; }
+  .bnum.gold { color:#FFC72C; }
+
+  /* a capability footnote hanging off the list, not an unnumbered sixth step */
+  .lang { position:absolute; left:660px; top:980px; width:340px;
+    font-family:"JetBrains Mono",monospace; font-weight:400; font-size:24px;
+    letter-spacing:0.08em; color:#B9C6D6; }
+
+  .body { position:absolute; left:80px; top:1024px; width:880px;
+    font-family:"Manrope",sans-serif; font-weight:400; font-size:32px;
+    line-height:1.36; color:#C6D4E2; }
+  .body b { color:#F4F8FF; font-weight:600; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">THE BOUNDARY</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>04 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#0B141F" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#F4F8FF" stroke-width="3.5"/>
+      <!-- state 04: the gap bridged by five terminal squares, a dot on each -->
+      <line x1="2" y1="32" x2="14" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <line x1="82" y1="32" x2="94" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <g fill="none" stroke="#2F6BB0" stroke-width="1.6">
+        <rect x="17" y="27" width="10" height="10"/><rect x="30" y="27" width="10" height="10"/>
+        <rect x="43" y="27" width="10" height="10"/><rect x="56" y="27" width="10" height="10"/>
+        <rect x="69" y="27" width="10" height="10"/>
+      </g>
+      <g fill="#2F6BB0">
+        <circle cx="22" cy="32" r="2"/><circle cx="35" cy="32" r="2"/><circle cx="48" cy="32" r="2"/>
+        <circle cx="61" cy="32" r="2"/><circle cx="74" cy="32" r="2"/>
+      </g>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">They rebuilt one line and left the other alone</div>
+
+    <div class="untouched" data-zone="ART" data-block="untouched" data-knockout>911 &middot; UNTOUCHED</div>
+
+    <div class="bnum" data-zone="DATA" data-block="b1" data-knockout style="left:601px; top:429px;">01</div>
+    <div class="bnum" data-zone="DATA" data-block="b2" data-knockout style="left:601px; top:535px;">02</div>
+    <div class="bnum" data-zone="DATA" data-block="b3" data-knockout style="left:601px; top:669px;">03</div>
+    <div class="bnum" data-zone="DATA" data-block="b4" data-knockout style="left:601px; top:775px;">04</div>
+    <div class="bnum gold" data-zone="DATA" data-block="b5" data-knockout style="left:601px; top:881px;">05</div>
+
+    <div class="step" data-zone="DATA" data-block="s1" style="top:440px;">ANSWER THE<br><span style="white-space:nowrap">NON-EMERGENCY LINE</span></div>
+    <div class="step" data-zone="DATA" data-block="s2" style="top:546px;">ASK WHICH MUNICIPALITY ISSUED THE TICKET</div>
+    <div class="step" data-zone="DATA" data-block="s3" style="top:680px;">FORWARD, OR TEXT THE LINK</div>
+    <div class="step" data-zone="DATA" data-block="s4" style="top:786px;">ESCALATE ON A WORD</div>
+    <div class="step" data-zone="DATA" data-block="s5" style="top:892px;">HUMAN ON REQUEST, ANY TIME</div>
+
+    <div class="lang" data-zone="DATA" data-block="lang">ENGLISH AND SPANISH</div>
+
+    <div class="body" data-zone="BODY" data-block="body">La Crosse bought it from a Seattle company called Aurelian. Every step above was drawn by a person before the phone ever rang. <b>That is a workflow, rung 4 of five, and for this job rung 4 is the right answer.</b> The vendor calls it an agent.</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/aklabel.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* ONE SOURCE OF TRUTH. The DOM step labels read these same Y values. */
+  const K = {
+    blk: { x: 120, y: 452, w: 470, h: 538 },
+    d: 54,                                  // cabinet-oblique depth
+    rows: [450, 556, 690, 796, 902],        // five terminal rows, matches .step tops +10
+    untouchedY: 386                          // the 911 conductor, above the block
+  };
+  const dx = K.d * Math.cos(Math.PI / 4), dy = -K.d * Math.sin(Math.PI / 4);
+
+  /* ---- ground -------------------------------------------------------------- */
+  const g = cx.createLinearGradient(0, 0, 0, H);
+  g.addColorStop(0, '#0C1622'); g.addColorStop(0.55, '#0B141F'); g.addColorStop(1, '#080F18');
+  cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+  // drafting scaffolding, hairline, so the ground is never a dead fill
+  cx.strokeStyle = 'rgba(120,158,196,0.055)'; cx.lineWidth = 0.75;
+  for (let x = 80; x <= 660; x += 40) { cx.beginPath(); cx.moveTo(x, 340); cx.lineTo(x, 1060); cx.stroke(); }
+
+  /* ---- THE UNTOUCHED 911 CONDUCTOR ---------------------------------------- */
+  /* Unbroken, edge to edge, at hero weight, landing on NOTHING. The absence of
+     a terminal on this block is the composition's whole argument. */
+  // an under-shadow first, so the line reads as floating in front of nothing
+  // rather than resting on the block's back edge
+  cx.strokeStyle = 'rgba(3,6,11,0.55)'; cx.lineWidth = 13;
+  cx.beginPath(); cx.moveTo(0, K.untouchedY + 4); cx.lineTo(W, K.untouchedY + 4); cx.stroke();
+  cx.strokeStyle = '#05090F'; cx.lineWidth = 11;               // casing (#79)
+  cx.beginPath(); cx.moveTo(0, K.untouchedY); cx.lineTo(W, K.untouchedY); cx.stroke();
+  cx.strokeStyle = '#F4F8FF'; cx.lineWidth = 5.5;              // --w-hero
+  cx.beginPath(); cx.moveTo(0, K.untouchedY); cx.lineTo(W, K.untouchedY); cx.stroke();
+
+  /* ---- the punchdown block, cabinet oblique (#39) -------------------------- */
+  // top lid
+  cx.fillStyle = '#22344A';
+  cx.beginPath();
+  cx.moveTo(K.blk.x, K.blk.y); cx.lineTo(K.blk.x + K.blk.w, K.blk.y);
+  cx.lineTo(K.blk.x + K.blk.w + dx, K.blk.y + dy); cx.lineTo(K.blk.x + dx, K.blk.y + dy);
+  cx.closePath(); cx.fill();
+  // right wall
+  cx.fillStyle = '#0D1824';
+  cx.beginPath();
+  cx.moveTo(K.blk.x + K.blk.w, K.blk.y); cx.lineTo(K.blk.x + K.blk.w + dx, K.blk.y + dy);
+  cx.lineTo(K.blk.x + K.blk.w + dx, K.blk.y + dy + K.blk.h); cx.lineTo(K.blk.x + K.blk.w, K.blk.y + K.blk.h);
+  cx.closePath(); cx.fill();
+  // front face
+  const fg = cx.createLinearGradient(K.blk.x, K.blk.y, K.blk.x, K.blk.y + K.blk.h);
+  fg.addColorStop(0, '#1B2B3D'); fg.addColorStop(1, '#101B27');
+  cx.fillStyle = fg; cx.fillRect(K.blk.x, K.blk.y, K.blk.w, K.blk.h);
+  cx.strokeStyle = 'rgba(190,214,238,0.20)'; cx.lineWidth = 1.25;
+  cx.strokeRect(K.blk.x, K.blk.y, K.blk.w, K.blk.h);
+
+  /* ---- five terminal rows, one cased conductor threading all five --------- */
+  const cxs = K.blk.x + 66;                 // conductor's vertical run
+  // the conductor: casing then core, hopping the block's own frame rails
+  cx.strokeStyle = '#05090F'; cx.lineWidth = 9;
+  cx.beginPath(); cx.moveTo(cxs, K.rows[0] - 26); cx.lineTo(cxs, K.rows[4] + 26); cx.stroke();
+  cx.strokeStyle = '#3E80C8'; cx.lineWidth = 3.5;
+  cx.beginPath(); cx.moveTo(cxs, K.rows[0] - 26); cx.lineTo(cxs, K.rows[4] + 26); cx.stroke();
+
+  K.rows.forEach((ry, i) => {
+    // terminal pair: two prongs
+    cx.strokeStyle = '#8FA6BE'; cx.lineWidth = 2;
+    for (const px of [cxs + 42, cxs + 62]) {
+      cx.beginPath(); cx.moveTo(px, ry - 13); cx.lineTo(px, ry + 13); cx.stroke();
+    }
+    // landing run from the conductor into the pair
+    cx.strokeStyle = '#3E80C8'; cx.lineWidth = 3.5;
+    cx.beginPath(); cx.moveTo(cxs, ry); cx.lineTo(cxs + 62, ry); cx.stroke();
+    // junction dot (#76) at the real connection
+    cx.fillStyle = '#5A9BDD';
+    cx.beginPath(); cx.arc(cxs, ry, 5.5, 0, Math.PI * 2); cx.fill();
+
+    // haloed balloon (#74), gold ONLY on 05, the always-open human port.
+    // The RING is drawn here; the numeral inside it is the .bnum DOM node, so
+    // it stays vector in the PDF and is never printed twice.
+    const bx = K.blk.x + K.blk.w + 32, by = ry;
+    const isGold = (i === 4);
+    cx.beginPath(); cx.arc(bx, by, 21, 0, Math.PI * 2);
+    cx.fillStyle = '#0B141F'; cx.fill();
+    cx.strokeStyle = isGold ? '#FFC72C' : '#8FA6BE'; cx.lineWidth = isGold ? 2.6 : 1.6;
+    cx.stroke();
+
+    // leader from the balloon out to the label column (#72)
+    cx.strokeStyle = 'rgba(143,166,190,0.55)'; cx.lineWidth = 1.25;
+    cx.beginPath(); cx.moveTo(bx + 21, by); cx.lineTo(bx + 42, by); cx.stroke();
+  });
+
+  /* ---- step 04's escalation riser: a PHANTOM path up to the 911 line ------ */
+  /* Phantom dash (#67) because it is the exception path, not the normal one. */
+  cx.save();
+  cx.setLineDash([30, 5, 6, 5, 6, 5]);
+  cx.strokeStyle = 'rgba(232,163,61,0.55)'; cx.lineWidth = 1.25;
+  cx.beginPath();
+  cx.moveTo(cxs + 62, K.rows[3]);
+  cx.lineTo(K.blk.x + K.blk.w - 40, K.rows[3]);
+  cx.lineTo(K.blk.x + K.blk.w - 40, K.untouchedY + 48);
+  cx.stroke();
+  cx.restore();
+  // NO arrowhead and NO terminator. The riser stops 48px short of the 911 line,
+  // because a barb touching it would contradict the word UNTOUCHED printed on
+  // the same slide, and because balloon 05 is this slide's only warm accent.
+
+  /* ---- the hot-word comb: seven teeth, gate glyph beside step 04 ---------- */
+  cx.strokeStyle = 'rgba(232,163,61,0.62)'; cx.lineWidth = 1.25;
+  for (let t = 0; t < 7; t++) {
+    const tx = cxs + 92 + t * 13;
+    cx.beginPath(); cx.moveTo(tx, K.rows[3] - 11); cx.lineTo(tx, K.rows[3] + 11); cx.stroke();
+  }
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: -0.03, saturation: 1.05, contrast: 1.09, filmic: true,
+    lift: [0.006, 0.010, 0.018], gain: [1.015, 1.0, 0.978], vignette: 0.22,
+    bloom: { threshold: 0.74, strength: 0.26, radius: 7 },
+    grain: { amount: 0.04, size: 2, seed: 20260829 }, dither: true, sharpen: 0.30
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 46, max: 66, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>

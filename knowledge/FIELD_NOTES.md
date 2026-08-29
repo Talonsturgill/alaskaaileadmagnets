@@ -72,3 +72,45 @@ What it means in practice:
   correct as emitted and gets passed through unmodified.
 
 Unchanged: this routine drafts and never sends.
+
+
+## Case File 002, 2026-08-29 — La Crosse County, Wisconsin
+
+**The vein.** Eight scouts, twenty-four candidates, one qualifying case. Every
+private-sector ground failed the same gate, and for one structural reason:
+award submissions, vendor blogs, trade press and MEP writeups are all written
+to win something, and cost is the one number that never helps you win. The
+case that cleared came from public safety, where 911 funding is a public
+surcharge and local press therefore prints the contract value. That is a
+standing hunting instruction now, not an observation about one run. Utilities,
+school districts, municipal services and co-ops are the same shape.
+
+**The teaching.** Containment is not resolution. About 65 percent of the calls
+the system took never reached a dispatcher, and that counts calls that ENDED,
+not calls that got ANSWERED. No resolution, satisfaction, callback or
+complaint figure exists on any page we fetched, including the vendor's own.
+The deck says so in words on slide 6 and draws it as a punchdown slot that is
+introduced empty and is never filled on any later slide.
+
+**The craft finding that cost the most.** Four machine gates and a full render
+pass shipped a slide where a mis-placed sum rule ran straight through both
+dollar figures, so the two numbers on the one slide built to hand the reader
+something to take to their CFO read as struck through. No gate caught it. The
+gates check text nodes against declared art rectangles; a canvas rule drawn
+inside a declared art rect, crossing a knockout label, is structurally
+invisible to them. Only the pixel critic saw it. Two lessons: never let a rule
+cross a number, and the pixel critic is not a formality after the gates go
+green, it is the only reader that looks at the picture.
+
+**The second craft finding.** An honesty problem is solved compositionally or
+not at all. When the 2024 annual baseline rule and the 41,000 bar shared a
+left origin, the critic read the baseline as SMALLER than seven months of
+calls, which inverts the truth. The words "SHOWN ON ITS OWN SCALE" were
+printed right there and did nothing. Different origins fixed what no caption
+could.
+
+**The engine defect.** `render.py` truncated every extracted text node to 80
+characters, so `coherence_check.py` could never see a full authored body and
+returned 24 false failures. Raised to 600. The gate went from 24 fails to 0
+with no change to a single slide. A gate that cannot see the artifact is worse
+than no gate, because it teaches you to distrust it.

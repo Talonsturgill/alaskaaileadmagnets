@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-08-29",
+  "case_file_no": 2,
+  "_synthesis_note": "Winner: lens C (TWO LINES) supplies the thesis and spine, because the boundary decision is genuinely this case's one idea and it is what makes Ozaukee structural proof rather than a disclaimer. Grafted from lens A (THE DESK): the overheard-question cover, and the seat roster that draws the hiring problem instead of describing it. Grafted from lens B (THE APERTURE): the two line-terminations on the receipts slide, the feathered ramp bar, the redaction slugs, the 30-degree duty dial, and the four-axis pool separation discipline. The 2am staging problem lens A flagged honestly against c33 ('during the day especially') is resolved by making the bright paper slides the daytime register and confining the dark room to the accident-call beat, with NO slide carrying a time-of-day claim.",
+  "deck": {
+    "hero_structure": "two-channel call path anatomy across a night dispatch console, the emergency channel unbroken and the non-emergency channel opened up in stages",
+    "atmosphere": "lamp-lit console interior with warm amber bounce off ivory paper and dust in the key beam",
+    "depth_technique": "akthree PBR object hero with real contact shadows, every quantity held in cabinet-oblique parallel projection",
+    "line_voice": "telco drafting, five-token weights with cased conductors, junction dots and one red blocked terminal",
+    "continuity_device": "the PAIR glyph whose upper conductor never changes and whose lower conductor changes silhouette on every slide, plus an empty third terminal slot introduced late and never filled",
+    "hook_archetype": "overheard question cold open",
+    "palette_family": "night dispatch console, line-status amber and clear green on punchdown ivory",
+    "type_pairing": "Bricolage Grotesque display with Manrope body and JetBrains Mono telemetry",
+    "narrative_structure": "the question, the desk, the hold, the boundary, the list a person typed, receipts, drawn too wide, what it took, your boundary, seal",
+    "render_ladder_top": "akthree"
+  },
+  "variance_dials": {
+    "design_variance": 4,
+    "visual_density": 3,
+    "type_temperature": 2
+  },
+  "slides": [
+    {
+      "n": 1,
+      "role": "COVER",
+      "mode": "OBJECT",
+      "layout_family": "full-bleed low-angle rendered object, display type knocked into the unlit air above it",
+      "art_system": "cabinet-oblique dispatch console with a lit line button and a lifted cover plate",
+      "value": "dark",
+      "temperature": "warm",
+      "custom_note": "The only cabinet-oblique console in the deck and the only lifted cover plate."
+    },
+    {
+      "n": 2,
+      "role": "THE DESK",
+      "mode": "FIELD",
+      "layout_family": "full-bleed ruled roster sheet, seat rail down the left margin, headline in the lower gutter",
+      "art_system": "hand-ruled duty roster with a 28 position seat rail and three extracted question leaders",
+      "value": "light",
+      "temperature": "neutral warm",
+      "custom_note": "The brightest slide in the deck and the only one that draws an unfilled hiring problem."
+    },
+    {
+      "n": 3,
+      "role": "THE HOLD",
+      "mode": "SCENE",
+      "layout_family": "over-the-shoulder night interior, headline in the dark upper void, quote on a plate resting on the desk",
+      "art_system": "AK3D depth-weighted console room with one volumetric amber shaft and a single lit hold lamp",
+      "value": "darkest",
+      "temperature": "cool with one amber source",
+      "custom_note": "The darkest slide, the only volumetric light, and the only empty chair in the deck."
+    },
+    {
+      "n": 4,
+      "role": "THE BOUNDARY",
+      "mode": "DIAGRAM",
+      "layout_family": "vertical five-step terminal ladder right, label column left, one untouched conductor clean across the top",
+      "art_system": "110 punchdown block in cabinet oblique with five landed pairs threaded by one cased conductor",
+      "value": "mid-dark",
+      "temperature": "cool",
+      "custom_note": "The only slide where the build is drawn as hardware you could put a hand on."
+    },
+    {
+      "n": 5,
+      "role": "THE LIST",
+      "mode": "DOCUMENT",
+      "layout_family": "rotated paper sheet on the right, flat dark console gutter left carrying all body copy",
+      "art_system": "typed escalation form with redaction slugs, a red pen and a gold paperclip",
+      "value": "mid",
+      "temperature": "warm",
+      "custom_note": "The breather, and the only slide whose subject is a document nobody has published."
+    },
+    {
+      "n": 6,
+      "role": "THE RECEIPTS",
+      "mode": "DATA",
+      "layout_family": "two physically detached data blocks on slate with an empty third slot beneath and no legend",
+      "art_system": "detached-base containment bar with an independently scaled baseline rule and two opposed terminations",
+      "value": "mid",
+      "temperature": "neutral",
+      "custom_note": "The only slide built so its two numbers physically cannot be read on one axis."
+    },
+    {
+      "n": 7,
+      "role": "DRAWN TOO WIDE",
+      "mode": "FIELD",
+      "layout_family": "wide cold interior with the noise source off frame and a duty dial anchored lower right",
+      "art_system": "interference-ring noise wash meeting a widened dashed boundary at red blocked caps",
+      "value": "dark",
+      "temperature": "coldest",
+      "custom_note": "The deck's only red, its only interference field, and the only boundary drawn wrong."
+    },
+    {
+      "n": 8,
+      "role": "WHAT IT TOOK",
+      "mode": "DOCUMENT",
+      "layout_family": "two offset invoice pages ascending left to right, totals right aligned, checklist down the left margin",
+      "art_system": "two-year invoice stack with a feathered-start ramp bar and proportional gold total underlines",
+      "value": "light",
+      "temperature": "warm",
+      "custom_note": "The only slide where the same object appears twice and the second one is bigger."
+    },
+    {
+      "n": 9,
+      "role": "YOUR VERSION",
+      "mode": "DIAGRAM",
+      "layout_family": "left segment column against a hand-filled form right, one inked boundary stroke across the middle",
+      "art_system": "local two-line panel with a hand-inked boundary stroke and the form filled in a second hand",
+      "value": "mid-dark",
+      "temperature": "cool neutral with one warm form",
+      "custom_note": "The only slide drawn in a second hand and the only one where the form is filled in."
+    },
+    {
+      "n": 10,
+      "role": "CLOSE",
+      "mode": "OBJECT",
+      "layout_family": "single centred macro object on a plain field, ask in the upper third, brand row at the base",
+      "art_system": "akthree PBR macro punchdown terminals, two capped and one empty",
+      "value": "dark",
+      "temperature": "warm neutral",
+      "custom_note": "The only slide rendered with real PBR materials and a physical contact shadow."
+    }
+  ],
+  "_ladder_note": "SHOWRUNNER DECISION during art build. The akthree climb was planned for S1 (a wide console panel) and was moved to S10 (a macro close-up of three punchdown terminals) after five framing iterations. A wide flat panel read as a sliver at every three-quarter camera and as an unreadable slab head-on. A macro object with three capped terminals is a far simpler thing to frame and is the natural subject for PBR, because chiselled metal caps are exactly what physically based materials are good at. S1 now uses a cabinet-oblique console, which is dimensional rather than flat and which the director had already specified as its designed fallback, so nothing was improvised. render_ladder_top stays akthree."
+}

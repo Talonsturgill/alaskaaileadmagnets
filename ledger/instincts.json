@@ -64,6 +64,30 @@
       "evidence": "Flow critic named S5 the bail point for exactly this reason on run 1, the tease was the fix.",
       "confidence": 0.65,
       "last_confirmed": "2026-07-21"
+    },
+    {
+      "id": "i-009",
+      "learned": "2026-08-29",
+      "instinct": "Hunt where the money is public. Award submissions, vendor blogs and trade press are written to win something, and cost is the one number that never helps you win. Public safety, utilities, school districts and municipal services publish contract values because the money is a public surcharge.",
+      "evidence": "Restock wave 1 returned zero banks across four private-sector grounds, fourteen candidates, every one failing the cost hard gate. Wave 2 opened the public-safety vein and produced the run's only qualifying case with both figures on the record."
+    },
+    {
+      "id": "i-010",
+      "learned": "2026-08-29",
+      "instinct": "Solve an honesty problem compositionally, not in captions. Two numbers that share no base must be separated on four axes at once: different slide, different glyph species, different geometry, different ground, with the base printed on the rule that measures it.",
+      "evidence": "Slide 6 carries the 41,000 and the annual 105,000 lives on slide 2. When the baseline rule and the bar shared a left origin the pixel critic read the 2024 baseline as SMALLER than seven months of calls, which inverts the truth. Separating the origins fixed a misread that no caption could have."
+    },
+    {
+      "id": "i-011",
+      "learned": "2026-08-29",
+      "instinct": "Never let a rule cross a number. On the slide whose job is handing the reader a figure to carry to their CFO, a mis-placed sum rule made both dollar totals read as struck through, which says voided.",
+      "evidence": "Slide 8 shipped a scotch rule at the total's mid x-height for a full render pass and four machine gates without a single gate catching it. Only the pixel critic saw it. Machine gates check collisions between TEXT nodes and declared ART rects; a canvas rule inside a declared art rect crossing a knockout label is invisible to them."
+    },
+    {
+      "id": "i-012",
+      "learned": "2026-08-29",
+      "instinct": "Never hand-type a reader-facing string at a tool call. If the copy record holds it, read it from the copy record. Corrections that land in copy.json do not propagate to anything a human types by hand.",
+      "evidence": "copy.json carried a slide_copy_corrections entry that had already replaced an em-dashed document title, and the showrunner then typed an em-dashed title straight into the assemble.py --title flag. It shipped into the PDF metadata, which LinkedIn renders under the carousel, and cost the run its only hard fail and 0.24 of score."
     }
   ]
 }

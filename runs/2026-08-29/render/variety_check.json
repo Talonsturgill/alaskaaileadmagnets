@@ -1,0 +1,298 @@
+{
+  "run_date": "2026-08-29",
+  "fails": [],
+  "warns": [
+    "slide-02.html x slide-03.html: shared text scaffold (layout IoU 0.56, image corr -0.32, palette 0.07)",
+    "slide-02.html x slide-04.html: shared text scaffold (layout IoU 0.57, image corr -0.30, palette 0.08)",
+    "slide-02.html x slide-06.html: shared text scaffold (layout IoU 0.67, image corr -0.30, palette 0.08)",
+    "slide-02.html x slide-08.html: shared text scaffold (layout IoU 0.60, image corr 0.20, palette 0.79)",
+    "slide-02.html x slide-09.html: shared text scaffold (layout IoU 0.57, image corr -0.12, palette 0.25)",
+    "slide-03.html x slide-07.html: shared text scaffold (layout IoU 0.59, image corr 0.58, palette 0.99)",
+    "slide-04.html x slide-06.html: shared text scaffold (layout IoU 0.56, image corr 0.49, palette 0.96)",
+    "slide-04.html x slide-09.html: shared text scaffold (layout IoU 0.60, image corr 0.19, palette 0.80)",
+    "slide-04.html x slide-10.html: shared text scaffold (layout IoU 0.58, image corr 0.58, palette 0.95)",
+    "slide-05.html x slide-08.html: shared text scaffold (layout IoU 0.60, image corr 0.11, palette 0.33)",
+    "slide-06.html x slide-08.html: shared text scaffold (layout IoU 0.64, image corr -0.12, palette 0.03)",
+    "slide-06.html x slide-09.html: shared text scaffold (layout IoU 0.70, image corr 0.09, palette 0.78)",
+    "slide-07.html x slide-08.html: shared text scaffold (layout IoU 0.62, image corr -0.08, palette 0.03)",
+    "slide-08.html x slide-09.html: shared text scaffold (layout IoU 0.66, image corr 0.27, palette 0.21)",
+    "deck median layout IoU 0.49 is high"
+  ],
+  "pairs": [
+    {
+      "pair": "slide-01.html x slide-02.html",
+      "layout_iou": 0.352,
+      "image_corr": -0.096,
+      "palette_sim": 0.093
+    },
+    {
+      "pair": "slide-01.html x slide-03.html",
+      "layout_iou": 0.327,
+      "image_corr": 0.371,
+      "palette_sim": 0.922
+    },
+    {
+      "pair": "slide-01.html x slide-04.html",
+      "layout_iou": 0.339,
+      "image_corr": 0.365,
+      "palette_sim": 0.949
+    },
+    {
+      "pair": "slide-01.html x slide-05.html",
+      "layout_iou": 0.369,
+      "image_corr": 0.064,
+      "palette_sim": 0.686
+    },
+    {
+      "pair": "slide-01.html x slide-06.html",
+      "layout_iou": 0.349,
+      "image_corr": 0.305,
+      "palette_sim": 0.938
+    },
+    {
+      "pair": "slide-01.html x slide-07.html",
+      "layout_iou": 0.457,
+      "image_corr": 0.378,
+      "palette_sim": 0.934
+    },
+    {
+      "pair": "slide-01.html x slide-08.html",
+      "layout_iou": 0.513,
+      "image_corr": 0.037,
+      "palette_sim": 0.063
+    },
+    {
+      "pair": "slide-01.html x slide-09.html",
+      "layout_iou": 0.331,
+      "image_corr": 0.119,
+      "palette_sim": 0.793
+    },
+    {
+      "pair": "slide-01.html x slide-10.html",
+      "layout_iou": 0.457,
+      "image_corr": 0.419,
+      "palette_sim": 0.929
+    },
+    {
+      "pair": "slide-02.html x slide-03.html",
+      "layout_iou": 0.557,
+      "image_corr": -0.32,
+      "palette_sim": 0.072
+    },
+    {
+      "pair": "slide-02.html x slide-04.html",
+      "layout_iou": 0.575,
+      "image_corr": -0.304,
+      "palette_sim": 0.077
+    },
+    {
+      "pair": "slide-02.html x slide-05.html",
+      "layout_iou": 0.491,
+      "image_corr": -0.075,
+      "palette_sim": 0.375
+    },
+    {
+      "pair": "slide-02.html x slide-06.html",
+      "layout_iou": 0.669,
+      "image_corr": -0.296,
+      "palette_sim": 0.079
+    },
+    {
+      "pair": "slide-02.html x slide-07.html",
+      "layout_iou": 0.492,
+      "image_corr": -0.311,
+      "palette_sim": 0.074
+    },
+    {
+      "pair": "slide-02.html x slide-08.html",
+      "layout_iou": 0.598,
+      "image_corr": 0.199,
+      "palette_sim": 0.787
+    },
+    {
+      "pair": "slide-02.html x slide-09.html",
+      "layout_iou": 0.565,
+      "image_corr": -0.119,
+      "palette_sim": 0.254
+    },
+    {
+      "pair": "slide-02.html x slide-10.html",
+      "layout_iou": 0.468,
+      "image_corr": -0.133,
+      "palette_sim": 0.089
+    },
+    {
+      "pair": "slide-03.html x slide-04.html",
+      "layout_iou": 0.383,
+      "image_corr": 0.42,
+      "palette_sim": 0.959
+    },
+    {
+      "pair": "slide-03.html x slide-05.html",
+      "layout_iou": 0.516,
+      "image_corr": 0.194,
+      "palette_sim": 0.679
+    },
+    {
+      "pair": "slide-03.html x slide-06.html",
+      "layout_iou": 0.54,
+      "image_corr": 0.592,
+      "palette_sim": 0.938
+    },
+    {
+      "pair": "slide-03.html x slide-07.html",
+      "layout_iou": 0.594,
+      "image_corr": 0.584,
+      "palette_sim": 0.985
+    },
+    {
+      "pair": "slide-03.html x slide-08.html",
+      "layout_iou": 0.5,
+      "image_corr": -0.05,
+      "palette_sim": 0.026
+    },
+    {
+      "pair": "slide-03.html x slide-09.html",
+      "layout_iou": 0.473,
+      "image_corr": 0.158,
+      "palette_sim": 0.766
+    },
+    {
+      "pair": "slide-03.html x slide-10.html",
+      "layout_iou": 0.292,
+      "image_corr": 0.427,
+      "palette_sim": 0.975
+    },
+    {
+      "pair": "slide-04.html x slide-05.html",
+      "layout_iou": 0.31,
+      "image_corr": 0.281,
+      "palette_sim": 0.686
+    },
+    {
+      "pair": "slide-04.html x slide-06.html",
+      "layout_iou": 0.559,
+      "image_corr": 0.495,
+      "palette_sim": 0.956
+    },
+    {
+      "pair": "slide-04.html x slide-07.html",
+      "layout_iou": 0.362,
+      "image_corr": 0.477,
+      "palette_sim": 0.965
+    },
+    {
+      "pair": "slide-04.html x slide-08.html",
+      "layout_iou": 0.522,
+      "image_corr": -0.391,
+      "palette_sim": 0.031
+    },
+    {
+      "pair": "slide-04.html x slide-09.html",
+      "layout_iou": 0.596,
+      "image_corr": 0.192,
+      "palette_sim": 0.798
+    },
+    {
+      "pair": "slide-04.html x slide-10.html",
+      "layout_iou": 0.578,
+      "image_corr": 0.581,
+      "palette_sim": 0.953
+    },
+    {
+      "pair": "slide-05.html x slide-06.html",
+      "layout_iou": 0.466,
+      "image_corr": 0.069,
+      "palette_sim": 0.685
+    },
+    {
+      "pair": "slide-05.html x slide-07.html",
+      "layout_iou": 0.434,
+      "image_corr": 0.015,
+      "palette_sim": 0.673
+    },
+    {
+      "pair": "slide-05.html x slide-08.html",
+      "layout_iou": 0.598,
+      "image_corr": 0.112,
+      "palette_sim": 0.329
+    },
+    {
+      "pair": "slide-05.html x slide-09.html",
+      "layout_iou": 0.466,
+      "image_corr": 0.706,
+      "palette_sim": 0.872
+    },
+    {
+      "pair": "slide-05.html x slide-10.html",
+      "layout_iou": 0.402,
+      "image_corr": 0.209,
+      "palette_sim": 0.676
+    },
+    {
+      "pair": "slide-06.html x slide-07.html",
+      "layout_iou": 0.48,
+      "image_corr": 0.615,
+      "palette_sim": 0.946
+    },
+    {
+      "pair": "slide-06.html x slide-08.html",
+      "layout_iou": 0.643,
+      "image_corr": -0.121,
+      "palette_sim": 0.032
+    },
+    {
+      "pair": "slide-06.html x slide-09.html",
+      "layout_iou": 0.705,
+      "image_corr": 0.092,
+      "palette_sim": 0.785
+    },
+    {
+      "pair": "slide-06.html x slide-10.html",
+      "layout_iou": 0.509,
+      "image_corr": 0.591,
+      "palette_sim": 0.934
+    },
+    {
+      "pair": "slide-07.html x slide-08.html",
+      "layout_iou": 0.619,
+      "image_corr": -0.076,
+      "palette_sim": 0.03
+    },
+    {
+      "pair": "slide-07.html x slide-09.html",
+      "layout_iou": 0.478,
+      "image_corr": 0.134,
+      "palette_sim": 0.765
+    },
+    {
+      "pair": "slide-07.html x slide-10.html",
+      "layout_iou": 0.321,
+      "image_corr": 0.579,
+      "palette_sim": 0.979
+    },
+    {
+      "pair": "slide-08.html x slide-09.html",
+      "layout_iou": 0.662,
+      "image_corr": 0.273,
+      "palette_sim": 0.208
+    },
+    {
+      "pair": "slide-08.html x slide-10.html",
+      "layout_iou": 0.509,
+      "image_corr": -0.205,
+      "palette_sim": 0.043
+    },
+    {
+      "pair": "slide-09.html x slide-10.html",
+      "layout_iou": 0.446,
+      "image_corr": 0.134,
+      "palette_sim": 0.765
+    }
+  ],
+  "value_arc": 0.763,
+  "deck_median_image_corr": 0.158,
+  "deck_median_layout_iou": 0.491,
+  "verdict": "WARN",
+  "recorded": true
+}

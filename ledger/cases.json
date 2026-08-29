@@ -20,6 +20,36 @@
         "https://alaskapublic.org/news/environment/2026-07-08/ai-drones-and-salmon-what-new-technology-could-mean-for-bristol-bay-sockeye-counts"
       ],
       "outcome_notes": "First live run, driven in-session as the manual test. Score 8.39 ship at round 3 threshold 8.0. Fact-check killed the intended payoff (c31) and the honest version shipped. 28 verified claims, honesty gate two rounds, pixel critics three rounds, flow critic ship 8.5."
+    },
+    {
+      "run_date": "2026-08-29",
+      "case_file_no": 2,
+      "bank_id": "bank-025",
+      "company": "La Crosse County Public Safety Communications, Wisconsin",
+      "industry": "public_safety_dispatch",
+      "capability": "voice_workflow_non_emergency_line",
+      "flavor": "deployment",
+      "angle": "They rebuilt one line and left the other alone",
+      "bottleneck": "The 24/7 dispatch desk had become the county's default number for every routine municipal question, so dispatchers were putting routine callers on hold to answer 911",
+      "vendor": "Aurelian (Seattle)",
+      "ladder_rung": 4,
+      "rung_note": "Honestly a WORKFLOW. Every step was drawn by a person before the phone rang. The vendor calls it an agent, and that gap is the curriculum payload.",
+      "numbers": {
+        "calls_handled": "41,000 in seven months (c03)",
+        "contained": "about 65 percent never reached a dispatcher, base = the 41,000 (c04)",
+        "annual_baseline": "roughly 105,000 routine calls a year, per the county (c08)",
+        "cost_year_one": "about $67,000 (c10)",
+        "cost_year_two": "about $81,000 (c11)",
+        "pricing": "priced on call volume, not per seat (c14)",
+        "staffing": "four dispatchers per shift, before and after (c36, c37)"
+      },
+      "named_human": "Cory Lynch, operations supervisor",
+      "honest_limit": "No resolution, satisfaction, callback or complaint figure exists on any page fetched this run, including the vendor's own (c53). Containment is not resolution.",
+      "timeline_status": "PARTIAL. Several months of intensive training before implementation (c18) plus a 5 May 2025 go-live. No decision-to-contract date exists on any page fetched.",
+      "counter_case": "Ozaukee County bought the same product, went live around the clock in week one, and cut back to two hours a day (c44 to c48). Same product, same vendor, different boundary.",
+      "alaska_landing": "Point it where a wrong route costs ten minutes, never where it costs a house or a hand.",
+      "score": null,
+      "notes": "Public-safety vein: 911 funding is a public surcharge, so local press prints the contract value. This is why the cost hard gate cleared here when it failed on 23 other candidates."
     }
   ]
 }

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="@@ASSETS@@/fonts/fonts.css">
+<style>
+  html, body { margin:0; padding:0; width:1080px; height:1350px; overflow:hidden; }
+  body { background:#E8DFCB; position:relative; font-kerning:normal; }
+  #art { position:absolute; inset:0; }
+  .layer { position:absolute; inset:0; }
+
+  .kicker { position:absolute; left:80px; top:96px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.18em; color:#2E3A46; }
+  .counter { position:absolute; left:880px; top:96px; width:120px; text-align:right;
+    font-family:"JetBrains Mono",monospace; font-size:24px; color:#6A6558; }
+  .pair { position:absolute; left:80px; top:140px; width:96px; height:44px; }
+
+  .head { position:absolute; left:80px; top:206px; width:760px; height:130px;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600;
+    font-variation-settings:"wdth" 90; font-size:70px; line-height:1.02;
+    letter-spacing:-0.018em; color:#14202C; }
+
+  /* MIRROR of slide 04 on purpose. There the hardware is on the left and the
+     numbered steps on the right; here the terms are on the left and the paper
+     they came from is on the right. Two facing pages, not one template. */
+  .chk { position:absolute; left:80px; width:400px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.02em; line-height:1.32; color:#2A3646; }
+  .chk span { color:#14202C; padding:0 0.28em; }
+
+  .ylab { position:absolute; font-family:"JetBrains Mono",monospace;
+    font-weight:500; font-size:24px; letter-spacing:0.10em; color:#6B6050; }
+  .ytot { position:absolute; font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700; font-variation-settings:"wdth" 92;
+    font-size:56px; letter-spacing:-0.01em; color:#14202C;
+    font-variant-numeric:tabular-nums; }
+
+  .body { position:absolute; left:80px; top:950px; width:880px;
+    font-family:"Manrope",sans-serif; font-weight:400; font-size:32px;
+    line-height:1.36; color:#26303C; }
+  .body b { font-weight:600; color:#14202C; }
+
+  .src { position:absolute; left:80px; top:1212px;
+    font-family:"JetBrains Mono",monospace; font-weight:500; font-size:24px;
+    letter-spacing:0.06em; color:#2E3A46; }
+</style>
+</head>
+<body>
+  <canvas id="art" width="2160" height="2700" style="width:1080px;height:1350px;"></canvas>
+
+  <div class="layer">
+    <div class="kicker" data-zone="HEAD" data-block="kicker">WHAT IT TOOK</div>
+    <div class="counter" data-zone="FOOTER" data-block="kicker" data-decorative>08 / 10</div>
+
+    <svg class="pair" viewBox="0 0 96 44" aria-hidden="true" data-decorative>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#E8DFCB" stroke-width="7"/>
+      <line x1="2" y1="12" x2="94" y2="12" stroke="#14202C" stroke-width="3.5"/>
+      <!-- state 08: solid, carrying two price ticks of different heights -->
+      <line x1="2" y1="32" x2="94" y2="32" stroke="#2F6BB0" stroke-width="3.5"/>
+      <line x1="40" y1="32" x2="40" y2="24" stroke="#14202C" stroke-width="3"/>
+      <line x1="66" y1="32" x2="66" y2="17" stroke="#14202C" stroke-width="3"/>
+    </svg>
+
+    <div class="head" id="head" data-zone="HEAD" data-block="head">The bill goes up as it works harder</div>
+
+    <div class="chk" data-zone="DATA" data-block="c1" style="top:392px;">PRICED ON CALL VOLUME,<br>NOT PER SEAT</div>
+    <div class="chk" data-zone="DATA" data-block="c2" style="top:490px;">SEVERAL MONTHS OF TRAINING<br>BEFORE THE FIRST CALL,<br><span style="display:block;text-align:right">5 MAY 2025</span></div>
+    <div class="chk" data-zone="DATA" data-block="c3" style="top:700px;">OWNER <span>&middot;</span> THE OPERATIONS<br>SUPERVISOR, NOT IT</div>
+    <div class="chk" data-zone="DATA" data-block="c4" style="top:814px;">CADENCE <span>&middot;</span> EVERY OTHER<br>WEEK WITH THE VENDOR</div>
+
+    <div class="ylab" data-zone="ART" data-block="y1" data-knockout style="left:510px; top:416px;">YEAR ONE</div>
+    <div class="ytot" data-zone="ART" data-block="y1t" data-knockout style="left:510px; top:452px;">ABOUT $67,000</div>
+
+    <div class="ylab" data-zone="ART" data-block="y2" data-knockout style="left:596px; top:616px;">YEAR TWO</div>
+    <div class="ytot" data-zone="ART" data-block="y2t" data-knockout style="left:596px; top:652px;">ABOUT $81,000</div>
+
+    <div class="body" data-zone="BODY" data-block="body">About $67,000 in year one and about $81,000 in year two, per Milwaukee Magazine, priced on call volume. <b>That is not a price rise. That is the product working harder, invoiced.</b> Milwaukee Magazine put the annual price at about one employee with benefits. If your calls triple in July, <span style="white-space:nowrap">model your July.</span></div>
+
+    <div class="src" data-zone="FOOTER" data-block="src">PER MILWAUKEE MAGAZINE</div>
+  </div>
+
+<script src="@@ASSETS@@/js/noise.js"></script>
+<script src="@@ASSETS@@/js/aktype.js"></script>
+<script src="@@ASSETS@@/js/akpost.js"></script>
+<script>
+window.renderReady = new Promise(async (resolve) => {
+  await document.fonts.ready;
+  AK.reseed(20260829);
+  const W = 1080, H = 1350;
+  const cx = document.getElementById('art').getContext('2d');
+  cx.scale(2, 2);
+
+  /* one source of truth. The DOM totals read these same page origins. */
+  const K = {
+    // page two is LOWER RIGHT so year one still reads first, 1.27x LARGER,
+    // and it runs off the right edge of the frame. A bigger bill, literally
+    // running off the page.
+    p1: { x: 496, y: 372, w: 420, h: 300, rot: -0.018 },
+    p2: { x: 566, y: 560, w: 532, h: 380, rot:  0.014 },
+    // gold underline lengths are PROPORTIONAL to the printed figures.
+    // 67000 -> 267px, 81000 -> 323px. Ratio 0.827, drawn, never printed.
+    // Both start at ONE shared origin, because a length comparison read off
+    // two different left edges overstates the difference it is measuring.
+    u1: 267, u2: 323, goldX: 596, g1y: 520, g2y: 860,
+    ramp: { y: 600, x0: 176, x1: 480 }
+  };
+
+  /* ---- warm paper ground ------------------------------------------------- */
+  cx.fillStyle = '#E8DFCB'; cx.fillRect(0, 0, W, H);
+  for (let i = 0; i < 5000; i++) {
+    const x = AK.rng(i * 7 + 1)() * W, y = AK.rng(i * 13 + 5)() * H;
+    cx.fillStyle = `rgba(118,102,78,${(0.018 + AK.rng(i * 3 + 2)() * 0.042).toFixed(3)})`;
+    cx.fillRect(x, y, 1.4, 1.4);
+  }
+  const kg = cx.createLinearGradient(0, 0, W, H);
+  kg.addColorStop(0, 'rgba(255,248,228,0.60)');
+  kg.addColorStop(0.6, 'rgba(255,248,228,0)');
+  kg.addColorStop(1, 'rgba(110,94,70,0.12)');
+  cx.fillStyle = kg; cx.fillRect(0, 0, W, H);
+
+  /* ---- the checklist's hairline table (#83), left margin ----------------- */
+  cx.strokeStyle = 'rgba(20,32,44,0.26)'; cx.lineWidth = 1.25;
+  cx.beginPath(); cx.moveTo(80, 372); cx.lineTo(80, 904); cx.stroke();
+  for (const ry of [372, 476, 676, 790, 904]) {
+    cx.beginPath(); cx.moveTo(80, ry); cx.lineTo(480, ry); cx.stroke();
+  }
+
+  /* ---- THE RAMP BAR. Its LEFT terminus feathers into nothing. ------------
+     No decision date exists on any page fetched, so the bar has no start cap.
+     The fuzzy end IS the timeline's epistemic state, drawn. The right end is a
+     hard tick at the one date we do have. */
+  const R = K.ramp;
+  const rg = cx.createLinearGradient(R.x0, 0, R.x1, 0);
+  rg.addColorStop(0.00, 'rgba(20,32,44,0)');
+  rg.addColorStop(0.42, 'rgba(20,32,44,0.30)');
+  rg.addColorStop(1.00, 'rgba(20,32,44,0.80)');
+  cx.fillStyle = rg;
+  cx.fillRect(R.x0, R.y, R.x1 - R.x0, 8);
+  // hard right tick, the only certain end of this measurement
+  cx.strokeStyle = '#14202C'; cx.lineWidth = 3.5;
+  cx.beginPath(); cx.moveTo(R.x1, R.y - 11); cx.lineTo(R.x1, R.y + 19); cx.stroke();
+
+  /* ---- TWO INVOICE PAGES ------------------------------------------------
+     Page two is LOWER RIGHT (so year one still reads first) and 1.27x LARGER,
+     and it runs off the right edge of the frame. A bigger invoice, literally
+     running off the page, is what "the bill goes up" looks like.
+
+     NO RULE MAY CROSS EITHER DOLLAR FIGURE. The scotch rule sits ABOVE the
+     total, which is what an invoice sum rule does, and every ruled line sits
+     below it. A stroke through a number reads as a number that was voided. */
+  function page(P) {
+    const s = P.h / 300;                       // everything scales off page one
+    cx.save();
+    cx.translate(P.x + P.w / 2, P.y + P.h / 2);
+    cx.rotate(P.rot);
+    cx.translate(-P.w / 2, -P.h / 2);
+
+    for (const [o, a] of [[1, 0.16], [2, 0.14], [4, 0.12], [9, 0.10], [18, 0.07]]) {
+      cx.fillStyle = `rgba(78,64,46,${a})`;
+      cx.fillRect(o * 0.7, o * 1.3, P.w, P.h);
+    }
+    cx.fillStyle = '#F6EFDF'; cx.fillRect(0, 0, P.w, P.h);
+    cx.strokeStyle = 'rgba(20,32,44,0.16)'; cx.lineWidth = 1;
+    cx.strokeRect(0, 0, P.w, P.h);
+
+    // scotch rule (#70), thick over thin, ABOVE the total
+    cx.fillStyle = '#14202C'; cx.fillRect(30 * s, 34 * s, P.w - 60 * s, 4);
+    cx.fillStyle = 'rgba(20,32,44,0.55)'; cx.fillRect(30 * s, 41 * s, P.w - 60 * s, 0.75);
+
+    // ruled body lines, tabular feel, all BELOW the total's baseline
+    cx.strokeStyle = 'rgba(20,32,44,0.13)'; cx.lineWidth = 0.75;
+    for (let i = 0; i < 5; i++) {
+      const ly = (186 + i * 26) * s;
+      cx.beginPath(); cx.moveTo(30 * s, ly); cx.lineTo(P.w - 30 * s, ly); cx.stroke();
+    }
+    cx.restore();
+  }
+  page(K.p1);
+  page(K.p2);
+
+  /* ---- THE TWO PROPORTIONAL GOLD RULES, ON ONE SHARED ORIGIN -------------
+     Drawn in page space, not inside either sheet, because a length comparison
+     read off two different left edges overstates the difference. Same origin,
+     so the gap between the right ends IS the gap between the figures. */
+  const GX = K.goldX;
+  for (const [gy, len] of [[K.g1y, K.u1], [K.g2y, K.u2]]) {
+    cx.fillStyle = '#C9971A'; cx.fillRect(GX, gy, len, 6);
+    cx.fillStyle = 'rgba(201,151,26,0.34)'; cx.fillRect(GX, gy + 7, len, 2);
+  }
+  // the delta, drawn: a hairline dropped from the shorter rule's end to the
+  // longer one, so the increase is a measured distance rather than a vibe
+  cx.strokeStyle = 'rgba(20,32,44,0.42)'; cx.lineWidth = 1.25;
+  cx.setLineDash([5, 5]);
+  cx.beginPath(); cx.moveTo(GX + K.u1, K.g1y + 9); cx.lineTo(GX + K.u1, K.g2y); cx.stroke();
+  cx.setLineDash([]);
+  cx.fillStyle = '#14202C';
+  cx.fillRect(GX + K.u1, K.g2y - 4, K.u2 - K.u1, 3);
+
+  AKPOST.grade(cx, {
+    w: W, h: H, exposure: 0.02, saturation: 1.03, contrast: 1.05, filmic: false,
+    lift: [0.004, 0.004, 0.002], gain: [1.0, 0.997, 0.986], vignette: 0.18,
+    grain: { amount: 0.032, size: 2, seed: 20260829 }, dither: true, sharpen: 0.24
+  });
+
+  AK.fitText(document.getElementById('head'), { min: 50, max: 72, maxLines: 2 });
+  resolve();
+});
+</script>
+</body>
+</html>
