@@ -1,0 +1,45 @@
+{
+  "run_date": "2026-08-29",
+  "case_file_no": 2,
+  "bank_id": null,
+  "branch": "tsturg/wonderful-bell-exirov",
+  "branch_note": "Session harness designates tsturg/wonderful-bell-exirov as the development branch for this run. The contract's default claude/case-file-<date> is overridden by that designation. Delivery links are commit-pinned to the pushed SHA, so this does not affect delivery.",
+  "phases": {
+    "wake": "done",
+    "restock": "pending",
+    "selection": "pending",
+    "verification": "pending",
+    "translation": "pending",
+    "directors_room": "pending",
+    "storyboard": "pending",
+    "copy": "pending",
+    "honesty_gate": "pending",
+    "art_build": "pending",
+    "review_loop": "pending",
+    "coherence_gate": "pending",
+    "assemble": "pending",
+    "scoring": "pending",
+    "ship": "pending",
+    "upgrade": "pending",
+    "gmail": "pending",
+    "retro": "pending"
+  },
+  "artifacts": {
+    "plan": "out/2026-08-29/plan.md",
+    "restock_notes": "out/2026-08-29/restock_notes.md"
+  },
+  "incidents": [
+    {
+      "date": "2026-08-29",
+      "phase": "restock",
+      "incident": "Restock wave 1 (four scouts, four grounds) returned ZERO bank verdicts. Fourteen candidates, eight banked as leads (bank-017..024), every one failing the cost hard gate. Structural cause identified and recorded in restock_notes.md: award submissions, vendor blogs, trade press and MEP writeups are all written to win something and cost is the one number that never helps you win.",
+      "resolution": "Wave 2 launched against the four veins wave 1 identified but never opened, rather than lowering the bar. Per the contract, a run that ships late beats a run that ships a case with no cost on the deck."
+    },
+    {
+      "date": "2026-08-29",
+      "phase": "restock",
+      "incident": "CONTRADICTION between two scouts. Both fetched https://www.servicetitan.com/press/bill-joplins-air-conditioning-and-heating-books-over-90-of-calls-with-servicetitan-ai-voice-agent on 2026-08-29 and returned DIFFERENT verbatim quotes attributed to the same named human, Randi Thompson.",
+      "resolution": "Neither quote is usable. The contract resolves contradictions in favour of the agent that read the page, and here both did, so the quote is simply unproven. Logged on bank-021; must be re-fetched and matched character for character before any use."
+    }
+  ]
+}
