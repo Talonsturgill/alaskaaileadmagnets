@@ -1599,12 +1599,12 @@
    "company": "La Crosse County Public Safety Communications",
    "added": "2026-08-29",
    "last_verified": "2026-08-29",
-   "status": "candidate",
+   "status": "verified",
    "location": "La Crosse County, Wisconsin",
    "size": "The county's 24/7 dispatch center. On the record from a fetched page: 'His county has at least four dispatchers per shift.' COUNTY-WIDE HEADCOUNT NOT YET VERIFIED; the county HR page returned 403. This is the one open item on filter 1 and the fact-checker must close it.",
    "industry": "public sector emergency communications and dispatch",
    "capability": "voice_agent_non_emergency_call_triage",
-   "bottleneck": "The dispatch center had become the default phone number for everything. Roughly 105,000 non-emergency calls a year, about parking tickets, court times, accident reports and who to call at which village hall, feeding through a center whose people are trained to handle emergencies. Cory Lynch: 'By virtue of being a 24/7 department, we've just become a default,' and separately, 'It's been really hard to hire and keep staff on.'",
+   "bottleneck": "The dispatch center had become the default phone number for everything. Roughly 105,000 non-emergency calls a year, about parking tickets, court times, accident reports and who to call at which village hall, feeding through a center whose people are trained to handle emergencies. Cory Lynch, per WPR: \"By virtue of being a 24/7 department, we've just become a default for anything…related to municipalities or police departments.\" And per Milwaukee Magazine: \"It's been really hard to hire and keep staff on.\"",
    "build": "They bought Aurelian's voice AI agent, 'Ava', and pointed it at the non-emergency line only. Ava answers, works out what the caller needs, collects the location, then either forwards the caller to the right municipality or department or texts them the information. It listens for hot words suggesting crime, violence or danger and routes those immediately to a human dispatcher. A caller can ask for a human at any point. The center meets the vendor every other week to work through dispatcher feedback and tune it.",
    "pattern_id": "P9",
    "ladder_rung": {
@@ -1643,16 +1643,16 @@
     "value": "Around $67,000 in year one and $81,000 in year two, priced on call volume. Milwaukee Magazine: 'Ava, which costs La Crosse, based on call volume, around $67,000 its first year and $81,000 its second, approximate to one employee with benefits.' WEAU independently describes it as 'the $70,000 system.'",
     "what_it_covers": "Reads as the subscription. Unclear whether integration and staff time sit inside the figure. Pricing is usage-based rather than per seat, which is why year two is higher.",
     "source_url": "https://www.milwaukeemag.com/wisconsin-ai-911-calls/",
-    "corroboration": "Two independent second cost points on the SAME vendor and pattern at other agencies: Grand Traverse County MI at $60,000 year one and $72,000 thereafter on a three-year term, and Spokane WA at $95,000 annually on a two-year term with six weeks of preparation."
+    "corroboration": "Two further cost points on the SAME product: Ozaukee County WI at about $70,000 (the sheriff's estimate, bundled into a larger dispatch upgrade, largely federal funds) and Grand Traverse County MI weighing $60,000 year one then $72,000 annually on a three-year term. CORRECTION 2026-08-29: Spokane WA is NOT the same product. Its vendor is Prepared AI with Axon, not Aurelian, so its $95,000 and its six-week preparation figure may NOT be attached to this case in any form. That error was introduced when this entry was written and the fact-checker caught it."
    },
-   "timeline": "Adopted May 2025; began taking calls May 5, 2025; the results above are the first seven months. The DECISION-TO-CONTRACT interval is not disclosed on any page fetched, so this is a go-live date plus a measured ramp rather than a full decision-to-working duration. County board or public safety committee minutes from late 2024 or early 2025 are where to close it.",
+   "timeline": "Go-live 5 May 2025, with seven months of measured results. The county's own launch announcement says the platform 'underwent several months of intensive training before implementation'. The DECISION-TO-CONTRACT interval could not be established from any source: the county web estate returned 403 to every request and its meeting PDFs are not full-text indexed. Showrunner ruling: the gate is met narrowly on the training-to-live duration, which is La Crosse-specific and sourced, and the shortfall is disclosed in the delivery email.",
    "named_human": {
     "name": "Cory Lynch",
     "role": "Operations supervisor, La Crosse County Public Safety Communications",
     "quote": "This morning we crossed over the 41,000 calls handled by the system mark since May 5th",
     "source_url": "https://www.news8000.com/news/local-news/la-crosse/ai-system-handles-thousands-of-non-emergency-calls-in-la-crosse-county/article_80fb411d-edba-42da-b89d-0aa9244904dc.html"
    },
-   "limit_named_by_source": "Two, and they are unusually good. Lynch names the human ceiling himself: 'The dispatcher is picking up nuances of changes in inflection and background noises that I personally don't see AI being able to take over.' And the SAME PRODUCT failed publicly at another agency: Ozaukee County Sheriff's Office launched Ava 24/7, hit misrouted calls, confusion between 'sheriff' and 'deputy', and trouble with background noise such as shouting and music, and cut it back to two hours a day while the vendor worked through it. That is a sourced, same-product failure and it is the honest scoping sentence for anyone copying this.",
+   "limit_named_by_source": "Two, and they are unusually good. Lynch names the human ceiling himself, per Milwaukee Magazine: \"I don't think AI will ever replace the human in a 911 center.\" And the SAME PRODUCT went sideways at another agency: Ozaukee County Sheriff's Office launched Ava 24/7, hit misrouted calls, callers asking for a sheriff when they meant a deputy, sometimes the wrong county entirely, and confusion from background noise such as shouting and music. They pulled it back to two hours a day while the vendor worked through it, and the sheriff says the vendor was receptive. That is a sourced, same-product, week-one failure and it is the honest scoping for anyone copying this.",
    "evidence_strength": "strong",
    "skepticism": "Five independently fetched outlets carry the story and two carry a cost figure, which is unusually good corroboration. But the operational numbers are all self-reported by the county to local press and nobody audited them. The 65 percent is a CONTAINMENT metric, exactly the P9 failure mode the knowledge base warns about: a call that ended without the caller getting what they needed still counts as handled. The two cost figures differ slightly ($70,000 versus $67,000 rising to $81,000) because they come from different outlets and framings.",
    "sources": [
@@ -1672,7 +1672,7 @@
     "clinic_groups",
     "tourism_lodging"
    ],
-   "notes": "THE ONLY BANK VERDICT ACROSS EIGHT SCOUTS AND TWO WAVES on 2026-08-29. Its cost line is the best-shaped disclosure this series has ever had, because the operator framed it in headcount terms rather than dollars alone.",
+   "notes": "THE ONLY BANK VERDICT ACROSS EIGHT SCOUTS AND TWO WAVES on 2026-08-29. Its cost line is the best-shaped disclosure this series has ever had, because the operator framed it in headcount terms rather than dollars alone. VERIFIED 2026-08-29: eleven pages fetched across nine independent outlets plus the vendor's own case study. case_viable=true. The one finding that shapes the whole deck: no resolution, satisfaction, callback or complaint figure exists anywhere, including on the vendor's page, so the 65 percent is CONTAINMENT and must be said as such.",
    "qualification": {
     "filter_version": "2026-07-28",
     "holds": [
@@ -1687,10 +1687,16 @@
      "honest rung 4 with a genuine agent-washing lesson"
     ],
     "missing": [
-     "employee count for La Crosse County government is unverified, so the 50 to 1,000 band is untested",
-     "the decision-to-working interval is not disclosed, only the go-live date and a seven-month ramp"
+     "employee count for La Crosse County government is uncorroborated (one outlet says 'over 200'), so NO county headcount goes on a slide; the deck describes the dispatch center instead",
+     "the decision-to-contract interval could not be established; what survived is 'several months of intensive training before implementation' plus a firm go-live date"
     ],
-    "to_promote": "CLOSE BEFORE SHIP: county headcount, and the decision-to-working interval from county board or public safety committee minutes. If headcount cannot be established, the entity to describe is the dispatch center itself, which the sources put at at least four dispatchers per shift."
+    "to_promote": "CLOSE BEFORE SHIP: county headcount, and the decision-to-working interval from county board or public safety committee minutes. If headcount cannot be established, the entity to describe is the dispatch center itself, which the sources put at at least four dispatchers per shift.",
+    "verification_corrections": [
+     "Spokane was wrongly recorded here as the same product. It is a different vendor (Prepared AI with Axon). Corrected.",
+     "The Lynch 'become a default' quote was recorded here truncated in a form that does not exist on the page. Corrected to the full sentence with its ellipsis.",
+     "The Lynch inflection/background-noise quote was recorded here silently cleaned; the page carries an ellipsis and a bracketed [and]. The deck uses the short clean verbatim instead.",
+     "'Approximate to one employee with benefits' is Milwaukee Magazine's own prose, NOT a quote from Lynch or the county. Attributing it to a person would be a fabricated quote."
+    ]
    }
   },
   {
